@@ -25,6 +25,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+      - name: The pinned OneShelf commit is on OneShelf main (not a fork's commit)
+        run: |
+          REF="$(tr -d '[:space:]' < tooling/oneshelf-core-ref.txt)"
+          git init -q "$RUNNER_TEMP/core"
+          git -C "$RUNNER_TEMP/core" fetch -q --filter=blob:none https://github.com/IPurplel/OneShelf.git main
+          git -C "$RUNNER_TEMP/core" merge-base --is-ancestor "$REF" FETCH_HEAD
       - name: Install the pinned OneShelf tooling
         run: ./tools/bootstrap
       - name: Fetch the published Registry (a published id+version must not change)

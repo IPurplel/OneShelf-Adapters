@@ -70,6 +70,12 @@ def test_the_pull_request_workflow_uses_no_secrets():
     assert "persist-credentials: false" in text
 
 
+def test_the_pull_request_workflow_refuses_a_core_pin_that_is_not_on_oneshelf_main():
+    text = (ROOT / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+    assert "merge-base --is-ancestor" in text
+    assert text.index("merge-base --is-ancestor") < text.index("./tools/bootstrap")
+
+
 def test_no_workflow_signs_or_publishes():
     for wf in workflows():
         text = wf.read_text(encoding="utf-8")
