@@ -1,0 +1,10 @@
+cases:
+- capability: search
+  inputs: {query: frankenstein}
+  fixtures:
+  - url: https://{{DOMAIN}}/search?q=frankenstein
+    file: fixtures/search.html
+  expect:
+    min_items: 2
+    fields_present: [listing_key, title]
+    first: {listing_key: frankenstein, title: Frankenstein}

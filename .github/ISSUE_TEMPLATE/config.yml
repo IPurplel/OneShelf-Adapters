@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/IPurplel/OneShelf-Adapters/security/advisories/new
+    about: Please report vulnerabilities privately.
+  - name: A problem with OneShelf itself
+    url: https://github.com/IPurplel/OneShelf/issues
+    about: The application, not an adapter.

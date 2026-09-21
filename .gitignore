@@ -1,0 +1,19 @@
+# Tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Registry work (generated; the published Registry lives on the `registry` branch)
+.registry-worktree/
+.registry-baseline/
+dist/
+
+# Never commit keys, credentials or sessions
+*.pem
+*.key
+*.p8
+.env
+.env.*
+*.cookies
+*.har

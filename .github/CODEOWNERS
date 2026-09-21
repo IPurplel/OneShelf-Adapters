@@ -1,0 +1,12 @@
+# Every change is reviewed by the maintainer. The paths below are security-sensitive and must never be
+# merged without it (enforce with a ruleset: docs/publishing.md#repository-settings).
+*                               @IPurplel
+/.github/workflows/             @IPurplel
+/.github/CODEOWNERS             @IPurplel
+/tools/                         @IPurplel
+/tooling/                       @IPurplel
+/registry-trust/                @IPurplel
+/adapters/official/             @IPurplel
+/adapters/verified-community/   @IPurplel
+/SECURITY.md                    @IPurplel
+/docs/review-policy.md          @IPurplel

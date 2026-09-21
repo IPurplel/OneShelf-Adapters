@@ -1,0 +1,4 @@
+base_url: https://{{DOMAIN}}
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

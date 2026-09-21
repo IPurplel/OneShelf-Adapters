@@ -1,0 +1,14 @@
+schema: oneshelf.osp/1
+id: {{ID}}
+name: {{NAME}}
+version: 0.1.0
+api: '1.0'
+description: >-
+  {{NAME}}: replace this with what the source is, what this adapter can do, and — plainly — what it
+  cannot. Start with search; add work, catalog, reader or downloads as you build and test them.
+publisher: {{PUBLISHER}}
+capabilities: [search]
+network:
+  domains: [{{DOMAIN}}]
+defaults:
+  language: en
