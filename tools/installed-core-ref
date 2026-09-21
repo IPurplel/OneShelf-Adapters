@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Print the OneShelf commit pip actually installed (from its direct_url.json), or "local"/nothing."""
+import json
+from importlib import metadata
+
+try:
+    raw = metadata.distribution("oneshelf").read_text("direct_url.json")
+except metadata.PackageNotFoundError:
+    raw = None
+info = json.loads(raw) if raw else {}
+if info.get("vcs_info", {}).get("commit_id"):
+    print(info["vcs_info"]["commit_id"])
+elif info.get("url", "").startswith("file:"):
+    print("local")

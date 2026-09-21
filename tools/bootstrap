@@ -16,8 +16,13 @@ if [ -n "${ONESHELF_CORE_PATH:-}" ]; then
   echo local > "$ROOT/.venv/oneshelf-core-ref"
   echo "Installed OneShelf tooling from $ONESHELF_CORE_PATH (local; not the pinned commit)"
 else
-  "$ROOT/.venv/bin/python" -m pip install --quiet \
-    "oneshelf @ git+https://github.com/IPurplel/OneShelf@${REF}#subdirectory=backend" pytest
+  SPEC="oneshelf @ git+https://github.com/IPurplel/OneShelf@${REF}#subdirectory=backend"
+  "$ROOT/.venv/bin/python" -m pip install --quiet "$SPEC" pytest
+  # pip keeps an installed "oneshelf" of the same version even when the pinned commit moved, so the package
+  # itself is always reinstalled from the pin, and what pip actually installed is checked afterwards.
+  "$ROOT/.venv/bin/python" -m pip install --quiet --force-reinstall --no-deps "$SPEC"
+  INSTALLED="$("$ROOT/.venv/bin/python" "$ROOT/tools/installed-core-ref")"
+  [ "$INSTALLED" = "$REF" ] || { echo "installed OneShelf is ${INSTALLED:-unknown}, not the pinned $REF" >&2; exit 1; }
   echo "$REF" > "$ROOT/.venv/oneshelf-core-ref"
   echo "Installed OneShelf tooling at ${REF:0:12}"
 fi

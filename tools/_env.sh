@@ -6,7 +6,7 @@ if [ ! -x "$PY" ]; then
   echo "The OneShelf tooling is not installed yet. Run: ./tools/bootstrap" >&2
   exit 2
 fi
-INSTALLED="$(cat "$ROOT/.venv/oneshelf-core-ref" 2>/dev/null || true)"
+INSTALLED="$("$PY" "$ROOT/tools/installed-core-ref" 2>/dev/null || true)"
 if [ "$INSTALLED" != "$PINNED" ] && [ "$INSTALLED" != "local" ]; then
   echo "The installed OneShelf tooling ($INSTALLED) is not the pinned one ($PINNED). Run: ./tools/bootstrap" >&2
   exit 2
