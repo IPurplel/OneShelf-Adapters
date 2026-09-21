@@ -63,12 +63,15 @@ under its existing version with byte-identical files and a new sha256 — the on
 byte-level immutability, and one the check itself verifies (same files, or it fails). Registry entries keep only each adapter's current version; installations keep their own
 previous versions for rollback.
 
-## Repository settings (recommended; configured by the owner)
+## Repository settings
 
-`CODEOWNERS` requests review but does not enforce it on its own. Recommended rulesets:
+**Configured** (2026-09-21):
 
-- `main`: require a pull request, require review from Code Owners, require the **Validate adapters** check,
-  block force pushes and deletion.
-- `registry`: restrict pushes to the maintainer, block force pushes and deletion.
-- Actions: "Require approval for all outside collaborators" for fork PR workflows; default workflow
-  permissions read-only.
+- ruleset *Protect main and registry*: no force pushes and no deletion on `main` and `registry`;
+- default workflow token is read-only, and workflows cannot approve pull requests;
+- secret scanning with push protection.
+
+**Recommended, for the owner to enable** (they change how the maintainer pushes, so they are not set
+automatically): on `main`, require a pull request, require review from Code Owners, and require the
+**Validate adapters** check; keep "Require approval for all outside collaborators" for workflows from forks.
+`CODEOWNERS` requests reviews but does not by itself enforce them.
