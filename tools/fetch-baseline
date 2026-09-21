@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Fetch the published Registry into .registry-baseline/ so checks can compare against it
+# (a published id+version never changes; versions never go backwards).
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+URL="${REGISTRY_REPO:-https://github.com/IPurplel/OneShelf-Adapters.git}"
+if ! git -C "$ROOT" ls-remote --exit-code "$URL" refs/heads/registry >/dev/null 2>&1; then
+  echo "No published registry branch at $URL yet; nothing to compare against."
+  exit 0
+fi
+git -C "$ROOT" fetch --quiet --depth=1 "$URL" registry
+rm -rf -- "$ROOT/.registry-baseline"
+mkdir -p "$ROOT/.registry-baseline"
+git -C "$ROOT" archive FETCH_HEAD | tar -x -C "$ROOT/.registry-baseline"
+echo "Published Registry fetched into .registry-baseline/"

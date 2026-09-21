@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Create a new Community adapter from templates/basic-source.
+
+    ./tools/new-adapter example-site [--name "Example Site"] [--domain example-site.org] [--publisher you]
+
+Creates adapters/community/oneshelf.<slug>. Nothing here is executable: the result is declarative data.
+"""
+import argparse
+import re
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+DOMAIN = re.compile(r"^(?=.{4,253}$)([a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$")
+TIERS = ("official", "verified-community", "community")
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("slug", help="lowercase site/project name, e.g. example-site")
+    parser.add_argument("--name", help="display name (default: from the slug)")
+    parser.add_argument("--domain", help="the site's host, e.g. example-site.org (default: <slug>.example.com)")
+    parser.add_argument("--publisher", default="Community contributor")
+    args = parser.parse_args(argv)
+    if not SLUG.match(args.slug) or len(args.slug) > 55:
+        print("slug: lowercase letters, digits and single hyphens, e.g. example-site", file=sys.stderr)
+        return 2
+    plugin_id = f"oneshelf.{args.slug}"
+    domain = (args.domain or f"{args.slug}.example.com").lower()
+    if not DOMAIN.match(domain):
+        print(f"--domain {domain!r} is not a public host name", file=sys.stderr)
+        return 2
+    for tier in TIERS:
+        if (ROOT / "adapters" / tier / plugin_id).exists():
+            print(f"{plugin_id} already exists in adapters/{tier}/", file=sys.stderr)
+            return 1
+    name = args.name or args.slug.replace("-", " ").title()
+    for value in (name, args.publisher):
+        if any(c in value for c in "\n\r{}[]:#&*!|>'\"%@`"):
+            print(f"{value!r}: please avoid YAML special characters here; edit manifest.yaml afterwards", file=sys.stderr)
+            return 2
+    target = ROOT / "adapters" / "community" / plugin_id
+    shutil.copytree(ROOT / "templates" / "basic-source", target)
+    values = {"{{ID}}": plugin_id, "{{NAME}}": name, "{{DOMAIN}}": domain, "{{PUBLISHER}}": args.publisher}
+    for path in target.rglob("*"):
+        if path.is_file():
+            text = path.read_text(encoding="utf-8")
+            for key, value in values.items():
+                text = text.replace(key, value)
+            path.write_text(text, encoding="utf-8")
+    print(f"Created adapters/community/{plugin_id}")
+    print(f"Next: edit it for {domain}, then run ./tools/check-adapter {plugin_id}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

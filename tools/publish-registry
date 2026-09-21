@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Build, sign, verify and stage the published Registry (maintainers only). Commits and pushes nothing.
+#   ./tools/publish-registry --signing-key PATH --key-id ID     # signed publication
+#   ./tools/publish-registry --unsigned-preview                 # until the project key exists
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+WT="$ROOT/.registry-worktree"
+REQUIRE_SIGNED=--require-signed
+for arg in "$@"; do [ "$arg" = "--unsigned-preview" ] && REQUIRE_SIGNED=""; done
+
+if [ ! -e "$WT/.git" ]; then
+  if git -C "$ROOT" show-ref --verify --quiet refs/heads/registry; then
+    git -C "$ROOT" worktree add --quiet "$WT" registry
+  elif git -C "$ROOT" ls-remote --exit-code origin refs/heads/registry >/dev/null 2>&1; then
+    git -C "$ROOT" fetch --quiet origin registry:registry
+    git -C "$ROOT" worktree add --quiet "$WT" registry
+  else
+    git -C "$ROOT" worktree add --quiet --orphan -b registry "$WT"
+    cp "$ROOT/tools/registry-branch-README.md" "$WT/README.md"
+  fi
+fi
+
+BASE="$(mktemp -d)"
+trap 'rm -r "$BASE"' EXIT
+BASELINE=()
+if [ -f "$WT/index.json" ]; then
+  cp -R "$WT/index.json" "$WT/packages" "$BASE/"
+  BASELINE=(--baseline "$BASE")
+fi
+
+repo build-registry --root "$ROOT" --out "$WT" "${BASELINE[@]}" "$@"
+# shellcheck disable=SC2086
+repo verify-registry --registry "$WT" --root "$ROOT" $REQUIRE_SIGNED
+git -C "$WT" add -A
+echo
+echo "Staged in .registry-worktree (branch registry):"
+git -C "$WT" status --short
+echo
+echo "Review it, then:  git -C .registry-worktree commit -m 'registry: ...' && git -C .registry-worktree push origin registry"

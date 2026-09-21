@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Print the PUBLIC key line (key-id:base64) for a signing key kept outside the repository.
+#   ./tools/public-key --signing-key ~/.config/oneshelf-registry/official-2026.pem --key-id official-2026
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+repo public-key "$@"

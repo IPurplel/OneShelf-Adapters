@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Install the pinned OneShelf tooling into .venv (Python 3.12 or newer).
+#   ./tools/bootstrap                      # the Core commit in tooling/oneshelf-core-ref.txt, from GitHub
+#   ONESHELF_CORE_PATH=../OneShelf ./tools/bootstrap   # a local OneShelf checkout instead (development)
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PYTHON="${PYTHON:-python3}"
+"$PYTHON" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' \
+  || { echo "Python 3.12 or newer is required (set PYTHON=...)" >&2; exit 1; }
+REF="$(tr -d '[:space:]' < "$ROOT/tooling/oneshelf-core-ref.txt")"
+[[ $REF =~ ^[0-9a-f]{40}$ ]] || { echo "tooling/oneshelf-core-ref.txt must hold a full commit SHA" >&2; exit 1; }
+"$PYTHON" -m venv "$ROOT/.venv"
+"$ROOT/.venv/bin/python" -m pip install --quiet --upgrade pip
+if [ -n "${ONESHELF_CORE_PATH:-}" ]; then
+  "$ROOT/.venv/bin/python" -m pip install --quiet "$ONESHELF_CORE_PATH/backend" pytest
+  echo local > "$ROOT/.venv/oneshelf-core-ref"
+  echo "Installed OneShelf tooling from $ONESHELF_CORE_PATH (local; not the pinned commit)"
+else
+  "$ROOT/.venv/bin/python" -m pip install --quiet \
+    "oneshelf @ git+https://github.com/IPurplel/OneShelf@${REF}#subdirectory=backend" pytest
+  echo "$REF" > "$ROOT/.venv/oneshelf-core-ref"
+  echo "Installed OneShelf tooling at ${REF:0:12}"
+fi

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Check one or more adapters by id, exactly as CI and an install would.
+#   ./tools/check-adapter oneshelf.example-site [more ids...]
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+[ $# -ge 1 ] || { echo "usage: ./tools/check-adapter <plugin-id> [...]" >&2; exit 2; }
+# shellcheck disable=SC2046
+repo check --root "$ROOT" $(baseline_args) "$@"

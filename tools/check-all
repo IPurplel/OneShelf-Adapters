@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Everything CI checks: every adapter, the repository policy tests, and a Registry built and verified
+# from the whole tree with OneShelf's own Registry parser.
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+# shellcheck disable=SC2046
+repo check-all --root "$ROOT" $(baseline_args)
+"$PY" -m pytest -q "$ROOT/tests"
+OUT="$(mktemp -d)"
+trap 'rm -r "$OUT"' EXIT
+repo build-registry --root "$ROOT" --out "$OUT" --unsigned-preview >/dev/null
+repo verify-registry --registry "$OUT" --root "$ROOT"
