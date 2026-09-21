@@ -5,7 +5,7 @@
       "file": "packages/oneshelf.3asq-1.0.0.osp",
       "id": "oneshelf.3asq",
       "name": "3asq (Al-Aasheq)",
-      "sha256": "59e726c28b08d3ffdaf89e773a72b9613bfb84c8a05d3c1d553328c6edef68c1",
+      "sha256": "78d15a10a0bc9e3a69317f1bba27657a2f10dab7a871d90b3a1a1ffc9f6c1398",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -14,7 +14,7 @@
       "file": "packages/oneshelf.arxiv-1.0.0.osp",
       "id": "oneshelf.arxiv",
       "name": "arXiv",
-      "sha256": "bbf42fbdd70f4fd1550eafdf5813ea867079890804728d18fbe6afd663ca8856",
+      "sha256": "bf2255ea491a744dfc7aa8fe7cf660f2ba4c96ad9e6effe996a73f9007f3b9e4",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -23,7 +23,7 @@
       "file": "packages/oneshelf.gutenberg-1.0.0.osp",
       "id": "oneshelf.gutenberg",
       "name": "Project Gutenberg",
-      "sha256": "6610a1c6783807c7890e71b85496fdfb6dc307688dda78cf30985f4d93c2aa98",
+      "sha256": "d00c350366255440f57e6f6a78ec6f5ea8836c7939ee3c66960aa117b0bb27ae",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -32,7 +32,7 @@
       "file": "packages/oneshelf.hindawi-1.0.0.osp",
       "id": "oneshelf.hindawi",
       "name": "Safahat (Hindawi)",
-      "sha256": "b4a3b3fa215d8205e7b936ebd56d516bd2a45cb6501163b3d70118edc5881573",
+      "sha256": "0712d869acaebe79c0f51ef888e2dac0f3c8f0ee2b3c5ad503e32f5227387352",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -41,7 +41,7 @@
       "file": "packages/oneshelf.mangadex-1.0.0.osp",
       "id": "oneshelf.mangadex",
       "name": "MangaDex",
-      "sha256": "44c568e4156b02f8855f5b74f0788e7f24e88f56b00c2520b14a7afc5778f0c8",
+      "sha256": "20a82d2b6e4178e702d0f6e9caaaf6f731a6b8652486da96e7a4953642e6cc29",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -50,7 +50,7 @@
       "file": "packages/oneshelf.standard-ebooks-1.0.0.osp",
       "id": "oneshelf.standard-ebooks",
       "name": "Standard Ebooks",
-      "sha256": "24bc3f0556f73fea9c864e73ed936b98b282dc67a2c7d694cee8c785720e281c",
+      "sha256": "f20c74e5ddf6e75edd2b076a4e782857c97e3ebba6439a90a3aaa2f8c111dd5f",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -59,7 +59,7 @@
       "file": "packages/oneshelf.tapas-1.0.0.osp",
       "id": "oneshelf.tapas",
       "name": "Tapas",
-      "sha256": "eb266ddd9d8184c9592faf87d83c81bf4a37f8530f1bc5706d31a943362147b5",
+      "sha256": "df5dffeb661dd6cc036aa46aa414f31610e8c9325ca8ed92b074a949ba585c3c",
       "trust_label": "official",
       "version": "1.0.0"
     },
@@ -68,7 +68,7 @@
       "file": "packages/oneshelf.webtoon-1.0.0.osp",
       "id": "oneshelf.webtoon",
       "name": "WEBTOON",
-      "sha256": "18292239813acedfa7fc8376c9776ce9e21321774e6228ee2ca2ffe3a5544625",
+      "sha256": "54a71fbdf5fc0672180b4ca2fe63c909bee4c3ae228a29db22e4b7f78fe42983",
       "trust_label": "official",
       "version": "1.0.0"
     }
