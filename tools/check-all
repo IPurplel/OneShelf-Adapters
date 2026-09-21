@@ -13,5 +13,5 @@ fi
 "$PY" -m pytest -q "$ROOT/tests"
 OUT="$(mktemp -d)"
 trap 'rm -r "$OUT"' EXIT
-repo build-registry --root "$ROOT" --out "$OUT" --unsigned-preview >/dev/null
+repo build-registry --root "$ROOT" --out "$OUT" >/dev/null
 repo verify-registry --registry "$OUT" --root "$ROOT"

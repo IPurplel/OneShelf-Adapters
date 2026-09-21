@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 # Build, sign, verify and stage the published Registry (maintainers only). Commits and pushes nothing.
-#   ./tools/publish-registry --signing-key PATH --key-id ID     # signed publication
-#   ./tools/publish-registry --unsigned-preview                 # until the project key exists
+#   ./tools/publish-registry                                    # the normal publication (signatures optional)
+#   ./tools/publish-registry --signing-key PATH --key-id ID     # optionally, also sign Official/Verified entries
 set -euo pipefail
 . "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
 WT="$ROOT/.registry-worktree"
-REQUIRE_SIGNED=--require-signed
-for arg in "$@"; do [ "$arg" = "--unsigned-preview" ] && REQUIRE_SIGNED=""; done
+# With a key, every Official/Verified entry must then verify against registry-trust/trusted-keys.txt.
+REQUIRE_SIGNED=""
+for arg in "$@"; do [ "$arg" = "--signing-key" ] && REQUIRE_SIGNED=--require-signed; done
+[ -n "${ONESHELF_REGISTRY_SIGNING_KEY_FILE:-}" ] && REQUIRE_SIGNED=--require-signed
 
 if [ ! -e "$WT/.git" ]; then
   if git -C "$ROOT" show-ref --verify --quiet refs/heads/registry; then

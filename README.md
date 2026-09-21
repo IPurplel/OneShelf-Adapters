@@ -21,21 +21,18 @@ reaches existing installations without a new version of OneShelf.
 
 ## Trust levels
 
-| Level | Meaning | Signed |
-|---|---|---|
-| **Official** | Maintained or adopted by the OneShelf project; strongest review; live evidence | Yes, by the project key |
-| **Verified Community** | Community-contributed, then reviewed and verified by maintainers | Yes, by the project key |
-| **Community** | Passes every automated check; not (yet) maintainer-verified | No |
+| Level | Meaning |
+|---|---|
+| **Official** | Maintained or adopted by the OneShelf project; strongest review; live evidence |
+| **Verified Community** | Community-contributed, then reviewed and verified by maintainers |
+| **Community** | Passes every automated check; not (yet) maintainer-verified |
 
 The level comes from the directory an adapter lives in — `adapters/official/`,
 `adapters/verified-community/` or `adapters/community/` — which only a maintainer-reviewed change can
-alter. Nothing inside an adapter can raise its trust, and OneShelf itself only believes Official or
-Verified Community when the package carries a valid signature from a key the installation trusts.
+alter. Nothing inside an adapter can raise its trust. OneShelf treats this repository's Registry as its
+**first-party** Registry and trusts its tiers as they are; any other Registry's claims count only with a
+signature from a key the installation trusts. Signing is optional extra evidence here.
 See [docs/trust-levels.md](docs/trust-levels.md).
-
-> **Signing status:** the project signing key has not been set up yet, so the Registry is currently
-> published as an **unsigned preview**: OneShelf shows every entry as Community (“not verified”) until
-> it is signed. See [docs/publishing.md](docs/publishing.md).
 
 ## Contributing an adapter
 

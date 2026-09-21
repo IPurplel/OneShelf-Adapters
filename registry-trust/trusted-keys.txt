@@ -1,4 +1,4 @@
 # PUBLIC Ed25519 keys whose signatures the Registry build and verification accept, one per line:
 #   key-id:base64-public-key
 # List two while rotating. Never put a private key here — or anywhere in this repository.
-# Empty until the owner creates the project signing key (docs/publishing.md).
+# Optional: signing is not required for this first-party Registry (docs/publishing.md). Empty for now.
