@@ -56,7 +56,11 @@ is not in GitHub and will not be put there without the owner's explicit decision
 ## Immutability
 
 A published id+version never changes content: `check-all` compares against the published Registry and
-fails on it. Registry entries keep only each adapter's current version; installations keep their own
+fails on it. "Content" means the files inside the package. The zip container around them is OneShelf's
+canonical builder's business: in September 2026 it stopped compressing, because zlib and zlib-ng produce
+different bytes and packages were only reproducible on one platform. Every package was re-published once
+under its existing version with byte-identical files and a new sha256 — the one documented exception to
+byte-level immutability, and one the check itself verifies (same files, or it fails). Registry entries keep only each adapter's current version; installations keep their own
 previous versions for rollback.
 
 ## Repository settings (recommended; configured by the owner)
