@@ -5,6 +5,11 @@ set -euo pipefail
 . "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
 # shellcheck disable=SC2046
 repo check-all --root "$ROOT" $(baseline_args)
+if [ -f "$ROOT/.registry-baseline/index.json" ]; then
+  # Every already-published version must rebuild here to exactly its published bytes: proof, on whatever
+  # platform this runs, that the canonical builder is reproducible.
+  repo reproducible --root "$ROOT" --baseline "$ROOT/.registry-baseline"
+fi
 "$PY" -m pytest -q "$ROOT/tests"
 OUT="$(mktemp -d)"
 trap 'rm -r "$OUT"' EXIT

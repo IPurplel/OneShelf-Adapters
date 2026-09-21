@@ -21,7 +21,9 @@ For each adapter, with the pinned OneShelf Core:
 5. plugin API compatibility with the pinned Core;
 6. **the packaged tests**, offline against the fixtures — mandatory;
 7. against the published Registry: a published id+version never changes content, and versions never go
-   backwards.
+   backwards;
+8. reproducibility: every already-published version rebuilds to exactly its published bytes. CI runs on a
+   different platform from the one that publishes, so this proves the builder is platform-independent.
 
 CI also builds a Registry from the whole tree and verifies it with Core's Registry parser — the contract
 OneShelf itself depends on — and runs the repository policy tests in `tests/`.
