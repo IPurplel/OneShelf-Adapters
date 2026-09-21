@@ -1,0 +1,29 @@
+# ADVISORY: the same checks against OneShelf's latest main instead of the pinned commit, to notice early
+# when a Core change will need adapters to adapt. Never blocks merges; the pinned check is authoritative.
+name: Compatibility with OneShelf main (advisory)
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latest-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install OneShelf tooling from main
+        run: |
+          git clone --depth=1 https://github.com/IPurplel/OneShelf.git "$RUNNER_TEMP/oneshelf"
+          ONESHELF_CORE_PATH="$RUNNER_TEMP/oneshelf" ./tools/bootstrap
+      - run: ./tools/check-all

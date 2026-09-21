@@ -1,0 +1,35 @@
+# Validate adapters: runs on every pull request, including from forks, with no secrets and read-only
+# permissions. It never signs or publishes anything.
+name: Validate adapters
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install the pinned OneShelf tooling
+        run: ./tools/bootstrap
+      - name: Fetch the published Registry (a published id+version must not change)
+        run: ./tools/fetch-baseline
+        env:
+          REGISTRY_REPO: https://github.com/${{ github.repository }}.git
+      - name: Check every adapter, the repository policy, and the Registry contract with OneShelf Core
+        run: ./tools/check-all
