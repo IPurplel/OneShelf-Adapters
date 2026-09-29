@@ -1,0 +1,22 @@
+# The site has no search. Its Arabic index is the whole collection on one page, so the recipe returns it
+# complete and OneShelf's own title matching (Master §6.4) keeps what the query matches. A story's key is
+# its four-digit African Storybook number, which is the same in every language.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/stories/ar/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.card"}
+  fields:
+    listing_key: {css: ".card-header a[href^='/stories/ar/']::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '^/stories/ar/([0-9]{4})/$', group: 1}}]}
+    title: {css: ".card-header h3::text", required: true, transforms: [trim]}
+    cover_url: {css: ".card-image img::attr(src)", transforms: [normalize_url]}
+    language: {template: "ar"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

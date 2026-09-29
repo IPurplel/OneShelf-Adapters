@@ -1,0 +1,47 @@
+cases:
+# The whole Arabic index: 40 stories, vocalised Arabic titles kept exactly as written.
+- capability: search
+  inputs: {query: أقرأ}
+  fixtures:
+  - url: https://www.storybookscanada.ca/stories/ar/
+    file: fixtures/index-ar.html
+  expect:
+    min_items: 40
+    complete: true
+    fields_present: [listing_key, title, cover_url, language]
+    first: {listing_key: '0087', title: أُحِبُّ أَنْ أَقْرَأَ!, language: ar,
+            cover_url: 'https://www.storybookscanada.ca/images/0087/01.jpg'}
+- capability: work
+  inputs: {listing_key: '0087'}
+  fixtures:
+  - url: https://www.storybookscanada.ca/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    fields_present: [title, creator, cover_url]
+    first: {title: أُحِبُّ أَنْ أَقْرَأَ!, creator: Letta Machoga, language: ar}
+- capability: catalog
+  inputs: {listing_key: '0087'}
+  fixtures:
+  - url: https://www.storybookscanada.ca/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '0087', unit_type: one_shot}
+# A number the site does not have: its "404" page offers no PDF, so there is no unit.
+- capability: catalog
+  inputs: {listing_key: '9999'}
+  fixtures:
+  - url: https://www.storybookscanada.ca/stories/ar/9999/
+    file: fixtures/story-missing.html
+  expect:
+    min_items: 0
+- capability: downloads
+  inputs: {unit_key: '0087'}
+  fixtures:
+  - url: https://www.storybookscanada.ca/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.storybookscanada.ca/pdf/ar/ar-0087_read.pdf', format: pdf, language: ar}

@@ -1,0 +1,16 @@
+# A number the site does not have answers 200 with a "404" page whose title lacks the story title, so the
+# required title is missing and the request fails instead of describing an empty story.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/stories/ar/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "title::text", required: true, transforms: [{regex_extract: {pattern: '^(.+) - Storybooks Canada$', group: 1}}, trim]}
+    creator: {xpath: "//h3[span[@data-tooltip='Written by']]/text()", transforms: [trim]}
+    cover_url: {css: "#text01 img.img-responsive::attr(src)", transforms: [normalize_url]}
+    language: {template: "ar"}
+    content_type: {template: "book"}

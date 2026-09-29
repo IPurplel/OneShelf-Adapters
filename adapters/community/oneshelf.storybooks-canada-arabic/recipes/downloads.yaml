@@ -1,0 +1,18 @@
+# The monolingual Arabic reading edition. The page also offers wordless, imageless, bilingual and booklet
+# editions; only this one is the story in the unit's language as written and illustrated.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/stories/ar/{unit_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[starts-with(@href, '/pdf/ar/ar-')][contains(@href, '_read.pdf')])[1]"}
+  fields:
+    url: {css: "::attr(href)", required: true, transforms: [normalize_url]}
+    format: {template: "pdf", required: true}
+    language: {template: "ar"}
+pagination:
+  mode: none
+  complete_when: single_response

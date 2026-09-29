@@ -1,0 +1,8 @@
+base_url: https://www.storybookscanada.ca
+url_patterns:
+  - pattern: '^https://www\.storybookscanada\.ca/stories/ar/([0-9]{4})/?'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.storybooks-canada-arabic
+name: Storybooks Canada (Arabic)
+version: 0.1.0
+api: '1.0'
+description: >-
+  The Arabic stories of Storybooks Canada — illustrated children's stories from the African Storybook,
+  openly licensed (Creative Commons), levelled for early readers. A story is one Reading Unit,
+  downloaded as the site's monolingual Arabic PDF. The site has no search: its whole Arabic index (40
+  stories) is one page, and OneShelf matches titles against it. No page reader (the site's pictures are
+  wordless; the words are in the PDF).
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [www.storybookscanada.ca]
+defaults:
+  language: ar
+  content_type: book
