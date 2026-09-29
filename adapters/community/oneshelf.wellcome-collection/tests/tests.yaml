@@ -1,0 +1,76 @@
+cases:
+# Arabic manuscripts, found with an Arabic query: tashkeel and internal line breaks in the catalogue's
+# titles are kept as text and collapsed as whitespace; "ara" becomes the "ar" the rest of OneShelf uses.
+- capability: search
+  inputs: {query: الاسطرلاب, page: 1}
+  fixtures:
+  - url: https://api.wellcomecollection.org/catalogue/v2/works?query=%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D8%B1%D9%84%D8%A7%D8%A8&availabilities=online&items.locations.accessConditions.status=%21restricted%2C%21closed%2C%21permission-required%2C%21licensed-resources%2C%21unavailable%2C%21open-with-advisory&include=languages%2Ccontributors&pageSize=50&page=1
+    file: fixtures/search-ar.json
+  expect:
+    min_items: 4
+    complete: true
+    fields_present: [listing_key, title, language, cover_url]
+    first: {listing_key: xpq35yqu, title: كتاب الاسطرلاب, language: ar, creator: Anonymous}
+- capability: work
+  inputs: {listing_key: xpq35yqu}
+  fixtures:
+  - url: https://api.wellcomecollection.org/catalogue/v2/works/xpq35yqu?include=languages%2Ccontributors
+    file: fixtures/work.json
+  expect:
+    fields_present: [title, cover_url, language]
+    first: {title: كتاب الاسطرلاب, language: ar}
+# Open work: its one digitised copy is its one Reading Unit.
+- capability: catalog
+  inputs: {listing_key: xpq35yqu}
+  fixtures:
+  - url: https://api.wellcomecollection.org/catalogue/v2/works?query=xpq35yqu&availabilities=online&items.locations.accessConditions.status=%21restricted%2C%21closed%2C%21permission-required%2C%21licensed-resources%2C%21unavailable%2C%21open-with-advisory&include=items
+    file: fixtures/catalog-open.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: b20299084, unit_type: one_shot, url: 'https://iiif.wellcomecollection.org/presentation/v2/b20299084'}
+# A work holding one open and one restricted copy (a5aeke2y, captured 2026-09-29): the access filter
+# returns nothing, so neither copy becomes a unit.
+- capability: catalog
+  inputs: {listing_key: a5aeke2y}
+  fixtures:
+  - url: https://api.wellcomecollection.org/catalogue/v2/works?query=a5aeke2y&availabilities=online&items.locations.accessConditions.status=%21restricted%2C%21closed%2C%21permission-required%2C%21licensed-resources%2C%21unavailable%2C%21open-with-advisory&include=items
+    file: fixtures/catalog-mixed.json
+  expect:
+    min_items: 0
+- capability: reader
+  inputs: {unit_key: b20299084}
+  fixtures:
+  - url: https://iiif.wellcomecollection.org/presentation/v3/b20299084
+    file: fixtures/manifest-open.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://iiif.wellcomecollection.org/image/b20299084_WMS_Arabic_855_0001.jp2/full/1338,998/0/default.jpg'}
+# The restricted copy's manifest still lists page images and a PDF, behind Wellcome's login: nothing is
+# offered, and the empty list is incomplete, so no download or reading can start from it.
+- capability: reader
+  inputs: {unit_key: b18109974}
+  fixtures:
+  - url: https://iiif.wellcomecollection.org/presentation/v3/b18109974
+    file: fixtures/manifest-restricted.json
+  expect:
+    min_items: 0
+    complete: false
+- capability: downloads
+  inputs: {unit_key: b20299084}
+  fixtures:
+  - url: https://iiif.wellcomecollection.org/presentation/v3/b20299084
+    file: fixtures/manifest-open.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://iiif.wellcomecollection.org/pdf/b20299084', format: pdf}
+- capability: downloads
+  inputs: {unit_key: b18109974}
+  fixtures:
+  - url: https://iiif.wellcomecollection.org/presentation/v3/b18109974
+    file: fixtures/manifest-restricted.json
+  expect:
+    min_items: 0
+    complete: false

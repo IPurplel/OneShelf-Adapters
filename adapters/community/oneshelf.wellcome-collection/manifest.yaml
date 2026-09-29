@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.wellcome-collection
+name: Wellcome Collection (open digitised)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Digitised books, manuscripts and archives from Wellcome Collection that are open to everyone online —
+  including its Arabic and Persian medical and scientific manuscripts. Only works none of whose copies
+  is restricted, closed, permission-only, licensed, unavailable or behind an advisory click-through are
+  offered: the Catalogue API's own access conditions filter every search and catalog request, and a
+  manifest must also declare itself open before its pages or PDF are offered. One digitised copy is one
+  Reading Unit, read page by page (IIIF) or downloaded as Wellcome's PDF. Uses the public Catalogue API
+  and IIIF; no account.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader, downloads]
+network:
+  domains: [api.wellcomecollection.org, iiif.wellcomecollection.org]

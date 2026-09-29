@@ -1,0 +1,134 @@
+{
+ "items": [
+  {
+   "locations": [
+    {
+     "url": "https://iiif.wellcomecollection.org/presentation/v2/b20299084",
+     "license": {
+      "id": "pdm",
+      "type": "License",
+      "label": "Public Domain Mark",
+      "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+     },
+     "accessConditions": [
+      {
+       "method": {
+        "id": "view-online",
+        "type": "AccessMethod",
+        "label": "View online"
+       },
+       "status": {
+        "id": "open",
+        "type": "AccessStatus",
+        "label": "Open"
+       },
+       "type": "AccessCondition"
+      }
+     ],
+     "locationType": {
+      "id": "iiif-presentation",
+      "type": "LocationType",
+      "label": "IIIF Presentation API"
+     },
+     "type": "DigitalLocation"
+    }
+   ],
+   "type": "Item"
+  },
+  {
+   "id": "jg8pb637",
+   "locations": [
+    {
+     "label": "Closed stores",
+     "accessConditions": [
+      {
+       "method": {
+        "id": "manual-request",
+        "type": "AccessMethod",
+        "label": "Manual request"
+       },
+       "status": {
+        "id": "by-appointment",
+        "type": "AccessStatus",
+        "label": "By appointment"
+       },
+       "note": "Please consult the digitised version as this item is fragile. Email library@wellcomecollection.org to request access to the physical item",
+       "type": "AccessCondition"
+      }
+     ],
+     "shelfmark": "MS Arabic 855",
+     "locationType": {
+      "id": "closed-stores",
+      "type": "LocationType",
+      "label": "Closed stores"
+     },
+     "type": "PhysicalLocation"
+    }
+   ],
+   "type": "Item"
+  }
+ ],
+ "workType": {
+  "id": "h",
+  "type": "Format",
+  "label": "Archives and manuscripts"
+ },
+ "thumbnail": {
+  "url": "https://iiif.wellcomecollection.org/thumbs/b20299084_WMS_Arabic_855_0001.jp2/full/!200,200/0/default.jpg",
+  "license": {
+   "id": "pdm",
+   "type": "License",
+   "label": "Public Domain Mark",
+   "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+  },
+  "accessConditions": [],
+  "locationType": {
+   "id": "thumbnail-image",
+   "type": "LocationType",
+   "label": "Thumbnail image"
+  },
+  "type": "DigitalLocation"
+ },
+ "alternativeTitles": [
+  "Kitāb al-asṭurlāb"
+ ],
+ "id": "xpq35yqu",
+ "languages": [
+  {
+   "id": "ara",
+   "type": "Language",
+   "label": "Arabic"
+  }
+ ],
+ "title": "كتاب الاسطرلاب",
+ "type": "Work",
+ "contributors": [
+  {
+   "agent": {
+    "id": "ugyr84np",
+    "label": "Anonymous",
+    "type": "Person"
+   },
+   "roles": [
+    {
+     "label": "author",
+     "type": "ContributionRole"
+    }
+   ],
+   "primary": true,
+   "type": "Contributor"
+  }
+ ],
+ "availabilities": [
+  {
+   "id": "online",
+   "type": "Availability",
+   "label": "Online"
+  },
+  {
+   "id": "closed-stores",
+   "type": "Availability",
+   "label": "Closed stores"
+  }
+ ]
+}

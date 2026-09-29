@@ -1,0 +1,262 @@
+{
+ "type": "ResultList",
+ "pageSize": 50,
+ "totalPages": 1,
+ "totalResults": 4,
+ "results": [
+  {
+   "workType": {
+    "id": "h",
+    "type": "Format",
+    "label": "Archives and manuscripts"
+   },
+   "thumbnail": {
+    "url": "https://iiif.wellcomecollection.org/thumbs/b20299084_WMS_Arabic_855_0001.jp2/full/!200,200/0/default.jpg",
+    "license": {
+     "id": "pdm",
+     "type": "License",
+     "label": "Public Domain Mark",
+     "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+    },
+    "accessConditions": [],
+    "locationType": {
+     "id": "thumbnail-image",
+     "type": "LocationType",
+     "label": "Thumbnail image"
+    },
+    "type": "DigitalLocation"
+   },
+   "alternativeTitles": [
+    "Kitāb al-asṭurlāb"
+   ],
+   "id": "xpq35yqu",
+   "languages": [
+    {
+     "id": "ara",
+     "type": "Language",
+     "label": "Arabic"
+    }
+   ],
+   "title": "كتاب الاسطرلاب",
+   "type": "Work",
+   "contributors": [
+    {
+     "agent": {
+      "id": "ugyr84np",
+      "label": "Anonymous",
+      "type": "Person"
+     },
+     "roles": [
+      {
+       "label": "author",
+       "type": "ContributionRole"
+      }
+     ],
+     "primary": true,
+     "type": "Contributor"
+    }
+   ],
+   "availabilities": [
+    {
+     "id": "online",
+     "type": "Availability",
+     "label": "Online"
+    },
+    {
+     "id": "closed-stores",
+     "type": "Availability",
+     "label": "Closed stores"
+    }
+   ]
+  },
+  {
+   "workType": {
+    "id": "h",
+    "type": "Format",
+    "label": "Archives and manuscripts"
+   },
+   "thumbnail": {
+    "url": "https://iiif.wellcomecollection.org/thumbs/b20296605_WMS_Arabic_372_0001.jp2/full/!200,200/0/default.jpg",
+    "license": {
+     "id": "pdm",
+     "type": "License",
+     "label": "Public Domain Mark",
+     "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+    },
+    "accessConditions": [],
+    "locationType": {
+     "id": "thumbnail-image",
+     "type": "LocationType",
+     "label": "Thumbnail image"
+    },
+    "type": "DigitalLocation"
+   },
+   "alternativeTitles": [
+    "Bahjat al-albāb fī ʿilm al-asṭurlāb"
+   ],
+   "id": "e7z3uuuy",
+   "languages": [
+    {
+     "id": "ara",
+     "type": "Language",
+     "label": "Arabic"
+    }
+   ],
+   "title": " بهجة الالباب فى علم الاسطرلاب\n                  \n              ",
+   "type": "Work",
+   "contributors": [
+    {
+     "agent": {
+      "id": "gxumnsaf",
+      "label": "عبد الحليم بن سويلم زاده",
+      "type": "Person"
+     },
+     "roles": [
+      {
+       "label": "author",
+       "type": "ContributionRole"
+      }
+     ],
+     "primary": true,
+     "type": "Contributor"
+    }
+   ],
+   "availabilities": [
+    {
+     "id": "closed-stores",
+     "type": "Availability",
+     "label": "Closed stores"
+    },
+    {
+     "id": "online",
+     "type": "Availability",
+     "label": "Online"
+    }
+   ]
+  },
+  {
+   "workType": {
+    "id": "h",
+    "type": "Format",
+    "label": "Archives and manuscripts"
+   },
+   "thumbnail": {
+    "url": "https://iiif.wellcomecollection.org/thumbs/b20296526_WMS_Arabic_348_0001.jp2/full/!200,200/0/default.jpg",
+    "license": {
+     "id": "pdm",
+     "type": "License",
+     "label": "Public Domain Mark",
+     "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+    },
+    "accessConditions": [],
+    "locationType": {
+     "id": "thumbnail-image",
+     "type": "LocationType",
+     "label": "Thumbnail image"
+    },
+    "type": "DigitalLocation"
+   },
+   "alternativeTitles": [
+    "Rajaz fī al-kawākib al-thābitah\n                al-marsūmah ʿalá al-asṭurlāb"
+   ],
+   "id": "geyeehhf",
+   "languages": [
+    {
+     "id": "ara",
+     "type": "Language",
+     "label": "Arabic"
+    }
+   ],
+   "title": " رَجَزٌ ڢِى الكَوَاكِبِ الثَّابِتَةِ\n                المَرْسُومَةِ عَلَى اَلَاسْطُرْلَابِ ",
+   "type": "Work",
+   "contributors": [
+    {
+     "agent": {
+      "id": "uyudvs3j",
+      "label": "يحيى بن ابي بكر المسطاسي",
+      "type": "Person"
+     },
+     "roles": [
+      {
+       "label": "author",
+       "type": "ContributionRole"
+      }
+     ],
+     "primary": true,
+     "type": "Contributor"
+    }
+   ],
+   "availabilities": [
+    {
+     "id": "online",
+     "type": "Availability",
+     "label": "Online"
+    },
+    {
+     "id": "closed-stores",
+     "type": "Availability",
+     "label": "Closed stores"
+    }
+   ]
+  },
+  {
+   "workType": {
+    "id": "h",
+    "type": "Format",
+    "label": "Archives and manuscripts"
+   },
+   "thumbnail": {
+    "url": "https://iiif.wellcomecollection.org/thumbs/b20296514_WMS_Arabic_347_0001.jp2/full/!200,200/0/default.jpg",
+    "license": {
+     "id": "pdm",
+     "type": "License",
+     "label": "Public Domain Mark",
+     "url": "https://creativecommons.org/share-your-work/public-domain/pdm/"
+    },
+    "accessConditions": [],
+    "locationType": {
+     "id": "thumbnail-image",
+     "type": "LocationType",
+     "label": "Thumbnail image"
+    },
+    "type": "DigitalLocation"
+   },
+   "alternativeTitles": [
+    "Risālat al-asṭurlāb"
+   ],
+   "id": "t9xjgtns",
+   "languages": [],
+   "title": " رسالة الأسطرلاب\n                  fol.13b\n              ",
+   "type": "Work",
+   "contributors": [
+    {
+     "agent": {
+      "id": "wxc2yu96",
+      "label": "سبط المارديني، بدر الدين محمد ابن\n                  محمد",
+      "type": "Person"
+     },
+     "roles": [
+      {
+       "label": "author",
+       "type": "ContributionRole"
+      }
+     ],
+     "primary": true,
+     "type": "Contributor"
+    }
+   ],
+   "availabilities": [
+    {
+     "id": "closed-stores",
+     "type": "Availability",
+     "label": "Closed stores"
+    },
+    {
+     "id": "online",
+     "type": "Availability",
+     "label": "Online"
+    }
+   ]
+  }
+ ]
+}

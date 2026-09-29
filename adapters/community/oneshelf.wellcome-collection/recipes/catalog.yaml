@@ -1,0 +1,21 @@
+# One Reading Unit per digitised copy (its IIIF manifest, keyed by the b-number Wellcome gives it).
+# The work is fetched through the same access filter as search, by its id: a work with any copy that is
+# not open returns nothing here, so none of its copies becomes a unit. Only IIIF manifests become units;
+# anything else in the list has no key, is refused, and leaves the catalogue incomplete rather than wrong.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/catalogue/v2/works?query={listing_key}&availabilities=online&items.locations.accessConditions.status=%21restricted%2C%21closed%2C%21permission-required%2C%21licensed-resources%2C%21unavailable%2C%21open-with-advisory&include=items"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.results[*].items[*].locations[*].url"}
+  fields:
+    unit_key: {json: "$", required: true,
+               transforms: [{regex_extract: {pattern: '^https://iiif\.wellcomecollection\.org/presentation/v2/(b[0-9x]+)$', group: 1}}]}
+    url: {json: "$"}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

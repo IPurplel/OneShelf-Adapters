@@ -1,0 +1,11 @@
+base_url: https://api.wellcomecollection.org
+url_patterns:
+  - pattern: '^https://wellcomecollection\.org/works/([a-z0-9]{8})'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 30
+  concurrency: 1
+timeouts:
+  # Wellcome builds a PDF on request; a large volume takes a while to start.
+  read_seconds: 120

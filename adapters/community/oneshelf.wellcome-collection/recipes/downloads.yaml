@@ -1,0 +1,20 @@
+# The whole copy as the PDF Wellcome builds, under the same condition as reader.yaml: only while the
+# manifest declares itself open. The PDF is the first rendering (a text rendering may follow it).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "https://iiif.wellcomecollection.org/presentation/v3/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    access: {json: "$.services[2].label.en[0]"}
+  items: {json: "$.rendering[0].id"}
+  fields:
+    url: {template: "{item}|{access}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://iiif\.wellcomecollection\.org/pdf/[^|]+)\|open$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

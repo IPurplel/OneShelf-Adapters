@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/catalogue/v2/works/{listing_key:path}?include=languages%2Ccontributors"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.title", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: ' '}}, trim]}
+    creator: {json: "$.contributors[0].agent.label", transforms: [trim]}
+    description: {json: "$.description", transforms: [trim]}
+    cover_url: {json: "$.thumbnail.url"}
+    language: {json: "$.languages[0].id", transforms: [{replace: {old: ara, new: ar}}, {replace: {old: eng, new: en}}, {replace: {old: fre, new: fr}}, {replace: {old: ger, new: de}}, {replace: {old: lat, new: la}}, {replace: {old: per, new: fa}}, {replace: {old: tur, new: tr}}, {replace: {old: heb, new: he}}, {replace: {old: ita, new: it}}, {replace: {old: spa, new: es}}, {replace: {old: dut, new: nl}}, {replace: {old: gre, new: el}}, {replace: {old: urd, new: ur}}, {regex_extract: {pattern: "^([a-z]{2}|ota|syr)$", group: 1}}]}

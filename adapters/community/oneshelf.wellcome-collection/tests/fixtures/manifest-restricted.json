@@ -1,0 +1,276 @@
+{
+ "@context": [
+  "http://iiif.io/api/auth/2/context.json",
+  "http://iiif.io/api/presentation/3/context.json"
+ ],
+ "id": "https://iiif.wellcomecollection.org/presentation/b18109974",
+ "type": "Manifest",
+ "label": {
+  "en": [
+   "Pharmacopoeia Londinensis : in qua medicamenta antiqua et nova usitatissima, sedulo collecta, accuratissime examinata, quotidiana experientia confirmata describuntur ... Revisa, denuo, recusa, emendatior, auctior."
+  ]
+ },
+ "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+ "rendering": [
+  {
+   "id": "https://iiif.wellcomecollection.org/pdf/b18109974",
+   "type": "Text",
+   "label": {
+    "en": [
+     "View as PDF"
+    ]
+   },
+   "format": "application/pdf"
+  }
+ ],
+ "behavior": [
+  "paged"
+ ],
+ "services": [
+  {
+   "id": "https://iiif.wellcomecollection.org/presentation/b18109974#tracking",
+   "type": "Text",
+   "profile": "http://universalviewer.io/tracking-extensions-profile",
+   "label": {
+    "en": [
+     "Format: Monograph, Institution: n/a, Identifier: b18109974, Digicode: digukmhl, Collection code: n/a"
+    ]
+   }
+  },
+  {
+   "id": "https://iiif.wellcomecollection.org/presentation/b18109974#timestamp",
+   "type": "Text",
+   "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
+   "label": {
+    "none": [
+     "2025-09-04T21:35:50.5974687Z"
+    ]
+   }
+  },
+  {
+   "@id": "https://iiif.wellcomecollection.org/auth/restrictedlogin",
+   "@type": "AuthCookieService1",
+   "profile": "http://iiif.io/api/auth/1/external",
+   "label": "Restricted material",
+   "description": "<p>This image cannot be viewed online.</p><p>Wellcome Collection members can request access to restricted materials for viewing in the Library.</p>",
+   "service": [
+    {
+     "@id": "https://iiif.wellcomecollection.org/auth/token",
+     "@type": "AuthTokenService1",
+     "profile": "http://iiif.io/api/auth/1/token"
+    },
+    {
+     "@id": "https://iiif.wellcomecollection.org/auth/logout",
+     "@type": "AuthLogoutService1",
+     "profile": "http://iiif.io/api/auth/1/logout",
+     "label": "Log out of Wellcome Collection"
+    }
+   ],
+   "failureHeader": "Restricted material",
+   "failureDescription": "<p>This image cannot be viewed online.</p><p>Wellcome Collection members can request access to restricted materials for viewing in the Library.</p>"
+  },
+  {
+   "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin",
+   "type": "AuthAccessService2",
+   "profile": "external",
+   "label": {
+    "en": [
+     "Restricted material"
+    ]
+   },
+   "service": [
+    {
+     "id": "https://iiif.wellcomecollection.org/auth/v2/access/token",
+     "type": "AuthAccessTokenService2"
+    },
+    {
+     "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin/logout",
+     "type": "AuthLogoutService2",
+     "label": {
+      "en": [
+       "Log out of Wellcome Collection"
+      ]
+     }
+    }
+   ],
+   "heading": {
+    "en": [
+     "Restricted material"
+    ]
+   },
+   "note": {
+    "en": [
+     "<p>This image cannot be viewed online.</p><p>Wellcome Collection members can request access to restricted materials for viewing in the Library.</p>"
+    ]
+   }
+  },
+  {
+   "id": "https://iiif.wellcomecollection.org/presentation/b18109974#accesscontrolhints",
+   "type": "Text",
+   "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+   "label": {
+    "en": [
+     "credentials"
+    ]
+   },
+   "metadata": [
+    {
+     "label": {
+      "en": [
+       "Restricted files"
+      ]
+     },
+     "value": {
+      "none": [
+       "256"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0001.jp2",
+   "type": "Canvas",
+   "label": {
+    "none": [
+     "-"
+    ]
+   },
+   "width": 3264,
+   "height": 4676,
+   "items": [
+    {
+     "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0001.jp2/painting",
+     "type": "AnnotationPage",
+     "items": [
+      {
+       "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0001.jp2/painting/anno",
+       "type": "Annotation",
+       "motivation": "painting",
+       "body": {
+        "id": "https://iiif.wellcomecollection.org/image/b18109974_0001.jp2/full/3264,4676/0/default.jpg",
+        "type": "Image",
+        "width": 3264,
+        "height": 4676,
+        "format": "image/jpeg",
+        "service": [
+         {
+          "@id": "https://iiif.wellcomecollection.org/image/b18109974_0001.jp2",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json",
+          "width": 3264,
+          "height": 4676,
+          "service": [
+           {
+            "@id": "https://iiif.wellcomecollection.org/auth/restrictedlogin",
+            "@type": "AuthCookieService1"
+           },
+           {
+            "id": "https://iiif.wellcomecollection.org/auth/v2/probe/b18109974_0001.jp2",
+            "type": "AuthProbeService2",
+            "service": [
+             {
+              "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin",
+              "type": "AuthAccessService2"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "@id": "https://iiif.wellcomecollection.org/auth/restrictedlogin",
+          "@type": "AuthCookieService1"
+         },
+         {
+          "id": "https://iiif.wellcomecollection.org/auth/v2/probe/b18109974_0001.jp2",
+          "type": "AuthProbeService2",
+          "service": [
+           {
+            "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin",
+            "type": "AuthAccessService2"
+           }
+          ]
+         }
+        ]
+       },
+       "target": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0001.jp2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0002.jp2",
+   "type": "Canvas",
+   "label": {
+    "none": [
+     "-"
+    ]
+   },
+   "width": 3136,
+   "height": 4648,
+   "items": [
+    {
+     "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0002.jp2/painting",
+     "type": "AnnotationPage",
+     "items": [
+      {
+       "id": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0002.jp2/painting/anno",
+       "type": "Annotation",
+       "motivation": "painting",
+       "body": {
+        "id": "https://iiif.wellcomecollection.org/image/b18109974_0002.jp2/full/3136,4648/0/default.jpg",
+        "type": "Image",
+        "width": 3136,
+        "height": 4648,
+        "format": "image/jpeg",
+        "service": [
+         {
+          "@id": "https://iiif.wellcomecollection.org/image/b18109974_0002.jp2",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json",
+          "width": 3136,
+          "height": 4648,
+          "service": [
+           {
+            "@id": "https://iiif.wellcomecollection.org/auth/restrictedlogin",
+            "@type": "AuthCookieService1"
+           },
+           {
+            "id": "https://iiif.wellcomecollection.org/auth/v2/probe/b18109974_0002.jp2",
+            "type": "AuthProbeService2",
+            "service": [
+             {
+              "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin",
+              "type": "AuthAccessService2"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "@id": "https://iiif.wellcomecollection.org/auth/restrictedlogin",
+          "@type": "AuthCookieService1"
+         },
+         {
+          "id": "https://iiif.wellcomecollection.org/auth/v2/probe/b18109974_0002.jp2",
+          "type": "AuthProbeService2",
+          "service": [
+           {
+            "id": "https://iiif.wellcomecollection.org/auth/v2/access/restrictedlogin",
+            "type": "AuthAccessService2"
+           }
+          ]
+         }
+        ]
+       },
+       "target": "https://iiif.wellcomecollection.org/presentation/b18109974/canvases/b18109974_0002.jp2"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

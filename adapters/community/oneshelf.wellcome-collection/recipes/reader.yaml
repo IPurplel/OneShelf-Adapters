@@ -1,0 +1,21 @@
+# Every page of one digitised copy, in the manifest's canvas order. A page is offered only while the
+# manifest itself says it is open: Wellcome puts that access hint at services[2], and a restricted
+# manifest has an authentication service there instead. The hint joins each image address, and only
+# "…|open" survives the pattern — anything else yields no pages, and an incomplete list is never used.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "https://iiif.wellcomecollection.org/presentation/v3/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    access: {json: "$.services[2].label.en[0]"}
+  items: {json: "$.items[*].items[0].items[0].body.id"}
+  fields:
+    url: {template: "{item}|{access}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://iiif\.wellcomecollection\.org/image/[^|]+)\|open$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

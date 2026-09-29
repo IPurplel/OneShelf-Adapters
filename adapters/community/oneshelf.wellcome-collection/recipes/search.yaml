@@ -1,0 +1,26 @@
+# Only works with an online copy and no location in any access state but open (the API lists the
+# states it knows and rejects unknown ones, so this is the whole list). A work that also holds a
+# restricted copy is left out entirely rather than offered in part.
+capability: search
+inputs: [query, page]
+request:
+  url: "{base_url}/catalogue/v2/works?query={query}&availabilities=online&items.locations.accessConditions.status=%21restricted%2C%21closed%2C%21permission-required%2C%21licensed-resources%2C%21unavailable%2C%21open-with-advisory&include=languages%2Ccontributors&pageSize=50&page={page}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.results[*]"}
+  fields:
+    listing_key: {json: "$.id", required: true}
+    title: {json: "$.title", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: ' '}}, trim]}
+    creator: {json: "$.contributors[0].agent.label", transforms: [trim]}
+    cover_url: {json: "$.thumbnail.url"}
+    # ISO 639-2 as the catalogue gives it, as the two-letter code the rest of OneShelf uses; a code
+    # not mapped here is left Unknown rather than stored in a second spelling of the same language.
+    language: {json: "$.languages[0].id", transforms: [{replace: {old: ara, new: ar}}, {replace: {old: eng, new: en}}, {replace: {old: fre, new: fr}}, {replace: {old: ger, new: de}}, {replace: {old: lat, new: la}}, {replace: {old: per, new: fa}}, {replace: {old: tur, new: tr}}, {replace: {old: heb, new: he}}, {replace: {old: ita, new: it}}, {replace: {old: spa, new: es}}, {replace: {old: dut, new: nl}}, {replace: {old: gre, new: el}}, {replace: {old: urd, new: ur}}, {regex_extract: {pattern: "^([a-z]{2}|ota|syr)$", group: 1}}]}
+pagination:
+  mode: page_number
+  start: 1
+  max_pages: 4
+  stop_when: total_count
+  total: {json: "$.totalResults"}
