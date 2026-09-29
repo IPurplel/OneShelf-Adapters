@@ -36,6 +36,9 @@ from oneshelf.plugins.results import ListResult
 from oneshelf.plugins.runtime import CapabilityError, FetchedResponse, RecipeRequest, RecipeRuntime
 from oneshelf.sources.fetcher import SourceFetcher
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from inspect_source import Robots, _fetch_robots  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 MAX_FILE_BYTES = 150 * 1024 * 1024
 
@@ -186,6 +189,28 @@ async def run(adapter_id: str, args) -> int:
                     checks.append({k: v for k, v in check.items() if v is not None})
                 report["capabilities"][capability]["bytes_checked"] = checks
         report["requests"] = fetcher.log
+        # Every URL the adapter requested, checked against its host's robots.txt (RFC 9309): an adapter may
+        # not use a disallowed path, however well it works (docs/review-policy.md).
+        verdicts: dict[str, Robots | None] = {}
+        requested = [{entry["url"], entry.get("final_url", entry["url"])} for entry in fetcher.log]
+        requested += [{check["url"], check.get("final_url", check["url"])}
+                      for capability in report["capabilities"].values() for check in capability.get("bytes_checked", [])]
+        for urls in requested:
+            for url in urls:
+                host = url.split("/")[2]
+                if host not in verdicts:
+                    record = {"url": f"https://{host}/robots.txt"}
+                    try:
+                        meta = await _fetch_robots(record, policy_for_plugin(package.id, domains=[host], cdn_domains=[],
+                                                                            allow_http=False, dev_test_source_enabled=False))
+                        verdicts[host] = Robots(meta["body"].decode("utf-8", "replace")) if meta["status"] == 200 else None
+                    except Exception as exc:  # unreachable robots.txt is recorded, not guessed at
+                        verdicts[host] = None
+                        report.setdefault("robots_unavailable", {})[host] = f"{type(exc).__name__}: {exc}"
+                robots = verdicts[host]
+                if robots is not None and not robots.can_fetch("OneShelf", url):
+                    failures.append(f"robots.txt disallows {url}")
+        report["robots_checked_hosts"] = sorted(verdicts)
         report["result"] = "PASS" if not failures else "FAIL"
         report["failures"] = failures
         print(json.dumps(report, ensure_ascii=False, indent=1, default=str))
