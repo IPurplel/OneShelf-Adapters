@@ -1,0 +1,16 @@
+# Pressbooks' own metadata for the book, keyed by the book's address slug.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}/wp-json/pressbooks/v2/metadata"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.name", required: true, transforms: [trim]}
+    creator: {json: "$.author[0].name", transforms: [trim]}
+    description: {json: "$.disambiguatingDescription", transforms: [trim]}
+    cover_url: {json: "$.image"}
+    language: {json: "$.inLanguage"}
+    content_type: {template: "book"}

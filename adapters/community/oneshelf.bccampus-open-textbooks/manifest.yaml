@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.bccampus-open-textbooks
+name: BCcampus Open Textbooks (opentextbc.ca)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Open textbooks published by BCcampus on its Pressbooks network, opentextbc.ca. A textbook is one
+  Reading Unit, downloaded as its EPUB export — only while the book's own page offers that export (its
+  files are public) and states a Creative Commons licence. Books of the BCcampus Open Collection that
+  live on other hosts are not covered. No search: the network's book directory ignores its search
+  parameter; a book is added by pasting its opentextbc.ca address.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [opentextbc.ca]
+defaults:
+  language: en
+  content_type: book

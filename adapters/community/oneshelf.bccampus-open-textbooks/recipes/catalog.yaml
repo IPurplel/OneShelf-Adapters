@@ -1,0 +1,18 @@
+# A textbook is one Reading Unit, the Master's one_shot (§4.4) — only while its home page offers the EPUB
+# export (Pressbooks shows "Download this book" only when the files are public) and states a Creative
+# Commons licence (rel="license").
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[substring(@href, string-length(@href) - 22) = 'open/download?type=epub'][//a[@rel='license'][contains(@href, 'creativecommons.org/')]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

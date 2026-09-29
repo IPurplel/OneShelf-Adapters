@@ -1,0 +1,42 @@
+cases:
+- capability: work
+  inputs: {listing_key: projectmanagement}
+  fixtures:
+  - url: https://opentextbc.ca/projectmanagement/wp-json/pressbooks/v2/metadata
+    file: fixtures/metadata-projectmanagement.json
+  expect:
+    fields_present: [title, creator, description, cover_url, language]
+    first: {title: Project Management - 2nd Edition, creator: Adrienne Watt, language: en}
+- capability: catalog
+  inputs: {listing_key: projectmanagement}
+  fixtures:
+  - url: https://opentextbc.ca/projectmanagement/
+    file: fixtures/home-projectmanagement.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: projectmanagement, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: projectmanagement}
+  fixtures:
+  - url: https://opentextbc.ca/projectmanagement/
+    file: fixtures/home-projectmanagement.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://opentextbc.ca/projectmanagement/open/download?type=epub', format: epub}
+# The same page without its download links (a labelled test variant): no unit, no file.
+- capability: catalog
+  inputs: {listing_key: projectmanagement}
+  fixtures:
+  - url: https://opentextbc.ca/projectmanagement/
+    file: fixtures/home-files-not-public.html
+  expect:
+    min_items: 0
+- capability: downloads
+  inputs: {unit_key: projectmanagement}
+  fixtures:
+  - url: https://opentextbc.ca/projectmanagement/
+    file: fixtures/home-files-not-public.html
+  expect:
+    min_items: 0
