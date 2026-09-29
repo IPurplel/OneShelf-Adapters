@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.intechopen
+name: IntechOpen
+version: 0.1.0
+api: '1.0'
+description: >-
+  Open-access scientific books from IntechOpen, every one published under a Creative Commons licence.
+  An IntechOpen book is an edited volume whose chapters are published one by one: the book is the Work
+  and each chapter a Reading Unit, in the book's order and numbering, downloaded as the chapter's PDF.
+  Books grow as chapters are published, and following them works like any series. No search (the
+  site's search is built in the browser); a book is added by pasting its intechopen.com address.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.intechopen.com]
+  cdn_domains: [api.intechopen.com, cdnintech.com]
+defaults:
+  language: en
+  content_type: book

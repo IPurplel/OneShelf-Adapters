@@ -1,0 +1,22 @@
+# The book's chapters as its page lists them, in the book's order: "1. Introductory Chapter: …". The
+# number is the book's own; the key is the chapter's id, which never changes.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/books/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "a.chapter__title[href^='/chapters/']"}
+  order: source_listed
+  fields:
+    unit_key: {css: "::attr(href)", required: true, transforms: [{regex_extract: {pattern: '^/chapters/([0-9]+)$', group: 1}}]}
+    # The whole text of the link: a title can be partly italic ("5. <em>Fusarium</em> Mycotoxins …").
+    title: {xpath: ".", transforms: [trim, {regex_replace: {pattern: '^[0-9]+\.\s*', replacement: ''}}]}
+    number: {xpath: ".", transforms: [trim, {regex_extract: {pattern: '^([0-9]+)\.', group: 1}}]}
+    url: {css: "::attr(href)", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

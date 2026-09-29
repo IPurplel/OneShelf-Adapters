@@ -1,0 +1,38 @@
+cases:
+- capability: work
+  inputs: {listing_key: '1005077'}
+  fixtures:
+  - url: https://www.intechopen.com/books/1005077
+    file: fixtures/book-1005077.html
+  expect:
+    fields_present: [title, creator, description, cover_url]
+    first: {title: Mycotoxins - An Interdisciplinary Study, creator: 'Ioana Cristina Crivei, Romina Alina Marc',
+            cover_url: 'https://cdnintech.com/books/1005077/1789545718-1560614595/web-cover.jpg'}
+- capability: catalog
+  inputs: {listing_key: '1005077'}
+  fixtures:
+  - url: https://www.intechopen.com/books/1005077
+    file: fixtures/book-1005077.html
+  expect:
+    min_items: 6
+    complete: true
+    first: {unit_key: '1263975', number: '1', unit_type: chapter, url: 'https://www.intechopen.com/chapters/1263975',
+            title: 'Introductory Chapter: Mycotoxins in Food and Feed Safety – An Interdisciplinary View'}
+- capability: downloads
+  inputs: {unit_key: '1263975'}
+  fixtures:
+  - url: https://www.intechopen.com/chapters/1263975
+    file: fixtures/chapter-1263975.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.intechopen.com/chapter/pdf-download/1263975', format: pdf}
+- capability: downloads
+  inputs: {unit_key: '999999999'}
+  fixtures:
+  - url: https://www.intechopen.com/chapters/999999999
+    file: fixtures/chapter-1263975.html
+    status: 404
+  expect:
+    min_items: 0
+    complete: false

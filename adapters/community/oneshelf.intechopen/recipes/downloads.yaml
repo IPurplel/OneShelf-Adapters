@@ -1,0 +1,18 @@
+# The chapter's PDF, at the address the site's own page state gives every chapter
+# ("downloadPdfUrl": "/chapter/pdf-download/<id>"); it redirects to api.intechopen.com. The chapter page
+# is requested first, so a chapter that does not exist fails here instead of downloading an error page.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/chapters/{unit_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//h1)[1]"}
+  fields:
+    url: {template: "https://www.intechopen.com/chapter/pdf-download/{unit_key}", required: true}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response
