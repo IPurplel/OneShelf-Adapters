@@ -1,0 +1,21 @@
+# Lever Press's catalogue on Fulcrum, in the JSON Fulcrum offers beside its own search page (15 a page).
+capability: search
+inputs: [query, page]
+request:
+  url: "{base_url}/leverpress.json?locale=en&q={query}&page={page}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.data[*]"}
+  fields:
+    listing_key: {json: "$.id", required: true, transforms: [{regex_extract: {pattern: '^([a-z0-9]{9})$', group: 1}}]}
+    title: {json: "$.attributes.title", required: true, transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}
+pagination:
+  mode: page_number
+  start: 1
+  max_pages: 3
+  stop_when: total_count
+  total: {json: "$.meta.pages.total_count"}

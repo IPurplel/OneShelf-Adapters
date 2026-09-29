@@ -1,0 +1,17 @@
+# The book's EPUB and PDF from its Download menu, in the page's order (EPUB first), each typed by the
+# page's own data-rep-type — under the same condition as catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/concern/monographs/{unit_key:path}?locale=en"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//ul[contains(@class, 'monograph-catalog-rep-downloads')]//a[@data-rep-type='epub' or @data-rep-type='pdf'][//div[@class='access']/img[@alt='Open Access']][//a[contains(@href, 'creativecommons.org/licenses/')]]"}
+  fields:
+    url: {xpath: "@href", required: true, transforms: [normalize_url]}
+    format: {xpath: "@data-rep-type", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

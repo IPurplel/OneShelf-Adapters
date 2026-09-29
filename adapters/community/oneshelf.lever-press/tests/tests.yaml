@@ -1,0 +1,51 @@
+cases:
+- capability: search
+  inputs: {query: avant-garde, page: 1}
+  fixtures:
+  - url: https://www.fulcrum.org/leverpress.json?locale=en&q=avant-garde&page=1
+    file: fixtures/search-avant-garde.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {listing_key: pk02cf39x, title: 'Travels with Mina Loy: Navigating the Avant-Garde'}
+- capability: work
+  inputs: {listing_key: pk02cf39x}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/pk02cf39x?locale=en
+    file: fixtures/monograph-pk02cf39x.html
+  expect:
+    fields_present: [title, creator]
+    first: {title: 'Travels with Mina Loy: Navigating the Avant-Garde', creator: 'Suzanne W. Churchill, Linda A. Kinnahan and Susan Rosenbaum'}
+- capability: catalog
+  inputs: {listing_key: pk02cf39x}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/pk02cf39x?locale=en
+    file: fixtures/monograph-pk02cf39x.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: pk02cf39x, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: pk02cf39x}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/pk02cf39x?locale=en
+    file: fixtures/monograph-pk02cf39x.html
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://www.fulcrum.org/ebooks/9p290d61b/download?locale=en', format: epub}
+# The same page without its Open Access indicator (a labelled test variant): nothing is offered.
+- capability: catalog
+  inputs: {listing_key: pk02cf39x}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/pk02cf39x?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    min_items: 0
+- capability: downloads
+  inputs: {unit_key: pk02cf39x}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/pk02cf39x?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    min_items: 0

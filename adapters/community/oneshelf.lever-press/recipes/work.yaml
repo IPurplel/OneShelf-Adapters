@@ -1,0 +1,13 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/concern/monographs/{listing_key:path}?locale=en"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1::text", required: true, transforms: [trim]}
+    creator: {css: "span.authors::text", transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}
