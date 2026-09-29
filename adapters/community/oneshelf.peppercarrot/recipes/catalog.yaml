@@ -1,0 +1,24 @@
+# The episode list in the track's language. The site lists every episode in every language and marks
+# the ones not translated into it with figure.notranslation — their pages show the English images
+# instead — so only unmarked episodes are this translation's units. Newest first on the page; reversed
+# into reading order. The number comes from the episode's own id (ep08_…), not the translated caption.
+capability: catalog
+inputs: [listing_key, language]
+request:
+  url: "{base_url}/{listing_key:path}/webcomics/peppercarrot.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "figure.thumbnail:not(.notranslation)"}
+  order: reverse
+  fields:
+    unit_key: {css: "figcaption a::attr(href)", required: true,
+               transforms: [{regex_extract: {pattern: '/webcomic/(ep[0-9]+_[A-Za-z0-9_-]+)\.html$', group: 1}}]}
+    title: {css: "figcaption a::text", transforms: [trim]}
+    number: {css: "figcaption a::attr(href)", transforms: [{regex_extract: {pattern: '/webcomic/ep0*([0-9]+)_', group: 1}}]}
+    url: {css: "figcaption a::attr(href)", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,17 @@
+# The episode's pages in order, from the episode page in the unit's own language: the header (P00) and
+# the pages, at the site's web size. Only images under /0_sources/…/low-res/ are pages.
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "img[src*='/0_sources/'][src*='/low-res/']"}
+  fields:
+    url: {css: "::attr(src)", required: true, transforms: [normalize_url]}
+    page_label: {css: "::attr(alt)", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

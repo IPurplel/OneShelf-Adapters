@@ -1,0 +1,11 @@
+base_url: https://www.peppercarrot.com
+# The listing key is the translation's code, taken from the address. Only codes the site uses as their
+# own ISO 639-1 code are recognised: others differ (its "ga" is Gascon, ISO "oc"; "cn" is Chinese, "zh")
+# and a recipe cannot translate them, so they are left out rather than stored under a wrong language.
+url_patterns:
+  - pattern: '^https://www\.peppercarrot\.com/(ar|bn|br|ca|cs|da|de|el|en|eo|es|fa|fi|fr|gd|gl|he|hi|hr|hu|id|ie|io|it|ja|kw|la|lt|ml|ms|nl|nn|oc|pl|pt|ro|ru|si|sk|sl|sr|su|sv|ta|tr|uk|vi)(?:/|$)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

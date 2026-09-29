@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.peppercarrot
+name: Pepper&Carrot
+version: 0.1.0
+api: '1.0'
+description: >-
+  Pepper&Carrot, David Revoy's free/libre webcomic (CC BY 4.0), read page by page in any of its
+  translations whose site code is also its ISO 639-1 code — Arabic, English, French and 44 more. Each
+  translation is its own listing, reached by pasting a peppercarrot.com address in that language; only
+  episodes the site marks as translated into it are listed, so no episode falls back to English. No
+  search (the site has none) and no downloads.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [www.peppercarrot.com]
+defaults:
+  content_type: comic

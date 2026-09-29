@@ -1,0 +1,31 @@
+cases:
+- capability: work
+  inputs: {listing_key: ar}
+  fixtures:
+  - url: https://www.peppercarrot.com/ar/webcomics/peppercarrot.html
+    file: fixtures/index-ar.html
+  expect:
+    fields_present: [title, creator, description, cover_url, language]
+    first: {title: Pepper&Carrot, language: ar, content_type: comic}
+# Eight of the 39 episodes are translated into Arabic; the other 31 are marked and must not be listed.
+- capability: catalog
+  inputs: {listing_key: ar, language: ar}
+  fixtures:
+  - url: https://www.peppercarrot.com/ar/webcomics/peppercarrot.html
+    file: fixtures/index-ar.html
+  expect:
+    min_items: 8
+    complete: true
+    fields_present: [unit_key, title, number, url]
+    first: {unit_key: ep01_Potion-of-Flight, number: '1', unit_type: chapter, title: 'حلقة ١ : جُرعةُ الطَيران',
+            url: 'https://www.peppercarrot.com/ar/webcomic/ep01_Potion-of-Flight.html'}
+- capability: reader
+  inputs: {unit_key: ep01_Potion-of-Flight, url: 'https://www.peppercarrot.com/ar/webcomic/ep01_Potion-of-Flight.html'}
+  fixtures:
+  - url: https://www.peppercarrot.com/ar/webcomic/ep01_Potion-of-Flight.html
+    file: fixtures/ep01-ar.html
+  expect:
+    min_items: 5
+    complete: true
+    first: {url: 'https://www.peppercarrot.com/0_sources/ep01_Potion-of-Flight/low-res/ar_Pepper-and-Carrot_by-David-Revoy_E01P00.jpg',
+            page_label: Header}
