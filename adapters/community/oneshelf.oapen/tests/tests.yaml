@@ -1,0 +1,43 @@
+cases:
+# Arabic query; seven books in Arabic, English and German, then an empty page ends the list.
+- capability: search
+  inputs: {query: أنساب}
+  fixtures:
+  - url: https://library.oapen.org/rest/search?query=%D8%A3%D9%86%D8%B3%D8%A7%D8%A8&expand=metadata&limit=50&offset=0
+    file: fixtures/search-ar.xml
+  - url: https://library.oapen.org/rest/search?query=%D8%A3%D9%86%D8%B3%D8%A7%D8%A8&expand=metadata&limit=50&offset=50
+    file: fixtures/search-ar-end.xml
+  expect:
+    min_items: 7
+    complete: true
+    fields_present: [listing_key, title, creator, language]
+    first: {listing_key: '116690', title: Ansāb al-Ašrāf, creator: 'al-Balāḏurī, Aḥmad ibn Yaḥyā', language: ar}
+- capability: work
+  inputs: {listing_key: '116690'}
+  fixtures:
+  - url: https://library.oapen.org/rest/handle/20.500.12657/116690?expand=metadata%2Cbitstreams
+    file: fixtures/item-116690.xml
+  expect:
+    fields_present: [title, creator, language, cover_url]
+    first: {title: Ansāb al-Ašrāf, language: ar,
+            cover_url: 'https://library.oapen.org/rest/bitstreams/96346d0b-b1a6-4d98-886e-238aed89b8f4/retrieve'}
+- capability: catalog
+  inputs: {listing_key: '116690'}
+  fixtures:
+  - url: https://library.oapen.org/rest/handle/20.500.12657/116690?expand=metadata%2Cbitstreams
+    file: fixtures/item-116690.xml
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '116690', unit_type: one_shot, title: Ansāb al-Ašrāf}
+# The item carries a PDF, two thumbnails and a text extraction: only the PDF is the book.
+- capability: downloads
+  inputs: {unit_key: '116690'}
+  fixtures:
+  - url: https://library.oapen.org/rest/handle/20.500.12657/116690?expand=metadata%2Cbitstreams
+    file: fixtures/item-116690.xml
+  expect:
+    min_items: 1
+    complete: true
+    first: {format: pdf, size_bytes: '29770548',
+            url: 'https://library.oapen.org/rest/bitstreams/7323958e-4b92-4220-98ec-647717ddb2e6/retrieve'}

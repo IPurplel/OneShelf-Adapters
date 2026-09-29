@@ -1,0 +1,9 @@
+base_url: https://library.oapen.org
+url_patterns:
+  - pattern: '^https://library\.oapen\.org/handle/20\.500\.12657/([0-9]+)'
+    capability: work
+    id_group: 1
+# robots.txt asks for Crawl-delay: 10.
+rate_limit:
+  requests_per_minute: 6
+  concurrency: 1

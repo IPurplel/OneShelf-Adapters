@@ -1,0 +1,15 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/rest/handle/20.500.12657/{listing_key:path}?expand=metadata%2Cbitstreams"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "//item/name/text()", required: true, transforms: [trim]}
+    creator: {xpath: "//item/metadata[key='dc.contributor.author']/value/text()", transforms: [trim]}
+    description: {xpath: "//item/metadata[key='dc.description.abstract']/value/text()", transforms: [trim]}
+    language: {xpath: "//item/metadata[key='dc.language']/value/text()", transforms: [{replace: {old: Arabic, new: ar}}, {replace: {old: English, new: en}}, {replace: {old: German, new: de}}, {replace: {old: French, new: fr}}, {replace: {old: Italian, new: it}}, {replace: {old: Spanish, new: es}}, {replace: {old: Dutch, new: nl}}, {replace: {old: Portuguese, new: pt}}, {replace: {old: Persian, new: fa}}, {replace: {old: Turkish, new: tr}}, {replace: {old: Hebrew, new: he}}, {replace: {old: Polish, new: pl}}, {replace: {old: Swedish, new: sv}}, {replace: {old: Latin, new: la}}, {regex_extract: {pattern: "^([a-z]{2})$", group: 1}}]}
+    cover_url: {xpath: "//item/bitstreams[bundlename='THUMBNAIL']/retrievelink/text()", transforms: [normalize_url]}
+    content_type: {template: "book"}

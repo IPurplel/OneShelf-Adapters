@@ -1,0 +1,20 @@
+# The book's own files: the ORIGINAL bundle's PDF and EPUB, and nothing else — the item also carries a
+# plain-text extraction, thumbnails and citation exports, which are not the book. The XPath selects only
+# those files, so every item it yields is one to offer.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/rest/handle/20.500.12657/{unit_key:path}?expand=metadata%2Cbitstreams"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  items: {xpath: "//item/bitstreams[bundlename='ORIGINAL'][mimetype='application/epub+zip' or mimetype='application/pdf']"}
+  fields:
+    url: {xpath: "retrievelink/text()", required: true, transforms: [normalize_url]}
+    format: {xpath: "mimetype/text()", required: true,
+             transforms: [{regex_extract: {pattern: '^application/(pdf|epub)(?:\+zip)?$', group: 1}}]}
+    size_bytes: {xpath: "sizebytes/text()"}
+pagination:
+  mode: none
+  complete_when: single_response

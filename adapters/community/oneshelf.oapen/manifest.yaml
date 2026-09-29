@@ -1,0 +1,16 @@
+schema: oneshelf.osp/1
+id: oneshelf.oapen
+name: OAPEN Library
+version: 0.1.0
+api: '1.0'
+description: >-
+  Peer-reviewed open-access academic books from the OAPEN Library, every one free to read and download
+  under an open licence (mostly Creative Commons). Many languages, including Arabic. Uses OAPEN's
+  public DSpace REST API; a book is one Reading Unit, downloaded as the PDF or EPUB OAPEN hosts. No
+  online page reader. Search pages through up to 200 results.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [library.oapen.org]
+defaults:
+  content_type: book

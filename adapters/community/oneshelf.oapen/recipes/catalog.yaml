@@ -1,0 +1,17 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/rest/handle/20.500.12657/{listing_key:path}?expand=metadata%2Cbitstreams"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  items: {xpath: "//item"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {xpath: "name/text()", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

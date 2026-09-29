@@ -1,0 +1,25 @@
+# The REST API answers in XML when asked, which lets the recipe pick metadata by key with XPath (its JSON
+# is a key/value list a JSON path cannot select from). The listing key is the number of the book's
+# permanent handle, 20.500.12657/<n>; a handle under any other prefix has no key and is skipped.
+capability: search
+inputs: [query, offset]
+request:
+  url: "{base_url}/rest/search?query={query}&expand=metadata&limit=50&offset={offset}"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  items: {xpath: "//items/item"}
+  fields:
+    listing_key: {xpath: "handle/text()", required: true,
+                  transforms: [{regex_extract: {pattern: '^20\.500\.12657/([0-9]+)$', group: 1}}]}
+    title: {xpath: "name/text()", required: true, transforms: [trim]}
+    creator: {xpath: "metadata[key='dc.contributor.author']/value/text()", transforms: [trim]}
+    language: {xpath: "metadata[key='dc.language']/value/text()", transforms: [{replace: {old: Arabic, new: ar}}, {replace: {old: English, new: en}}, {replace: {old: German, new: de}}, {replace: {old: French, new: fr}}, {replace: {old: Italian, new: it}}, {replace: {old: Spanish, new: es}}, {replace: {old: Dutch, new: nl}}, {replace: {old: Portuguese, new: pt}}, {replace: {old: Persian, new: fa}}, {replace: {old: Turkish, new: tr}}, {replace: {old: Hebrew, new: he}}, {replace: {old: Polish, new: pl}}, {replace: {old: Swedish, new: sv}}, {replace: {old: Latin, new: la}}, {regex_extract: {pattern: "^([a-z]{2})$", group: 1}}]}
+    content_type: {template: "book"}
+pagination:
+  mode: offset
+  start: 0
+  step: 50
+  max_pages: 4
+  stop_when: empty_items
