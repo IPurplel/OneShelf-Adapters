@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.ucl-press
+name: UCL Press
+version: 0.1.0
+api: '1.0'
+description: >-
+  Open-access books from UCL Press, the UK's first fully open-access university press. A book is one
+  Reading Unit, downloaded as its open-access PDF from UCL's repository (discovery.ucl.ac.uk) — only
+  while the book's page states a Creative Commons licence. No search: uclpress.co.uk's robots.txt
+  disallows its search, so a book is added by pasting its uclpress.co.uk address. UCL Press books are
+  also in the OAPEN Library.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [uclpress.co.uk]
+  cdn_domains: [discovery.ucl.ac.uk]
+defaults:
+  language: en
+  content_type: book

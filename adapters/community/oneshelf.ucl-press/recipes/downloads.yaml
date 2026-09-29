@@ -1,0 +1,22 @@
+# The open-access PDF, which the page states only in its schema.org data (workExample, bookFormat
+# EBook, url on UCL's repository) — with the page's JSON escaping of "/" undone. Same condition as
+# catalog.yaml. uclpress.co.uk's robots.txt disallows /*.pdf on its own host; the file is on
+# discovery.ucl.ac.uk, which allows it.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/book/{unit_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//script[@type='application/ld+json'][contains(., 'discovery.ucl.ac.uk')][//a[@class='cc'][contains(@href, 'creativecommons.org/licenses/')]])[1]"}
+  fields:
+    url: {xpath: "text()", required: true,
+          transforms: [{regex_extract: {pattern: '"url":"(https:\\/\\/discovery\.ucl\.ac\.uk\\/[^"]+?\.pdf)"', group: 1}},
+                       {replace: {old: '\/', new: '/'}},
+                       {regex_extract: {pattern: '^(https://discovery\.ucl\.ac\.uk/id/eprint/[0-9]+/[0-9]+/[^"?#]+\.pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

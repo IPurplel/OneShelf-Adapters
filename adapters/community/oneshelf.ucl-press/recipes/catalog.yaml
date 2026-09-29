@@ -1,0 +1,17 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4) — only while its page has both its
+# open-access PDF (in its schema.org data) and a Creative Commons licence link.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/book/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//script[@type='application/ld+json'][contains(., 'discovery.ucl.ac.uk')][//a[@class='cc'][contains(@href, 'creativecommons.org/licenses/')]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
