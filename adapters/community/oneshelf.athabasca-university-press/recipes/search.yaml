@@ -12,7 +12,8 @@ extract:
   fields:
     listing_key: {css: "::attr(href)", required: true,
                   transforms: [{regex_extract: {pattern: '^https://www\.aupress\.ca/books/([0-9]+-[a-z0-9-]+)/$', group: 1}}]}
-    title: {css: "::text", required: true, transforms: [trim]}
+    # The link's whole text: academic titles can be partly italic. A cover-image link has none and is skipped.
+    title: {xpath: ".", required: true, transforms: [trim]}
     language: {template: "en"}
     content_type: {template: "book"}
 pagination:
