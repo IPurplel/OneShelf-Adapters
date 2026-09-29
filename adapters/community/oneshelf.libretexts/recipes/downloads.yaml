@@ -1,0 +1,17 @@
+# The full-book PDF from LibreTexts' download service, which redirects to its storage host.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/api/v1/commons/book/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.book.links.pdf"}
+  fields:
+    url: {json: "$", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://downloads\.libretexts\.org/api/v1/download/[a-z0-9]+-[0-9]+/pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

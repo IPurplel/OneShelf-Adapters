@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.libretexts
+name: LibreTexts
+version: 0.1.0
+api: '1.0'
+description: >-
+  Open educational textbooks from LibreTexts, free to read and download, through the LibreTexts Commons
+  API. A textbook is one Reading Unit, downloaded as its full-book PDF. Most are Creative Commons
+  licensed; some are shared with permission or state no licence, and all are free to read. Language
+  follows the LibreTexts library (Español is Spanish, the subject libraries English). No search: the
+  Commons API returns its whole catalogue whatever is asked, so a textbook is added by pasting its
+  commons.libretexts.org/book/… address.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [commons.libretexts.org]
+  cdn_domains: [downloads.libretexts.org, storage.downloads.libretexts.org]
+defaults:
+  content_type: book

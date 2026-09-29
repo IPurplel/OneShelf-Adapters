@@ -1,0 +1,35 @@
+cases:
+- capability: work
+  inputs: {listing_key: workforce-32647}
+  fixtures:
+  - url: https://commons.libretexts.org/api/v1/commons/book/workforce-32647
+    file: fixtures/book-workforce-32647.json
+  expect:
+    fields_present: [title, creator, description, language]
+    first: {title: Workplace Software and Skills, creator: OpenStax, language: en}
+# The Español library's books are Spanish.
+- capability: work
+  inputs: {listing_key: espanol-51387}
+  fixtures:
+  - url: https://commons.libretexts.org/api/v1/commons/book/espanol-51387
+    file: fixtures/book-espanol-51387.json
+  expect:
+    first: {title: Manual de microbiología general, language: es}
+- capability: catalog
+  inputs: {listing_key: workforce-32647}
+  fixtures:
+  - url: https://commons.libretexts.org/api/v1/commons/book/workforce-32647
+    file: fixtures/book-workforce-32647.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: workforce-32647, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: workforce-32647}
+  fixtures:
+  - url: https://commons.libretexts.org/api/v1/commons/book/workforce-32647
+    file: fixtures/book-workforce-32647.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://downloads.libretexts.org/api/v1/download/workforce-32647/pdf', format: pdf}

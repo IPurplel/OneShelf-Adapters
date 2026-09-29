@@ -1,0 +1,16 @@
+# A textbook is one Reading Unit, the Master's one_shot (§4.4), when Commons lists a PDF for it.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/v1/commons/book/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.book.links.pdf"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
