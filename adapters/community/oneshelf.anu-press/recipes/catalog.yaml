@@ -1,0 +1,17 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4), when its page offers the whole-book EPUB or
+# PDF; a forthcoming book has neither and no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/node/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[contains(@href, 'press-files.anu.edu.au/downloads/press/')][contains(@href, '/epub/book.epub') or contains(@href, '/pdf/book.pdf')])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

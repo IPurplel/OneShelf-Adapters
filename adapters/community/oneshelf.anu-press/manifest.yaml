@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.anu-press
+name: ANU Press
+version: 0.1.0
+api: '1.0'
+description: >-
+  Free scholarly books from ANU Press, the Australian National University's open-access publisher. A
+  book is one Reading Unit, downloaded as the whole-book EPUB or PDF ANU Press offers for free (its
+  per-chapter PDFs are not separate units). Forthcoming books, which have no free edition yet, are not
+  listed. Search is the press's own and reads its first two pages of ten results.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [press.anu.edu.au]
+  cdn_domains: [press-files.anu.edu.au]
+defaults:
+  language: en
+  content_type: book

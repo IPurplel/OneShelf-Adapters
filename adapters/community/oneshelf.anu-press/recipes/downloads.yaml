@@ -1,0 +1,20 @@
+# The whole-book PDF and EPUB, in the page's order. ANU links them over http; press-files.anu.edu.au
+# serves the same files over https, which is what is requested. The page links the PDF twice; the
+# runtime keeps one.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/node/{unit_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[contains(@href, 'press-files.anu.edu.au/downloads/press/')][contains(@href, '/epub/book.epub') or contains(@href, '/pdf/book.pdf')]"}
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [{regex_extract: {pattern: '^https?://(press-files\.anu\.edu\.au/downloads/press/n[0-9]+/(?:pdf/book\.pdf|epub/book\.epub))$', group: 1}},
+                       {regex_replace: {pattern: '^(.+)$', replacement: 'https://\1'}}]}
+    format: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '/(pdf|epub)/book\.', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

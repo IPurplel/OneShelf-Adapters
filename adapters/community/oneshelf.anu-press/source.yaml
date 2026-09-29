@@ -1,0 +1,5 @@
+base_url: https://press.anu.edu.au
+# A book's address does not contain its node id, so pasted addresses are not recognised; search finds it.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

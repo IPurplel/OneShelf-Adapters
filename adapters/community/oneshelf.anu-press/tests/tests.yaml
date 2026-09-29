@@ -1,0 +1,41 @@
+cases:
+# Two pages of ten; forthcoming titles (no "Download for free") are not listed — the first title on the
+# first page is one of them. Capped, so incomplete.
+- capability: search
+  inputs: {query: strategic, page: 0}
+  fixtures:
+  - url: https://press.anu.edu.au/publications?search=strategic&p=0
+    file: fixtures/search-strategic-0.html
+  - url: https://press.anu.edu.au/publications?search=strategic&p=1
+    file: fixtures/search-strategic-1.html
+  expect:
+    min_items: 10
+    complete: false
+    fields_present: [listing_key, title, cover_url]
+    first: {listing_key: '4359', title: New Directions in Strategic Thinking 2.0}
+- capability: work
+  inputs: {listing_key: '13704'}
+  fixtures:
+  - url: https://press.anu.edu.au/node/13704
+    file: fixtures/book-strategic-imagination.html
+  expect:
+    fields_present: [title, creator]
+    first: {title: Strategic Imagination, creator: Andrew Carr}
+- capability: catalog
+  inputs: {listing_key: '13704'}
+  fixtures:
+  - url: https://press.anu.edu.au/node/13704
+    file: fixtures/book-strategic-imagination.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '13704', unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: '13704'}
+  fixtures:
+  - url: https://press.anu.edu.au/node/13704
+    file: fixtures/book-strategic-imagination.html
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://press-files.anu.edu.au/downloads/press/n13704/pdf/book.pdf', format: pdf}

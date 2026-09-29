@@ -1,0 +1,28 @@
+# The press's own publications search (robots.txt disallows /search/, not this). A result is one row
+# holding exactly one title — the page also wraps all rows in an element with the same class — and is a
+# book only if it offers its free edition ("Download for free"), which leaves forthcoming titles out.
+# The key is the book's Drupal node id (from the row's own form): /node/<id> reaches the book whatever
+# its series, which its address segments do not reliably do (a slug with an en dash answers 200 with
+# another page).
+capability: search
+inputs: [query, page]
+request:
+  url: "{base_url}/publications?search={query}&p={page}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//div[contains(@class, 'row')][count(.//h2[contains(@class, 'pub-title')]) = 1][.//a[contains(@class, 'pub-download-btn')]]"}
+  fields:
+    listing_key: {xpath: ".//input[@name='nid']/@value", required: true, transforms: [{regex_extract: {pattern: '^([0-9]+)$', group: 1}}]}
+    title: {xpath: ".//h2[contains(@class, 'pub-title')]//a", required: true,
+            transforms: [{regex_replace: {pattern: '[\s\x{00A0}]*»\s*$', replacement: ''}}, trim]}
+    creator: {xpath: ".//div[strong[contains(., 'by')]]/a/text()", transforms: [trim]}
+    cover_url: {xpath: ".//img[contains(@class, 'press-publication')]/@src", transforms: [normalize_url]}
+    language: {template: "en"}
+    content_type: {template: "book"}
+pagination:
+  mode: page_number
+  start: 0
+  max_pages: 2
+  stop_when: empty_items
