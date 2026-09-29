@@ -552,6 +552,9 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
   **Live source check** workflow needs that test updated in Core.
 - Core's runtime raises an uncategorised `TypeError` on an XPath that returns a number (such as `count()`),
   which its schema accepts.
+- The Core package that `./tools/bootstrap` installs from the pinned commit carries no `.sql` schema
+  migrations (they are not package data), so tooling that opens a OneShelf library fails with "no such
+  table". The final install check here loaded them from the pinned commit instead.
 - JSON recipes cannot filter items by a value, and a strict list (catalog, reader, downloads) marks itself
   incomplete when any item is skipped. Open-access gates here use XPath predicates or a template joined with
   a document-level value and a pattern; a small Core filter primitive would make these simpler.
