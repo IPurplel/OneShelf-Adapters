@@ -1,0 +1,92 @@
+{
+ "@context": "https://digital.bodleian.ox.ac.uk/api/1/context.json",
+ "id": "https://digital.bodleian.ox.ac.uk/objects/ce397b96-c8bf-46b1-9ccb-569d1b880bd6/",
+ "type": "Object",
+ "shelfmark": "Bodleian Library MS. A. Walker 4",
+ "description": "كتاب المجسطي",
+ "collections": [
+  {
+   "type": "db:Collection",
+   "id": "http://digital.bodleian.ox.ac.uk/collections/arabic/",
+   "title": "Arabic Manuscripts and Maps",
+   "thumbnail": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5b862f4d-d22b-4853-b2ba-652cf3d71d40/1114,1114,2364,1773/!320,240/0/default.jpg",
+     "type": "Image",
+     "format": "image/jpeg",
+     "service": [
+      {
+       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5b862f4d-d22b-4853-b2ba-652cf3d71d40",
+       "type": "ImageService2",
+       "profile": "level1"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "surfaceCount": 224,
+ "thumbnail": [
+  {
+   "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6/full/255,/0/default.jpg",
+   "type": "Image",
+   "format": "image/jpeg",
+   "service": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6",
+     "type": "ImageService2",
+     "profile": "level1"
+    }
+   ]
+  }
+ ],
+ "logo": [
+  {
+   "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71/full/255,/0/default.jpg",
+   "type": "Image",
+   "format": "image/jpeg",
+   "service": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71",
+     "type": "ImageService2",
+     "profile": "level1"
+    }
+   ]
+  }
+ ],
+ "manifest": {
+  "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ce397b96-c8bf-46b1-9ccb-569d1b880bd6.json",
+  "type": "Manifest"
+ },
+ "contacts": {
+  "imaging": {
+   "text": "Image rights and reuse enquiries",
+   "links": [
+    {
+     "url": "mailto:imaging@bodleian.ox.ac.uk?subject=Bodleian%20Library%20MS.%20A.%20Walker%204",
+     "text": "imaging@bodleian.ox.ac.uk"
+    }
+   ]
+  },
+  "object": {
+   "text": "Enquiries about this object",
+   "links": [
+    {
+     "url": "mailto:specialcollections.enquiries@bodleian.ox.ac.uk?subject=Bodleian%20Library%20MS.%20A.%20Walker%204",
+     "text": "specialcollections.enquiries@bodleian.ox.ac.uk"
+    }
+   ]
+  },
+  "technical": {
+   "text": "Technical enquiries and questions about the digital collections",
+   "links": [
+    {
+     "url": "mailto:digital-bodleian@bodleian.ox.ac.uk?subject=Bodleian%20Library%20MS.%20A.%20Walker%204",
+     "text": "digital-bodleian@bodleian.ox.ac.uk"
+    }
+   ]
+  }
+ },
+ "has_annotations": false,
+ "has_multiple_layers": false
+}

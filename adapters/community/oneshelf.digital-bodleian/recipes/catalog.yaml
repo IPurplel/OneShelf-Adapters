@@ -1,0 +1,18 @@
+# One object is one Reading Unit, the Master's one_shot (§4.4): a manuscript is read as the sequence of
+# its pages, not divided into invented chapters.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "https://iiif.bodleian.ox.ac.uk/iiif/manifest/{listing_key:path}.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {json: "$.label", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

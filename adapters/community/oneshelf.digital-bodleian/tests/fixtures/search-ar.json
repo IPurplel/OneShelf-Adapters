@@ -1,0 +1,219 @@
+{
+ "@context": "https://digital.bodleian.ox.ac.uk/api/1/context.json",
+ "id": "https://digital.bodleian.ox.ac.uk/search/?q=%D9%83%D8%AA%D8%A7%D8%A8&fq=completeness:Yes",
+ "type": "Collection",
+ "query": {
+  "q": [
+   "كتاب"
+  ],
+  "fq": [
+   "completeness:Yes"
+  ]
+ },
+ "view": {
+  "type": "PartialCollectionView",
+  "first": "https://digital.bodleian.ox.ac.uk/search/?fq=completeness%3AYes&q=%D9%83%D8%AA%D8%A7%D8%A8",
+  "totalPages": 1
+ },
+ "totalItems": 4,
+ "member": [
+  {
+   "type": "Object",
+   "id": "https://digital.bodleian.ox.ac.uk/objects/ce397b96-c8bf-46b1-9ccb-569d1b880bd6/",
+   "shelfmark": "Bodleian Library MS. A. Walker 4",
+   "surfaceCount": 224,
+   "thumbnail": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6/full/255,/0/default.jpg",
+     "type": "Image",
+     "format": "image/jpeg",
+     "service": [
+      {
+       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6",
+       "type": "ImageService2",
+       "profile": "level1"
+      }
+     ]
+    }
+   ],
+   "manifest": {
+    "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ce397b96-c8bf-46b1-9ccb-569d1b880bd6.json",
+    "type": "Manifest"
+   },
+   "displayFields": {
+    "shelfmark": [
+     "Bodleian Library MS. A. Walker 4"
+    ],
+    "people": [
+     "Ptolemy, 2nd cent.",
+     "Isḥāq ibn Ḥunayn, 830 or 1-910 or 1",
+     "Thābit ibn Qurrah al-Ḥarrānī, d. 901",
+     "Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274",
+     "Brigadier-General Alexander Walker, d. 1831"
+    ],
+    "languages": [
+     "Arabic"
+    ],
+    "title": [
+     "<em>كتاب</em> المجسطي"
+    ],
+    "dateStatement": [
+     "Before 1669. [early 17th century? CE]"
+    ],
+    "snippet": [
+     "... <em>كتاب</em> المجسطي ..."
+    ]
+   },
+   "completeness": "complete",
+   "textAvailable": false
+  },
+  {
+   "type": "Object",
+   "id": "https://digital.bodleian.ox.ac.uk/objects/4f104fd5-16b5-4cd6-99b3-9a8f8868d7ff/",
+   "shelfmark": "Bodleian Library MS. Arab. d. 138",
+   "surfaceCount": 434,
+   "thumbnail": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8add3004-ff7e-4221-b51a-b0c78ce446b2/full/255,/0/default.jpg",
+     "type": "Image",
+     "format": "image/jpeg",
+     "service": [
+      {
+       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8add3004-ff7e-4221-b51a-b0c78ce446b2",
+       "type": "ImageService2",
+       "profile": "level1"
+      }
+     ]
+    }
+   ],
+   "manifest": {
+    "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/4f104fd5-16b5-4cd6-99b3-9a8f8868d7ff.json",
+    "type": "Manifest"
+   },
+   "displayFields": {
+    "shelfmark": [
+     "Bodleian Library MS. Arab. d. 138"
+    ],
+    "people": [
+     "Iṣṭafan Ibn-Bāsil",
+     "Dioscorides Pedanius, of Anazarbos",
+     "Ḥunayn ibn Isḥāq al-ʻIbādī, ca. 809-873",
+     "Sir William Osler",
+     "al-Ḥasan ibn Aḥmad ibn Muḥammad al-Nashawī"
+    ],
+    "origins": [
+     "Baghdad (?)"
+    ],
+    "languages": [
+     "Arabic"
+    ],
+    "title": [
+     "<em>كتاب</em> الحشائش"
+    ],
+    "dateStatement": [
+     "17th July 1240"
+    ],
+    "snippet": [
+     "... <em>كتاب</em> الحشائش ..."
+    ]
+   },
+   "completeness": "complete",
+   "textAvailable": false
+  },
+  {
+   "type": "Object",
+   "id": "https://digital.bodleian.ox.ac.uk/objects/9d7d382f-9ea8-42e3-bd86-5ccb1bde5854/",
+   "shelfmark": "Bodleian Library MS. Ouseley Add. 1",
+   "surfaceCount": 356,
+   "thumbnail": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8a696546-7cca-432c-bd70-86044148d46b/full/255,/0/default.jpg",
+     "type": "Image",
+     "format": "image/jpeg",
+     "service": [
+      {
+       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8a696546-7cca-432c-bd70-86044148d46b",
+       "type": "ImageService2",
+       "profile": "level1"
+      }
+     ]
+    }
+   ],
+   "manifest": {
+    "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/9d7d382f-9ea8-42e3-bd86-5ccb1bde5854.json",
+    "type": "Manifest"
+   },
+   "displayFields": {
+    "shelfmark": [
+     "Bodleian Library MS. Ouseley Add. 1"
+    ],
+    "languages": [
+     "Persian"
+    ],
+    "title": [
+     "<em>کتاب</em> داستان"
+    ],
+    "dateStatement": [
+     "1565"
+    ],
+    "snippet": [
+     "... <em>کتاب</em> داستان ..."
+    ]
+   },
+   "completeness": "complete",
+   "textAvailable": false
+  },
+  {
+   "type": "Object",
+   "id": "https://digital.bodleian.ox.ac.uk/objects/462e9ff4-8cc1-44fc-ae7d-a7a0d73b7755/",
+   "shelfmark": "Bodleian Library MS. Arab. d. 257",
+   "surfaceCount": 550,
+   "thumbnail": [
+    {
+     "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/693836fc-a0c5-4636-8170-a7568405118e/full/255,/0/default.jpg",
+     "type": "Image",
+     "format": "image/jpeg",
+     "service": [
+      {
+       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/693836fc-a0c5-4636-8170-a7568405118e",
+       "type": "ImageService2",
+       "profile": "level1"
+      }
+     ]
+    }
+   ],
+   "manifest": {
+    "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/462e9ff4-8cc1-44fc-ae7d-a7a0d73b7755.json",
+    "type": "Manifest"
+   },
+   "displayFields": {
+    "shelfmark": [
+     "Bodleian Library MS. Arab. d. 257"
+    ],
+    "people": [
+     "Fārābī",
+     "Rauf Yekta, 1871-1935",
+     "ʻAbd al-Raʼūf al-Qarābī[?]"
+    ],
+    "origins": [
+     "Turkey, Istanbul"
+    ],
+    "languages": [
+     "Arabic"
+    ],
+    "title": [
+     "<em>كتاب</em> الموسيقي الكبير"
+    ],
+    "dateStatement": [
+     "28th Dhū al-Qaʻdah 1319 AH; 8th March 1902 CE"
+    ],
+    "snippet": [
+     "... <em>كتاب</em> الموسيقي الكبير ...",
+     "... <em>كتاب</em> المدخل إلى صناعة الموسيقي تأليف ابي نصر محمد بن محمد الطرخانى رحمه الله ..."
+    ]
+   },
+   "completeness": "complete",
+   "textAvailable": false
+  }
+ ]
+}

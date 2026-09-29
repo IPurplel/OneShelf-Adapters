@@ -1,0 +1,24 @@
+# The site's own search answers in JSON when asked for it. fq=completeness:Yes is the site's own
+# "completely digitised" facet, applied by the server (armenian: 99 results, 18 complete). Titles carry
+# the search's <em> highlighting, which is removed. The key is the object's UUID.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/search/?q={query}&fq=completeness%3AYes"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.member[*]"}
+  fields:
+    listing_key: {json: "$.id", required: true,
+                  transforms: [{regex_extract: {pattern: '/objects/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/$', group: 1}}]}
+    title: {json: "$.displayFields.title[0]", required: true,
+            transforms: [{regex_replace: {pattern: '</?em>', replacement: ''}}, html_decode, trim]}
+    creator: {json: "$.displayFields.people[0]", transforms: [trim]}
+    language: {json: "$.displayFields.languages[0]", transforms: [{replace: {old: Arabic, new: ar}}, {replace: {old: Persian, new: fa}}, {replace: {old: Turkish, new: tr}}, {replace: {old: English, new: en}}, {replace: {old: Latin, new: la}}, {replace: {old: Hebrew, new: he}}, {replace: {old: Armenian, new: hy}}, {replace: {old: Syriac, new: syr}}, {replace: {old: French, new: fr}}, {replace: {old: German, new: de}}, {replace: {old: Italian, new: it}}, {replace: {old: Urdu, new: ur}}, {replace: {old: Sanskrit, new: sa}}, {regex_extract: {pattern: "^([a-z]{2}|syr)$", group: 1}}]}
+    cover_url: {json: "$.thumbnail[0].id"}
+pagination:
+  mode: next_link
+  max_pages: 4
+  next: {json: "$.view.next"}

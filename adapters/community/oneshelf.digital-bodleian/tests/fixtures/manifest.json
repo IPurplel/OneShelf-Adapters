@@ -1,0 +1,235 @@
+{
+ "@context": "http://iiif.io/api/presentation/2/context.json",
+ "@id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ce397b96-c8bf-46b1-9ccb-569d1b880bd6.json",
+ "@type": "sc:Manifest",
+ "label": "Bodleian Library MS. A. Walker 4",
+ "description": "كتاب المجسطي",
+ "metadata": [
+  {
+   "label": "Homepage",
+   "value": "<span><a href=\"https://digital.bodleian.ox.ac.uk/objects/ce397b96-c8bf-46b1-9ccb-569d1b880bd6/\">View on Digital Bodleian</a></span>"
+  },
+  {
+   "label": "Catalogue Description",
+   "value": "<a href=\"https://www.fihrist.org.uk/catalog/manuscript_776\">Full catalogue record in Fihrist: Union Catalogue of Manuscripts from the Islamicate World</a>"
+  },
+  {
+   "label": "Title",
+   "value": "كتاب المجسطي"
+  },
+  {
+   "label": "Other Titles",
+   "value": "Translation of the Almagest of Ptolemy, 2nd cent."
+  },
+  {
+   "label": "Shelfmark",
+   "value": "Bodleian Library MS. A. Walker 4"
+  },
+  {
+   "label": "Contributor",
+   "value": "Thābit ibn Qurrah al-Ḥarrānī, d. 901"
+  },
+  {
+   "label": "Author",
+   "value": "Ptolemy, 2nd cent."
+  },
+  {
+   "label": "Author",
+   "value": "Isḥāq ibn Ḥunayn, 830 or 1-910 or 1"
+  },
+  {
+   "label": "Editors",
+   "value": "Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274"
+  },
+  {
+   "label": "Former Owner",
+   "value": "Brigadier-General Alexander Walker, d. 1831"
+  },
+  {
+   "label": "Donor",
+   "value": "Sir William Walker"
+  },
+  {
+   "label": "Language",
+   "value": "Arabic"
+  },
+  {
+   "label": "Date Statement",
+   "value": "Before 1669. [early 17th century? CE]"
+  },
+  {
+   "label": "Description",
+   "value": "1 copy of Translation of the Almagest of Ptolemy, 2nd cent by Isḥāq ibn Ḥunayn, 830 or 31-910 or 11."
+  },
+  {
+   "label": "Contents Note",
+   "value": "Revised by Thābit ibn Qurrah, in the recension of Naṣīr al-Dīn al-Ṭūsī."
+  },
+  {
+   "label": "Extent",
+   "value": "ff. 106."
+  },
+  {
+   "label": "Provenance",
+   "value": "The collections of Brigadier-General Alexander Walker, d. 1831. Presented to the Bodleian Library by Sir William Walker in 1845."
+  },
+  {
+   "label": "Origin Note",
+   "value": "(Fol. 1a: Owner's note dated 3rd Shawwāl 1079)"
+  },
+  {
+   "label": "Record Origin",
+   "value": "Manuscript description based on the Bodleian Library's public card index of Arabic manuscripts with additional enhancements by the OCIMCO project team."
+  },
+  {
+   "label": "Collection",
+   "value": "Arabic Manuscripts and Maps"
+  },
+  {
+   "label": "Catalogue Identifier",
+   "value": "GAL I 207"
+  },
+  {
+   "label": "Catalogue Identifier",
+   "value": "[EA 100] [revd. by Beeston]"
+  },
+  {
+   "label": "Acknowledgements",
+   "value": "The digitization of this manuscript was generously funded by Qatar National Library."
+  },
+  {
+   "label": "Record Created",
+   "value": "2026-05-28T16:53:01+00:00"
+  },
+  {
+   "label": "Holding Institution",
+   "value": "Bodleian Libraries, University of Oxford"
+  },
+  {
+   "label": "Digitization Sponsor",
+   "value": "<span>Qatar National Library<br/><img src=\"https://iiif.bodleian.ox.ac.uk/iiif/image/62f2111c-0dd2-46fd-ba65-247521671231/full/!255,255/0/default.jpg\" alt=\"Qatar National Library logo\"/></span>"
+  }
+ ],
+ "navDate": "1600-01-01T00:00:00Z",
+ "rendering": {
+  "@id": "https://digital.bodleian.ox.ac.uk/objects/ce397b96-c8bf-46b1-9ccb-569d1b880bd6/",
+  "label": "View on Digital Bodleian",
+  "format": "text/html"
+ },
+ "attribution": "<span>Photo: © Bodleian Libraries, University of Oxford. Terms of use: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>. For more information, please see <a href=\"https://digital.bodleian.ox.ac.uk/terms/\">https://digital.bodleian.ox.ac.uk/terms/</a></span>",
+ "logo": {
+  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71/full/256,/0/default.jpg",
+  "@type": "dctypes:Image",
+  "format": "image/jpeg",
+  "service": {
+   "@context": "http://iiif.io/api/image/2/context.json",
+   "profile": "http://iiif.io/api/image/2/level1.json",
+   "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71"
+  }
+ },
+ "thumbnail": {
+  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6/full/256,/0/default.jpg",
+  "@type": "dctypes:Image",
+  "format": "image/jpeg",
+  "service": {
+   "@context": "http://iiif.io/api/image/2/context.json",
+   "profile": "http://iiif.io/api/image/2/level1.json",
+   "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6"
+  }
+ },
+ "viewingHint": "paged",
+ "viewingDirection": "right-to-left",
+ "sequences": [
+  {
+   "@id": "https://iiif.bodleian.ox.ac.uk/iiif/sequence/ce397b96-c8bf-46b1-9ccb-569d1b880bd6_default.json",
+   "@type": "sc:Sequence",
+   "label": "Default",
+   "canvases": [
+    {
+     "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/246b40da-1117-44a2-afe6-60065fb6a8b6.json",
+     "@type": "sc:Canvas",
+     "label": "Upper board",
+     "width": 7465,
+     "height": 8853,
+     "images": [
+      {
+       "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/246b40da-1117-44a2-afe6-60065fb6a8b6.json",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/246b40da-1117-44a2-afe6-60065fb6a8b6.json",
+       "resource": {
+        "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "width": 7465,
+        "height": 8853,
+        "service": {
+         "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6",
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       }
+      }
+     ],
+     "otherContent": []
+    },
+    {
+     "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/48a0c710-85db-4516-baea-d821f01b693e.json",
+     "@type": "sc:Canvas",
+     "label": "Inside upper board",
+     "width": 8601,
+     "height": 10004,
+     "images": [
+      {
+       "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/48a0c710-85db-4516-baea-d821f01b693e.json",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/48a0c710-85db-4516-baea-d821f01b693e.json",
+       "resource": {
+        "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/48a0c710-85db-4516-baea-d821f01b693e",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "width": 8601,
+        "height": 10004,
+        "service": {
+         "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/48a0c710-85db-4516-baea-d821f01b693e",
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       }
+      }
+     ],
+     "otherContent": []
+    },
+    {
+     "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/90747c5e-635a-4c41-bf58-5f998db1321c.json",
+     "@type": "sc:Canvas",
+     "label": "fol. i a",
+     "width": 8569,
+     "height": 9984,
+     "images": [
+      {
+       "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/90747c5e-635a-4c41-bf58-5f998db1321c.json",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/90747c5e-635a-4c41-bf58-5f998db1321c.json",
+       "resource": {
+        "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/90747c5e-635a-4c41-bf58-5f998db1321c",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "width": 8569,
+        "height": 9984,
+        "service": {
+         "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/90747c5e-635a-4c41-bf58-5f998db1321c",
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       }
+      }
+     ],
+     "otherContent": []
+    }
+   ]
+  }
+ ]
+}

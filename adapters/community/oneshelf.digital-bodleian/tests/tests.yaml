@@ -1,0 +1,38 @@
+cases:
+# Arabic query; the site's search also matches the Persian spelling (کتاب), whose language is Persian.
+- capability: search
+  inputs: {query: كتاب}
+  fixtures:
+  - url: https://digital.bodleian.ox.ac.uk/search/?q=%D9%83%D8%AA%D8%A7%D8%A8&fq=completeness%3AYes
+    file: fixtures/search-ar.json
+  expect:
+    min_items: 4
+    complete: true
+    fields_present: [listing_key, title, creator, language, cover_url]
+    first: {listing_key: ce397b96-c8bf-46b1-9ccb-569d1b880bd6, title: كتاب المجسطي, language: ar, creator: 'Ptolemy, 2nd cent.'}
+- capability: work
+  inputs: {listing_key: ce397b96-c8bf-46b1-9ccb-569d1b880bd6}
+  fixtures:
+  - url: https://digital.bodleian.ox.ac.uk/objects/ce397b96-c8bf-46b1-9ccb-569d1b880bd6/
+    file: fixtures/object.json
+  expect:
+    fields_present: [title, cover_url]
+    first: {title: كتاب المجسطي}
+- capability: catalog
+  inputs: {listing_key: ce397b96-c8bf-46b1-9ccb-569d1b880bd6}
+  fixtures:
+  - url: https://iiif.bodleian.ox.ac.uk/iiif/manifest/ce397b96-c8bf-46b1-9ccb-569d1b880bd6.json
+    file: fixtures/manifest.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: ce397b96-c8bf-46b1-9ccb-569d1b880bd6, unit_type: one_shot}
+- capability: reader
+  inputs: {unit_key: ce397b96-c8bf-46b1-9ccb-569d1b880bd6}
+  fixtures:
+  - url: https://iiif.bodleian.ox.ac.uk/iiif/manifest/ce397b96-c8bf-46b1-9ccb-569d1b880bd6.json
+    file: fixtures/manifest.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://iiif.bodleian.ox.ac.uk/iiif/image/246b40da-1117-44a2-afe6-60065fb6a8b6/full/!2048,2048/0/default.jpg'}

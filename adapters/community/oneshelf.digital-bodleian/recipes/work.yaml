@@ -1,0 +1,12 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/objects/{listing_key:path}/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.description", required: true, transforms: [trim]}
+    aliases: {json: "$.shelfmark", transforms: [trim]}
+    cover_url: {json: "$.thumbnail[0].id"}

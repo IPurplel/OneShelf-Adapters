@@ -1,0 +1,4 @@
+base_url: https://digital.bodleian.ox.ac.uk
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

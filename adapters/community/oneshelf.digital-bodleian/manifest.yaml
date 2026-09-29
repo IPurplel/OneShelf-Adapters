@@ -1,0 +1,16 @@
+schema: oneshelf.osp/1
+id: oneshelf.digital-bodleian
+name: Digital Bodleian
+version: 0.1.0
+api: '1.0'
+description: >-
+  Digitised manuscripts, books and archives from the Bodleian Libraries, Oxford — among them Arabic,
+  Persian and Turkish manuscripts — free to view for everyone (images CC BY-NC 4.0). Only objects the
+  library marks as completely digitised are offered, so a manuscript of which only a few leaves were
+  photographed is not presented as the whole work. An object is one Reading Unit, read page by page
+  from its IIIF manifest in the manifest's order. No downloads (the library offers no PDF), and objects
+  are reached through search rather than pasted addresses, which could lead to partial ones.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [digital.bodleian.ox.ac.uk, iiif.bodleian.ox.ac.uk]

@@ -1,0 +1,17 @@
+# Every canvas of the manifest, in its order, from each page's IIIF image service at up to 2048 pixels on
+# the long side — the whole page at reading size, not the 256-pixel thumbnail the manifest points to.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "https://iiif.bodleian.ox.ac.uk/iiif/manifest/{unit_key:path}.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.sequences[0].canvases[*].images[0].resource.service['@id']"}
+  fields:
+    url: {template: "{item}/full/!2048,2048/0/default.jpg", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://iiif\.bodleian\.ox\.ac\.uk/iiif/image/[0-9a-f-]{36}/full/!2048,2048/0/default\.jpg)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response
