@@ -31,6 +31,15 @@ OneShelf itself depends on — and runs the repository policy tests in `tests/`.
 ## Live checks
 
 Packaged tests are the gate; they never touch the network. Live verification against the real sites is
-evidence for promotion and for noticing breakage, run by maintainers through the **Live source check**
-workflow (manual dispatch). A live pass is never a substitute for packaged tests and never changes a
-trust level by itself.
+evidence for promotion and for noticing breakage. A live pass is never a substitute for packaged tests and
+never changes a trust level by itself.
+
+```bash
+./tools/live-check <id>           # any adapter, any tier, on your machine
+```
+
+runs every declared capability of one adapter against the live site through OneShelf Core's runtime, fetcher
+and egress policy, chained as a library chains them, and opens the files and images it reaches with Core's
+validators ([source-discovery.md](source-discovery.md#3-toolslive-check)). Record the outcome in
+[source-matrix.md](source-matrix.md). Maintainers can also run OneShelf's own live suite against the Official
+adapters through the **Live source check** workflow (manual dispatch).

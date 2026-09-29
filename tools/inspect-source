@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Scrapling-assisted source inspection for adapter authors: development evidence, never an adapter.
+#   ./tools/inspect-source URL [--css SEL] [--xpath EXPR] [--json PATH] [--save FILE]
+#   ./tools/inspect-source --from saved.html --url URL [--css SEL]      # offline
+# See tools/lib/inspect_source.py and docs/source-discovery.md.
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+exec "$PY" "$ROOT/tools/lib/inspect_source.py" "$@"

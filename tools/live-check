@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Live verification of one adapter through OneShelf Core's runtime, fetcher and egress policy (evidence only).
+#   ./tools/live-check oneshelf.example [--query Q] [--listing-key K] [--unit-key U] [--no-files]
+# See tools/lib/live_check.py and docs/testing.md.
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+exec "$PY" "$ROOT/tools/lib/live_check.py" "$@"

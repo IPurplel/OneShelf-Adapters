@@ -25,6 +25,13 @@ adapters/community/oneshelf.example-site/
 **Adapters are data, not code.** Only `.yaml`, `.yml`, `.json`, `.html`, `.htm`, `.xml`, `.txt` and small
 `.png`/`.jpg`/`.jpeg`/`.webp` fixtures are accepted. OneShelf performs every request itself.
 
+## Investigate the site first
+
+`./tools/inspect-source <url>` shows what a page or endpoint offers — feeds, APIs, IIIF manifests, file hosts,
+robots.txt, candidate selectors — and `--css`/`--xpath`/`--json` test a selector exactly as OneShelf will run
+it. See [docs/source-discovery.md](docs/source-discovery.md), which also says which sources qualify as
+open access.
+
 ## Create one
 
 ```bash

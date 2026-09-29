@@ -43,7 +43,13 @@ cd OneShelf-Adapters
 ./tools/new-adapter example-site      # creates adapters/community/oneshelf.example-site
 # edit it: manifest, source, recipes, tests and fixtures
 ./tools/check-adapter oneshelf.example-site
+./tools/live-check oneshelf.example-site  # optional: the same adapter against the live site
 ```
+
+Investigating a new site first? `./tools/inspect-source <url>` reports its structure, feeds, APIs, file
+hosts, robots.txt verdict and candidate selectors ([docs/source-discovery.md](docs/source-discovery.md)).
+Which open-access sources are supported, and which are blocked and why, is in
+[docs/source-matrix.md](docs/source-matrix.md).
 
 Then open a Pull Request. CI runs the same checks, and a maintainer reviews it. Start with
 [CONTRIBUTING.md](CONTRIBUTING.md); the full guide is [docs/adapter-authoring.md](docs/adapter-authoring.md).
