@@ -1,0 +1,24 @@
+# The search the site's own pages call, with its own filters: the "Arabic Manuscripts" collection (154)
+# and Arabic as a language of the manuscript, so every result is Arabic. startPage counts from 0.
+# Titles carry the search's <em> highlighting, which is removed. The key is the BSB identifier.
+capability: search
+inputs: [query, page]
+request:
+  url: "{base_url}/api/search?query={query}&handler=simple-all&ocrContext=1&filter=collections%3A%22154%22&filter=language_bib%3A%22ar%22&pageSize=50&startPage={page}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.docs[*]"}
+  fields:
+    listing_key: {json: "$.id", required: true, transforms: [{regex_extract: {pattern: '^(bsb[0-9]{8})$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [{regex_replace: {pattern: '</?em>', replacement: ''}}, html_decode, trim]}
+    creator: {json: "$.authors[0]", transforms: [trim]}
+    cover_url: {json: "$.previewPage", transforms: [{regex_replace: {pattern: '^(bsb[0-9]{8}_[0-9]+)$', replacement: 'https://api.digitale-sammlungen.de/iiif/image/v2/\1/full/!400,400/0/default.jpg'}}]}
+    language: {template: "ar"}
+pagination:
+  mode: page_number
+  start: 0
+  max_pages: 4
+  stop_when: total_count
+  total: {json: "$.numTotal"}

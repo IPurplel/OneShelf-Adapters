@@ -1,0 +1,82 @@
+{
+  "title" : "Kitāb al-Aġānī - BSB Cod.arab. 1239",
+  "creators" : [ {
+    "name" : "Abu-'l-Faraǧ al-Iṣfahānī, ʿAlī Ibn-al-Ḥusain",
+    "nameOriginalScript" : "أبو الفرج الإصبهاني, علي بن الحسين",
+    "lifeDates" : "897-967",
+    "gndId" : "118500341",
+    "roles" : [ {
+      "de" : "Verfasser",
+      "en" : "Author"
+    } ]
+  } ],
+  "workTitle" : "Abu-'l-Faraǧ al-Iṣfahānī, ʿAlī Ibn-al-Ḥusain: Kitāb al-aġānī",
+  "workGndId" : "4470810-5",
+  "subjects" : [ "Handschrift", "Lyrik", "Arabisch" ],
+  "contributors" : [ {
+    "name" : "Glaser, Eduard",
+    "lifeDates" : "1855-1908",
+    "gndId" : "118695223",
+    "roles" : [ {
+      "de" : "früherer Eigentümer",
+      "en" : "Former owner"
+    } ]
+  } ],
+  "publishedBy" : [ "Entstehungsort nicht ermittelbar" ],
+  "publishedDate" : "1085 [h.q.] [1674]",
+  "extent" : "189 Blätter",
+  "dimensions" : "21 x 30 cm",
+  "languages" : [ {
+    "_raw_" : "ar",
+    "de" : "Arabisch",
+    "en" : "Arabic"
+  } ],
+  "notes" : [ "Kurzaufnahme einer Handschrift", "Datierte Handschrift", "Inhalt: Das neunte Buch der bekannten Enzyklopädie der arabischen Poesie.", "Schrift: Mittelgroßes weitgehend unpunktiertes etwas unsorgfältig geschriebenes Nasḫī. Die Überschriften mit einem breiteren qalam geschrieben. Sonstige Hervorhebungen rot: Punkte und Striche an den Rosetten als Verstrenner, Überstreichungen einzelner Ausdrücke und Überschriften, die an den Rändern ausgeworfenen Überschriften.", "Einband: Dunkelbrauner bestoßener abgenutzter Lederband mit Blindpressung. Die Klappe abgerissen. Der Rücken in helleres Leder gefaßt. Deckelumrahmung durch Mehrfachleisten. Die Ecken abgeschrägt. In der Mitte eine Vielpaßmandel mit Anhängern, deren Füllungen auf Grund von Abnutzung des Einbandes kaum noch erkennbar sind.", "BSB-Provenienz: Aus der Sammlung Glaser (1855-1908)", "Altsignatur: Cod.arab. Glaser 135" ],
+  "contentTypes" : [ {
+    "_raw_" : "text",
+    "de" : "Text",
+    "en" : "Text"
+  } ],
+  "manufacturingTypes" : [ {
+    "_raw_" : "handmade",
+    "de" : "Handschrift",
+    "en" : "Manuscript"
+  } ],
+  "mediaTypes" : [ {
+    "_raw_" : "book",
+    "de" : "Buch",
+    "en" : "Book"
+  } ],
+  "manifestationIdentifiers" : [ {
+    "name" : "OCLC",
+    "value" : "1028890869",
+    "url" : "https://search.worldcat.org/title/1028890869"
+  }, {
+    "name" : "Handschriften-ID",
+    "value" : "BSB-Hss Cod.arab. 1239"
+  } ],
+  "provenance" : "München, Bayerische Staatsbibliothek",
+  "shelfNumber" : "Cod.arab. 1239",
+  "shelfGroups" : [ "Codices arabici - Arabische Handschriften" ],
+  "urn" : "urn:nbn:de:bvb:12-bsb00118365-8",
+  "id" : "bsb00118365",
+  "idB3Kat" : "BV040213635",
+  "numScans" : 391,
+  "scanDate" : "2019-01-23T00:00:00Z",
+  "collections" : [ {
+    "id" : 154,
+    "labels" : {
+      "de" : "Arabische Handschriften",
+      "en" : "Arabic Manuscripts"
+    }
+  } ],
+  "license" : "https://creativecommons.org/publicdomain/mark/1.0/",
+  "iiifAvailable" : true,
+  "lsId" : "991049033509707356",
+  "previewId" : "bsb00118365_00005",
+  "entityType" : "DigitalObject",
+  "relations" : {
+    "work" : 3,
+    "otherParts" : 0
+  }
+}

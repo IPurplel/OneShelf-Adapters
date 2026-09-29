@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/metadata/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.title", required: true, transforms: [trim]}
+    creator: {json: "$.creators[0].name", transforms: [trim]}
+    description: {json: "$.byline", transforms: [trim]}
+    language: {json: "$.languages[0]._raw_"}
+    cover_url: {json: "$.previewId", transforms: [{regex_replace: {pattern: '^(bsb[0-9]{8}_[0-9]+)$', replacement: 'https://api.digitale-sammlungen.de/iiif/image/v2/\1/full/!400,400/0/default.jpg'}}]}

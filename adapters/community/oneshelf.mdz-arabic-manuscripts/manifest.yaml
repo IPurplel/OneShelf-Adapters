@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.mdz-arabic-manuscripts
+name: MDZ — Arabic Manuscripts (Bayerische Staatsbibliothek)
+version: 0.1.0
+api: '1.0'
+description: >-
+  The Arabic-language manuscripts of the Bavarian State Library's "Arabic Manuscripts" collection in
+  the Munich Digitization Center (MDZ), read page by page from their IIIF manifests. Scoped to that
+  collection because MDZ as a whole also holds in-copyright works shown only in its reading rooms; and
+  every manuscript must also carry an open rights statement (public domain mark, CC, or No Copyright)
+  in its own metadata and manifest before it becomes a Reading Unit or shows a page. Titles are MDZ's
+  transliterations; search accepts Arabic script. No downloads.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [www.digitale-sammlungen.de, api.digitale-sammlungen.de]
+defaults:
+  language: ar

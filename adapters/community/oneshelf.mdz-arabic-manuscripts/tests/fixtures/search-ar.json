@@ -1,0 +1,485 @@
+{
+ "params": {
+  "query": "الأغاني",
+  "sortField": "relevancy",
+  "sortOrder": "DESC",
+  "startPage": 0,
+  "pageSize": 50,
+  "handler": "simple-all",
+  "ocrContext": 1,
+  "filters": [
+   "collections:\"154\"",
+   "language_bib:\"ar\""
+  ]
+ },
+ "numTotal": 8,
+ "docs": [
+  {
+   "id": "bsb00118365",
+   "shelfNos": [
+    "Cod.arab. 1239"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Abu-'l-Faraǧ al-Iṣfahānī, ʿAlī Ibn-al-Ḥusain, 897-967"
+   ],
+   "publicationPlaces": [
+    "Entstehungsort nicht ermittelbar"
+   ],
+   "publicationDate": "1085 [h.q.] [1674]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00118365_00005",
+   "iiifAvailable": true,
+   "title": "Kitāb al-Aġānī - BSB Cod.arab. 1239",
+   "doi": "urn:nbn:de:bvb:12-bsb00118365-8",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "السفر الثالث من كتاب <em>الأغاني</em> الجامع الكبير تاليف الي الفرج على سن الخشير الأموى",
+     "pages": [
+      {
+       "id": "bsb00118378_00723",
+       "width": 2380,
+       "height": 3578
+      }
+     ],
+     "regions": [
+      {
+       "x": 755,
+       "y": 555,
+       "width": 1413,
+       "height": 311,
+       "pageIdx": 0,
+       "text": "السفر الثالث من كتاب <em>الأغاني</em> الجامع الكبير تاليف الي الفرج على سن الخشير الأموى"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 320,
+         "y": 31,
+         "width": 284,
+         "height": 158
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 4,
+   "id": "bsb00118378",
+   "shelfNos": [
+    "Cod.arab. 1263"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Abu-'l-Faraǧ al-Iṣfahānī, ʿAlī Ibn-al-Ḥusain, 897-967"
+   ],
+   "publicationPlaces": [
+    "Entstehungsort nicht ermittelbar"
+   ],
+   "publicationDate": "Donnerstag, 29. Rabīʿ I. 1087 [h.q.] [11. Juni 1676]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00118378_00005",
+   "iiifAvailable": true,
+   "title": "Kitāb al-Aġanī - BSB Cod.arab. 1263",
+   "doi": "urn:nbn:de:bvb:12-bsb00118378-9",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "السابع من كتاب <em>الأغاني</em> الكبير الجامع",
+     "pages": [
+      {
+       "id": "bsb00037027_00009",
+       "width": 2554,
+       "height": 3443
+      }
+     ],
+     "regions": [
+      {
+       "x": 232,
+       "y": 297,
+       "width": 2075,
+       "height": 278,
+       "pageIdx": 0,
+       "text": "السابع من كتاب <em>الأغاني</em> الكبير الجامع"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 900,
+         "y": 1,
+         "width": 420,
+         "height": 275
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00037027",
+   "shelfNos": [
+    "Cod.arab. 470#Mikroform"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Abu-'l-Faraǧ al-Iṣfahānī, ʿAlī Ibn-al-Ḥusain, 897-967"
+   ],
+   "publicationPlaces": [
+    "Äypten [?]"
+   ],
+   "publicationDate": "17. Raǧab, 613 [h.q.] [30. Oktober 1216]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00037027_00005",
+   "iiifAvailable": true,
+   "title": "Kitāb al-Aġānī. [Ein Teil] - BSB Cod.arab. 470",
+   "doi": "urn:nbn:de:bvb:12-bsb00037027-2",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "أقاموا <em>الأغاني</em> بالمغاني وضعه - كرام المساجي و الشنا المخلدا",
+     "pages": [
+      {
+       "id": "bsb00118366_00032",
+       "width": 3943,
+       "height": 5865
+      }
+     ],
+     "regions": [
+      {
+       "x": 1436,
+       "y": 1153,
+       "width": 2093,
+       "height": 223,
+       "pageIdx": 0,
+       "text": "أقاموا <em>الأغاني</em> بالمغاني وضعه - كرام المساجي و الشنا المخلدا"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 1606,
+         "y": 3,
+         "width": 248,
+         "height": 199
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00118366",
+   "shelfNos": [
+    "Cod.arab. 1240"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Ibn-al-Muqarrab, ʿAlī, 1176-1232"
+   ],
+   "publicationPlaces": [
+    "Entstehungsort nicht ermittelbar"
+   ],
+   "publicationDate": "1221 [h.q.] [1806]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00118366_00005",
+   "iiifAvailable": true,
+   "title": "Dīwān ʿAlī Ibn al-Muqarrab - BSB Cod.arab. 1240",
+   "doi": "urn:nbn:de:bvb:12-bsb00118366-3",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "الما تغني <em>الأغاني</em>، عدا سيو التخلي",
+     "pages": [
+      {
+       "id": "bsb00047872_00156",
+       "width": 1152,
+       "height": 1968
+      }
+     ],
+     "regions": [
+      {
+       "x": 237,
+       "y": 1413,
+       "width": 444,
+       "height": 52,
+       "pageIdx": 0,
+       "text": "الما تغني <em>الأغاني</em>، عدا سيو التخلي"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 241,
+         "y": 0,
+         "width": 93,
+         "height": 52
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00047872",
+   "shelfNos": [
+    "Cod.arab. 591#Mikroform"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "publicationDate": "Vor 1858",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00047872_00005",
+   "iiifAvailable": true,
+   "title": "Sammlung arabischer Lieder - Cod.arab. 591",
+   "doi": "urn:nbn:de:bvb:12-bsb00047872-8",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "بالطعن على الإسلام وتقرب الكفر و الإلجاء لا عمر نا مكن المسلون من المنع من ذلك والأركتب <em>الأغاني</em> فاني القبح على العبار ما لا جملة من الرداد تقي الطولية",
+     "pages": [
+      {
+       "id": "bsb00118348_00125",
+       "width": 2721,
+       "height": 4022
+      }
+     ],
+     "regions": [
+      {
+       "x": 545,
+       "y": 951,
+       "width": 1895,
+       "height": 631,
+       "pageIdx": 0,
+       "text": "بالطعن على الإسلام وتقرب الكفر و الإلجاء لا عمر نا مكن المسلون من المنع من ذلك والأركتب <em>الأغاني</em> فاني القبح على العبار ما لا جملة من الرداد تقي الطولية"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 195,
+         "y": 228,
+         "width": 312,
+         "height": 177
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00118348",
+   "shelfNos": [
+    "Cod.arab. 1189"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Manṣūr Billāh ʿAbdallāh Ibn-Ḥamza Ibn-Sulaimān, -1217"
+   ],
+   "publicationPlaces": [
+    "Entstehungsort nicht ermittelbar"
+   ],
+   "publicationDate": "635 [h.q.] [1238]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00118348_00005",
+   "iiifAvailable": true,
+   "title": "Kitāb al-ʿIqd aṯ-ṯamīn fī tabyīn aḥkām al-aʾimma al-hādīn - BSB Cod.arab. 1189",
+   "doi": "urn:nbn:de:bvb:12-bsb00118348-3",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "سعيد انه قال قال الزهري قال أبو يوسف القاضي ما اعجب امركم يا هل هذه المدينه في هذه <em>الأغاني</em> ما منكم شريف ولا وضيع يتحاشا عنها قال فغضبت وقلت قاتلكم السريا هل",
+     "pages": [
+      {
+       "id": "bsb00118368_00052",
+       "width": 2258,
+       "height": 3328
+      }
+     ],
+     "regions": [
+      {
+       "x": 202,
+       "y": 1298,
+       "width": 1458,
+       "height": 404,
+       "pageIdx": 0,
+       "text": "سعيد انه قال قال الزهري قال أبو يوسف القاضي ما اعجب امركم يا هل هذه المدينه في هذه <em>الأغاني</em> ما منكم شريف ولا وضيع يتحاشا عنها قال فغضبت وقلت قاتلكم السريا هل"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 430,
+         "y": 139,
+         "width": 216,
+         "height": 116
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00118368",
+   "shelfNos": [
+    "Cod.arab. 1243"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Ibšīhī, Muḥammad Ibn-Aḥmad al-, 1388-1446"
+   ],
+   "publicationPlaces": [
+    "Entstehungsort nicht ermittelbar"
+   ],
+   "publicationDate": "1307 [h.q.] [1890]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00118368_00005",
+   "iiifAvailable": true,
+   "title": "al-Mustaṭraf fī kull fann mustaẓraf - BSB Cod.arab. 1243",
+   "doi": "urn:nbn:de:bvb:12-bsb00118368-4",
+   "contained": false
+  },
+  {
+   "ocrSnippets": [
+    {
+     "text": "وقوله و الماتري <em>الأغاني</em> موقعه من الفوان از ته ويله والمواد به وجد من قبلا يسكنت و منر ير انه من ثم قال هي التي زوجها ولينا اولينا بغير امر ناشر بلغنا از مكوننا لا يكون",
+     "pages": [
+      {
+       "id": "bsb00004871_00123",
+       "width": 2328,
+       "height": 3325
+      }
+     ],
+     "regions": [
+      {
+       "x": 476,
+       "y": 1791,
+       "width": 1712,
+       "height": 159,
+       "pageIdx": 0,
+       "text": "وقوله و الماتري <em>الأغاني</em> موقعه من الفوان از ته ويله والمواد به وجد من قبلا يسكنت و منر ير انه من ثم قال هي التي زوجها ولينا اولينا بغير امر ناشر بلغنا از مكوننا لا يكون"
+      }
+     ],
+     "highlightSpans": [
+      {
+       "highlights": [
+        {
+         "text": "الأغاني",
+         "parentRegionIdx": 0,
+         "x": 1279,
+         "y": 13,
+         "width": 127,
+         "height": 62
+        }
+       ],
+       "text": "الأغاني"
+      }
+     ]
+    }
+   ],
+   "totalOcrSnippets": 1,
+   "id": "bsb00004871",
+   "shelfNos": [
+    "Cod.arab. 339#Mikroform"
+   ],
+   "provenance": "München, Bayerische Staatsbibliothek",
+   "authors": [
+    "Ibn-al-Qāḍī ʿIyāḍ, Muḥammad, -1179",
+    "Ibn-al-Qāsim, ʿAbd-ar-Raḥmān, 746-806"
+   ],
+   "publicationPlaces": [
+    "Tunis"
+   ],
+   "publicationDate": "793 [h.q.] [1390/1391]",
+   "mediaTypes": [
+    "book"
+   ],
+   "contentType": "text",
+   "manufacturingType": "handmade",
+   "previewPage": "bsb00004871_00005",
+   "iiifAvailable": true,
+   "title": "at-Tanbīhāt al-mustanbaṭa ʿalā kitāb al-mudauwana wa-'l-muḫtaliṭa ... - BSB Cod.arab. 339",
+   "doi": "urn:nbn:de:bvb:12-bsb00004871-8",
+   "contained": false
+  }
+ ],
+ "filterTranslations": {
+  "language_bib": {
+   "ar": {
+    "en": "Arabic",
+    "de": "Arabisch"
+   }
+  },
+  "collections": {
+   "154": {
+    "de": "Arabische Handschriften",
+    "en": "Arabic Manuscripts"
+   }
+  }
+ }
+}

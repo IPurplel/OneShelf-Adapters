@@ -1,0 +1,22 @@
+# A manuscript is one Reading Unit, the Master's one_shot (§4.4) — but only if its metadata carries an
+# open rights statement. The licence joins the key, and only a key followed by an open licence survives
+# the pattern: an in-copyright object (bsb00047099, InC) has no unit, even when pasted by address.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/metadata/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.license"}
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}|{licence}", required: true,
+               transforms: [{regex_extract: {pattern: '^(bsb[0-9]{8})\|https://(?:creativecommons\.org/publicdomain/(?:mark|zero)/|creativecommons\.org/licenses/|rightsstatements\.org/vocab/NoC-)', group: 1}}]}
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

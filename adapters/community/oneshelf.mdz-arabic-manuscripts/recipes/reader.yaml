@@ -1,0 +1,21 @@
+# Every canvas in the manifest's order, from each page's IIIF image service at up to 2048 px on the long
+# side, and only while the manifest's own licence is open — the same test as catalog.yaml, on the
+# document the pages come from.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "https://api.digitale-sammlungen.de/iiif/presentation/v2/{unit_key:path}/manifest"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.license"}
+  items: {json: "$.sequences[0].canvases[*].images[0].resource.service['@id']"}
+  fields:
+    url: {template: "{item}|{licence}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://api\.digitale-sammlungen\.de/iiif/image/v2/bsb[0-9]{8}_[0-9]+)\|https://(?:creativecommons\.org/publicdomain/(?:mark|zero)/|creativecommons\.org/licenses/|rightsstatements\.org/vocab/NoC-)', group: 1}},
+                       {regex_replace: {pattern: '^(.+)$', replacement: '\1/full/!2048,2048/0/default.jpg'}}]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,76 @@
+{
+  "title" : "Carl Einstein : Beiträge zu einer Monographie",
+  "byline" : "von Sibylle Penkert",
+  "creators" : [ {
+    "name" : "Penkert, Sibylle",
+    "lifeDates" : "1935-2023",
+    "gndId" : "1111584958",
+    "roles" : [ {
+      "de" : "Verfasser",
+      "en" : "Author"
+    } ]
+  } ],
+  "subjects" : [ "Biografie", "Hochschulschrift", "Einstein, Carl, 1885-1940" ],
+  "publishedBy" : [ "Göttingen : Vandenhoeck & Ruprecht" ],
+  "publishedDate" : "1969",
+  "extent" : "160 S.",
+  "languages" : [ {
+    "_raw_" : "de",
+    "de" : "Deutsch",
+    "en" : "German"
+  } ],
+  "contentTypes" : [ {
+    "_raw_" : "text",
+    "de" : "Text",
+    "en" : "Text"
+  } ],
+  "manufacturingTypes" : [ {
+    "_raw_" : "print",
+    "de" : "Druck",
+    "en" : "Print"
+  } ],
+  "mediaTypes" : [ {
+    "_raw_" : "book",
+    "de" : "Buch",
+    "en" : "Book"
+  } ],
+  "manifestationIdentifiers" : [ {
+    "name" : "ISSN",
+    "value" : "0303-4607"
+  }, {
+    "name" : "OCLC",
+    "value" : "3431353",
+    "url" : "https://search.worldcat.org/title/3431353"
+  } ],
+  "provenance" : "München, Bayerische Staatsbibliothek",
+  "shelfNumber" : "P.o.germ. 1041 fo-255/257",
+  "shelfGroups" : [ "Poetae et oratores germanici - Deutsche Dichter und Schriftsteller samt Sekundärliteratur" ],
+  "urn" : "urn:nbn:de:bvb:12-bsb00047099-5",
+  "id" : "bsb00047099",
+  "idB3Kat" : "BV005693447",
+  "numScans" : 163,
+  "scanDate" : "2010-06-11T00:00:00Z",
+  "collections" : [ {
+    "id" : 16,
+    "labels" : {
+      "de" : "Digi20",
+      "en" : "Digi20"
+    }
+  } ],
+  "license" : "https://rightsstatements.org/vocab/InC/1.0/",
+  "iiifAvailable" : true,
+  "parentIds" : [ "BV000001521" ],
+  "lsId" : "991069438299707356",
+  "previewId" : "bsb00047099_00005",
+  "entityType" : "DigitalObject",
+  "relations" : {
+    "parentWorks" : [ {
+      "bvId" : "BV000001521",
+      "title" : "Palaestra : Untersuchungen aus der deutschen und englischen Philologie und Literaturgeschichte",
+      "numContainedWorks" : 96
+    } ],
+    "boundWith" : 2,
+    "otherParts" : 0
+  },
+  "superWorks" : [ "Palaestra : Untersuchungen aus der deutschen und englischen Philologie und Literaturgeschichte ; 255" ]
+}

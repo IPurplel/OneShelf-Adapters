@@ -1,0 +1,57 @@
+cases:
+# Arabic-script query; MDZ matches it against its transliterations. Eight manuscripts, one page.
+- capability: search
+  inputs: {query: الأغاني, page: 0}
+  fixtures:
+  - url: https://www.digitale-sammlungen.de/api/search?query=%D8%A7%D9%84%D8%A3%D8%BA%D8%A7%D9%86%D9%8A&handler=simple-all&ocrContext=1&filter=collections%3A%22154%22&filter=language_bib%3A%22ar%22&pageSize=50&startPage=0
+    file: fixtures/search-ar.json
+  expect:
+    min_items: 8
+    complete: true
+    fields_present: [listing_key, title, creator, cover_url, language]
+    first: {listing_key: bsb00118365, title: Kitāb al-Aġānī - BSB Cod.arab. 1239, language: ar,
+            cover_url: 'https://api.digitale-sammlungen.de/iiif/image/v2/bsb00118365_00005/full/!400,400/0/default.jpg'}
+- capability: work
+  inputs: {listing_key: bsb00118365}
+  fixtures:
+  - url: https://www.digitale-sammlungen.de/api/metadata/bsb00118365
+    file: fixtures/metadata-bsb00118365.json
+  expect:
+    fields_present: [title, creator, language, cover_url]
+    first: {title: Kitāb al-Aġānī - BSB Cod.arab. 1239, language: ar}
+- capability: catalog
+  inputs: {listing_key: bsb00118365}
+  fixtures:
+  - url: https://www.digitale-sammlungen.de/api/metadata/bsb00118365
+    file: fixtures/metadata-bsb00118365.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: bsb00118365, unit_type: one_shot}
+# An in-copyright MDZ book (InC), outside the collection but reachable by address: no unit, not complete.
+- capability: catalog
+  inputs: {listing_key: bsb00047099}
+  fixtures:
+  - url: https://www.digitale-sammlungen.de/api/metadata/bsb00047099
+    file: fixtures/metadata-bsb00047099.json
+  expect:
+    min_items: 0
+    complete: false
+- capability: reader
+  inputs: {unit_key: bsb00118365}
+  fixtures:
+  - url: https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00118365/manifest
+    file: fixtures/manifest-bsb00118365.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://api.digitale-sammlungen.de/iiif/image/v2/bsb00118365_00001/full/!2048,2048/0/default.jpg'}
+# Its manifest lists every page publicly, yet carries InC: no page is offered.
+- capability: reader
+  inputs: {unit_key: bsb00047099}
+  fixtures:
+  - url: https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00047099/manifest
+    file: fixtures/manifest-bsb00047099.json
+  expect:
+    min_items: 0
+    complete: false
