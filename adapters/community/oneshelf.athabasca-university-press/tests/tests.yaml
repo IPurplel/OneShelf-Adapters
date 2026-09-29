@@ -1,0 +1,54 @@
+cases:
+- capability: search
+  inputs: {query: numinous}
+  fixtures:
+  - url: https://www.aupress.ca/?s=numinous&post_type=book
+    file: fixtures/search-numinous.html
+  expect:
+    min_items: 1
+    complete: true
+    fields_present: [listing_key, title]
+    first: {listing_key: 120348-numinous-animal, language: en}
+- capability: work
+  inputs: {listing_key: 120348-numinous-animal}
+  fixtures:
+  - url: https://www.aupress.ca/books/120348-numinous-animal/
+    file: fixtures/book-120348.html
+  expect:
+    fields_present: [title, creator, cover_url]
+    first: {title: Numinous Animal, creator: Bertrand Bickersteth,
+            cover_url: 'https://www.aupress.ca/app/uploads/Numinous-Animal-cover-web-472x600.jpg'}
+- capability: catalog
+  inputs: {listing_key: 120348-numinous-animal}
+  fixtures:
+  - url: https://www.aupress.ca/books/120348-numinous-animal/
+    file: fixtures/book-120348.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: 120348-numinous-animal, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: 120348-numinous-animal}
+  fixtures:
+  - url: https://www.aupress.ca/books/120348-numinous-animal/
+    file: fixtures/book-120348.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.aupress.ca/app/uploads/120348_Bickersteth_2026-Numinous_Animal.pdf', format: pdf}
+# The same page with its Creative Commons statement removed (a labelled test variant): the PDF link is
+# still there, but without an open licence nothing is offered.
+- capability: catalog
+  inputs: {listing_key: 120348-numinous-animal}
+  fixtures:
+  - url: https://www.aupress.ca/books/120348-numinous-animal/
+    file: fixtures/book-without-licence.html
+  expect:
+    min_items: 0
+- capability: downloads
+  inputs: {unit_key: 120348-numinous-animal}
+  fixtures:
+  - url: https://www.aupress.ca/books/120348-numinous-animal/
+    file: fixtures/book-without-licence.html
+  expect:
+    min_items: 0

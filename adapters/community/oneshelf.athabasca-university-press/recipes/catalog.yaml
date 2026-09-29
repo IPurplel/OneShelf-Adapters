@@ -1,0 +1,18 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4) — only when its page has both the whole-book
+# PDF and a Creative Commons licence statement (#book--copyright). A book without the licence statement
+# has no unit, whatever else its page offers.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/books/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//li[contains(@class, 'downloadPDF')]/a[contains(@href, '.pdf')][//div[@id='book--copyright']//a[contains(@href, 'creativecommons.org/licenses/') or contains(@href, 'creativecommons.org/publicdomain/')]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

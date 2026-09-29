@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/books/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1.entry-title::text", required: true, transforms: [trim]}
+    creator: {css: "h2.contributors::text", transforms: [trim]}
+    cover_url: {css: ".book--image img::attr(src)", transforms: [normalize_url]}
+    language: {template: "en"}
+    content_type: {template: "book"}

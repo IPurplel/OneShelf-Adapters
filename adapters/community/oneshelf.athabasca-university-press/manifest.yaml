@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.athabasca-university-press
+name: Athabasca University Press
+version: 0.1.0
+api: '1.0'
+description: >-
+  Open-access scholarly books from Athabasca University Press, Canada's first open-access university
+  press. A book is offered only when its page carries both a Creative Commons licence statement and the
+  whole-book PDF; that PDF is its one Reading Unit. Uses the site's own search. No page reader (the
+  press's online reader is a separate application).
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [www.aupress.ca]
+defaults:
+  language: en
+  content_type: book

@@ -1,0 +1,21 @@
+# The site's own search, limited to books. Links that are not a book page have no key and are skipped;
+# the key is the book's id-and-slug, as in its address.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/?s={query}&post_type=book"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "a[href*='/books/']"}
+  fields:
+    listing_key: {css: "::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '^https://www\.aupress\.ca/books/([0-9]+-[a-z0-9-]+)/$', group: 1}}]}
+    title: {css: "::text", required: true, transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}
+pagination:
+  mode: next_link
+  max_pages: 3
+  next: {xpath: "//a[normalize-space(.)='→']/@href"}

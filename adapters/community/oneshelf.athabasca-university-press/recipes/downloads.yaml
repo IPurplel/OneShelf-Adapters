@@ -1,0 +1,17 @@
+# The whole-book PDF, under the same condition as catalog.yaml: an open licence on the same page.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/books/{unit_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//li[contains(@class, 'downloadPDF')]/a[contains(@href, '.pdf')][//div[@id='book--copyright']//a[contains(@href, 'creativecommons.org/licenses/') or contains(@href, 'creativecommons.org/publicdomain/')]])[1]"}
+  fields:
+    url: {css: "::attr(href)", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://www\.aupress\.ca/app/uploads/[^?#]+\.pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response
