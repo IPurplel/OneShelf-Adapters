@@ -1,0 +1,8 @@
+base_url: https://www.digitalcollections.manchester.ac.uk
+url_patterns:
+  - pattern: '^https://www\.digitalcollections\.manchester\.ac\.uk/view/(MS-ARABIC-[0-9]{5})'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

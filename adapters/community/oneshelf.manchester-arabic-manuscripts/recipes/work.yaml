@@ -1,0 +1,11 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/iiif/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.label", required: true, transforms: [trim]}
+    language: {template: "ar"}

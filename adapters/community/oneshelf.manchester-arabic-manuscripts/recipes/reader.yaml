@@ -1,0 +1,17 @@
+# Every canvas in the manifest's order (right to left, as the manifest says), from each page's IIIF
+# image service at up to 2048 px on the long side.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/iiif/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.sequences[0].canvases[*].images[0].resource.service['@id']"}
+  fields:
+    url: {template: "{item}/full/!2048,2048/0/default.jpg", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://image\.digitalcollections\.manchester\.ac\.uk/iiif/MS-ARABIC-[0-9]{5}-[0-9A-Za-z-]+\.jp2/full/!2048,2048/0/default\.jpg)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

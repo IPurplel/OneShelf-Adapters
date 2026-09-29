@@ -1,0 +1,23 @@
+# The JSON search the site's own search page calls, for results 0–200 (it takes a start and an end,
+# which a recipe cannot compute from each other, so this is one request). It searches every collection;
+# only items in the Arabic manuscripts series (MS-ARABIC-nnnnn) have a key, so the rest are skipped.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/search/JSON?keyword={query}&start=0&end=200"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$[*]"}
+  fields:
+    listing_key: {json: "$.item.id[0]", required: true, transforms: [{regex_extract: {pattern: '^(MS-ARABIC-[0-9]{5})$', group: 1}}]}
+    title: {json: "$.item.title[0]", required: true, transforms: [trim]}
+    creator: {json: "$.item.authors[0][0].displayForm", transforms: [trim]}
+    # The thumbnail given is an IIIF image service, not an image: ask it for one.
+    cover_url: {json: "$.item.thumbnailURL[0]",
+                transforms: [{regex_replace: {pattern: '^(https://image\.digitalcollections\.manchester\.ac\.uk/iiif/[A-Za-z0-9-]+\.jp2)$', replacement: '\1/full/!400,400/0/default.jpg'}}]}
+    language: {template: "ar"}
+pagination:
+  mode: none
+  complete_when: single_response

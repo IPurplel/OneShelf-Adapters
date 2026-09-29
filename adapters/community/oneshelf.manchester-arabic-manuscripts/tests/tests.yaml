@@ -1,0 +1,39 @@
+cases:
+# Two results: an Arabic manuscript and a Hebrew one. Only the Arabic series is this source's.
+- capability: search
+  inputs: {query: mantiq}
+  fixtures:
+  - url: https://www.digitalcollections.manchester.ac.uk/search/JSON?keyword=mantiq&start=0&end=200
+    file: fixtures/search-mantiq.json
+  expect:
+    min_items: 1
+    complete: true
+    fields_present: [listing_key, title, cover_url, language]
+    first: {listing_key: MS-ARABIC-00829, title: Kitāb al-Manṭiq, language: ar,
+            cover_url: 'https://image.digitalcollections.manchester.ac.uk/iiif/MS-ARABIC-00829-000-00001.jp2/full/!400,400/0/default.jpg'}
+- capability: work
+  inputs: {listing_key: MS-ARABIC-00829}
+  fixtures:
+  - url: https://www.digitalcollections.manchester.ac.uk/iiif/MS-ARABIC-00829
+    file: fixtures/manifest-MS-ARABIC-00829.json
+  expect:
+    fields_present: [title]
+    first: {title: Kitāb al-Manṭiq (Arabic MS 829), language: ar}
+- capability: catalog
+  inputs: {listing_key: MS-ARABIC-00829}
+  fixtures:
+  - url: https://www.digitalcollections.manchester.ac.uk/iiif/MS-ARABIC-00829
+    file: fixtures/manifest-MS-ARABIC-00829.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: MS-ARABIC-00829, unit_type: one_shot}
+- capability: reader
+  inputs: {unit_key: MS-ARABIC-00829}
+  fixtures:
+  - url: https://www.digitalcollections.manchester.ac.uk/iiif/MS-ARABIC-00829
+    file: fixtures/manifest-MS-ARABIC-00829.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://image.digitalcollections.manchester.ac.uk/iiif/MS-ARABIC-00829-000-00001.jp2/full/!2048,2048/0/default.jpg'}

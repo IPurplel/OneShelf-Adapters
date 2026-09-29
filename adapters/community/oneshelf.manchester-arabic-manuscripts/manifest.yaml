@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.manchester-arabic-manuscripts
+name: Manchester Digital Collections — Arabic Manuscripts
+version: 0.1.0
+api: '1.0'
+description: >-
+  The John Rylands Library's Arabic manuscripts (classmark series MS-ARABIC) in Manchester Digital
+  Collections, free for everyone to view page by page, read from their IIIF manifests in the
+  manifest's order. Search is the site's own and matches its transliterated catalogue (Arabic script
+  finds nothing there); only results in the Arabic manuscripts series are kept, and the first 200
+  results are searched. Language is recorded as Arabic, the series' language. No downloads.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [www.digitalcollections.manchester.ac.uk]
+  cdn_domains: [image.digitalcollections.manchester.ac.uk]
+defaults:
+  language: ar
