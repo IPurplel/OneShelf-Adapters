@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.fsu-arabic-short-stories
+name: FSU Arabic Short Stories
+version: 0.1.0
+api: '1.0'
+description: >-
+  Short illustrated stories in Arabic for beginning and intermediate learners, written and published
+  free by Florida State University's Arabic program ("Read and Listen"). A story is one Reading Unit,
+  downloaded as the PDF the site offers. The site states no licence; the PDFs are offered publicly for
+  free download. Search returns the one-page list of stories for OneShelf's title matching. The spoken
+  and formal audio recordings are not books and are not offered.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [arabicshortstories.create.fsu.edu]
+defaults:
+  language: ar
+  content_type: book

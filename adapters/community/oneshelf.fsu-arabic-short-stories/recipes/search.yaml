@@ -1,0 +1,20 @@
+# The "Read and Listen" category lists every story on one page; OneShelf's own title matching keeps what
+# a query matches. The key is the story's slug, book-<n>.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/category/read-and-listen/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "h2 a[href*='/read-and-listen/book-']"}
+  fields:
+    listing_key: {css: "::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '/read-and-listen/(book-[0-9]+)/?$', group: 1}}]}
+    title: {css: "::text", required: true, transforms: [trim]}
+    language: {template: "ar"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

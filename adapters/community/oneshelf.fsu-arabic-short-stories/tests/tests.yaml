@@ -1,0 +1,37 @@
+cases:
+- capability: search
+  inputs: {query: بيروت}
+  fixtures:
+  - url: https://arabicshortstories.create.fsu.edu/category/read-and-listen/
+    file: fixtures/index.html
+  expect:
+    min_items: 3
+    complete: true
+    fields_present: [listing_key, title, language]
+    first: {listing_key: book-3, title: 'تالا الفضوليّة', language: ar}
+- capability: work
+  inputs: {listing_key: book-2}
+  fixtures:
+  - url: https://arabicshortstories.create.fsu.edu/read-and-listen/book-2/
+    file: fixtures/book-2.html
+  expect:
+    fields_present: [title]
+    first: {title: 'سفري وأحلامي', language: ar}
+- capability: catalog
+  inputs: {listing_key: book-2}
+  fixtures:
+  - url: https://arabicshortstories.create.fsu.edu/read-and-listen/book-2/
+    file: fixtures/book-2.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: book-2, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: book-2}
+  fixtures:
+  - url: https://arabicshortstories.create.fsu.edu/read-and-listen/book-2/
+    file: fixtures/book-2.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://arabicshortstories.create.fsu.edu/wp-content/uploads/2024/02/fsu-valentine-book2.pdf', format: pdf, language: ar}
