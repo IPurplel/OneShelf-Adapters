@@ -1,0 +1,49 @@
+cases:
+# Arabic query. The fixture carries one non-PDF entry (a .jpg, second) that the request itself would not
+# return: it must be skipped, not listed.
+- capability: search
+  inputs: {query: الجبر}
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/commons/search/page?q=filetype%3Apdf%20%D8%A7%D9%84%D8%AC%D8%A8%D8%B1&limit=100
+    file: fixtures/search-ar.json
+  expect:
+    min_items: 4
+    complete: true
+    fields_present: [listing_key, title, cover_url]
+    first: {listing_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf, title: المختصر في حساب الجبر والمقابلة}
+- capability: search
+  inputs: {query: zzqxnomatch}
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/commons/search/page?q=filetype%3Apdf%20zzqxnomatch&limit=100
+    file: fixtures/search-empty.json
+  expect:
+    min_items: 0
+    complete: true
+- capability: work
+  inputs: {listing_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf}
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/commons/file/File%3A%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D8%B5%D8%B1_%D9%81%D9%8A_%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D8%A8%D8%B1_%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9.pdf
+    file: fixtures/file.json
+  expect:
+    fields_present: [title, cover_url]
+    first: {title: المختصر في حساب الجبر والمقابلة}
+- capability: catalog
+  inputs: {listing_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf}
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/commons/file/File%3A%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D8%B5%D8%B1_%D9%81%D9%8A_%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D8%A8%D8%B1_%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9.pdf
+    file: fixtures/file.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf, unit_type: one_shot, title: المختصر في حساب الجبر والمقابلة,
+            release_date: '2011-05-09'}
+- capability: downloads
+  inputs: {unit_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf}
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/commons/file/File%3A%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D8%B5%D8%B1_%D9%81%D9%8A_%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D8%A8%D8%B1_%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9.pdf
+    file: fixtures/file.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {format: pdf, size_bytes: '12796443',
+            url: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D8%B5%D8%B1_%D9%81%D9%8A_%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D8%A8%D8%B1_%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9.pdf'}

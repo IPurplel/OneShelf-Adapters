@@ -1,0 +1,18 @@
+# A file is one Reading Unit: the whole document, the Master's one_shot (§4.4). Its key is the file name.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/core/v1/commons/file/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {json: "$.title", transforms: [{regex_extract: {pattern: '^(.+?)(?:\.(?i:pdf))?$', group: 1}}, trim]}
+    unit_type: {template: "one_shot"}
+    release_date: {json: "$.latest.timestamp", transforms: [parse_date]}
+pagination:
+  mode: none
+  complete_when: single_response

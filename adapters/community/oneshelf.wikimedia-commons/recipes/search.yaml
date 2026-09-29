@@ -1,0 +1,21 @@
+# Commons' own search (CirrusSearch) with its filetype keyword, so only PDF files are asked for. The
+# listing key is the file page name, "File:….pdf" — Commons' permanent name for the file. An entry that
+# is not a PDF has no key and is skipped: the request already excludes them, and that must stay true.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/core/v1/commons/search/page?q=filetype%3Apdf%20{query}&limit=100"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.pages[*]"}
+  fields:
+    listing_key: {json: "$.key", required: true,
+                  transforms: [{regex_extract: {pattern: '^(File:.+\.(?i:pdf))$', group: 1}}]}
+    title: {json: "$.title", required: true,
+            transforms: [{regex_extract: {pattern: '^File:(.+?)(?:\.(?i:pdf))?$', group: 1}}, trim]}
+    cover_url: {json: "$.thumbnail.url"}
+pagination:
+  mode: none
+  complete_when: single_response

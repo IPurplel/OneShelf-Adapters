@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.wikimedia-commons
+name: Wikimedia Commons (PDF)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Scanned books and other PDF documents on Wikimedia Commons, every one public domain or freely licensed
+  by Commons policy. Search covers Commons' PDF files; add incategory:"Scanned Arabic books in PDF" (or
+  any category) to a query to narrow it. A file is one Reading Unit, downloaded as the original PDF. Uses
+  the Wikimedia API Portal because commons.wikimedia.org's robots.txt disallows its own /w/ API. No
+  author or licence details (those need the disallowed API), no DjVu, and search returns the first 100
+  matches only. Languages vary per file and are not stated by the API.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [api.wikimedia.org]
+  cdn_domains: [upload.wikimedia.org, thumb.wikimedia.org]

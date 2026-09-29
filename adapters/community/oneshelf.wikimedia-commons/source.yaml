@@ -1,0 +1,5 @@
+base_url: https://api.wikimedia.org
+# The API Portal allows 500 anonymous requests an hour; stay well inside that.
+rate_limit:
+  requests_per_minute: 6
+  concurrency: 1

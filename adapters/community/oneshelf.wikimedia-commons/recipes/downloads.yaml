@@ -1,0 +1,19 @@
+# The original upload. Only a PDF on upload.wikimedia.org is offered — any other file type yields no
+# entry — and the tracking parameters the API appends are left off.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/core/v1/commons/file/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.original"}
+  fields:
+    url: {json: "$.url", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://upload\.wikimedia\.org/[^?#]+\.(?i:pdf))(?:[?#]|$)', group: 1}}]}
+    format: {template: "pdf", required: true}
+    size_bytes: {json: "$.size"}
+pagination:
+  mode: none
+  complete_when: single_response
