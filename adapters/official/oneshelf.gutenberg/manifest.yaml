@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.gutenberg
 name: Project Gutenberg
-version: 1.0.0
+version: 1.1.0
 api: '1.0'
 description: >-
   Project Gutenberg through the public Gutendex catalogue API, with EPUB downloads served by

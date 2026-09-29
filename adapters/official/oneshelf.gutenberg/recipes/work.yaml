@@ -1,7 +1,7 @@
 capability: work
 inputs: [listing_key]
 request:
-  url: "{base_url}/books/{listing_key:path}"
+  url: "{base_url}/books/{listing_key:path}/"
   headers: {Accept: application/json}
 response:
   format: json

@@ -1,7 +1,7 @@
 capability: search
 inputs: [query, page]
 request:
-  url: "{base_url}/books?search={query}&page={page}"
+  url: "{base_url}/books/?search={query}&page={page}"
   headers: {Accept: application/json}
 response:
   format: json
