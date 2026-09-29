@@ -1,0 +1,4 @@
+base_url: https://booksbyhabiba.wordpress.com
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

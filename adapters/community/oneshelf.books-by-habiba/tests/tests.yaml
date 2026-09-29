@@ -1,0 +1,39 @@
+cases:
+# The menu lists five books among other pages; only the books have Arabic in their slug.
+- capability: search
+  inputs: {query: هم}
+  fixtures:
+  - url: https://booksbyhabiba.wordpress.com/
+    file: fixtures/home.html
+  expect:
+    min_items: 5
+    complete: true
+    fields_present: [listing_key, title, language]
+    first: {listing_key: 'habiba-draws-dahab-حَبيبة-ب-تِرسِم-دَهَب', title: 'حَبيبة ب تِرسِم دَهَب', language: arz}
+- capability: work
+  inputs: {listing_key: 'yum-yum-هَمّ-هَمّ'}
+  fixtures:
+  - url: https://booksbyhabiba.wordpress.com/yum-yum-%D9%87%D9%8E%D9%85%D9%91-%D9%87%D9%8E%D9%85%D9%91/
+    file: fixtures/yum-yum.html
+  expect:
+    fields_present: [title, aliases, description, cover_url]
+    first: {title: '!هَمّ هَمّ', language: arz}
+- capability: catalog
+  inputs: {listing_key: 'yum-yum-هَمّ-هَمّ'}
+  fixtures:
+  - url: https://booksbyhabiba.wordpress.com/yum-yum-%D9%87%D9%8E%D9%85%D9%91-%D9%87%D9%8E%D9%85%D9%91/
+    file: fixtures/yum-yum.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: 'yum-yum-هَمّ-هَمّ', unit_type: one_shot}
+# Six editions are offered; only the monolingual Egyptian Arabic ebook is the unit's file.
+- capability: downloads
+  inputs: {unit_key: 'yum-yum-هَمّ-هَمّ'}
+  fixtures:
+  - url: https://booksbyhabiba.wordpress.com/yum-yum-%D9%87%D9%8E%D9%85%D9%91-%D9%87%D9%8E%D9%85%D9%91/
+    file: fixtures/yum-yum.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://booksbyhabiba.wordpress.com/wp-content/uploads/2020/06/humhum_egyptian-arabic_ebook.pdf', format: pdf, language: arz}

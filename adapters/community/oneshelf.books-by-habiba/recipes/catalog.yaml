@@ -1,0 +1,18 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4), and exists only if its page offers the
+# monolingual Egyptian Arabic ebook, found by its link text ("… – Egyptian Arabic"): the file names
+# are not consistent between books, the link texts are.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[contains(@href, '.pdf')][contains(normalize-space(.), 'Egyptian Arabic') or contains(normalize-space(.), 'EgyptianArabic')][not(contains(., 'English'))][not(contains(., 'Spanish'))])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.books-by-habiba
+name: Books by Habiba (Egyptian Arabic)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Illustrated children's books written in Egyptian (Cairene) Arabic — not Modern Standard Arabic — by
+  Habiba, released under a Creative Commons licence, free to read, download and print. A book is one
+  Reading Unit, downloaded as its monolingual Egyptian Arabic ebook PDF (not the bilingual or printable
+  editions). Language is recorded as arz, Egyptian Arabic. The five books are listed on one menu, which
+  search returns whole for OneShelf's title matching.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [booksbyhabiba.wordpress.com]
+defaults:
+  language: arz
+  content_type: book

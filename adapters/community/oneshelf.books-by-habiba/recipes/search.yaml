@@ -1,0 +1,22 @@
+# The site has no search worth using: its menu lists every book (five), and OneShelf's own title matching
+# keeps what a query matches. A book's key is its page slug, decoded (it is half English, half Arabic);
+# menu entries that are not books have no Arabic in their slug and are skipped. The title is the Egyptian
+# Arabic half of "English ~ عربي"; the English half is not the book's language.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "nav a[href^='https://booksbyhabiba.wordpress.com/']"}
+  fields:
+    listing_key: {css: "::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '^https://booksbyhabiba\.wordpress\.com/([a-z0-9-]+-(?:%[0-9a-fA-F]{2})+[^/]*)/$', group: 1}}, url_decode]}
+    title: {css: "::text", required: true, transforms: [{split: {sep: ' ~ ', index: 1}}, trim]}
+    language: {template: "arz"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response
