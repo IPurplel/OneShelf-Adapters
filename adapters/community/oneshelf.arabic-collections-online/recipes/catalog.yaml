@@ -1,0 +1,19 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4): only when the id search found exactly that
+# one book and it offers a PDF.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/search?q={listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    found: {css: ".numfound::text"}
+  items: {css: "div.item.flexrow a.pdf-button[href$='_lo.pdf']"}
+  fields:
+    unit_key: {template: "{found}|{listing_key}", required: true, transforms: [{regex_extract: {pattern: '^1\|([a-z]+_aco[0-9]+)$', group: 1}}]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

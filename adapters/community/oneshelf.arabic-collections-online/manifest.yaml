@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.arabic-collections-online
+name: Arabic Collections Online (NYU)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Arabic Collections Online, NYU's free digital library of Arabic-language books digitised with partner
+  libraries (AUB, Princeton, Columbia, Cornell and others). Titles and authors in Arabic script. A book
+  is one Reading Unit, downloaded as ACO's PDF — the low-resolution file, since the high-resolution one
+  can exceed OneShelf's 256 MB file limit; it is offered as a variant. Search pages through the first
+  20 results. No page reader (ACO's viewer is script-driven).
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [aco.dlib.nyu.edu]
+  cdn_domains: [mc.dlib.nyu.edu]
+defaults:
+  language: ar
+  content_type: book

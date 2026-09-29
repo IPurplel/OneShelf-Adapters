@@ -1,0 +1,48 @@
+cases:
+# Arabic query: two pages of ten, and more beyond — search is capped, so it says it is not complete.
+- capability: search
+  inputs: {query: تاريخ مصر}
+  fixtures:
+  - url: https://aco.dlib.nyu.edu/search?q=%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%20%D9%85%D8%B5%D8%B1
+    file: fixtures/search-ar-1.html
+  - url: https://aco.dlib.nyu.edu/search?q=%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%20%D9%85%D8%B5%D8%B1&page=2
+    file: fixtures/search-ar-2.html
+  expect:
+    min_items: 20
+    complete: false
+    fields_present: [listing_key, title, original_title, creator, language]
+    first: {listing_key: aub_aco002657, language: ar}
+- capability: work
+  inputs: {listing_key: aub_aco002657}
+  fixtures:
+  - url: https://aco.dlib.nyu.edu/search?q=aub_aco002657
+    file: fixtures/id-aub_aco002657.html
+  expect:
+    fields_present: [title, aliases, creator]
+    first: {title: 'تاريخ مصر الإقتصادي والمالي في العصر الحديث', language: ar}
+- capability: catalog
+  inputs: {listing_key: aub_aco002657}
+  fixtures:
+  - url: https://aco.dlib.nyu.edu/search?q=aub_aco002657
+    file: fixtures/id-aub_aco002657.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: aub_aco002657, unit_type: one_shot}
+# An id ACO does not have: no result, so no unit.
+- capability: catalog
+  inputs: {listing_key: nyu_aco999999}
+  fixtures:
+  - url: https://aco.dlib.nyu.edu/search?q=nyu_aco999999
+    file: fixtures/id-none.html
+  expect:
+    min_items: 0
+- capability: downloads
+  inputs: {unit_key: aub_aco002657}
+  fixtures:
+  - url: https://aco.dlib.nyu.edu/search?q=aub_aco002657
+    file: fixtures/id-aub_aco002657.html
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://mc.dlib.nyu.edu/files/books/aub_aco002657/aub_aco002657_lo.pdf', format: pdf, variant: low-resolution}

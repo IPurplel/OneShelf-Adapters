@@ -1,0 +1,23 @@
+# ACO's own search results page. Each result carries the book twice, in Latin transliteration and in
+# Arabic script; the Arabic block is the book's own title and author. The key is ACO's book id.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/search?q={query}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.item.flexrow"}
+  fields:
+    listing_key: {css: ".flexcol[lang='en'] .md_title a::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '/book/([a-z]+_aco[0-9]+)/1$', group: 1}}]}
+    title: {css: ".flexcol[lang='ar'] .md_title a::text", required: true, transforms: [trim]}
+    original_title: {css: ".flexcol[lang='en'] .md_title a::text", transforms: [trim]}
+    creator: {css: ".flexcol[lang='ar'] .md_author::text", transforms: [trim, {regex_replace: {pattern: '[،,]*\s*مؤلف\.?$', replacement: ''}}, trim]}
+    language: {template: "ar"}
+    content_type: {template: "book"}
+pagination:
+  mode: next_link
+  max_pages: 2
+  next: {css: "a[rel='next']::attr(href)"}

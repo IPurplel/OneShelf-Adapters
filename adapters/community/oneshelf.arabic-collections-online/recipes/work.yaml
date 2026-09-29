@@ -1,0 +1,23 @@
+# ACO's book pages are a script-driven viewer, so a book is read from its own search result: a search
+# for its id finds that book alone. Every field requires the result count to be exactly 1 — a search
+# that matched nothing or several books describes nothing, rather than the wrong book.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/search?q={listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    found: {css: ".numfound::text"}
+    arabic: {css: "div.item.flexrow .flexcol[lang='ar'] .md_title a::text"}
+    latin: {css: "div.item.flexrow .flexcol[lang='en'] .md_title a::text"}
+    author: {css: "div.item.flexrow .flexcol[lang='ar'] .md_author::text"}
+  fields:
+    title: {template: "{found}|{arabic}", required: true, transforms: [{regex_extract: {pattern: '^1\|\s*(.+?)\s*$', group: 1}}]}
+    aliases: {template: "{found}|{latin}", transforms: [{regex_extract: {pattern: '^1\|\s*(.+?)\s*$', group: 1}}]}
+    creator: {template: "{found}|{author}",
+              transforms: [{regex_extract: {pattern: '^1\|\s*(.+?)\s*$', group: 1}}, {regex_replace: {pattern: '[،,]*\s*مؤلف\.?$', replacement: ''}}, trim]}
+    language: {template: "ar"}
+    content_type: {template: "book"}

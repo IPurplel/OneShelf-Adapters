@@ -1,0 +1,24 @@
+# The book's PDFs from its id search (exactly one result, as in work.yaml): low resolution first — the
+# file a download takes — then high resolution as a variant. ACO links them over http; the same host
+# serves them over https, which is what is requested (OneShelf does not allow plain http here).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/search?q={unit_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    found: {css: ".numfound::text"}
+  items: {css: "div.item.flexrow a.pdf-button::attr(href)"}
+  fields:
+    url: {template: "{found}|{item}", required: true,
+          transforms: [{regex_extract: {pattern: '^1\|https?://(mc\.dlib\.nyu\.edu/files/books/[a-z]+_aco[0-9]+/[a-z]+_aco[0-9]+_(?:lo|hi)\.pdf)$', group: 1}},
+                       {regex_replace: {pattern: '^(.+)$', replacement: 'https://\1'}}]}
+    format: {template: "pdf", required: true}
+    variant: {template: "{item}", transforms: [{regex_extract: {pattern: '_(lo|hi)\.pdf$', group: 1}}, {replace: {old: lo, new: low-resolution}}, {replace: {old: hi, new: high-resolution}}]}
+    language: {template: "ar"}
+pagination:
+  mode: none
+  complete_when: single_response
