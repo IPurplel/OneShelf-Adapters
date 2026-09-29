@@ -1,0 +1,29 @@
+cases:
+- capability: work
+  inputs: {listing_key: '3875'}
+  fixtures:
+  - url: https://comicbookplus.com/?cid=3875
+    file: fixtures/series-3875.html
+  expect:
+    fields_present: [title, cover_url, language]
+    first: {title: Maximo, language: en, content_type: comic}
+- capability: catalog
+  inputs: {listing_key: '3875'}
+  fixtures:
+  - url: https://comicbookplus.com/?cid=3875
+    file: fixtures/series-3875.html
+  expect:
+    min_items: 3
+    complete: true
+    fields_present: [unit_key, title, url]
+    first: {unit_type: chapter}
+# 217 pages, from the viewer's own page selector: page n is /viewer/42/<hash>/<n>.jpg.
+- capability: reader
+  inputs: {unit_key: '102554'}
+  fixtures:
+  - url: https://comicbookplus.com/?dlid=102554
+    file: fixtures/issue-102554.html
+  expect:
+    min_items: 217
+    complete: true
+    first: {url: 'https://comicbookplus.com/viewer/42/42edd65939943970d23aaae50ed8f6da/0.jpg'}

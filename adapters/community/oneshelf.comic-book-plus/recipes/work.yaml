@@ -1,0 +1,15 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/?cid={listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1::text", required: true, transforms: [trim]}
+    description: {css: "meta[name='description']::attr(content)", transforms: [trim]}
+    cover_url: {xpath: "(//tr[@itemtype='https://schema.org/Book']//meta[@itemprop='thumbnailUrl'])[1]/@content"}
+    # The language the site records for the series' issues (schema.org inLanguage).
+    language: {xpath: "(//tr[@itemtype='https://schema.org/Book']//meta[@itemprop='inLanguage'])[1]/@content"}
+    content_type: {template: "comic"}

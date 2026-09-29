@@ -1,0 +1,20 @@
+# The series page lists every issue (there is no paging, only sorting in the browser) as schema.org Book
+# rows, in the series' own order; the "latest comics" sidebar is not part of it and is not read.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/?cid={listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//tr[@itemtype='https://schema.org/Book']"}
+  order: source_listed
+  fields:
+    unit_key: {xpath: ".//a[@itemprop='url']/@href", required: true, transforms: [{regex_extract: {pattern: 'dlid=([0-9]+)$', group: 1}}]}
+    title: {xpath: ".//span[@itemprop='name']/text()", transforms: [trim]}
+    url: {xpath: ".//a[@itemprop='url']/@href", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

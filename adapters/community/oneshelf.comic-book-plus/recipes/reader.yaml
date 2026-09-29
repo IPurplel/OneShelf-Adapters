@@ -1,0 +1,25 @@
+# Every page of the issue, in order. The viewer shows /viewer/<dir>/<hash>/<n>.jpg for page n and lists
+# every page in its page selector ("1 of 217" …); the first page's address gives the rest. A page that
+# does not fit that shape yields nothing, and the list is then incomplete rather than wrong.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/?dlid={unit_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    first: {css: "img#maincomic::attr(src)"}
+  items: {css: "#comicbookpageselect option::attr(value)"}
+  fields:
+    url: {template: "{first}|{item}", required: true,
+          transforms: [{regex_replace: {pattern: '^(https://comicbookplus\.com/viewer/[0-9a-f]{2}/[0-9a-f]{32}/)0\.jpg\|([0-9]+)$', replacement: '\1\2.jpg'}},
+                       {regex_extract: {pattern: '^(https://comicbookplus\.com/viewer/[0-9a-f]{2}/[0-9a-f]{32}/[0-9]+\.jpg)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response
+# The page images are refused (Cloudflare "you have been blocked") unless the site is the Referer, as it
+# is for the site's own viewer.
+resource_headers:
+  Referer: https://comicbookplus.com/

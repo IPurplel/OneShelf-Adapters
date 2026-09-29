@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.comic-book-plus
+name: Comic Book Plus
+version: 0.1.0
+api: '1.0'
+description: >-
+  Public domain Golden Age comics, comic strips and more from Comic Book Plus, which invites everyone to
+  read all its books online (an account is needed only to download, which this adapter does not do).
+  A series is a Work and its issues are Reading Units in the series' own order, read page by page in
+  the site's viewer order. The page images are served only with the site as Referer, which the reader
+  sends, as the site's own viewer does. No search (the site's search is an embedded Google search); a
+  series is added by pasting its comicbookplus.com address.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [comicbookplus.com]
+  cdn_domains: [box01.comicbookplus.com]
+defaults:
+  content_type: comic
