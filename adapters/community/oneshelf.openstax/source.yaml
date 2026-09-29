@@ -1,0 +1,8 @@
+base_url: https://openstax.org
+url_patterns:
+  - pattern: '^https://openstax\.org/details/books/([^/?#]+)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

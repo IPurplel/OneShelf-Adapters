@@ -1,0 +1,138 @@
+{
+    "meta": {
+        "total_count": 2
+    },
+    "items": [
+        {
+            "id": 599,
+            "meta": {
+                "slug": "química-2ed",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/599/",
+                "html_url": "https://openstax.org/details/books/química-2ed",
+                "first_published_at": "2022-05-20T12:57:37.058444-05:00",
+                "locale": "es"
+            },
+            "title": "Química 2ed",
+            "description": "<p data-block-key=\"jxyo1\"><i>Química 2ed</i> está diseñado para cumplir con los requisitos de alcance y secuencia del curso de química general de dos semestres. Este libro de texto brinda una gran oportunidad para que los estudiantes aprendan los conceptos básicos de la química y comprendan cómo se aplican a sus vidas y al mundo que los rodea. El libro incluye una serie de características innovadoras, como ejercicios interactivos y aplicaciones del mundo real, destinadas a reforzar el aprendizaje. La segunda edición fue revisada para incorporar explicaciones más claras, actuales y dinámicas, a la vez que se mantiene la misma organización que la primera edición. Se hicieron mejoras sustanciales en las imágenes, las ilustraciones y los ejercicios de ejemplo que apoyan el contenido del texto. Los cambios realizados en <i>Química 2e</i> se describen en el prefacio para ayudar a los instructores en la transición a la segunda edición. La primera edición de <i>Química</i> de OpenStax está disponible en inglés aquí.</p><p data-block-key=\"8j81g\"></p><p data-block-key=\"ao0mb\">Si se encuentra con una pantalla blanca mientras intenta acceder a su libro de texto de Openstax, nuestros desarrolladores sugieren que cierre todas las pestañas abiertas de <a href=\"http://openstax.org/\">Openstax.org</a> e intente recargar el libro.</p>",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Paul Flowers",
+                        "university": "University of North Carolina at Pembroke",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "2b19a5e2-e261-4278-9ace-9a497da3b23b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Klaus Theopold",
+                        "university": "University of Delaware",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "74e2dd8b-6f8b-4d81-b9ab-bc158d9b7e1a"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Richard Langley",
+                        "university": "Stephen F. Austin State University",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "f3c7bd1d-f4b2-44ab-8082-73e87fb48519"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "William R. Robinson, PhD",
+                        "university": "",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "2b5cab26-ff7f-4562-b17a-6243a3115967"
+                }
+            ],
+            "high_resolution_pdf_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Quimica-2ed-WEB.pdf"
+        },
+        {
+            "id": 600,
+            "meta": {
+                "slug": "química-comenzando-átomos-2ed",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/600/",
+                "html_url": "https://openstax.org/details/books/química-comenzando-átomos-2ed",
+                "first_published_at": "2022-05-20T12:57:30.274659-05:00",
+                "locale": "es"
+            },
+            "title": "Química: Comenzando con los átomos 2ed",
+            "description": "<p data-block-key=\"zmcee\"><i>Química: Comenzando con los átomos 2ed</i> es un libro de texto introductorio, revisado por colegas y con licencia abierta. Es el producto de la alianza editorial entre OpenStax, la Universidad de Connecticut y su Federación de Centros de Estudiantes. Este libro es la adaptación de <i>Química: Comenzando con los átomos 2ed</i> de OpenStax. La intención de \"comenzando con los átomos\" implica algunos principios básicos. En primer lugar, presenta la estructura atómica y molecular mucho antes que el enfoque tradicional, y luego enlaza estos temas en los capítulos posteriores. Puede elegirse este enfoque como una forma de postergar la introducción de material como la estequiometría, que los estudiantes hallan a menudo abstracto y difícil. Esto les da tiempo para adaptarse al estudio de la química. Además, les proporciona una base para comprender la aplicación de los principios cuantitativos a la química que subyace en todo el curso. También pretende centrar el estudio de la química en la base atómica que muchos ampliarán en un curso posterior que trate sobre la química orgánica. Así, se facilitará la transición en du debido momento.<br/></p><p data-block-key=\"brtha\">La segunda edición fue revisada para incorporar explicaciones más claras, actuales y dinámicas, a la vez que se mantiene la misma organización que la primera edición. Se hicieron mejoras sustanciales en las imágenes, las ilustraciones y los ejercicios de ejemplo que apoyan el contenido del texto. La primera edición de <i>Química: Comenzando con los átomos</i> de OpenStax está disponible en inglés <a href=\"http://openstax.org/books/chemistry-atoms-first-2e\">aquí</a>.</p><p data-block-key=\"2igrq\"></p><p data-block-key=\"2d92v\">Si se encuentra con una pantalla blanca mientras intenta acceder a su libro de texto de Openstax, nuestros desarrolladores sugieren que cierre todas las pestañas abiertas de <a href=\"http://openstax.org/\">Openstax.org</a> e intente recargar el libro.</p>",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Edward J. Neth",
+                        "university": "University of Connecticut",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "fe67f354-ffab-49dc-bb1d-0f9e411b262f"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Paul Flowers",
+                        "university": "University of North Carolina at Pembroke",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "9faf9522-6602-45f4-87a8-eb0a63e25183"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Klaus Theopold",
+                        "university": "University of Delaware",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "0a41ab34-3d2b-4d97-8db5-8079517ccd17"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Richard Langley",
+                        "university": "Stephen F. Austin State University",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "98b5d2c3-ec51-4299-8d73-35b926079f95"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "William R. Robinson, PhD",
+                        "university": "",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": false
+                    },
+                    "id": "e2b9a07b-4fa5-4dbd-9c61-42fe94565867"
+                }
+            ],
+            "high_resolution_pdf_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Quimica-comenzando-atomos-2ed-WEB_oNc32Lp.pdf"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "total_count": 1
+    },
+    "items": [
+        {
+            "id": 506,
+            "meta": {
+                "slug": "college-physics-courseware",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/506/",
+                "html_url": "https://openstax.org/details/books/college-physics-courseware",
+                "first_published_at": "2021-03-24T13:33:46.911602-05:00",
+                "locale": "en"
+            },
+            "title": "College Physics with Courseware",
+            "description": "",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Placeholder",
+                        "university": "",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "359a7886-aa9f-4429-acf1-a27d1bceb486"
+                }
+            ],
+            "high_resolution_pdf_url": null
+        }
+    ]
+}

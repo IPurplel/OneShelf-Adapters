@@ -1,0 +1,15 @@
+# The slug filter is exact: one book or none.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/apps/cms/api/v2/pages/?type=books.Book&slug={listing_key}&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.items[0].title", required: true, transforms: [trim]}
+    creator: {json: "$.items[0].authors[0].value.name", transforms: [trim]}
+    description: {json: "$.items[0].description", transforms: [{regex_replace: {pattern: '<[^>]*>', replacement: ''}}, html_decode, trim]}
+    language: {json: "$.items[0].meta.locale"}
+    content_type: {template: "book"}

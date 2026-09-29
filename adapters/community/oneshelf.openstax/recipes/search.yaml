@@ -1,0 +1,22 @@
+# The CMS's own full-text search over its textbooks. It cannot also filter by edition state, so retired
+# editions are listed too — they remain openly licensed and downloadable. The listing key is the book's
+# slug, the name in its openstax.org/details/books/<slug> address.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/apps/cms/api/v2/pages/?type=books.Book&search={query}&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=100"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.items[*]"}
+  fields:
+    listing_key: {json: "$.meta.slug", required: true}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    creator: {json: "$.authors[0].value.name", transforms: [trim]}
+    description: {json: "$.description", transforms: [{regex_replace: {pattern: '<[^>]*>', replacement: ''}}, html_decode, trim]}
+    language: {json: "$.meta.locale"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

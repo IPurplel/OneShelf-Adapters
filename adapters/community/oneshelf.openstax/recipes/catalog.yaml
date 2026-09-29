@@ -1,0 +1,17 @@
+# A textbook is one Reading Unit, the Master's one_shot (§4.4).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/apps/cms/api/v2/pages/?type=books.Book&slug={listing_key}&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.items[*]"}
+  fields:
+    unit_key: {json: "$.meta.slug", required: true}
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

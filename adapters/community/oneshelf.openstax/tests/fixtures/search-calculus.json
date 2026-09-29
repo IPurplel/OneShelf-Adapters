@@ -1,0 +1,649 @@
+{
+    "meta": {
+        "total_count": 3
+    },
+    "items": [
+        {
+            "id": 76,
+            "meta": {
+                "slug": "calculus-volume-3",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/76/",
+                "html_url": "https://openstax.org/details/books/calculus-volume-3",
+                "first_published_at": "2016-03-10T14:37:26.063000-06:00",
+                "locale": "en"
+            },
+            "title": "Calculus Volume 3",
+            "description": "<p data-block-key=\"x4f0g\"><i>Calculus</i> is designed for the typical two- or three-semester general calculus course, incorporating innovative features to enhance student learning. The book guides students through the core concepts of calculus and helps them understand how those concepts apply to their lives and the world around them. Due to the comprehensive nature of the material, we are offering the book in three volumes for flexibility and efficiency. <i>Volume 3</i> covers parametric equations and polar coordinates, vectors, functions of several variables, multiple integration, and second-order differential equations.</p><p data-block-key=\"u6o3e\">Please note that this title is published under a CC BY-NC-SA 4.0 license, which means that you are free to use and adapt, but not for commercial purposes. Changes you make need to be shared using this license.<br/></p>",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Gilbert Strang",
+                        "university": "Massachusetts Institute of Technology",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "b72b4154-ea55-468d-a17e-9d763f5432f3"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Nicoleta Virginia Bila",
+                        "university": "Fayetteville State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "2432a7af-821c-4b2d-b0c9-72239adfed0e"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Sheri J. Boyd",
+                        "university": "Rollins College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "df77ff64-96ef-4aa8-98c9-b719befc3948"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Smith",
+                        "university": "University of the Virgin Islands",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "255c162a-de23-4b39-86bd-f653da8c66c3"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Elaine A. Terry",
+                        "university": "Saint Joseph’s University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "63ca48ca-5f0e-41bb-bec3-89839521b95f"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Torain",
+                        "university": "Hampton University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "ee558d71-d733-474e-a29d-c2e36c8aca55"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Edwin “Jed” Herman",
+                        "university": "University of Wisconsin-Stevens Point",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "379a28a2-b488-4220-a9ea-f05024a64aaf"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Kirsten R. Messer",
+                        "university": "Colorado State University-Pueblo",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "55f3c677-81f0-40ff-8578-e14454a27f54"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Alfred K. Mulzet",
+                        "university": "Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "8c87b214-32e5-4723-ab38-83045e1678e6"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "William Radulovich",
+                        "university": "Formerly at Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "311e1798-f97e-4e59-82a9-418071e7eecb"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Erica M. Rutter",
+                        "university": "Arizona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "d7b996f8-44a6-4128-9748-51f2b53b577f"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David McCune",
+                        "university": "William Jewell College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "1dc79552-d364-4067-8415-57bf1e9a18e2"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Michelle Merriweather",
+                        "university": "Bronxville High School",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "358d015e-5a53-476f-8eb7-8e3390fb4480"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joseph Lakey",
+                        "university": "New Mexico State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "1b394da2-f2fb-4493-b490-f7827908c124"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Julie Levandosky",
+                        "university": "Framingham State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "f24cd0aa-3318-43ed-9ccd-5279540c619c"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Valeree Falduto",
+                        "university": "Palm Beach State College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "ad837c02-89a1-4d97-9ae4-f08b596e976f"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Catherine Abbott",
+                        "university": "Keuka College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "2d812be9-ce34-4ea2-a318-4dffb67b950b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joyati Debnath",
+                        "university": "Winona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "ba4c8c82-1a9f-4302-a68f-144c0512c2ca"
+                }
+            ],
+            "high_resolution_pdf_url": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-volume-3_-_WEB.pdf"
+        },
+        {
+            "id": 75,
+            "meta": {
+                "slug": "calculus-volume-2",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/75/",
+                "html_url": "https://openstax.org/details/books/calculus-volume-2",
+                "first_published_at": "2016-03-10T14:37:26.063000-06:00",
+                "locale": "en"
+            },
+            "title": "Calculus Volume 2",
+            "description": "<p data-block-key=\"6i1ux\"><i>Calculus</i> is designed for the typical two- or three-semester general calculus course, incorporating innovative features to enhance student learning. The book guides students through the core concepts of calculus and helps them understand how those concepts apply to their lives and the world around them. Due to the comprehensive nature of the material, we are offering the book in three volumes for flexibility and efficiency. <i>Volume 2</i> covers integration, differential equations, sequences and series, and parametric equations and polar coordinates.</p><p data-block-key=\"72w6f\">Please note that this title is published under a CC BY-NC-SA 4.0 license, which means that you are free to use and adapt, but not for commercial purposes. Changes you make need to be shared using this license.<br/></p>",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "William Radulovich",
+                        "university": "Formerly at Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "86f461d9-0b76-438c-9656-0a800fc410cc"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Erica M. Rutter",
+                        "university": "Arizona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "042a887d-8ef8-448e-ac09-387b3245371a"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Smith",
+                        "university": "University of the Virgin Islands",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "54e6f9c1-bcea-4d8d-820e-7ba95b256cf2"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Gilbert Strang",
+                        "university": "Massachusetts Institute of Technology",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "b68b58d4-092c-48b3-bd7a-5ce4d0a7b6c7"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Kirsten R. Messer",
+                        "university": "Colorado State University-Pueblo",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "8fd98479-556b-4938-a048-21902e9239c9"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Alfred K. Mulzet",
+                        "university": "Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "a4a2bfbc-ae68-4ebf-af06-2825d7f8f379"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Nicoleta Virginia Bila",
+                        "university": "Fayetteville State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "50bf67e8-a732-447c-9e03-d307d7464d2a"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Sheri J. Boyd",
+                        "university": "Rollins College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "57fec2a9-1b87-4230-a8de-f70ef7c509be"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joyati Debnath",
+                        "university": "Winona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "b4f9dbc1-7dc5-46da-be0a-b3fb358aee0f"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Edwin “Jed” Herman",
+                        "university": "University of Wisconsin-Stevens Point",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "d7398e10-d6fd-45ef-910c-8088476f63d6"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Valeree Falduto",
+                        "university": "Palm Beach State College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "917a44fc-ed37-43c8-bf90-1833ffbffa0d"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Elaine A. Terry",
+                        "university": "Saint Joseph’s University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "6881419b-7899-41bd-8e38-f5c73b178361"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Torain",
+                        "university": "Hampton University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "982e2a54-d171-4936-8b49-bc9fe99112ac"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Michelle Merriweather",
+                        "university": "Bronxville High School",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "eb8c0108-c3a1-452e-9ff4-6257f0c07e89"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Catherine Abbott",
+                        "university": "Keuka College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "181f5945-0282-47cd-b740-7acd9b07be08"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joseph Lakey",
+                        "university": "New Mexico State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "6e6497d0-4691-4f09-acb1-b475f545bda6"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Julie Levandosky",
+                        "university": "Framingham State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "5b78bf29-2e06-44a5-be8c-9e5c8860cb53"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David McCune",
+                        "university": "William Jewell College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "9c2bc931-90ba-4294-a7af-9eb17e82281f"
+                }
+            ],
+            "high_resolution_pdf_url": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-volume-2_-_WEB.pdf"
+        },
+        {
+            "id": 74,
+            "meta": {
+                "slug": "calculus-volume-1",
+                "type": "books.Book",
+                "detail_url": "https://openstax.org/apps/cms/api/v2/pages/74/",
+                "html_url": "https://openstax.org/details/books/calculus-volume-1",
+                "first_published_at": "2016-03-10T14:37:26.063000-06:00",
+                "locale": "en"
+            },
+            "title": "Calculus Volume 1",
+            "description": "<p data-block-key=\"esja3\"><i>Calculus</i> is designed for the typical two- or three-semester general calculus course, incorporating innovative features to enhance student learning. The book guides students through the core concepts of calculus and helps them understand how those concepts apply to their lives and the world around them. Due to the comprehensive nature of the material, we are offering the book in three volumes for flexibility and efficiency. <i>Volume 1</i> covers functions, limits, derivatives, and integration.<br/></p><p data-block-key=\"9vy8w\">Please note that this title is published under a CC BY-NC-SA 4.0 license, which means that you are free to use and adapt, but not for commercial purposes. Changes you make need to be shared using this license.</p>",
+            "authors": [
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Gilbert Strang",
+                        "university": "Massachusetts Institute of Technology",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "845fc674-e2bd-41d6-833a-09605def9d8b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joseph Lakey",
+                        "university": "New Mexico State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "da1be78c-f4f8-47ae-86ac-9f1e00d503dd"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Elaine A. Terry",
+                        "university": "Saint Joseph’s University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "fbe6dac0-450f-4905-a8ae-d1993e6671e4"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Alfred K. Mulzet",
+                        "university": "Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "7607fb35-68d4-4416-915a-5ffdd0d16dc9"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Sheri J. Boyd",
+                        "university": "Rollins College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "ed4be58a-18c7-4cb8-aceb-82d6b45acf50"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Joyati Debnath",
+                        "university": "Winona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "9ba25aa3-be8e-4d6a-9d26-c4ab157f30df"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Michelle Merriweather",
+                        "university": "Bronxville High School",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "9f331e1a-f494-487f-88cd-89b6e0ef697e"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Smith",
+                        "university": "University of the Virgin Islands",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "cbd01593-5794-4449-9ec1-56a37e4299f3"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Nicoleta Virginia Bila",
+                        "university": "Fayetteville State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "e9c3e9b4-62cf-426c-ac89-f109c9085b6d"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Valeree Falduto",
+                        "university": "Palm Beach State College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "4d886d57-edc6-4d80-ad59-4234df2a607b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Kirsten R. Messer",
+                        "university": "Colorado State University-Pueblo",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "90baa82d-d60d-418e-b7ab-aa1676177326"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "William Radulovich",
+                        "university": "Formerly at Florida State College at Jacksonville",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "de4252bf-1006-4442-907c-917aa02339f0"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Erica M. Rutter",
+                        "university": "Arizona State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "464ca24c-1052-4589-9d17-ca472132645b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David Torain",
+                        "university": "Hampton University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "e0ae2686-1ddb-490f-ba91-5f413c55b25b"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Edwin “Jed” Herman",
+                        "university": "University of Wisconsin-Stevens Point",
+                        "country": "",
+                        "senior_author": true,
+                        "display_at_top": true
+                    },
+                    "id": "25002e71-0909-42b2-b385-679c82e033b0"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Catherine Abbott",
+                        "university": "Keuka College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "5ff2add3-cf69-45ab-a13c-23eb2cf39f2c"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "Julie Levandosky",
+                        "university": "Framingham State University",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "44d075da-ecdf-4c10-b27b-25141ce7af74"
+                },
+                {
+                    "type": "author",
+                    "value": {
+                        "name": "David McCune",
+                        "university": "William Jewell College",
+                        "country": "",
+                        "senior_author": false,
+                        "display_at_top": false
+                    },
+                    "id": "7cd5fd90-6009-4ed8-a887-587f3d1c9096"
+                }
+            ],
+            "high_resolution_pdf_url": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-volume-1_-_WEB.pdf"
+        }
+    ]
+}

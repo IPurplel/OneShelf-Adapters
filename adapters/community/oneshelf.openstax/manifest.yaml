@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.openstax
+name: OpenStax
+version: 0.1.0
+api: '1.0'
+description: >-
+  Free, peer-reviewed, openly licensed (Creative Commons) college and school textbooks from OpenStax at
+  Rice University, in English and some Spanish and Polish editions. Uses the site's public CMS API; a
+  textbook is one Reading Unit, downloaded as OpenStax's full PDF. No online page reader, and no cover
+  images (OpenStax publishes them as SVG). Retired editions appear in search, as on the site.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [openstax.org]
+  cdn_domains: [assets.openstax.org]
+defaults:
+  content_type: book

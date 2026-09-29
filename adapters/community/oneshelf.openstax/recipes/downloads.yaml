@@ -1,0 +1,18 @@
+# The full-book PDF on assets.openstax.org. A book without one (a retired courseware edition has none)
+# yields an empty, incomplete list, so no download starts.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/apps/cms/api/v2/pages/?type=books.Book&slug={unit_key}&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.items[*].high_resolution_pdf_url"}
+  fields:
+    url: {json: "$", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://assets\.openstax\.org/[^?#]+\.(?i:pdf))$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

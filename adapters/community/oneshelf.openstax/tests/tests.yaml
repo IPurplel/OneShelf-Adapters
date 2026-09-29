@@ -1,0 +1,56 @@
+cases:
+- capability: search
+  inputs: {query: calculus}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&search=calculus&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=100
+    file: fixtures/search-calculus.json
+  expect:
+    min_items: 3
+    complete: true
+    fields_present: [listing_key, title, creator, description, language]
+    first: {listing_key: calculus-volume-3, title: Calculus Volume 3, language: en, creator: Gilbert Strang}
+# Non-ASCII query and a Spanish edition, whose language the CMS states.
+- capability: search
+  inputs: {query: química}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&search=qu%C3%ADmica&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=100
+    file: fixtures/search-quimica.json
+  expect:
+    min_items: 2
+    fields_present: [listing_key, title, language]
+    first: {listing_key: química-2ed, title: Química 2ed, language: es}
+- capability: work
+  inputs: {listing_key: calculus-volume-1}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=calculus-volume-1&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1
+    file: fixtures/book-calculus-volume-1.json
+  expect:
+    fields_present: [title, creator, description, language]
+    first: {title: Calculus Volume 1, creator: Gilbert Strang, language: en}
+- capability: catalog
+  inputs: {listing_key: calculus-volume-1}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=calculus-volume-1&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1
+    file: fixtures/book-calculus-volume-1.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: calculus-volume-1, unit_type: one_shot, title: Calculus Volume 1}
+- capability: downloads
+  inputs: {unit_key: calculus-volume-1}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=calculus-volume-1&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1
+    file: fixtures/book-calculus-volume-1.json
+  expect:
+    min_items: 1
+    complete: true
+    fields_present: [url, format]
+    first: {format: pdf}
+- capability: downloads
+  inputs: {unit_key: college-physics-courseware}
+  fixtures:
+  - url: https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=college-physics-courseware&fields=title%2Cdescription%2Cauthors%2Chigh_resolution_pdf_url&limit=1
+    file: fixtures/book-no-pdf.json
+  expect:
+    min_items: 0
+    complete: false
