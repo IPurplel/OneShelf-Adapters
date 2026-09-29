@@ -1,0 +1,36 @@
+cases:
+- capability: work
+  inputs: {listing_key: btv1b8422965p}
+  fixtures:
+  - url: https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/manifest.json
+    file: fixtures/manifest-btv1b8422965p.json
+  expect:
+    first: {title: BnF. Département des Manuscrits. Arabe 5847}
+- capability: catalog
+  inputs: {listing_key: btv1b8422965p}
+  fixtures:
+  - url: https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/manifest.json
+    file: fixtures/manifest-btv1b8422965p.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: btv1b8422965p, unit_type: one_shot}
+# A document without a IIIF manifest: Gallica answers with an error, and there is no unit.
+- capability: catalog
+  inputs: {listing_key: bpt6k0000000x}
+  fixtures:
+  - url: https://gallica.bnf.fr/iiif/ark:/12148/bpt6k0000000x/manifest.json
+    file: fixtures/manifest-btv1b8422965p.json
+    status: 500
+  expect:
+    min_items: 0
+    complete: false
+- capability: reader
+  inputs: {unit_key: btv1b8422965p}
+  fixtures:
+  - url: https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/manifest.json
+    file: fixtures/manifest-btv1b8422965p.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f1/full/2048,/0/native.jpg'}

@@ -1,0 +1,170 @@
+{
+ "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/manifest.json",
+ "label": "BnF. Département des Manuscrits. Arabe 5847",
+ "attribution": "Bibliothèque nationale de France",
+ "license": "https://gallica.bnf.fr/html/und/conditions-dutilisation-des-contenus-de-gallica",
+ "logo": "https://gallica.bnf.fr/mbImage/logos/logo-bnf.png",
+ "related": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p",
+ "seeAlso": [
+  "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b8422965p"
+ ],
+ "description": "Les Makamat de Hariri ; exemplaire orné de peintures exécutées par Yahya ibn Mahmoud ibn Yahya ibn Aboul-Hasan ibn Kouvarriha al-Wasiti.",
+ "metadata": [
+  {
+   "label": "Repository",
+   "value": ""
+  },
+  {
+   "label": "Digitised by",
+   "value": "Bibliothèque nationale de France"
+  },
+  {
+   "label": "Source Images",
+   "value": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p"
+  },
+  {
+   "label": "Metadata Source",
+   "value": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b8422965p"
+  },
+  {
+   "label": "Shelfmark",
+   "value": "Bibliothèque nationale de France. Département des Manuscrits. Arabe 5847"
+  },
+  {
+   "label": "Title",
+   "value": "Les Makamat de Hariri ; exemplaire orné de peintures exécutées par Yahya ibn Mahmoud ibn Yahya ibn Aboul-Hasan ibn Kouvarriha al-Wasiti."
+  },
+  {
+   "label": "Date",
+   "value": "1236-1237"
+  },
+  {
+   "label": "Language",
+   "value": "arabe"
+  },
+  {
+   "label": "Format",
+   "value": "Neskhi mésopotamien copié en 634 de l'hégire / 1236-1237 par le peintre lui-même. - 167 feuillets. - 37 × 28 centimètres"
+  },
+  {
+   "label": "Creator",
+   "value": [
+    {
+     "@value": "Abou Mohammad al-Qāsim ibn ʿAli ibn Mohammad ibn ʿAli al-Hariri al-Basri. Auteur du texte"
+    },
+    {
+     "@value": "Qāsim ibn ʿAli ibn Mohammad ibn ʿAli al-Hariri al-Basri (Abou Mohammad) (al-). Auteur du texte"
+    }
+   ]
+  },
+  {
+   "label": "Relation",
+   "value": "Notice du catalogue : http://archivesetmanuscrits.bnf.fr/ark:/12148/cc328777"
+  },
+  {
+   "label": "Type",
+   "value": "Manuscrit"
+  }
+ ],
+ "sequences": [
+  {
+   "canvases": [
+    {
+     "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f1",
+     "label": "plat supérieur",
+     "height": 6434,
+     "width": 5686,
+     "images": [
+      {
+       "motivation": "sc:painting",
+       "on": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f1",
+       "resource": {
+        "format": "image/jpeg",
+        "service": {
+         "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+         "@context": "http://iiif.io/api/image/1/context.json",
+         "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f1"
+        },
+        "height": 6434,
+        "width": 5686,
+        "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f1/full/full/0/native.jpg",
+        "@type": "dctypes:Image"
+       },
+       "@type": "oa:Annotation"
+      }
+     ],
+     "thumbnail": {
+      "@id": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p/f1.thumbnail"
+     },
+     "@type": "sc:Canvas"
+    },
+    {
+     "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f2",
+     "label": "contreplat sup.",
+     "height": 6391,
+     "width": 5544,
+     "images": [
+      {
+       "motivation": "sc:painting",
+       "on": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f2",
+       "resource": {
+        "format": "image/jpeg",
+        "service": {
+         "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+         "@context": "http://iiif.io/api/image/1/context.json",
+         "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f2"
+        },
+        "height": 6391,
+        "width": 5544,
+        "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f2/full/full/0/native.jpg",
+        "@type": "dctypes:Image"
+       },
+       "@type": "oa:Annotation"
+      }
+     ],
+     "thumbnail": {
+      "@id": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p/f2.thumbnail"
+     },
+     "@type": "sc:Canvas"
+    },
+    {
+     "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f3",
+     "label": "page de garde recto",
+     "height": 6217,
+     "width": 5334,
+     "images": [
+      {
+       "motivation": "sc:painting",
+       "on": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/canvas/f3",
+       "resource": {
+        "format": "image/jpeg",
+        "service": {
+         "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+         "@context": "http://iiif.io/api/image/1/context.json",
+         "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f3"
+        },
+        "height": 6217,
+        "width": 5334,
+        "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/f3/full/full/0/native.jpg",
+        "@type": "dctypes:Image"
+       },
+       "@type": "oa:Annotation"
+      }
+     ],
+     "thumbnail": {
+      "@id": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p/f3.thumbnail"
+     },
+     "@type": "sc:Canvas"
+    }
+   ],
+   "label": "Current Page Order",
+   "@type": "sc:Sequence",
+   "@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8422965p/sequence/default"
+  }
+ ],
+ "thumbnail": {
+  "@id": "https://gallica.bnf.fr/ark:/12148/btv1b8422965p.thumbnail"
+ },
+ "@type": "sc:Manifest",
+ "@context": "http://iiif.io/api/presentation/2/context.json"
+}

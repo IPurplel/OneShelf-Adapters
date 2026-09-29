@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.gallica
+name: Gallica (BnF)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Digitised books and manuscripts from Gallica, the Bibliothèque nationale de France's digital
+  library — Arabic manuscripts among them — read page by page from their IIIF manifests, which Gallica
+  publishes for the documents it offers freely (its conditions of use allow free non-commercial reuse).
+  A document without a manifest has no Reading Unit. No search: Gallica's robots.txt disallows every
+  address with a query string, its search API included; a document is added by pasting its
+  gallica.bnf.fr/ark:/12148/… address. Language is not stated in a form a recipe can read, so it is left
+  Unknown.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [gallica.bnf.fr]

@@ -1,0 +1,18 @@
+# Every canvas in the manifest's order, at 2048 px wide — the whole page at reading size; the manifest's
+# own addresses are the native scans (over 5000 px, about 2 MB each).
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/iiif/ark:/12148/{unit_key:path}/manifest.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.sequences[0].canvases[*].images[0].resource['@id']"}
+  fields:
+    url: {json: "$", required: true,
+          transforms: [{regex_replace: {pattern: '^(https://gallica\.bnf\.fr/iiif/ark:/12148/[a-z0-9]+/f[0-9]+)/full/full/0/native\.jpg$', replacement: '\1/full/2048,/0/native.jpg'}},
+                       {regex_extract: {pattern: '^(https://gallica\.bnf\.fr/iiif/ark:/12148/[a-z0-9]+/f[0-9]+/full/2048,/0/native\.jpg)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,10 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/iiif/ark:/12148/{listing_key:path}/manifest.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.label", required: true, transforms: [trim]}

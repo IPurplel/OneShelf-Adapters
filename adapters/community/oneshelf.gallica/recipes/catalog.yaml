@@ -1,0 +1,18 @@
+# A document is one Reading Unit, the Master's one_shot (§4.4): read as the sequence of its pages. A
+# document Gallica does not serve through IIIF answers with an error, and so has no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/iiif/ark:/12148/{listing_key:path}/manifest.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {json: "$.label", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
