@@ -34,8 +34,7 @@ import sys
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
-from urllib.parse import parse_qsl, urljoin, urlsplit
-from urllib.robotparser import RobotFileParser
+from urllib.parse import parse_qsl, quote, unquote, urljoin, urlsplit
 
 from oneshelf.net.http import USER_AGENT, FetchFailed, HttpClient, TooManyRedirects
 from oneshelf.net.policy import BlockedDestination, DisallowedTarget, EgressPolicy
@@ -61,6 +60,76 @@ SPA_MARKERS = ("__NEXT_DATA__", "__NUXT__", "id=\"root\"", "id=\"app\"", "ng-ver
 ARABIC = re.compile(r"[؀-ۿݐ-ݿࢠ-ࣿ]")
 LATIN = re.compile(r"[A-Za-z]")
 CJK = re.compile(r"[぀-ヿ一-鿿]")
+
+
+# -- robots.txt (RFC 9309) --------------------------------------------------------------------------------
+
+class Robots:
+    """RFC 9309 matching, which urllib.robotparser does not implement: every group naming the agent (or,
+    failing that, every "*" group) is merged; paths support "*" and a trailing "$"; the longest matching
+    rule wins and Allow wins a tie. urllib's parser reads "/*.pdf" as a literal path and would call a
+    disallowed PDF allowed."""
+
+    def __init__(self, text: str) -> None:
+        self.groups: list[tuple[list[str], list[tuple[bool, str]]]] = []
+        self.sitemaps: list[str] = []
+        self.crawl_delays: dict[str, float] = {}
+        agents: list[str] = []
+        rules: list[tuple[bool, str]] = []
+        in_rules = False
+        for raw in text.splitlines():
+            line = raw.split("#", 1)[0].strip()
+            if ":" not in line:
+                continue
+            key, value = (part.strip() for part in line.split(":", 1))
+            key = key.lower()
+            if key == "user-agent":
+                if in_rules:
+                    self.groups.append((agents, rules))
+                    agents, rules, in_rules = [], [], False
+                agents.append(value.lower())
+            elif key in ("allow", "disallow"):
+                in_rules = True
+                if value:
+                    rules.append((key == "allow", value))
+            elif key == "crawl-delay":
+                in_rules = True
+                try:
+                    for agent in agents:
+                        self.crawl_delays[agent] = float(value)
+                except ValueError:
+                    pass
+            elif key == "sitemap":
+                self.sitemaps.append(value)
+        if agents:
+            self.groups.append((agents, rules))
+
+    def _rules_for(self, agent: str) -> list[tuple[bool, str]]:
+        token = agent.lower()
+        named = [rules for agents, rules in self.groups if token in agents]
+        chosen = named or [rules for agents, rules in self.groups if "*" in agents]
+        return [rule for rules in chosen for rule in rules]
+
+    @staticmethod
+    def _matches(pattern: str, path: str) -> bool:
+        anchored = pattern.endswith("$")
+        regex = "".join(".*" if c == "*" else re.escape(c) for c in (pattern[:-1] if anchored else pattern))
+        return re.match(regex + ("$" if anchored else ""), path) is not None
+
+    def can_fetch(self, agent: str, url: str) -> bool:
+        parts = urlsplit(url)
+        path = quote(unquote(parts.path or "/"), safe="/%*$-._~!&'()+,;=:@") + (f"?{parts.query}" if parts.query else "")
+        best: tuple[int, bool] | None = None
+        for allow, pattern in self._rules_for(agent):
+            normal = quote(unquote(pattern), safe="/%*$-._~!&'()+,;=:@?")
+            if self._matches(normal, path):
+                candidate = (len(normal), allow)
+                if best is None or candidate[0] > best[0] or (candidate[0] == best[0] and allow):
+                    best = candidate
+        return True if best is None else best[1]
+
+    def crawl_delay(self, agent: str) -> float | None:
+        return self.crawl_delays.get(agent.lower(), self.crawl_delays.get("*"))
 
 
 # -- fetching: Core's client, robots first, cached ---------------------------------------------------------
@@ -120,13 +189,11 @@ async def fetch_with_robots(url: str, extra_hosts: list[str], max_bytes: int, ig
             meta = await _fetch_robots(robots, policy)
             robots["status"] = meta["status"]
             if meta["status"] == 200:
-                text = meta["body"].decode("utf-8", "replace")
-                parser = RobotFileParser()
-                parser.parse(text.splitlines())
+                parser = Robots(meta["body"].decode("utf-8", "replace"))
                 robots["oneshelf_allowed"] = parser.can_fetch("OneShelf", url)
                 robots["any_agent_allowed"] = parser.can_fetch("*", url)
-                robots["crawl_delay"] = parser.crawl_delay("OneShelf") or parser.crawl_delay("*")
-                robots["sitemaps"] = parser.site_maps() or []
+                robots["crawl_delay"] = parser.crawl_delay("OneShelf")
+                robots["sitemaps"] = parser.sitemaps
             else:  # RFC 9309: an unavailable robots.txt (4xx) means no restrictions
                 robots["oneshelf_allowed"] = robots["any_agent_allowed"] = meta["status"] < 500
         except (FetchFailed, DisallowedTarget, BlockedDestination, TooManyRedirects, TimeoutError) as exc:

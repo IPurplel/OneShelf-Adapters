@@ -82,3 +82,30 @@ def test_inspect_refuses_headers_a_recipe_may_not_send():
     out = subprocess.run([sys.executable, str(ROOT / "tools" / "lib" / "inspect_source.py"), "https://example.org/",
                           "--header", "Cookie:session=1"], capture_output=True, text=True)
     assert out.returncode != 0 and "not allowed" in out.stderr
+
+
+UCL_LIKE = """User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
+Disallow: /*.pdf
+Disallow: /?s=
+Disallow: /private$
+Crawl-delay: 10
+"""
+
+
+def test_robots_follows_rfc_9309():
+    robots = inspect_source.Robots(UCL_LIKE)
+    assert not robots.can_fetch("OneShelf", "https://x.org/app/uploads/book.pdf")      # "*" wildcard
+    assert not robots.can_fetch("OneShelf", "https://x.org/app/uploads/book.pdf.html")  # no "$": a prefix pattern
+    assert not robots.can_fetch("OneShelf", "https://x.org/?s=arabic")                # second "*" group merged
+    assert robots.can_fetch("OneShelf", "https://x.org/wp-admin/admin-ajax.php")      # longer Allow wins
+    assert not robots.can_fetch("OneShelf", "https://x.org/wp-admin/options.php")
+    assert not robots.can_fetch("OneShelf", "https://x.org/private") and robots.can_fetch("OneShelf", "https://x.org/private/x")
+    assert not robots.can_fetch("CCBot", "https://x.org/books/")                        # a named group replaces "*"
+    assert robots.can_fetch("OneShelf", "https://x.org/books/") and robots.crawl_delay("OneShelf") == 10
