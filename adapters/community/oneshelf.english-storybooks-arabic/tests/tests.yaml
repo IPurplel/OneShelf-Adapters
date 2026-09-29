@@ -1,0 +1,47 @@
+cases:
+- capability: search
+  inputs: {query: أقرأ}
+  fixtures:
+  - url: https://englishstorybooks.org/stories/ar/
+    file: fixtures/index-ar.html
+  expect:
+    min_items: 40
+    complete: true
+    fields_present: [listing_key, title, language]
+    first: {listing_key: '0087', title: 'أُحِبُّ أَنْ أَقْرَأَ!', language: ar}
+- capability: work
+  inputs: {listing_key: '0087'}
+  fixtures:
+  - url: https://englishstorybooks.org/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    fields_present: [title, creator]
+    first: {title: 'أُحِبُّ أَنْ أَقْرَأَ!', creator: Letta Machoga, language: ar}
+- capability: catalog
+  inputs: {listing_key: '0087'}
+  fixtures:
+  - url: https://englishstorybooks.org/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '0087', unit_type: one_shot}
+# An unknown number is a real 404: no unit, and the list is not complete.
+- capability: catalog
+  inputs: {listing_key: '9999'}
+  fixtures:
+  - url: https://englishstorybooks.org/stories/ar/9999/
+    file: fixtures/story-missing.html
+    status: 404
+  expect:
+    min_items: 0
+    complete: false
+- capability: downloads
+  inputs: {unit_key: '0087'}
+  fixtures:
+  - url: https://englishstorybooks.org/stories/ar/0087/
+    file: fixtures/story-0087.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://globalstorybooks.net/media/ue/pdf/ar/ar-0087_read.pdf', format: pdf, language: ar}

@@ -1,0 +1,8 @@
+base_url: https://englishstorybooks.org
+url_patterns:
+  - pattern: '^https://englishstorybooks\.org/stories/ar/([0-9]{4})/?'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

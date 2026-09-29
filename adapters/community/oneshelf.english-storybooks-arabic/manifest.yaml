@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.english-storybooks-arabic
+name: Multilingual English Storybooks (Arabic)
+version: 0.1.0
+api: '1.0'
+description: >-
+  The Arabic stories of Multilingual English Storybooks, a Global Storybooks site — illustrated
+  African Storybook picture books, Creative Commons licensed, levelled for early readers. A story is one
+  Reading Unit, downloaded as the monolingual Arabic PDF from globalstorybooks.net. The site has no
+  search: its whole Arabic index (40 stories) is one page, and OneShelf matches titles against it. No
+  covers (they are served from raw.githubusercontent.com, which would mean allowing all of GitHub's raw
+  files) and no page reader (the pictures are wordless; the words are in the PDF).
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [englishstorybooks.org]
+  cdn_domains: [globalstorybooks.net]
+defaults:
+  language: ar
+  content_type: book

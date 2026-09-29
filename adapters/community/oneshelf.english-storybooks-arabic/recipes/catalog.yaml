@@ -1,0 +1,18 @@
+# A story is one Reading Unit, the Master's one_shot (§4.4), and exists only if the page offers the
+# story's monolingual Arabic PDF.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/stories/ar/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[starts-with(@href, 'https://globalstorybooks.net/media/ue/pdf/ar/ar-')][contains(@href, '_read.pdf')])[1]"}
+  fields:
+    unit_key: {css: "::attr(href)", required: true,
+               transforms: [{regex_extract: {pattern: '/pdf/ar/ar-([0-9]{4})_read\.pdf$', group: 1}}]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
