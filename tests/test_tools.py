@@ -76,3 +76,9 @@ def test_live_check_names_an_unknown_adapter():
 
 def test_the_inspection_cache_is_ignored():
     assert subprocess.run(["git", "-C", str(ROOT), "check-ignore", "-q", ".inspect-cache/x"]).returncode == 0
+
+
+def test_inspect_refuses_headers_a_recipe_may_not_send():
+    out = subprocess.run([sys.executable, str(ROOT / "tools" / "lib" / "inspect_source.py"), "https://example.org/",
+                          "--header", "Cookie:session=1"], capture_output=True, text=True)
+    assert out.returncode != 0 and "not allowed" in out.stderr

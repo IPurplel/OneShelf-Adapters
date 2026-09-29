@@ -41,7 +41,7 @@ from oneshelf.net.http import USER_AGENT, FetchFailed, HttpClient, TooManyRedire
 from oneshelf.net.policy import BlockedDestination, DisallowedTarget, EgressPolicy
 from oneshelf.plugins import jsonpath
 from oneshelf.plugins.runtime import _raw_for, parse_document
-from oneshelf.plugins.schema import FieldSpec
+from oneshelf.plugins.schema import FieldSpec, check_headers
 
 ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / ".inspect-cache"
@@ -65,19 +65,20 @@ CJK = re.compile(r"[぀-ヿ一-鿿]")
 
 # -- fetching: Core's client, robots first, cached ---------------------------------------------------------
 
-def _cache_path(url: str) -> Path:
-    return CACHE / hashlib.sha256(url.encode()).hexdigest()[:32]
+def _cache_path(url: str, headers: dict[str, str] | None = None) -> Path:
+    key = url + "".join(f"\n{k}: {v}" for k, v in sorted((headers or {}).items()))
+    return CACHE / hashlib.sha256(key.encode()).hexdigest()[:32]
 
 
-async def _fetch(client: HttpClient, url: str, max_bytes: int) -> dict:
-    cached = _cache_path(url)
+async def _fetch(client: HttpClient, url: str, max_bytes: int, headers: dict[str, str] | None = None) -> dict:
+    cached = _cache_path(url, headers)
     if (cached / "meta.json").is_file():
         meta = json.loads((cached / "meta.json").read_text())
         meta["body"] = (cached / "body").read_bytes()
         meta["from_cache"] = True
         return meta
     started = time.monotonic()
-    response = await client.fetch(url, max_bytes=max_bytes)
+    response = await client.fetch(url, max_bytes=max_bytes, headers=headers or None)
     meta = {"url": url, "final_url": response.url, "status": response.status, "redirects": response.redirects,
             "headers": {k: v for k, v in response.headers.items() if k.lower() != "set-cookie"},
             "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -109,7 +110,8 @@ async def _fetch_robots(robots: dict, policy: EgressPolicy) -> dict:
     raise TooManyRedirects("robots.txt redirected too many times")
 
 
-async def fetch_with_robots(url: str, extra_hosts: list[str], max_bytes: int, ignore_robots: bool) -> tuple[dict, dict]:
+async def fetch_with_robots(url: str, extra_hosts: list[str], max_bytes: int, ignore_robots: bool,
+                            headers: dict[str, str] | None = None) -> tuple[dict, dict]:
     host = urlsplit(url).hostname or ""
     policy = EgressPolicy(domains=tuple(dict.fromkeys([host.lower(), *[h.lower() for h in extra_hosts]])))
     robots: dict = {"url": urljoin(url, "/robots.txt")}
@@ -133,7 +135,7 @@ async def fetch_with_robots(url: str, extra_hosts: list[str], max_bytes: int, ig
         if robots.get("oneshelf_allowed") is False and not ignore_robots:
             raise SystemExit(f"robots.txt at {robots['url']} disallows {url} for OneShelf; not fetched.\n"
                              "An adapter may not use a disallowed path either (docs/review-policy.md).")
-        return await _fetch(client, url, max_bytes), robots
+        return await _fetch(client, url, max_bytes, headers), robots
 
 
 # -- analysis ----------------------------------------------------------------------------------------------
@@ -293,6 +295,9 @@ def evaluate(body: bytes, url: str, is_json: bool, selectors: list[tuple[str, st
                             "values": [str(v)[:200] for v in values[:limit]]})
         except (ValueError, jsonpath.JsonPathError) as exc:
             results.append({"kind": kind, "selector": expression, "error": str(exc)})
+        except TypeError as exc:  # e.g. XPath count(): the runtime needs nodes or strings, not a number
+            results.append({"kind": kind, "selector": expression,
+                            "error": f"the runtime cannot use this expression's result ({exc}); select nodes or text"})
     return results
 
 
@@ -328,6 +333,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--xpath", action="append", default=[], help="evaluate an XPath expression (repeatable)")
     parser.add_argument("--json", dest="json_paths", action="append", default=[], help="evaluate a JSON path (repeatable)")
     parser.add_argument("--allow-host", action="append", default=[], help="also allow redirects to this host")
+    parser.add_argument("--header", action="append", default=[], metavar="NAME:VALUE",
+                        help="a request header a recipe would send, e.g. Accept:application/xml (recipe rules apply)")
     parser.add_argument("--save", type=Path, help="write the response body here (a fixture draft to trim)")
     parser.add_argument("--limit", type=int, default=5, help="values shown per selector (default 5)")
     parser.add_argument("--max-bytes", type=int, default=8 * 1024 * 1024)
@@ -344,7 +351,12 @@ def main(argv: list[str] | None = None) -> int:
     elif args.url:
         url = args.url
         try:
-            meta, robots = asyncio.run(fetch_with_robots(url, args.allow_host, args.max_bytes, args.ignore_robots))
+            headers = check_headers(dict(h.split(":", 1) for h in args.header)) if args.header else {}
+        except ValueError as exc:
+            parser.error(str(exc))
+        try:
+            meta, robots = asyncio.run(fetch_with_robots(url, args.allow_host, args.max_bytes, args.ignore_robots,
+                                                         {k.strip(): v.strip() for k, v in headers.items()}))
         except DisallowedTarget as exc:
             print(f"refused by the egress policy: {exc}\n(a redirect to another host? rerun with --allow-host HOST"
                   " if that host belongs to the source)", file=sys.stderr)
