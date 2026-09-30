@@ -1,0 +1,10 @@
+base_url: https://xkcd.com
+# The whole site is one listing, so any xkcd.com address — the front page or a comic's — opens it. The
+# key is the fixed word "xkcd", captured so that nothing else from the address becomes an identifier.
+url_patterns:
+  - pattern: '^https://(xkcd)\.com(?:/|$)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

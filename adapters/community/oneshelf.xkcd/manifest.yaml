@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.xkcd
+name: xkcd
+version: 0.1.0
+api: '1.0'
+description: >-
+  xkcd, Randall Munroe's webcomic (CC BY-NC 2.5), read comic by comic from the site's own archive and its
+  JSON interface. One listing holds every comic; each comic is one unit with its one image. Comics whose
+  JSON names no image file — the interactive ones such as Hoverboard — offer no page rather than a
+  stand-in. Non-commercial use only, with attribution to xkcd.com. No search and no downloads.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [xkcd.com]
+  cdn_domains: [imgs.xkcd.com]
+defaults:
+  language: en
+  content_type: comic

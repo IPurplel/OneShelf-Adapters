@@ -1,0 +1,48 @@
+cases:
+- capability: work
+  inputs: {listing_key: xkcd}
+  fixtures:
+  - url: https://xkcd.com/info.0.json
+    file: fixtures/latest.json
+  expect:
+    fields_present: [title, creator, description, cover_url, language]
+    first: {title: xkcd, creator: Randall Munroe, language: en, content_type: comic,
+            cover_url: 'https://imgs.xkcd.com/comics/jupiter_icy_moons_explorer.png'}
+# A trimmed archive: the three newest and three oldest comics, and four with awkward titles or no image.
+- capability: catalog
+  inputs: {listing_key: xkcd, language: en}
+  fixtures:
+  - url: https://xkcd.com/archive/
+    file: fixtures/archive.html
+  expect:
+    min_items: 10
+    complete: true
+    fields_present: [unit_key, number, title, url]
+    first: {unit_key: '1', number: '1', title: Barrel - Part 1, unit_type: chapter, url: 'https://xkcd.com/1/'}
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://xkcd.com/1/'}
+  fixtures:
+  - url: https://xkcd.com/1/info.0.json
+    file: fixtures/comic-1.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg', page_label: Barrel - Part 1}
+- capability: reader
+  inputs: {unit_key: '3304', url: 'https://xkcd.com/3304/'}
+  fixtures:
+  - url: https://xkcd.com/3304/info.0.json
+    file: fixtures/comic-3304.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://imgs.xkcd.com/comics/jupiter_icy_moons_explorer.png'}
+# Interactive: the JSON's "img" is the bare directory. No page is offered (first entry absent).
+- capability: reader
+  inputs: {unit_key: '1608', url: 'https://xkcd.com/1608/'}
+  fixtures:
+  - url: https://xkcd.com/1608/info.0.json
+    file: fixtures/comic-1608.json
+  expect:
+    complete: false
+    first: {url: null}

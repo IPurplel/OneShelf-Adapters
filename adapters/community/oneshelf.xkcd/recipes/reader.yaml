@@ -1,0 +1,19 @@
+# A comic's one page, from its JSON. Only a real image file on imgs.xkcd.com is a page: interactive comics
+# (1608 Hoverboard, 1663 Garden, …) give the bare directory "https://imgs.xkcd.com/comics/", which is not
+# an image, so they yield no page and nothing is saved in their place.
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{base_url}/{unit_key}/info.0.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$"}
+  fields:
+    url: {json: "$.img", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://imgs\.xkcd\.com/comics/[^/?#]+\.(?:png|jpg|jpeg|gif))$', group: 1}}]}
+    page_label: {json: "$.safe_title", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

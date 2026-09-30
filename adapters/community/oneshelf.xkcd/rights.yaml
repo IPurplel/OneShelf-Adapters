@@ -1,0 +1,35 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+# OneShelf Core does not read this file; the repository's tests do, and so do reviewers.
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-NC-2.5
+  url: https://creativecommons.org/licenses/by-nc/2.5/
+commercial_use: not_allowed
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "xkcd by Randall Munroe — https://xkcd.com/ (CC BY-NC 2.5)"
+# visible: what search/catalog may show. local_copy: whether reader/downloads may save the content.
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    One licence covers the whole site, so eligibility is not decided per comic. The reader offers a page
+    only when the comic's JSON names an image file on imgs.xkcd.com; interactive comics name none and
+    yield no page, so nothing is saved in their place. A few images (1190 "Time") redirect through
+    c.xkcd.com to a plain-http address; OneShelf's egress policy refuses both, so those comics fail rather
+    than widen the allowlist or accept http (live-checked 2026-09-29; 12 of 12 randomly sampled comics
+    serve their image directly).
+  exclusion_tests: [4]
+evidence:
+  - claim: The site's licence is CC BY-NC 2.5, "free to copy and reuse any of my drawings (noncommercially) as long as you tell people where they're from".
+    url: https://xkcd.com/license.html
+  - claim: The JSON interface is published for public use.
+    url: https://xkcd.com/json.html
+  - claim: robots.txt disallows only /personal/ for all agents (GPTBot is disallowed everywhere; OneShelf is not GPTBot).
+    url: https://xkcd.com/robots.txt
+last_verified: 2026-09-29

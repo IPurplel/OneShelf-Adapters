@@ -1,0 +1,26 @@
+# Every comic, from the archive page: one link per comic, newest first, in one response — reversed into
+# reading order. The comic's number is its identity (it is also its address and its JSON's "num"); a link
+# whose address is not /<number>/ is not a comic and is skipped, which marks the list incomplete rather
+# than storing a guess. The title is the link's whole text: some titles carry markup (472 colours
+# "House"); one (3142, "<City>-Style Pizza") has an unescaped tag the parser swallows, so it reads
+# "-Style Pizza".
+capability: catalog
+inputs: [listing_key, language]
+request:
+  url: "{base_url}/archive/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "#middleContainer > a[href]"}
+  order: reverse
+  fields:
+    unit_key: {css: "::attr(href)", required: true,
+               transforms: [{regex_extract: {pattern: '^/([1-9][0-9]*)/$', group: 1}}]}
+    number: {css: "::attr(href)", transforms: [{regex_extract: {pattern: '^/([1-9][0-9]*)/$', group: 1}}]}
+    title: {xpath: ".", transforms: [trim]}
+    url: {css: "::attr(href)", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

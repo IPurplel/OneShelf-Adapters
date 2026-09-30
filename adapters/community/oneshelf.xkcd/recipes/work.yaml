@@ -1,0 +1,16 @@
+# The work is the comic as a whole; the newest comic's image stands in as its cover.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/info.0.json"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {template: "xkcd", required: true}
+    creator: {template: "Randall Munroe"}
+    description: {template: "A webcomic of romance, sarcasm, math, and language. Licensed CC BY-NC 2.5: non-commercial use, with attribution to xkcd.com."}
+    cover_url: {json: "$.img", transforms: [{regex_extract: {pattern: '^(https://imgs\.xkcd\.com/comics/[^/?#]+\.(?:png|jpg|jpeg|gif))$', group: 1}}]}
+    language: {template: "en"}
+    content_type: {template: "comic"}
