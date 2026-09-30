@@ -165,9 +165,15 @@ async def run(adapter_id: str, args) -> int:
                 picks = [result.entries[0]] if capability == "downloads" else [result.entries[0], result.entries[-1]]
                 checks = []
                 for entry in picks:
-                    response = await fetcher.inner.request(entry.url, capability=capability, auth_mode="none",
-                                                           headers=dict(package.recipes[capability].resource_headers) or None,
-                                                           max_bytes=MAX_FILE_BYTES)
+                    try:
+                        response = await fetcher.inner.request(entry.url, capability=capability, auth_mode="none",
+                                                               headers=dict(package.recipes[capability].resource_headers) or None,
+                                                               max_bytes=MAX_FILE_BYTES)
+                    except Exception as exc:  # an egress refusal (unlisted host, http downgrade) is a finding, not a crash
+                        problem = f"{type(exc).__name__}: {exc}"
+                        failures.append(f"{capability}: {entry.url}: {problem}")
+                        checks.append({"url": entry.url, "problem": problem})
+                        continue
                     check = {"url": entry.url, "status": response.status, "final_url": response.url,
                              "bytes": len(response.body), "content_type": response.headers.get("Content-Type")}
                     if response.status != 200:
