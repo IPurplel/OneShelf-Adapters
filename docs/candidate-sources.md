@@ -2,7 +2,8 @@
 
 Sources proposed after the 60-candidate audit in [source-matrix.md](source-matrix.md). **Nothing here is
 verified because it is listed.** A row moves to `VERIFIED_CANDIDATE` only on evidence, and an adapter reaches
-source-matrix.md only after its packaged tests and a live check pass. Rights terms follow
+source-matrix.md only after its packaged tests and a live check pass. A later discovery round focused on manga, manhwa, manhua
+and comics is in [discovery-comics-2026-09.md](discovery-comics-2026-09.md). Rights terms follow
 [rights-model.md](rights-model.md): being free to view is not a licence to keep a copy.
 
 Screened **2026-09-29** from this environment with OneShelf's own User-Agent
