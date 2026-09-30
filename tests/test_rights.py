@@ -173,3 +173,19 @@ def test_the_consistency_rules_require_exclusion_tests_for_per_item_rights(tmp_p
                                                                        "capabilities: [search, downloads]"), encoding="utf-8")
     with pytest.raises(AssertionError, match="eligible_items_only needs exclusion_tests"):
         test_rights_file_is_complete_and_consistent(created)
+
+
+@pytest.mark.parametrize("adapter", adapter_dirs(), ids=lambda p: p.name)
+def test_no_list_case_passes_whatever_the_recipe_returns(adapter):
+    """A list case must expect items, specific values, or an empty result (first: {key: null}).
+
+    `min_items: 0` alone passes any output — an exclusion test written that way proves nothing.
+    """
+    vacuous = []
+    for index, case in enumerate(load(adapter / "tests" / "tests.yaml")["cases"]):
+        if case["capability"] in ("work", "health", "check_session"):
+            continue
+        expect = case.get("expect") or {}
+        if not expect.get("min_items") and not (expect.get("first") or {}):
+            vacuous.append(index)
+    assert not vacuous, f"cases {vacuous} assert nothing about the result; add first: {{url: null}} (or the key) for an empty one"
