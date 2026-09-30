@@ -36,6 +36,7 @@ cases:
     file: fixtures/metadata-bsb00047099.json
   expect:
     min_items: 0
+    first: {unit_key: null}
     complete: false
 - capability: reader
   inputs: {unit_key: bsb00118365}
@@ -54,4 +55,5 @@ cases:
     file: fixtures/manifest-bsb00047099.json
   expect:
     min_items: 0
+    first: {url: null}
     complete: false

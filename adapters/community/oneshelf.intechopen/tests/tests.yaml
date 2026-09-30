@@ -35,4 +35,5 @@ cases:
     status: 404
   expect:
     min_items: 0
+    first: {url: null}
     complete: false

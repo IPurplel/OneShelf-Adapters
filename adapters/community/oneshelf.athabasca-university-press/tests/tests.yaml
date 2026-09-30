@@ -45,6 +45,7 @@ cases:
     file: fixtures/book-without-licence.html
   expect:
     min_items: 0
+    first: {unit_key: null}
 - capability: downloads
   inputs: {unit_key: 120348-numinous-animal}
   fixtures:
@@ -52,3 +53,4 @@ cases:
     file: fixtures/book-without-licence.html
   expect:
     min_items: 0
+    first: {url: null}

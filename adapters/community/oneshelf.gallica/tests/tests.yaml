@@ -24,6 +24,7 @@ cases:
     status: 500
   expect:
     min_items: 0
+    first: {unit_key: null}
     complete: false
 - capability: reader
   inputs: {unit_key: btv1b8422965p}

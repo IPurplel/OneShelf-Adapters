@@ -37,6 +37,7 @@ cases:
     file: fixtures/id-none.html
   expect:
     min_items: 0
+    first: {unit_key: null}
 - capability: downloads
   inputs: {unit_key: aub_aco002657}
   fixtures:

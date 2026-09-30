@@ -53,4 +53,5 @@ cases:
     file: fixtures/book-no-pdf.json
   expect:
     min_items: 0
+    first: {url: null}
     complete: false

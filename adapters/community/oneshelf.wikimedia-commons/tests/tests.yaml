@@ -18,6 +18,7 @@ cases:
     file: fixtures/search-empty.json
   expect:
     min_items: 0
+    first: {listing_key: null}
     complete: true
 - capability: work
   inputs: {listing_key: File:المختصر_في_حساب_الجبر_والمقابلة.pdf}

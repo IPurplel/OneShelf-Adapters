@@ -35,6 +35,7 @@ cases:
     status: 404
   expect:
     min_items: 0
+    first: {unit_key: null}
     complete: false
 - capability: downloads
   inputs: {unit_key: '0087'}
