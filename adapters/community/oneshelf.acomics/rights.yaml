@@ -1,0 +1,41 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The comic's author(s) as named on its Acomics page — https://acomics.ru/~<slug>"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Acomics hosts many creators; a comic's licence is its own, shown as a licence field on its "about"
+    page and as a licence badge in the description on every issue page. Most comics state none. Search,
+    comic details and issue lists are shown as Acomics shows them; a page is offered only when the issue
+    page it comes from carries a Creative Commons, PDM or CC0 badge and names no "Автор оригинала" — a
+    translation's uploader cannot license the original (seen live: Dile shows CC BY-NC and an original
+    author). Age-restricted comics answer with a confirmation page, which is not bypassed and offers no
+    page. Every Creative Commons variant is admitted (docs/rights-model.md): a personal copy of the
+    unmodified page is within NC and ND. Anything else fails closed.
+  exclusion_tests: [5, 6, 7, 8]
+evidence:
+  - claim: robots.txt allows everything (User-Agent * with no Disallow).
+    url: https://acomics.ru/robots.txt
+  - claim: A comic's about page states its licence (CC BY-NC-SA 4.0 example).
+    url: https://acomics.ru/~tails-n-ears-revolution/about
+  - claim: The issue page repeats the licence as a badge in its description (CC BY-NC-ND 4.0 example).
+    url: https://acomics.ru/~Truce/2
+  - claim: Translations name the original author and translators ("Автор оригинала", "Переводчик").
+    url: https://acomics.ru/~avas-demon/about
+  - claim: A translation that nevertheless shows a Creative Commons badge.
+    url: https://acomics.ru/~Dile/about
+  - claim: A comic with no licence field.
+    url: https://acomics.ru/~my-strange-partner/about
+last_verified: 2026-09-30

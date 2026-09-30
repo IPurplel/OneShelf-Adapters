@@ -428,4 +428,5 @@ official Arabic chapters but a protobuf API.
 
 | Date | Task | Result | Commit | Next |
 |---|---|---|---|---|
-| 2026-09-30 | NIJL Kokusho Database | `VERIFIED` as `oneshelf.nijl-kokusho` (search, work, catalog, reader; per-item CC/PDM gate, All-Rights-Reserved excluded) | see git log | Acomics eligibility |
+| 2026-09-30 | NIJL Kokusho Database | `VERIFIED` as `oneshelf.nijl-kokusho` (search, work, catalog, reader; per-item CC/PDM gate, All-Rights-Reserved excluded) | d924457 | Acomics eligibility |
+| 2026-09-30 | Acomics | `VERIFIED` as `oneshelf.acomics` (search, work, catalog, reader; per-comic CC/PDM/CC0 gate on each page, translations and unlicensed comics excluded) | see git log | ComicControl feasibility review |

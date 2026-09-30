@@ -552,6 +552,7 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 |---|---|---|---|---|---|---|
 | [xkcd](https://xkcd.com/) | `oneshelf.xkcd` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC 2.5 (site-wide) |
 | [NIJL Kokusho Database](https://kokusho.nijl.ac.jp/) | `oneshelf.nijl-kokusho` | `VERIFIED` | Community | search, work, catalog, reader | ja | Per item: CC / PDM only (All-Rights-Reserved excluded) |
+| [Acomics](https://acomics.ru/) | `oneshelf.acomics` | `VERIFIED` | Community | search, work, catalog, reader | ru | Per comic: pages only for CC/PDM/CC0 originals (translations and unlicensed comics excluded) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
@@ -577,6 +578,20 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 - Live check: 2026-09-30: PASS for 100249537 (CC BY-SA 4.0, 91 pages; first and last decoded) and 100432076 (PDM, 74 pages); 100062008 (All-Rights-Reserved): no catalog unit and no reader page (19 canvases refused)
 - Tests: every clause of the gate is covered — mutation checks on the licence pattern (catalog and reader) and the manifest-host condition each fail a packaged test (the host condition through a fixture marked SYNTHETIC)
 - Notes: manifests declare right-to-left viewing; OneShelf has no reading-direction field yet, so page order is kept but direction is not passed on. No covers (the record has no thumbnail; search results carry none). No downloads (no whole-book file)
+
+**Acomics (Авторский Комикс)** — `VERIFIED`, `oneshelf.acomics`
+- Access model: per comic. A comic's licence is its own: a licence field on its about page and a badge in the description on each issue page; most comics state none (13 of 19 sampled). Translations name "Автор оригинала" and translators, and at least one shows a CC badge anyway (Dile). `rights.yaml`: mixed, item granularity, eligible items only
+- Gate: a page is offered only when the issue page it comes from carries a Creative Commons, PDM or CC0 badge **and** names no original author. Search, comic details and issue lists are shown as Acomics shows them
+- Transport: HTML — `/search?keyword=`, `/~<slug>/about`, `/~<slug>/content?skip=N` (24 issues a page), `/~<slug>/<n>`
+- Domains: acomics.ru only
+- Stable id: comic slug; issue number within it
+- Pagination / completeness: catalog follows the contents paginator's next link and is complete when there is none (verified live: Truce 900 issues over 38 pages = its stated 900; bibliostory 63 over 3); search: one response
+- Formats: page images (PNG/JPEG)
+- Languages: ru (the platform's)
+- robots.txt: no Disallow rules; checked 2026-09-30; every live request allowed
+- Live check: 2026-09-30: PASS for bibliostory (CC BY-NC) and Truce (CC BY-NC-ND), page bytes decoded; my-strange-partner (no licence, 873 issues listed) and Dile (licensed translation, 364 listed) offer no page
+- Tests: mutation checks — dropping the licence pattern, the translation condition, or the licence value each fail a packaged test (the licence pattern through a fixture marked SYNTHETIC)
+- Notes: age-restricted comics answer with Acomics' age confirmation page, which is not bypassed; they offer no page. Issue titles come from the contents list when the author gave one
 
 ## Source Registry check — 2026-09-30
 

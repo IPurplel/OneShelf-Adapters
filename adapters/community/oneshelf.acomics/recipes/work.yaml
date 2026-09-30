@@ -1,0 +1,16 @@
+# The comic's own "about" page.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/~{listing_key:path}/about"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "article h1::text", required: true, transforms: [trim]}
+    creator: {css: "p.serial-about-authors a::text", transforms: [trim]}
+    description: {xpath: "//section[contains(@class,'serial-about-text')]", transforms: [trim]}
+    cover_url: {css: "meta[property='og:image']::attr(content)", transforms: [normalize_url]}
+    language: {template: "ru"}
+    content_type: {template: "comic"}

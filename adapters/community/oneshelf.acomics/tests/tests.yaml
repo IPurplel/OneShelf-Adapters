@@ -1,0 +1,91 @@
+cases:
+# Catalogue search, one response. Cards carry no licence: readability is decided per page (reader).
+- capability: search
+  inputs: {query: библио}
+  fixtures:
+  - url: https://acomics.ru/search?keyword=%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE
+    file: fixtures/search-biblio.html
+  expect:
+    min_items: 3
+    complete: true
+    fields_present: [listing_key, title, description, cover_url, url, language]
+    first: {listing_key: TheWallachianLibrary, title: Валашская библиотека, language: ru, content_type: comic}
+- capability: work
+  inputs: {listing_key: bibliostory}
+  fixtures:
+  - url: https://acomics.ru/~bibliostory/about
+    file: fixtures/about-bibliostory.html
+  expect:
+    fields_present: [title, creator, description, cover_url, language]
+    first: {title: Библиостории, creator: SalemaRu, language: ru, content_type: comic}
+# 63 issues over three contents pages; complete because the third page has no next link.
+- capability: catalog
+  inputs: {listing_key: bibliostory}
+  fixtures:
+  - url: https://acomics.ru/~bibliostory/content?skip=0
+    file: fixtures/content-bibliostory-0.html
+  - url: https://acomics.ru/~bibliostory/content?skip=24
+    file: fixtures/content-bibliostory-24.html
+  - url: https://acomics.ru/~bibliostory/content?skip=48
+    file: fixtures/content-bibliostory-48.html
+  expect:
+    min_items: 63
+    complete: true
+    fields_present: [unit_key, number, url]
+    first: {unit_key: '1', number: '1', unit_type: chapter, url: 'https://acomics.ru/~bibliostory/1'}
+# CC BY-NC 4.0, an original comic: its page.
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://acomics.ru/~bibliostory/1'}
+  fixtures:
+  - url: https://acomics.ru/~bibliostory/1
+    file: fixtures/issue-bibliostory-1.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://acomics.ru/upload/!c/SalemaRu/bibliostory/000001-awgcedcale.png'}
+# CC BY-NC-ND 4.0: its page (a personal copy of the unmodified page is within ND).
+- capability: reader
+  inputs: {unit_key: '2', url: 'https://acomics.ru/~Truce/2'}
+  fixtures:
+  - url: https://acomics.ru/~Truce/2
+    file: fixtures/issue-truce-2.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://acomics.ru/upload/!c/Chuguy/Truce/000002-j3kbmpcnxn.jpg'}
+# An original comic with no licence: its page image is on the page, but no page is offered.
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://acomics.ru/~my-strange-partner/1'}
+  fixtures:
+  - url: https://acomics.ru/~my-strange-partner/1
+    file: fixtures/issue-strange-partner-1.html
+  expect:
+    complete: false
+    first: {url: null}
+# A translation that shows a CC BY-NC badge and "Автор оригинала: Common_Individual": the uploader
+# cannot license someone else's comic, so no page.
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://acomics.ru/~Dile/1'}
+  fixtures:
+  - url: https://acomics.ru/~Dile/1
+    file: fixtures/issue-dile-1.html
+  expect:
+    first: {url: null}
+# An age-restricted comic answers with Acomics' age confirmation page: no page (not bypassed).
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://acomics.ru/~Moodtracker/1'}
+  fixtures:
+  - url: https://acomics.ru/~Moodtracker/1
+    file: fixtures/issue-adult-confirmation.html
+  expect:
+    first: {url: null}
+# SYNTHETIC (the fixture says so): the same page with a licence badge that is not Creative Commons, PDM
+# or CC0 — no page. Tests the licence pattern on its own.
+- capability: reader
+  inputs: {unit_key: '1', url: 'https://acomics.ru/~bibliostory/1'}
+  fixtures:
+  - url: https://acomics.ru/~bibliostory/1
+    file: fixtures/synthetic-noncc-licence.html
+  expect:
+    complete: false
+    first: {url: null}

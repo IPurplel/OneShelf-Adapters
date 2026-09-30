@@ -1,0 +1,22 @@
+# The platform's catalogue search (keyword, at least three characters): one card per comic, in one
+# response. Cards say nothing about licences; which comics can be read is decided on each page by reader.yaml.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/search?keyword={query}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "section.serial-card"}
+  fields:
+    listing_key: {css: "h2.title a::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '^/~([A-Za-z0-9_-]+)$', group: 1}}]}
+    title: {css: "h2.title a::text", required: true, transforms: [trim]}
+    description: {css: "p.about::text", transforms: [trim]}
+    cover_url: {css: "a.cover img::attr(data-real-src)", transforms: [normalize_url]}
+    url: {css: "h2.title a::attr(href)", transforms: [normalize_url]}
+    language: {template: "ru"}
+    content_type: {template: "comic"}
+pagination:
+  mode: none

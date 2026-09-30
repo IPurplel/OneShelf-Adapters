@@ -1,0 +1,24 @@
+# Every issue in order, from the comic's contents "by issue" (?skip=0; 24 a page), following the
+# paginator's next link; the list is complete when there is no next page. The issue's number is its
+# address (/~<slug>/<n>) — completeness comes from the paginator, never from counting numbers.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/~{listing_key:path}/content?skip=0"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "section.serial-content-issues a.issue-preview"}
+  fields:
+    unit_key: {css: "::attr(href)", required: true,
+               transforms: [{regex_extract: {pattern: '^/~[A-Za-z0-9_-]+/([1-9][0-9]*)$', group: 1}}]}
+    number: {css: "::attr(href)", transforms: [{regex_extract: {pattern: '/([1-9][0-9]*)$', group: 1}}]}
+    title: {css: "span.issue-preview-name::text", transforms: [trim]}
+    url: {css: "::attr(href)", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: next_link
+  max_pages: 200
+  stop_when: no_next
+  next: {xpath: "(//nav[contains(@class,'common-paginator')]//li[@class='current']/following-sibling::li[@class='link'])[1]/a/@href"}

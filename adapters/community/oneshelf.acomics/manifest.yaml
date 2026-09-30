@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.acomics
+name: Acomics (Авторский Комикс)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Acomics, the Russian-language webcomic hosting platform, read issue by issue. Search, comics and their
+  issue lists are shown as Acomics shows them, but a page is offered only for comics whose own pages carry a
+  Creative Commons licence (or the Public Domain Mark / CC0) and that are not translations of someone
+  else's comic ("Автор оригинала"): most comics state no licence and offer no pages. Age-restricted comics
+  whose pages sit behind Acomics' age confirmation offer none either. No downloads.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [acomics.ru]
+defaults:
+  language: ru
+  content_type: comic

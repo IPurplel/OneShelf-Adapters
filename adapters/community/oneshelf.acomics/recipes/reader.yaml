@@ -1,0 +1,22 @@
+# An issue's page image — only when the comic's own description on this page carries an open licence
+# badge (Creative Commons, Public Domain Mark or CC0) and names no "Автор оригинала" (the comic is not a
+# translation of someone else's work, whose uploader cannot license it). Both are tested on the very page
+# the image comes from; anything else — no licence, a translation, an age-confirmation page — offers no page.
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//section[contains(@class,'reader-serial-description')]//a[contains(@class,'license-icon')]/@href)[1]"}
+  items: {xpath: "//img[contains(concat(' ', normalize-space(@class), ' '), ' issue ')][not(//section[contains(@class,'reader-serial-description')]//p[b[normalize-space(.)='Автор оригинала:']])]/@src"}
+  fields:
+    url: {template: "{item}|{licence}", required: true,
+          transforms: [{regex_extract: {pattern: '^(/upload/![a-z]/[A-Za-z0-9_.!-]+/[A-Za-z0-9_-]+/[0-9]+-[a-z0-9]+\.(?:jpg|jpeg|png|gif|webp))\|https://creativecommons\.org/(?:licenses/(?:by|by-sa|by-nc|by-nc-sa|by-nd|by-nc-nd)/[0-9.]+/|publicdomain/(?:mark|zero)/1\.0/)', group: 1}},
+                       normalize_url]}
+pagination:
+  mode: none
+  complete_when: single_response

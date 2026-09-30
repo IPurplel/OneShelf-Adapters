@@ -1,0 +1,9 @@
+base_url: https://acomics.ru
+# A comic's address is /~<slug>; the slug is its identity on the platform (case-sensitive).
+url_patterns:
+  - pattern: '^https://acomics\.ru/~([A-Za-z0-9_-]+)(?:[/?#]|$)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1
