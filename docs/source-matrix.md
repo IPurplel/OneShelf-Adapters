@@ -564,6 +564,44 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 - Live check: 2026-09-29: PASS: catalog 3,303 complete, comic 1 image decoded (24,848 bytes JPEG); comic 3142 PASS; failure modes: 1608 (interactive, no image file) → no page offered; 404 (no such comic) → page_failed; 1190 → image redirects via c.xkcd.com to plain http and is refused by the egress policy. 12 of 12 randomly sampled comics serve their image directly
 - Notes: No search (the site has none). The archive title of 3142 contains an unescaped tag and reads "-Style Pizza".
 
+## Source Registry check — 2026-09-30
+
+The whole tree was built into a Registry (`adapter_repo build-registry`, then `verify-registry`: verified)
+and served as a local `file://` mirror to OneShelf Core at its current `main` (fa58db4), started with its
+eight bundled Official adapters. Through the API the Sources → Source Registry screen calls:
+
+- `GET /api/registry` lists all 31 adapters. The 23 Community adapters read `available`; Hindawi,
+  3asq, arXiv, MangaDex, Tapas and WEBTOON read `installed`; Gutenberg 2.0.0 and Standard Ebooks 1.1.0 read
+  `update_available`.
+- Every Community adapter passes review (packaged tests run by Core), installs, and appears in
+  `GET /api/sources` as active with the capabilities its manifest declares. The review lists exactly the
+  manifest's domains as permissions — for xkcd `network:domain:xkcd.com` and `network:cdn:imgs.xkcd.com`.
+- The Gutenberg 2.0.0 update adds `network:domain:www.gutenberg.org` and asks for it; Standard Ebooks 1.1.0
+  adds none. Both install and read `installed` afterwards.
+- An unsigned local mirror confers no trust: every package, Official ones included, has effective trust
+  `community` from it. Official status reaches an installation only from the signed first-party Registry
+  (review-policy.md), which this check does not replace.
+
+## Blocker re-check — 2026-09-30
+
+The blockers that are about access rather than structure were screened again with OneShelf's own
+User-Agent, robots.txt first. None has lifted:
+
+| Source | Result today |
+|---|---|
+| Qatru | no TLS connection |
+| Qatar Digital Library | robots.txt disallows the search path; 403 challenge page |
+| Library of Congress (three collections, `?fo=json`) | 403 challenge page, robots.txt included |
+| Open Book Publishers | 429, robots.txt included |
+| MIT Press OA, MDPI Books, Open Humanities Press | 403 |
+| NCBI Bookshelf | **200 whose body is a reCAPTCHA page** ("Checking your browser") — a success status is not content |
+| Biodiversity Heritage Library | 403 challenge page |
+| British Library Digitised Manuscripts | `/manuscripts/` → 308 → 404 |
+
+The structural blockers (robots.txt rules, app-only or text-only content, aggregators' third-party
+hosts, cookies computed by page script) were not re-screened; they do not change without the source
+changing its design.
+
 ## Findings outside the open-access scope
 
 - **arXiv** and **MangaDex** (Official) request paths their robots.txt disallows: `export.arxiv.org` is
