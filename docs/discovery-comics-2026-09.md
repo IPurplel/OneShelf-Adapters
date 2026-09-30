@@ -429,4 +429,6 @@ official Arabic chapters but a protobuf API.
 | Date | Task | Result | Commit | Next |
 |---|---|---|---|---|
 | 2026-09-30 | NIJL Kokusho Database | `VERIFIED` as `oneshelf.nijl-kokusho` (search, work, catalog, reader; per-item CC/PDM gate, All-Rights-Reserved excluded) | d924457 | Acomics eligibility |
-| 2026-09-30 | Acomics | `VERIFIED` as `oneshelf.acomics` (search, work, catalog, reader; per-comic CC/PDM/CC0 gate on each page, translations and unlicensed comics excluded) | see git log | ComicControl feasibility review |
+| 2026-09-30 | Acomics | `VERIFIED` as `oneshelf.acomics` (search, work, catalog, reader; per-comic CC/PDM/CC0 gate on each page, translations and unlicensed comics excluded) | e03fb2e | ComicControl feasibility review |
+| 2026-09-30 | Feasibility reviews (ComicControl, WordPress/Toocheke, HTML/text reader) | written up in [architecture-reviews-2026-09.md](architecture-reviews-2026-09.md) | next commit | secondary candidates |
+| 2026-09-30 | Sandra and Woo | `VERIFIED` as `oneshelf.sandra-and-woo` (work, catalog, reader; CC BY-NC-ND 3.0) | see git log | GDL, Unglue.it, Grise Bouille recorded in the architecture reviews |
