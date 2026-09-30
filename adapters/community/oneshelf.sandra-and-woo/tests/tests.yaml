@@ -1,0 +1,38 @@
+cases:
+- capability: work
+  inputs: {listing_key: sandraandwoo}
+  fixtures:
+  - url: https://www.sandraandwoo.com/archive/
+    file: fixtures/archive.html
+  expect:
+    fields_present: [title, creator, description, language]
+    first: {title: Sandra and Woo, language: en, content_type: comic}
+# A trimmed archive: the three newest and three oldest rows, including an unnumbered strip.
+- capability: catalog
+  inputs: {listing_key: sandraandwoo}
+  fixtures:
+  - url: https://www.sandraandwoo.com/archive/
+    file: fixtures/archive.html
+  expect:
+    min_items: 6
+    complete: true
+    fields_present: [unit_key, title, url]
+    first: {unit_key: 2000/01/01/welcome-to-sandra-and-woo, url: 'https://www.sandraandwoo.com/2000/01/01/welcome-to-sandra-and-woo/', unit_type: chapter}
+- capability: reader
+  inputs: {unit_key: 2023/08/12/1340-mh370-until-proven-otherwise, url: 'https://www.sandraandwoo.com/2023/08/12/1340-mh370-until-proven-otherwise/'}
+  fixtures:
+  - url: https://www.sandraandwoo.com/2023/08/12/1340-mh370-until-proven-otherwise/
+    file: fixtures/1340-mh370-until-proven-otherwise.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.sandraandwoo.com/comics/2023-08-12-1340-mh370-until-proven-otherwise.png'}
+# SYNTHETIC (the fixture says so): a real strip page with its footer licence link removed — no page.
+- capability: reader
+  inputs: {unit_key: 2024/01/29/first-page-of-scarlet-published, url: 'https://www.sandraandwoo.com/2024/01/29/first-page-of-scarlet-published/'}
+  fixtures:
+  - url: https://www.sandraandwoo.com/2024/01/29/first-page-of-scarlet-published/
+    file: fixtures/synthetic-no-licence.html
+  expect:
+    complete: false
+    first: {url: null}

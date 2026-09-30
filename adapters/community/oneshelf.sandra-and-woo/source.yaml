@@ -1,0 +1,9 @@
+base_url: https://www.sandraandwoo.com
+# The whole comic is one listing: any address on the site opens it, under the fixed key "sandraandwoo".
+url_patterns:
+  - pattern: '^https://www\.(sandraandwoo)\.com(?:/|$)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

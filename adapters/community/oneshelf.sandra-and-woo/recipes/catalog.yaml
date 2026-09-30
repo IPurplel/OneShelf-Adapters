@@ -1,0 +1,24 @@
+# Every strip from the comic archive: one table row per strip, newest first, in one response — reversed
+# into reading order. The key is the strip's permalink path (date and slug), which is also its address;
+# the strip number, when the title carries one ("[1340] …"), is its number. A row whose link is not a
+# dated permalink is skipped, which marks the list incomplete rather than guessing.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/archive/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "table.month-table td.archive-title a"}
+  order: reverse
+  fields:
+    unit_key: {css: "::attr(href)", required: true,
+               transforms: [{regex_extract: {pattern: '^https://www\.sandraandwoo\.com/([0-9]{4}/[0-9]{2}/[0-9]{2}/[a-z0-9-]+)/$', group: 1}}]}
+    title: {css: "::text", transforms: [trim, {regex_replace: {pattern: '^\[[0-9]+[a-z]?\]\s*', replacement: ''}}]}
+    number: {css: "::text", transforms: [{regex_extract: {pattern: '^\[0*([0-9]+[a-z]?)\]', group: 1}}]}
+    url: {css: "::attr(href)", transforms: [normalize_url]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.sandra-and-woo
+name: Sandra and Woo
+version: 0.1.0
+api: '1.0'
+description: >-
+  Sandra and Woo, Oliver Knörzer and Powree's webcomic (CC BY-NC-ND 3.0), read strip by strip from the
+  site's own comic archive. One listing holds every strip; each strip is one unit with its one image, and a
+  page is offered only while the strip's page carries the site's Creative Commons licence. Non-commercial,
+  no derivatives, with attribution. No search and no downloads.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [www.sandraandwoo.com]
+defaults:
+  language: en
+  content_type: comic

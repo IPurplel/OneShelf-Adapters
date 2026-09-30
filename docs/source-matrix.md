@@ -553,6 +553,7 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 | [xkcd](https://xkcd.com/) | `oneshelf.xkcd` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC 2.5 (site-wide) |
 | [NIJL Kokusho Database](https://kokusho.nijl.ac.jp/) | `oneshelf.nijl-kokusho` | `VERIFIED` | Community | search, work, catalog, reader | ja | Per item: CC / PDM only (All-Rights-Reserved excluded) |
 | [Acomics](https://acomics.ru/) | `oneshelf.acomics` | `VERIFIED` | Community | search, work, catalog, reader | ru | Per comic: pages only for CC/PDM/CC0 originals (translations and unlicensed comics excluded) |
+| [Sandra and Woo](https://www.sandraandwoo.com/) | `oneshelf.sandra-and-woo` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC-ND 3.0 (site-wide) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
@@ -592,6 +593,19 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 - Live check: 2026-09-30: PASS for bibliostory (CC BY-NC) and Truce (CC BY-NC-ND), page bytes decoded; my-strange-partner (no licence, 873 issues listed) and Dile (licensed translation, 364 listed) offer no page
 - Tests: mutation checks — dropping the licence pattern, the translation condition, or the licence value each fail a packaged test (the licence pattern through a fixture marked SYNTHETIC)
 - Notes: age-restricted comics answer with Acomics' age confirmation page, which is not bypassed; they offer no page. Issue titles come from the contents list when the author gave one
+
+**Sandra and Woo** — `VERIFIED`, `oneshelf.sandra-and-woo`
+- Access model: CC BY-NC-ND 3.0 for the whole comic, linked in the footer of every page; `rights.yaml`: open_license, source granularity
+- Transport: HTML — the WordPress/ComicPress comic archive (`/archive/`, one table row per strip) and each strip's page (`#comic` image under `/comics/`)
+- Domains: www.sandraandwoo.com only
+- Stable id: the strip's permalink path (date and slug); the strip number from its title when it has one
+- Pagination / completeness: catalog: the whole archive in one response (1,372 rows on 2026-09-30); reader: one image per strip
+- Formats: page images (PNG/JPEG)
+- Languages: en
+- robots.txt: only /wp-admin/ disallowed; checked 2026-09-30; every live request allowed
+- Live check: 2026-09-30: PASS — catalog 1,372 complete, first strip decoded (573 KB PNG)
+- Tests: the reader's licence condition is covered by a fixture marked SYNTHETIC (footer licence removed) and a mutation check
+- Notes: the archive also lists the site's announcement posts that carry a comic image (e.g. "First Page of Scarlet Published!"); they are kept as the site lists them. No search (WordPress search is not scoped to strips)
 
 ## Source Registry check — 2026-09-30
 

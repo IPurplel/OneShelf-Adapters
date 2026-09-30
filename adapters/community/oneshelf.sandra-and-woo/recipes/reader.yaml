@@ -1,0 +1,20 @@
+# The strip's image (#comic, under /comics/ on the site's own host) — only while the page's footer carries
+# the Creative Commons licence the site publishes under.
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//div[@id='footer']//a[contains(@href,'creativecommons.org/')]/@href)[1]"}
+  items: {xpath: "//div[@id='comic']//img/@src"}
+  fields:
+    url: {template: "{item}|{licence}", required: true,
+          transforms: [{regex_extract: {pattern: '^(/comics/[A-Za-z0-9._-]+\.(?:png|jpg|jpeg|gif))\|https?://creativecommons\.org/licenses/by-nc-nd/3\.0/$', group: 1}},
+                       normalize_url]}
+pagination:
+  mode: none
+  complete_when: single_response

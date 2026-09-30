@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/archive/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {template: "Sandra and Woo", required: true}
+    creator: {template: "Oliver Knörzer (writer), Powree (artist)"}
+    description: {template: "A webcomic about Sandra, a girl, and Woo, her pet raccoon. Licensed CC BY-NC-ND 3.0."}
+    language: {template: "en"}
+    content_type: {template: "comic"}

@@ -1,0 +1,30 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-NC-ND-3.0
+  url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+commercial_use: not_allowed
+redistribution: allowed_with_conditions
+derivatives: not_allowed
+attribution:
+  required: true
+  text: "Sandra and Woo by Oliver Knörzer and Powree — https://www.sandraandwoo.com/ (CC BY-NC-ND 3.0)"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    One licence, stated in the footer of every page, covers the comic. The reader offers a strip's image only
+    while the page it comes from links CC BY-NC-ND 3.0; a page without it offers none. A personal copy of the
+    unmodified strip is non-commercial and not a derivative.
+  exclusion_tests: [3]
+evidence:
+  - claim: Every page's footer links CC BY-NC-ND 3.0.
+    url: https://www.sandraandwoo.com/2023/08/12/1340-mh370-until-proven-otherwise/
+  - claim: The comic archive lists every strip in one page.
+    url: https://www.sandraandwoo.com/archive/
+  - claim: robots.txt allows the archive and strip pages.
+    url: https://www.sandraandwoo.com/robots.txt
+last_verified: 2026-09-30
