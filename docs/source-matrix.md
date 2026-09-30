@@ -543,6 +543,27 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
 - Live check: 2026-09-29: PASS: 12.8 MB, 350 pages
 - Notes: commons.wikimedia.org's robots.txt disallows /w/ and /api/; the API Portal is allowed.
 
+## Later additions
+
+Adapters added after the 60-candidate audit, from the investigation backlog in
+[candidate-sources.md](candidate-sources.md). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+
+| Source | Adapter | Status | Tier | Capabilities | Languages | Access |
+|---|---|---|---|---|---|---|
+| [xkcd](https://xkcd.com/) | `oneshelf.xkcd` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC 2.5 (site-wide) |
+
+**xkcd** — `VERIFIED`, `oneshelf.xkcd`
+- Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
+- Transport: JSON interface ([documented](https://xkcd.com/json.html)) for each comic; the archive page (HTML) for the list
+- Domains: xkcd.com; files/media: imgs.xkcd.com
+- Stable id: comic number (its address, and the JSON's `num`)
+- Pagination / completeness: catalog: the whole archive in one response (3,303 comics on 2026-09-29; there is no 404); reader: one page per comic
+- Formats: page images (PNG/JPEG/GIF)
+- Languages: en
+- robots.txt: checked 2026-09-29; only /personal/ disallowed for all agents; every live request allowed
+- Live check: 2026-09-29: PASS: catalog 3,303 complete, comic 1 image decoded (24,848 bytes JPEG); comic 3142 PASS; failure modes: 1608 (interactive, no image file) → no page offered; 404 (no such comic) → page_failed; 1190 → image redirects via c.xkcd.com to plain http and is refused by the egress policy. 12 of 12 randomly sampled comics serve their image directly
+- Notes: No search (the site has none). The archive title of 3142 contains an unescaped tag and reads "-Style Pizza".
+
 ## Findings outside the open-access scope
 
 - **arXiv** and **MangaDex** (Official) request paths their robots.txt disallows: `export.arxiv.org` is

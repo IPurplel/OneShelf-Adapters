@@ -95,6 +95,11 @@ one is not offered as downloadable. The usual declarative way is a required fiel
 evidence does, so an item without it is skipped rather than guessed at. Without such evidence the source is
 Blocked, not approximated.
 
+Every new adapter records these answers in a `rights.yaml` — access type, licence, what may be listed and
+what may be copied, how the recipes enforce it and which packaged tests prove it — checked by
+`tests/test_rights.py`. Visible is not downloadable: see [rights-model.md](rights-model.md). Sources still
+under investigation are tracked in [candidate-sources.md](candidate-sources.md).
+
 ## 5. What OneShelf can read, and what that means for capabilities
 
 - `downloads` files must be **EPUB, PDF or CBZ**: those are the formats OneShelf's download path validates and
