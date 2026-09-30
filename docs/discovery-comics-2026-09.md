@@ -430,5 +430,6 @@ official Arabic chapters but a protobuf API.
 |---|---|---|---|---|
 | 2026-09-30 | NIJL Kokusho Database | `VERIFIED` as `oneshelf.nijl-kokusho` (search, work, catalog, reader; per-item CC/PDM gate, All-Rights-Reserved excluded) | d924457 | Acomics eligibility |
 | 2026-09-30 | Acomics | `VERIFIED` as `oneshelf.acomics` (search, work, catalog, reader; per-comic CC/PDM/CC0 gate on each page, translations and unlicensed comics excluded) | e03fb2e | ComicControl feasibility review |
-| 2026-09-30 | Feasibility reviews (ComicControl, WordPress/Toocheke, HTML/text reader) | written up in [architecture-reviews-2026-09.md](architecture-reviews-2026-09.md) | next commit | secondary candidates |
-| 2026-09-30 | Sandra and Woo | `VERIFIED` as `oneshelf.sandra-and-woo` (work, catalog, reader; CC BY-NC-ND 3.0) | see git log | GDL, Unglue.it, Grise Bouille recorded in the architecture reviews |
+| 2026-09-30 | Feasibility reviews (ComicControl, WordPress/Toocheke, HTML/text reader) | written up in [architecture-reviews-2026-09.md](architecture-reviews-2026-09.md) | a1275e1 | secondary candidates |
+| 2026-09-30 | Sandra and Woo | `VERIFIED` as `oneshelf.sandra-and-woo` (work, catalog, reader; CC BY-NC-ND 3.0) | 15909a7 | GDL, Unglue.it, Grise Bouille recorded in the architecture reviews |
+| 2026-09-30 | Full regression | `./tools/bootstrap` (Core 475c145), `./tools/check-all`: 34 adapters, 83 repository tests, published versions reproducible, Registry built and verified; the three new adapters reviewed and installed through Core main's Registry API | this commit | next batch: HTML/text format task (Core), GDL once search language or per-book EPUB exists |
