@@ -1,0 +1,120 @@
+{
+ "bid": "100249537",
+ "shubetsu": "M",
+ "hshomei": "料理珍味集（りょうりちんみしゅう）（Ryourichinmishuu），Ｍ",
+ "kshomei": [
+  "1．料理珎味集（りょうりちんみしゅう）（Ryourichinmishuu），内・目・尾",
+  "2．□理□味集（りょうりちんみしゅう）（Ryourichinmishuu），外",
+  "3．珎味集（ちんみしゅう）（Chinmishuu），柱"
+ ],
+ "hshomeipdf": "料理珍味集（りょうりちんみしゅう）",
+ "kshomeipdf": [
+  "料理珎味集（りょうりちんみしゅう）",
+  "□理□味集（りょうりちんみしゅう）",
+  "珎味集（ちんみしゅう）"
+ ],
+ "author": [],
+ "kansu": "",
+ "kansha": "刊",
+ "bpublish": [],
+ "keitai": "１８．１×１２．０ｃｍ",
+ "shokei": "小",
+ "satsu": "４冊",
+ "zan": "巻之五欠",
+ "structure": "",
+ "keyword": "",
+ "chuki": "",
+ "denrai": "",
+ "collection": "味の素食の文化センター，一般",
+ "w_seikyu": "",
+ "m_seikyu": "",
+ "c_seikyu": "",
+ "d_seikyu": "DIG-AJNM-00131，91，Y",
+ "tmedias": [
+  {
+   "num": 1,
+   "mediashubetsu": "D",
+   "mediacallno_all": "ＡＪＮＭ－００１３１",
+   "mediakikaku": "",
+   "fshubetsu": "",
+   "mediakeitai": "91",
+   "startno": "1",
+   "startreel": "",
+   "numreel": "",
+   "serviceclass": "Y",
+   "schuki": "",
+   "tourokuno": "",
+   "mediapublisher": "",
+   "mediadate": ""
+  }
+ ],
+ "refid": [],
+ "parentbiblio": "",
+ "parentbiblioname": "",
+ "parentbiblioimage": "0",
+ "card_sno": "",
+ "seikyuoutput": "0",
+ "image": "1",
+ "manifestlabel": "",
+ "manifest": "https://kokusho.nijl.ac.jp/biblio/100249537/manifest",
+ "licenseimg": "./images/by-sa.png",
+ "licensetext1": "",
+ "licensetext2": "",
+ "licenselink": "https://creativecommons.org/licenses/by-sa/4.0/deed.ja",
+ "imagedownload": "1",
+ "imageindex": [],
+ "taglist": [],
+ "reprinttext": [
+  {
+   "koma": "2",
+   "text": "序太古はいまだ火化あらずたゞ禽獣の血を呑生肉を食ふのみ庖羲氏始て生を炮て熟とし以て腥食を変じ給ひ神農民に粒食を教て米粒をして焼石の上に置て炙て是を"
+  }
+ ],
+ "work": [
+  {
+   "wid": "64299",
+   "name": "料理珍味集（りょうりちんみしゅう）（Ryourichinmishuu）",
+   "satsu": "五巻五冊",
+   "tsuno": "",
+   "year": "宝暦一四刊（1764）",
+   "keyword": "料理",
+   "besho": [],
+   "note": "",
+   "author": [
+    {
+     "aid": "428002",
+     "name": "博望子（Hakuboushi）"
+    }
+   ],
+   "shubetsu": "J",
+   "kokusho": "『国書総目録』所収",
+   "kokushono": "1",
+   "kokushoshozai": "【写】教大（五巻一冊），東北大狩野（一冊）【版】＜宝暦一四版＞早大，東大，東北大狩野，日比谷加賀，楂■，石泰，茶図成簣，無窮神習，陽明＜文政二版＞杏雨【複】〔活〕料理大鑑一四"
+  }
+ ],
+ "doi": "https://doi.org/10.20730/100249537",
+ "outsidelink": [
+  {
+   "sort_order": 1,
+   "label": "CiNii Booksで書名を検索（外部サイト）",
+   "label_en": "CiNii Books",
+   "url": "https://ci.nii.ac.jp/books/search?q=料理珍味集"
+  },
+  {
+   "sort_order": 2,
+   "label": "データセットをダウンロード（CODH）",
+   "label_en": "http://codh.rois.ac.jp/pmjt/book/100249537/",
+   "url": "http://codh.rois.ac.jp/pmjt/book/100249537/"
+  }
+ ],
+ "childbiblio": [],
+ "iid": "",
+ "licensemsg": "ccby",
+ "licensecondurl": "https://creativecommons.org/licenses/by-sa/4.0/deed.ja",
+ "cmeishoh": "一般",
+ "smeishoh": "味の素食の文化センター",
+ "top_shomeih": "料理珍味集",
+ "smeishor": "Ajinomoto Foundation for Dietary Culture",
+ "exceptionurl": "",
+ "seriestype": 0
+}

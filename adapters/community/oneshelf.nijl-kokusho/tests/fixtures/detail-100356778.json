@@ -1,0 +1,105 @@
+{
+ "bid": "100356778",
+ "shubetsu": "M",
+ "hshomei": "勇魚取絵詞（いさなとりえことば）（Isanatoriekotoba），Ｍ",
+ "kshomei": [],
+ "hshomeipdf": "勇魚取絵詞（いさなとりえことば）",
+ "kshomeipdf": "",
+ "author": [
+  "小山田／与清 "
+ ],
+ "kansu": "",
+ "kansha": "写",
+ "bpublish": [],
+ "keitai": "",
+ "shokei": "",
+ "satsu": "",
+ "zan": "［１］存",
+ "structure": "",
+ "keyword": "",
+ "chuki": [
+  "〈備〉所蔵者作成画像，ＮＤＬ書誌ＩＤ：０００００７２７５９７９，ＮＤＬＰＩＤ：２５８９６０１。"
+ ],
+ "denrai": "",
+ "collection": "国立国会図書館，デジタルコレクション",
+ "w_seikyu": "",
+ "m_seikyu": "",
+ "c_seikyu": "",
+ "d_seikyu": "DIG-NDLD-15840，25，Y",
+ "tmedias": [
+  {
+   "num": 1,
+   "mediashubetsu": "D",
+   "mediacallno_all": "ＮＤＬＤ－１５８４０",
+   "mediakikaku": "1",
+   "fshubetsu": "",
+   "mediakeitai": "25",
+   "startno": "",
+   "startreel": "",
+   "numreel": "",
+   "serviceclass": "Y",
+   "schuki": "",
+   "tourokuno": "",
+   "mediapublisher": "国立国会図書館",
+   "mediadate": ""
+  }
+ ],
+ "refid": [],
+ "parentbiblio": "",
+ "parentbiblioname": "",
+ "parentbiblioimage": "0",
+ "card_sno": "",
+ "seikyuoutput": "0",
+ "image": "1",
+ "manifestlabel": "IIIF連携",
+ "manifest": "https://www.dl.ndl.go.jp/api/iiif/2589601/manifest.json",
+ "licenseimg": "",
+ "licensetext1": "",
+ "licensetext2": "",
+ "licenselink": "",
+ "imagedownload": "1",
+ "imageindex": [],
+ "taglist": [],
+ "reprinttext": [],
+ "work": [
+  {
+   "wid": "1897661",
+   "name": "勇魚取絵詞（いさなとりえことば）（Isanatoriekotoba）",
+   "satsu": "二冊",
+   "tsuno": "",
+   "year": "文政一二（1829）",
+   "keyword": "水産",
+   "besho": [],
+   "note": "〈参〉→鯨肉調味方。〈訂〉参照注記・著者役割追加（江戸時代料理本集成８・１１による）。",
+   "author": [
+    {
+     "aid": "97201",
+     "name": "小山田／与清（Oyamada Tomokiyo） 跋"
+    }
+   ],
+   "shubetsu": "J",
+   "kokusho": "『国書総目録』所収（改訂）",
+   "kokushono": "1",
+   "kokushoshozai": "【写】国会（二軸），国会伊藤（鯨肉調味方一冊を付す），内閣（二軸），水産資料館（天保三版本写）【版】＜文政一二版＞東大，早大，京都府，桜山，旧彰考，［補遺］日比谷諸家（二帖）＜天保三版（鯨肉調味方を付す）＞水産資料館，東博，京大，水産大羽原，京都府，金沢市稼堂，［補遺］鹿児島大玉里＜刊年不明＞宮書，日比谷近藤，岩瀬【複】〔活〕日本科学古典全書五"
+  }
+ ],
+ "doi": "https://doi.org/10.11501/2589601",
+ "outsidelink": [
+  {
+   "sort_order": 1,
+   "label": "CiNii Booksで書名を検索（外部サイト）",
+   "label_en": "CiNii Books",
+   "url": "https://ci.nii.ac.jp/books/search?q=勇魚取絵詞"
+  }
+ ],
+ "childbiblio": [],
+ "iid": "",
+ "licensemsg": "",
+ "licensecondurl": "",
+ "cmeishoh": "デジタルコレクション",
+ "smeishoh": "国立国会図書館",
+ "top_shomeih": "勇魚取絵詞",
+ "smeishor": "National Diet Library",
+ "exceptionurl": "",
+ "seriestype": 0
+}

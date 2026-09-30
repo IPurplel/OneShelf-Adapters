@@ -1,0 +1,111 @@
+{
+ "bid": "100062008",
+ "shubetsu": "M",
+ "hshomei": "",
+ "kshomei": [
+  "1．料理献立／頭てん天口有（りょうりこんだて／あたまてんてんにくちあり）（Ryourikondate Atamatentennikuchiari），外",
+  "2．大つうそく（だいつうぞく）（Daitsuuzoku），柱"
+ ],
+ "hshomeipdf": "料理献立／頭てん天口有（りょうりこんだて／あたまてんてんにくちあり）",
+ "kshomeipdf": [
+  "料理献立／頭てん天口有（りょうりこんだて／あたまてんてんにくちあり）",
+  "大つうそく（だいつうぞく）"
+ ],
+ "author": [],
+ "kansu": "",
+ "kansha": "刊",
+ "bpublish": [],
+ "keitai": "",
+ "shokei": "",
+ "satsu": "１冊",
+ "zan": "",
+ "structure": "",
+ "keyword": "",
+ "chuki": "",
+ "denrai": "",
+ "collection": "東京都立中央図書館，加賀文庫，84‐1",
+ "w_seikyu": "",
+ "m_seikyu": "025-0078-019，18コマ，B",
+ "c_seikyu": "",
+ "d_seikyu": "",
+ "tmedias": [
+  {
+   "num": 1,
+   "mediashubetsu": "M",
+   "mediacallno_all": "０２５－００７８－０１９",
+   "mediakikaku": "",
+   "fshubetsu": "N1，N2，P3",
+   "mediakeitai": "18",
+   "startno": "0",
+   "startreel": "",
+   "numreel": "0",
+   "serviceclass": "B",
+   "schuki": "",
+   "tourokuno": "",
+   "mediapublisher": "",
+   "mediadate": ""
+  }
+ ],
+ "refid": [],
+ "parentbiblio": "",
+ "parentbiblioname": "",
+ "parentbiblioimage": "0",
+ "card_sno": "",
+ "seikyuoutput": "1",
+ "image": "1",
+ "manifestlabel": "",
+ "manifest": "https://kokusho.nijl.ac.jp/biblio/100062008/manifest",
+ "licenseimg": "",
+ "licensetext1": "All-Rights-Reserved",
+ "licensetext2": "画像の利用については利用条件ページの各コレクションの案内をご参照ください。",
+ "licenselink": "https://kokusho.nijl.ac.jp/page/usage.html",
+ "imagedownload": "1",
+ "imageindex": [],
+ "taglist": [],
+ "reprinttext": [],
+ "work": [
+  {
+   "wid": "610071",
+   "name": "頭てん天口有（あたまてんてんにくちあり）（Atamatentennikuchiari）",
+   "satsu": "三冊",
+   "tsuno": "料理献立",
+   "year": "天明四刊（1784）",
+   "keyword": "黄表紙",
+   "besho": [],
+   "note": "〈備〉日本古典文学大辞典に解説あり。",
+   "author": [
+    {
+     "aid": "75478",
+     "name": "四方山人(大田／南畝)（Yomosanjin(Oota Nanpo)） 作"
+    },
+    {
+     "aid": "112403",
+     "name": "勝川／春潮（Katsukawa Shunchou） 画"
+    }
+   ],
+   "shubetsu": "J",
+   "kokusho": "『国書総目録』所収",
+   "kokushono": "1",
+   "kokushoshozai": "【版】成田，［補遺］国会，日比谷加賀"
+  }
+ ],
+ "doi": "https://doi.org/10.20730/100062008",
+ "outsidelink": [
+  {
+   "sort_order": 1,
+   "label": "CiNii Booksで書名を検索（外部サイト）",
+   "label_en": "CiNii Books",
+   "url": "https://ci.nii.ac.jp/books/search?q=頭てん天口有"
+  }
+ ],
+ "childbiblio": [],
+ "iid": "",
+ "licensemsg": "contact",
+ "licensecondurl": "https://kokusho.nijl.ac.jp/page/usage.html",
+ "cmeishoh": "加賀文庫",
+ "smeishoh": "東京都立中央図書館",
+ "top_shomeih": "料理献立／頭てん天口有",
+ "smeishor": "Tokyo Metropolitan Library",
+ "exceptionurl": "",
+ "seriestype": 0
+}

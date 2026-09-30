@@ -1,0 +1,9 @@
+base_url: https://kokusho.nijl.ac.jp
+# A record's address carries its bibliographic id (bid), which is also its DOI suffix (10.20730/<bid>).
+url_patterns:
+  - pattern: '^https://kokusho\.nijl\.ac\.jp/biblio/([0-9]+)(?:[/?#]|$)'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

@@ -1,0 +1,137 @@
+{
+ "@context": "http://iiif.io/api/presentation/2/context.json",
+ "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/manifest",
+ "@type": "sc:Manifest",
+ "metadata": [
+  {
+   "label": "Author",
+   "value": "覃"
+  },
+  {
+   "label": "Title",
+   "value": "大つうそく"
+  },
+  {
+   "label": "DOI",
+   "value": "10.20730/100062008"
+  }
+ ],
+ "label": "料理献立／頭てん天口有",
+ "attribution": "東京都立中央図書館 国文学研究資料館",
+ "license": "https://kokusho.nijl.ac.jp/page/usage.html",
+ "viewingDirection": "right-to-left",
+ "viewingHint": "individuals",
+ "sequences": [
+  {
+   "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/sequence/normal",
+   "@type": "sc:Sequence",
+   "canvases": [
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/1",
+     "@type": "sc:Canvas",
+     "label": "1",
+     "height": 4592,
+     "width": 4464,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/annotation/1",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0000.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4592,
+        "width": 4464,
+        "dc:identifier": "0025-0078019",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0000.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/1"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0000.tif/full/full/0/default.jpg",
+       "label": "Original (4464 x 4592px)",
+       "format": "image/jpeg"
+      }
+     ]
+    },
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/2",
+     "@type": "sc:Canvas",
+     "label": "2",
+     "height": 4216,
+     "width": 4488,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/annotation/2",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0001.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4216,
+        "width": 4488,
+        "dc:identifier": "0025-0078019",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0001.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/2"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0001.tif/full/full/0/default.jpg",
+       "label": "Original (4488 x 4216px)",
+       "format": "image/jpeg"
+      }
+     ]
+    },
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/3",
+     "@type": "sc:Canvas",
+     "label": "3",
+     "height": 4216,
+     "width": 4488,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100062008/annotation/3",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0002.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4216,
+        "width": 4488,
+        "dc:identifier": "0025-0078019",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0002.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100062008/canvas/3"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100062008/v4/0025/0025-0078019/0025-0078019-0002.tif/full/full/0/default.jpg",
+       "label": "Original (4488 x 4216px)",
+       "format": "image/jpeg"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

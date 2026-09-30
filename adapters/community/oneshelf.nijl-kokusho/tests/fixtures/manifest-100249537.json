@@ -1,0 +1,137 @@
+{
+ "@context": "http://iiif.io/api/presentation/2/context.json",
+ "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/manifest",
+ "@type": "sc:Manifest",
+ "metadata": [
+  {
+   "label": "Author",
+   "value": "博望子"
+  },
+  {
+   "label": "Title",
+   "value": "珎味集"
+  },
+  {
+   "label": "DOI",
+   "value": "10.20730/100249537"
+  }
+ ],
+ "label": "料理珍味集",
+ "attribution": "味の素食の文化センター 国文学研究資料館",
+ "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.ja",
+ "viewingDirection": "right-to-left",
+ "viewingHint": "individuals",
+ "sequences": [
+  {
+   "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/sequence/normal",
+   "@type": "sc:Sequence",
+   "canvases": [
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/1",
+     "@type": "sc:Canvas",
+     "label": "1",
+     "height": 4032,
+     "width": 5728,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/annotation/1",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00001.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4032,
+        "width": 5728,
+        "dc:identifier": "AJNM-00131",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00001.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/1"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00001.tif/full/full/0/default.jpg",
+       "label": "Original (5728 x 4032px)",
+       "format": "image/jpeg"
+      }
+     ]
+    },
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/2",
+     "@type": "sc:Canvas",
+     "label": "2",
+     "height": 4032,
+     "width": 5728,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/annotation/2",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00002.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4032,
+        "width": 5728,
+        "dc:identifier": "AJNM-00131",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00002.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/2"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00002.tif/full/full/0/default.jpg",
+       "label": "Original (5728 x 4032px)",
+       "format": "image/jpeg"
+      }
+     ]
+    },
+    {
+     "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/3",
+     "@type": "sc:Canvas",
+     "label": "3",
+     "height": 4032,
+     "width": 5728,
+     "images": [
+      {
+       "@id": "https://kokusho.nijl.ac.jp/biblio/100249537/annotation/3",
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "resource": {
+        "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00003.tif/full/full/0/default.jpg",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg",
+        "height": 4032,
+        "width": 5728,
+        "dc:identifier": "AJNM-00131",
+        "service": {
+         "@context": "http://iiif.io/api/image/2/context.json",
+         "@id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00003.tif",
+         "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+       },
+       "on": "https://kokusho.nijl.ac.jp/biblio/100249537/canvas/3"
+      }
+     ],
+     "rendering": [
+      {
+       "id": "https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00003.tif/full/full/0/default.jpg",
+       "label": "Original (5728 x 4032px)",
+       "format": "image/jpeg"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

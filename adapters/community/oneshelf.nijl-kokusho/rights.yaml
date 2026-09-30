@@ -1,0 +1,40 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "国書データベース, National Institute of Japanese Literature (NIJL), with the holding institution named in each manifest's attribution"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Rights differ per record: Creative Commons (BY, BY-SA, BY-NC, BY-NC-SA, BY-NC-ND), the Public Domain
+    Mark, "All-Rights-Reserved" (licensemsg "contact": ask NIJL), or none. Search lists records as NIJL
+    does. A record becomes a Reading Unit only when NIJL's record links a Creative Commons licence or the
+    PDM/CC0 and names a manifest on NIJL's own host; the reader shows pages only while the manifest's own
+    licence field is Creative Commons or PDM/CC0. Anything else fails closed. Commercial use and
+    derivatives vary with the item's licence; a personal copy of unmodified page images is within every
+    licence admitted (NC and ND included).
+  exclusion_tests: [4, 5, 6, 8]
+evidence:
+  - claim: robots.txt allows everything (Disallow empty).
+    url: https://kokusho.nijl.ac.jp/robots.txt
+  - claim: Per-record licence fields (licenselink, licensemsg, manifest) — CC BY-SA 4.0 example.
+    url: https://kokusho.nijl.ac.jp/api/biblioDetail/100249537
+  - claim: All-Rights-Reserved example (licensemsg "contact"), images present.
+    url: https://kokusho.nijl.ac.jp/api/biblioDetail/100062008
+  - claim: Record without a licence whose manifest is a IIIF Collection pointing to the National Diet Library.
+    url: https://kokusho.nijl.ac.jp/biblio/100356778/manifest
+  - claim: The IIIF manifest carries the same licence in its license field.
+    url: https://kokusho.nijl.ac.jp/biblio/100249537/manifest
+  - claim: NIJL's usage terms for items that are not openly licensed.
+    url: https://kokusho.nijl.ac.jp/page/usage.html
+last_verified: 2026-09-30

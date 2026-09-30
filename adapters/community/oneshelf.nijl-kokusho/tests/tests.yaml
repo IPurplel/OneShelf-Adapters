@@ -1,0 +1,84 @@
+cases:
+# 黄表紙 (kibyōshi, illustrated popular fiction). Trimmed to five records — three with images, two
+# without — and its paginator totals set to match, so one page is the whole (fixture) result.
+- capability: search
+  inputs: {query: 黄表紙, page: 1}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioSimpleSearch?keyword=%E9%BB%84%E8%A1%A8%E7%B4%99&page=1
+    file: fixtures/search-kibyoshi.json
+  expect:
+    min_items: 5
+    complete: true
+    fields_present: [listing_key, title, creator, language]
+    first: {listing_key: '100356591', title: 嗚呼勇四人与市　３巻, creator: 柳川／桂子, language: ja}
+- capability: work
+  inputs: {listing_key: '100249537'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100249537
+    file: fixtures/detail-100249537.json
+  expect:
+    fields_present: [title, original_title, creator, description, language]
+    first: {title: 料理珍味集, creator: 博望子（Hakuboushi）, language: ja, content_type: book}
+# CC BY-SA 4.0: one unit.
+- capability: catalog
+  inputs: {listing_key: '100249537'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100249537
+    file: fixtures/detail-100249537.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '100249537', unit_type: one_shot, title: 料理珍味集}
+# Public Domain Mark: one unit.
+- capability: catalog
+  inputs: {listing_key: '100432076'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100432076
+    file: fixtures/detail-100432076.json
+  expect:
+    min_items: 1
+    first: {unit_key: '100432076'}
+# All-Rights-Reserved (licensemsg "contact"), images present: no unit.
+- capability: catalog
+  inputs: {listing_key: '100062008'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100062008
+    file: fixtures/detail-100062008.json
+  expect:
+    first: {unit_key: null}
+# No licence; its "manifest" is another library's (NDL): no unit.
+- capability: catalog
+  inputs: {listing_key: '100356778'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100356778
+    file: fixtures/detail-100356778.json
+  expect:
+    first: {unit_key: null}
+# SYNTHETIC (fixture says so): a CC licence but a manifest on another library's host — still no unit,
+# because pages could not come from NIJL. Tests the manifest-host condition on its own.
+- capability: catalog
+  inputs: {listing_key: '100356778'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/api/biblioDetail/100356778
+    file: fixtures/synthetic-cc-external-manifest.json
+  expect:
+    first: {unit_key: null}
+# CC BY-SA manifest, trimmed to its first three canvases: three pages in order, 2048 px wide.
+- capability: reader
+  inputs: {unit_key: '100249537'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/biblio/100249537/manifest
+    file: fixtures/manifest-100249537.json
+  expect:
+    min_items: 3
+    complete: true
+    first: {url: 'https://kokusho.nijl.ac.jp/api/iiif/100249537/v4/AJNM/AJNM-00131/AJNM-00131-00001.tif/full/2048,/0/default.jpg'}
+# All-Rights-Reserved manifest (license: NIJL's usage page) — reached by key directly: no page.
+- capability: reader
+  inputs: {unit_key: '100062008'}
+  fixtures:
+  - url: https://kokusho.nijl.ac.jp/biblio/100062008/manifest
+    file: fixtures/manifest-100062008.json
+  expect:
+    complete: false
+    first: {url: null}

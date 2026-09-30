@@ -1,0 +1,24 @@
+# A book is one Reading Unit (one_shot) — only when NIJL's record links a Creative Commons licence or the
+# Public Domain Mark and names a manifest on NIJL's own host. Anything else has no unit: All-Rights-Reserved
+# ("contact" for permission), no licence, images held by another library, or no images (a record without
+# images has an empty manifest field, so the host condition covers it).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/biblioDetail/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.licenselink"}
+    manifest: {json: "$.manifest"}
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}|{licence}|{manifest}", required: true,
+               transforms: [{regex_extract: {pattern: '^([1-9][0-9]*)\|https://creativecommons\.org/(?:licenses/(?:by|by-sa|by-nc|by-nc-sa|by-nd|by-nc-nd)/[0-9.]+/|publicdomain/(?:mark|zero)/1\.0/)[^|]*\|https://kokusho\.nijl\.ac\.jp/biblio/[1-9][0-9]*/manifest$', group: 1}}]}
+    title: {json: "$.top_shomeih", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

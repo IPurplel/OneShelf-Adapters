@@ -1,0 +1,102 @@
+{
+ "bid": "100432076",
+ "shubetsu": "M",
+ "hshomei": "御家続御祝儀御料理被下覚（おいえつづきごしゅうぎおりょうりくだされおぼえ）（Oietsuzukigoshuugioryourikudasareoboe），Ｍ",
+ "kshomei": [],
+ "hshomeipdf": "御家続御祝儀御料理被下覚（おいえつづきごしゅうぎおりょうりくだされおぼえ）",
+ "kshomeipdf": "",
+ "author": [],
+ "kansu": "",
+ "kansha": "写",
+ "bpublish": [
+  "正徳５",
+  "　"
+ ],
+ "keitai": "",
+ "shokei": "",
+ "satsu": "１冊",
+ "zan": "",
+ "structure": "",
+ "keyword": "",
+ "chuki": [
+  "〈般〉正徳５年。",
+  "〈備〉「池田家文庫藩政資料マイクロ版集成」（丸善雄松堂販売）より電子化，リール番号（ＴＣＥ－０２０）。"
+ ],
+ "denrai": "",
+ "collection": "岡山大学図書館，岡山大蔵池田家文庫マイクロデジタル変換，池田家C5-2509",
+ "w_seikyu": "",
+ "m_seikyu": "",
+ "c_seikyu": "",
+ "d_seikyu": "DIG-OKAU-64762，74，Y",
+ "tmedias": [
+  {
+   "num": 1,
+   "mediashubetsu": "D",
+   "mediacallno_all": "ＯＫＡＵ－６４７６２",
+   "mediakikaku": "2",
+   "fshubetsu": "",
+   "mediakeitai": "74",
+   "startno": "",
+   "startreel": "",
+   "numreel": "",
+   "serviceclass": "Y",
+   "schuki": "",
+   "tourokuno": "",
+   "mediapublisher": "",
+   "mediadate": ""
+  }
+ ],
+ "refid": [],
+ "parentbiblio": "",
+ "parentbiblioname": "",
+ "parentbiblioimage": "0",
+ "card_sno": "",
+ "seikyuoutput": "0",
+ "image": "1",
+ "manifestlabel": "",
+ "manifest": "https://kokusho.nijl.ac.jp/biblio/100432076/manifest",
+ "licenseimg": "./images/Public_Domain_Mark.png",
+ "licensetext1": "",
+ "licensetext2": "",
+ "licenselink": "https://creativecommons.org/publicdomain/mark/1.0/deed.ja",
+ "imagedownload": "1",
+ "imageindex": [],
+ "taglist": [],
+ "reprinttext": [],
+ "work": [
+  {
+   "wid": "4430550",
+   "name": "池田継政関係記録（いけだつぐまさかんけいきろく）（Ikedatsugumasakankeikiroku）",
+   "satsu": "",
+   "tsuno": "",
+   "year": "",
+   "keyword": "記録",
+   "besho": [],
+   "note": "〈般〉岡山池田家。",
+   "author": [],
+   "shubetsu": "J",
+   "kokusho": "国文研作成（まとめ項目）",
+   "kokushono": "0",
+   "kokushoshozai": ""
+  }
+ ],
+ "doi": "https://doi.org/10.20730/100432076",
+ "outsidelink": [
+  {
+   "sort_order": 1,
+   "label": "CiNii Booksで書名を検索（外部サイト）",
+   "label_en": "CiNii Books",
+   "url": "https://ci.nii.ac.jp/books/search?q=御家続御祝儀御料理被下覚"
+  }
+ ],
+ "childbiblio": [],
+ "iid": "",
+ "licensemsg": "free",
+ "licensecondurl": "https://creativecommons.org/publicdomain/mark/1.0/deed.ja",
+ "cmeishoh": "岡山大蔵池田家文庫マイクロデジタル変換",
+ "smeishoh": "岡山大学図書館",
+ "top_shomeih": "御家続御祝儀御料理被下覚",
+ "smeishor": "Okayama University Libraries Ikedake Bunko",
+ "exceptionurl": "",
+ "seriestype": 0
+}

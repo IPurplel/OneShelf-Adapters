@@ -551,6 +551,7 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 | Source | Adapter | Status | Tier | Capabilities | Languages | Access |
 |---|---|---|---|---|---|---|
 | [xkcd](https://xkcd.com/) | `oneshelf.xkcd` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC 2.5 (site-wide) |
+| [NIJL Kokusho Database](https://kokusho.nijl.ac.jp/) | `oneshelf.nijl-kokusho` | `VERIFIED` | Community | search, work, catalog, reader | ja | Per item: CC / PDM only (All-Rights-Reserved excluded) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
@@ -563,6 +564,19 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 - robots.txt: checked 2026-09-29; only /personal/ disallowed for all agents; every live request allowed
 - Live check: 2026-09-29: PASS: catalog 3,303 complete, comic 1 image decoded (24,848 bytes JPEG); comic 3142 PASS; failure modes: 1608 (interactive, no image file) → no page offered; 404 (no such comic) → page_failed; 1190 → image redirects via c.xkcd.com to plain http and is refused by the egress policy. 12 of 12 randomly sampled comics serve their image directly
 - Notes: No search (the site has none). The archive title of 3142 contains an unescaped tag and reads "-Style Pizza".
+
+**NIJL Kokusho Database (国書データベース)** — `VERIFIED`, `oneshelf.nijl-kokusho`
+- Access model: per item. A 24-record sample of illustrated items: 9 All-Rights-Reserved (licensemsg "contact"), 5 Public Domain Mark, 7 Creative Commons (BY, BY-SA, BY-NC, BY-NC-SA, BY-NC-ND), 3 without a licence (their "manifest" is another library's). `rights.yaml`: mixed, item granularity, eligible items only
+- Transport: the database's public JSON API (`/api/biblioSimpleSearch`, `/api/biblioDetail/<bid>`) and IIIF Presentation 2 manifests (`/biblio/<bid>/manifest`); images from its IIIF Image service (level 1) at 2048 px wide
+- Domains: kokusho.nijl.ac.jp only
+- Stable id: bid (also the DOI suffix, 10.20730/<bid>)
+- Pagination / completeness: search: 100 records a page, capped at 3 pages, reported incomplete (the API has no image or licence filter — it lists records as NIJL does); catalog: one unit (one_shot), single response; reader: every canvas of the manifest, single response
+- Formats: page images (JPEG)
+- Languages: ja (the database's; no per-record language field)
+- robots.txt: `Disallow:` empty; checked 2026-09-30; every live request allowed
+- Live check: 2026-09-30: PASS for 100249537 (CC BY-SA 4.0, 91 pages; first and last decoded) and 100432076 (PDM, 74 pages); 100062008 (All-Rights-Reserved): no catalog unit and no reader page (19 canvases refused)
+- Tests: every clause of the gate is covered — mutation checks on the licence pattern (catalog and reader) and the manifest-host condition each fail a packaged test (the host condition through a fixture marked SYNTHETIC)
+- Notes: manifests declare right-to-left viewing; OneShelf has no reading-direction field yet, so page order is kept but direction is not passed on. No covers (the record has no thumbnail; search results carry none). No downloads (no whole-book file)
 
 ## Source Registry check — 2026-09-30
 

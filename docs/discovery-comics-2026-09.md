@@ -423,3 +423,9 @@ official Arabic chapters but a protobuf API.
 - Discovery leads: publisher lists (loomic.io, Comics Beat), Hatena's GigaViewer adopter releases, ComicControl
   usage statistics (ful.io), SpiderForest and Hiveworks directories, AUB Libraries' Arabic comics guide,
   Indonesian, Vietnamese, Korean and Chinese legal-reading lists, Wikipedia's list of CC-licensed works.
+
+## Round 2 — checkpoints
+
+| Date | Task | Result | Commit | Next |
+|---|---|---|---|---|
+| 2026-09-30 | NIJL Kokusho Database | `VERIFIED` as `oneshelf.nijl-kokusho` (search, work, catalog, reader; per-item CC/PDM gate, All-Rights-Reserved excluded) | see git log | Acomics eligibility |

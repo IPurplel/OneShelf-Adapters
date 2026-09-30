@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.nijl-kokusho
+name: NIJL Kokusho Database (国書データベース)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Early Japanese books from the National Institute of Japanese Literature's Kokusho Database, read page by
+  page from their IIIF manifests. Search lists the database's bibliographic records as NIJL does; a record
+  becomes readable only when NIJL's own record and manifest carry a Creative Commons licence or the Public
+  Domain Mark — All-Rights-Reserved items, items without a licence and items whose images live elsewhere
+  offer no pages. Pages are requested 2048 px wide from NIJL's IIIF image service. No downloads (NIJL offers
+  no whole-book file). Right-to-left page order is kept; OneShelf has no field for the reading direction yet.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [kokusho.nijl.ac.jp]
+defaults:
+  language: ja
+  content_type: book

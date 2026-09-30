@@ -1,0 +1,22 @@
+# Every canvas of the manifest in its order (the manifest is complete: one document, every page), from
+# each page's IIIF image service at 2048 px wide (IIIF level 1 "w,"), and only while the manifest's own
+# licence is Creative Commons or the Public Domain Mark — the catalog's test, on the document the pages
+# come from. A IIIF Collection (images held elsewhere) has no canvases and so no pages.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/biblio/{unit_key:path}/manifest"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.license"}
+  items: {json: "$.sequences[0].canvases[*].images[0].resource.service['@id']"}
+  fields:
+    url: {template: "{item}|{licence}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://kokusho\.nijl\.ac\.jp/api/iiif/[1-9][0-9]*/[A-Za-z0-9._/-]+\.tif)\|https://creativecommons\.org/(?:licenses/(?:by|by-sa|by-nc|by-nc-sa|by-nd|by-nc-nd)/[0-9.]+/|publicdomain/(?:mark|zero)/1\.0/)', group: 1}},
+                       {regex_replace: {pattern: '^(.+)$', replacement: '\1/full/2048,/0/default.jpg'}}]}
+pagination:
+  mode: none
+  complete_when: single_response

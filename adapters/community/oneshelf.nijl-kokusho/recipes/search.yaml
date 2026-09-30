@@ -1,0 +1,24 @@
+# The database's own public search API (the one its pages call), 100 records a page. It has no filter for
+# images or licences, so results are the database's records as NIJL lists them; which of them can be read
+# is decided per record by catalog.yaml and reader.yaml. The key is the record's bid.
+capability: search
+inputs: [query, page]
+request:
+  url: "{base_url}/api/biblioSimpleSearch?keyword={query}&page={page}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.data[*]"}
+  fields:
+    listing_key: {json: "$.bid", required: true, transforms: [{regex_extract: {pattern: '^([1-9][0-9]*)$', group: 1}}]}
+    title: {json: "$.name", required: true, transforms: [trim]}
+    creator: {json: "$.authorhead", transforms: [trim]}
+    language: {template: "ja"}
+    content_type: {template: "book"}
+pagination:
+  mode: page_number
+  start: 1
+  max_pages: 3
+  stop_when: total_count
+  total: {json: "$.total"}

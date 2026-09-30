@@ -1,0 +1,20 @@
+# NIJL's bibliographic record. The title is the record's clean title (top_shomeih, without the kana
+# reading); the author is the work's first author as NIJL records it.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/biblioDetail/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    year: {json: "$.work[0].year"}
+    holder: {json: "$.collection"}
+  fields:
+    title: {json: "$.top_shomeih", required: true, transforms: [trim]}
+    original_title: {json: "$.hshomeipdf", transforms: [trim]}
+    creator: {json: "$.work[0].author[0].name", transforms: [trim]}
+    description: {template: "{year} — {holder}"}
+    language: {template: "ja"}
+    content_type: {template: "book"}
