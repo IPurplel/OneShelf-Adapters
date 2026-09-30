@@ -1,0 +1,28 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it — see docs/rights-model.md.
+# It starts at the safe end: listed, readable only on the source's own site, no local copies. Before you
+# add reader or downloads, find the source's licence or terms, cite them under evidence, and change
+# access_type, license, local_copy and enforcement to match what they actually grant.
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: free_to_read
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: unknown
+derivatives: unknown
+attribution:
+  required: true
+  text: "{{NAME}} — https://{{DOMAIN}}/"
+visibility: all_listed_items
+local_copy: not_allowed
+enforcement:
+  summary: >-
+    Search only: nothing is saved locally. Replace this with how the recipes keep ineligible items out once
+    the adapter reads or downloads anything.
+  exclusion_tests: []
+evidence:
+  - claim: Replace with the page that states the source's licence or terms of use.
+    url: https://{{DOMAIN}}/
+last_verified: 2026-01-01
