@@ -162,6 +162,14 @@ async def run(adapter_id: str, args) -> int:
                 result = await attempt(capability, unit_inputs)
                 if args.no_files or not isinstance(result, ListResult) or not result.entries:
                     continue
+                if capability == "reader" and any(entry.html is not None for entry in result.entries):
+                    # Text units (plugin API 1.2) carry their content: there are no bytes to fetch. The check
+                    # is what Download Missing would store — Core's own container, through Core's validator.
+                    check = _text_unit_check(result.entries, Path(work) / "unit.ostext", manifest.defaults.language)
+                    if check.get("problem"):
+                        failures.append(f"reader: text unit: {check['problem']}")
+                    report["capabilities"][capability]["text_checked"] = check
+                    continue
                 picks = [result.entries[0]] if capability == "downloads" else [result.entries[0], result.entries[-1]]
                 checks = []
                 for entry in picks:
@@ -221,6 +229,31 @@ async def run(adapter_id: str, args) -> int:
         report["failures"] = failures
         print(json.dumps(report, ensure_ascii=False, indent=1, default=str))
         return 0 if not failures else 1
+
+
+def _text_unit_check(entries, path: Path, language: str | None) -> dict:
+    # Imported here: only a Core with text units (plugin API 1.2) has them, and only such a Core can
+    # have produced an entry with text.
+    from oneshelf.text.container import TextUnit, write_text_container
+    from oneshelf.text.direction import content_direction
+    from oneshelf.text.sanitise import plain_text, sanitise, split_sections
+
+    sections = []
+    for entry in entries:
+        if not entry.html:
+            return {"problem": f"item {entry.index} has no text"}
+        sections.extend(split_sections(sanitise(entry.html)))
+    if not sections:
+        return {"problem": "no text once sanitised"}
+    write_text_container(path, TextUnit(title=entries[0].title, language=language,
+                                        direction=content_direction(language), source_url=None, sections=sections))
+    verdict = validate(path)
+    check = {"validated_as": verdict.format, "sections": len(sections),
+             "characters": sum(s.characters for s in sections), "direction": content_direction(language),
+             "first_text": plain_text(sections[0].html)[:160]}
+    if not verdict.ok:
+        check["problem"] = verdict.reason or "not a valid text unit"
+    return check
 
 
 def main(argv: list[str] | None = None) -> int:
