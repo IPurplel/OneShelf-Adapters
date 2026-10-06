@@ -15,7 +15,7 @@ generated from the adapters' manifests.
 | `BLOCKED` | Not implementable now; the reason, the evidence and what would unblock it are recorded |
 
 
-**60 candidates:** 3 existing and verified, 23 rows served by new verified adapters, 34 blocked. Two rows (Arabic and international Wikimedia Commons) share one adapter, so the rows map to 22 new adapters. New adapters are in `adapters/community/`; none is added to the snapshot OneShelf bundles.
+**60 candidates:** 3 existing and verified, 25 rows served by new verified adapters, 32 blocked. Two rows (Arabic and international Wikimedia Commons) share one adapter, so the rows map to 24 new adapters. The two Wikisource rows were unblocked on 2026-10-06 by Core's text reading units (plugin API 1.2); they need a Core newer than the current tooling pin (see their entries). New adapters are in `adapters/community/`; none is added to the snapshot OneShelf bundles.
 
 
 ## Arabic and Arabic-content sources
@@ -24,7 +24,7 @@ generated from the adapters' manifests.
 |---:|---|---|---|---|---|---|---|
 | 1 | [Safahat / Hindawi Foundation](https://www.safahat.org/) | `oneshelf.hindawi` | `EXISTING_VERIFIED` | Official | search, work, catalog, downloads | ar | Free (publisher-offered) |
 | 2 | [Booktime](https://www.booktime.org/ar/books) | — | `BLOCKED` | — | — | ar | Free, account-gated |
-| 3 | [Arabic Wikisource](https://ar.wikisource.org/) | — | `BLOCKED` | — | — | ar | PD / CC |
+| 3 | [Arabic Wikisource](https://ar.wikisource.org/) | `oneshelf.wikisource-ar` | `VERIFIED` | Community | search, work, catalog, reader | ar | GFDL (site policy; non-free material is deleted) |
 | 4 | [Arabic Wikibooks](https://ar.wikibooks.org/) | — | `BLOCKED` | — | — | ar | CC BY-SA |
 | 5 | [Arabic Collections Online (NYU)](https://aco.dlib.nyu.edu/) | `oneshelf.arabic-collections-online` | `VERIFIED` | Community | search, work, catalog, downloads | ar | Free (PD and permissioned) |
 | 6 | [OpenITI Corpus](https://openiti.org/) | — | `BLOCKED` | — | — | ar, fa | CC |
@@ -59,7 +59,7 @@ generated from the adapters' manifests.
 |---:|---|---|---|---|---|---|---|
 | 1 | [Project Gutenberg](https://www.gutenberg.org/) | `oneshelf.gutenberg` | `EXISTING_VERIFIED` | Official | work, catalog, downloads | per book (mapped) | PD (US) |
 | 2 | [Standard Ebooks](https://standardebooks.org/) | `oneshelf.standard-ebooks` | `EXISTING_VERIFIED` | Official | search, work, catalog, downloads | en | PD |
-| 3 | [Wikisource](https://wikisource.org/) | — | `BLOCKED` | — | — | many | PD / CC |
+| 3 | [Wikisource](https://wikisource.org/) | `oneshelf.wikisource-en` | `VERIFIED` | Community | search, work, catalog, reader | en (one adapter per language) | PD or free licence (site policy); transcriptions CC BY-SA 4.0 |
 | 4 | [Wikibooks](https://www.wikibooks.org/) | — | `BLOCKED` | — | — | many | CC BY-SA |
 | 5 | [Directory of Open Access Books](https://www.doabooks.org/) | — | `BLOCKED` | — | — | many | OA (aggregator) |
 | 6 | [OAPEN Library](https://library.oapen.org/) | `oneshelf.oapen` | `VERIFIED` | Community | search, work, catalog, downloads | many (mapped) | OA (mostly CC) |
@@ -111,9 +111,17 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
 - Access model: Free, account-gated
 - Blocker: Reading needs sign-in: the page's Read() sends visitors without a user id to /ar/account/sign-in; no downloadable files (app otherwise).
 
-**3. Arabic Wikisource** — `BLOCKED`
-- Access model: PD / CC
-- Blocker: *.wikisource.org robots.txt disallows /w/, /api/ and Special:. Search works via api.wikimedia.org, but the only whole-book format is WS-Export (ws-export.wmcloud.org), whose robots.txt is Disallow: /. Wiki pages are HTML, which OneShelf cannot read as a book. Unblock: robots permission for WS-Export, or a Core HTML/text book format.
+**3. Arabic Wikisource (ويكي مصدر)** — `VERIFIED`, `oneshelf.wikisource-ar`
+- Access model: the site's official copyright policy (ويكي_مصدر:حقوق_النسخ) puts all content under the GFDL and deletes material whose source does not allow it; `rights.yaml`: open_license (GFDL-1.1-or-later), source granularity
+- Transport: the Wikimedia API Portal (`api.wikimedia.org/core/v1/wikisource/ar/…`): search (`/search/page`) and page HTML (`/page/<name>/html`, Parsoid). `ar.wikisource.org/w/` is robots-disallowed and never used; WS-Export (robots `Disallow: /`) is not needed
+- Domains: api.wikimedia.org only
+- Stable id: the page name (`Work`, `Work/Chapter_1`)
+- Pagination / completeness: search: the first 50 matches, single response, keeping top-level pages (chapters match too and are dropped); catalog: the work's page, then every subpage of it the page links to, matched against the page's own `<title>`, single response; reader: one text unit per page, single response
+- Formats: text units (plugin API 1.2): the page's content blocks without the `ws-noexport` navigation header and the licence banner, sanitised by Core, stored as `.ostext`. No images
+- robots.txt: checked 2026-10-06; api.wikimedia.org allows everything this adapter requests; `ar.wikisource.org/w/` disallowed and unused
+- Core: needs OneShelf with plugin API 1.2 (`markup: outer`, `<base>`-resolved links) — commits eae9b3d, 537115c, e4d7498 on Core's `feature/text-reading-units`, not yet on main or in `tooling/oneshelf-core-ref.txt`; verified with `ONESHELF_CORE_PATH`
+- Live check: 2026-10-06: PASS: كليلة ودمنة — search 4 works, catalog 20 units complete, a chapter read as 4 sections (46,320 characters, rtl) and validated as a text unit; also PASS for ألف ليلة وليلة (catalog 6) and مقدمة ابن خلدون
+- Notes: Was `BLOCKED` on format (2026-09-29): the pages are HTML and the only whole-book export was robots-disallowed. Subpage links are not percent-encoded while `dc:isVersionOf` is, so the catalog matches on `<title>`.
 
 **4. Arabic Wikibooks** — `BLOCKED`
 - Access model: CC BY-SA
@@ -336,9 +344,17 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
 - Live check: 2026-09-29: PASS: 711 kB EPUB opened
 - Notes: Fixed to 1.1.0: a key's query could return several books and the first was taken; now only the entry whose id is the key. Unfiltered feeds are Patrons Circle only (401); query feeds are public.
 
-**3. Wikisource** — `BLOCKED`
-- Access model: PD / CC
-- Blocker: As Arabic Wikisource.
+**3. Wikisource (English)** — `VERIFIED`, `oneshelf.wikisource-en`
+- Access model: the copyright policy (Wikisource:Copyright_policy) admits only public-domain or freely licensed works and prohibits fair use; contributions are CC BY-SA 4.0 and GFDL; `rights.yaml`: open_license (CC-BY-SA-4.0), source granularity
+- Transport: the Wikimedia API Portal (`api.wikimedia.org/core/v1/wikisource/en/…`): search (`/search/page`) and page HTML (`/page/<name>/html`, Parsoid). `en.wikisource.org/w/` is robots-disallowed and never used; WS-Export (robots `Disallow: /`) is not needed
+- Domains: api.wikimedia.org only
+- Stable id: the page name (`Work`, `Work/Chapter_1`)
+- Pagination / completeness: search: the first 50 matches, single response, keeping top-level pages (chapters match too and are dropped); catalog: the work's page, then every subpage of it the page links to, matched against the page's own `<title>`, single response; reader: one text unit per page, single response
+- Formats: text units (plugin API 1.2): the page's content blocks without the `ws-noexport` navigation header and the licence banner, sanitised by Core, stored as `.ostext`. No images
+- robots.txt: checked 2026-10-06; api.wikimedia.org allows everything this adapter requests; `en.wikisource.org/w/` disallowed and unused
+- Core: needs OneShelf with plugin API 1.2 (`markup: outer`, `<base>`-resolved links) — commits eae9b3d, 537115c, e4d7498 on Core's `feature/text-reading-units`, not yet on main or in `tooling/oneshelf-core-ref.txt`; verified with `ONESHELF_CORE_PATH`
+- Live check: 2026-10-06: PASS: Pride and Prejudice (1813) — catalog 65 units complete (the work, 3 volume pages, 61 chapters), Volume 2/Chapter 3 read (12,749 characters) and validated as a text unit; also PASS for Frankenstein, Les Misérables (catalog 50 complete) and The Time Machine
+- Notes: Was `BLOCKED` with Arabic Wikisource. Other languages (fr, de, …) are one adapter each with the same recipes. A bare title is often a versions page (Frankenstein, The Time Machine): its one unit lists the editions, which search finds as works of their own.
 
 **4. Wikibooks** — `BLOCKED`
 - Access model: CC BY-SA

@@ -49,7 +49,8 @@ GET /wp-json/wp/v2/comic?per_page=100&page=1&order=asc&orderby=date&_envelope=1
 so a recipe reads `items: $.body[*]` and `total: $.headers['X-WP-Total']` with `stop_when: total_count` today.
 Items carry a numeric `id`, `slug`, `link`, `date`, `chapters` and the page image in `content.rendered`.
 
-**Core primitive review** (§36 gate). Response-header extraction would help (1) WordPress — solved without it by
+**Core primitive review** (the review asked for before any new Core primitive; not a numbered section of
+the Meta Prompt — its §36 is Multi-Client Live Updates, which an earlier draft cited by mistake). Response-header extraction would help (1) WordPress — solved without it by
 `_envelope`; (2) `Link: rel=next` APIs (GitHub-style) — none among current candidates; (3) `ETag`/`Last-Modified`
 — conditional requests belong to Core's fetcher and Traffic Governor, not to recipes. It would be declarative,
 statically validatable and fixture-testable (fixtures already carry a content type; they would need headers), but
@@ -60,7 +61,16 @@ is a header, the design would be an allowlist (`X-WP-Total`, `X-WP-TotalPages`, 
 **Rights** as for ComicControl: the Toocheke sites state no licence; one adapter per permitted site. Note per-site
 image hosts (Octopus Pie serves images from `test.octopuspie.com`), declared per adapter.
 
-## C. HTML/text Reading Units — decision **B: a generic new reading format is needed** (not in this round)
+## C. HTML/text Reading Units — decision **B: a generic new reading format is needed** (implemented 2026-10-06)
+
+> **Status (2026-10-06).** Built in Core as plugin API 1.2 on branch `feature/text-reading-units` (commits
+> eae9b3d, 537115c, e4d7498; not yet on main, so not yet the tooling pin). As designed below, with these
+> differences: version 1 stores no images (an `<img>` becomes its alt text); long units are split into
+> sections of about 16,000 characters, because the sandboxed frame cannot report a scroll position, so
+> progress is by section, not by character offset; `markup` is `inner` or `outer`; links in a text unit
+> resolve against the document's own `<base>`. First consumers: `oneshelf.wikisource-en` and
+> `oneshelf.wikisource-ar` (see source-matrix.md). Still open: images in text units (Grise Bouille),
+> Japanese vertical text, the reading-direction field for image units below.
 
 **Sources it would unlock** (all blocked today on format, not access): Wikisource and Arabic Wikisource (their
 WS-Export host is also robots-disallowed — they would read chapter HTML via the allowed API Portal), Wikibooks,
@@ -92,7 +102,7 @@ existing rows. **Tests:** sanitiser corpus (script, event handler, `javascript:`
 packaged-test kind for text units, reader tests for RTL Arabic and Japanese, a live Wikisource-API adapter as the
 first consumer.
 
-**Recommendation:** a separate, gated Core task (not this round): it touches runtime, storage, migrations,
+**Recommendation (2026-09-30):** a separate, gated Core task (not this round): it touches runtime, storage, migrations,
 downloads and the reader. It is bounded and reuses the EPUB renderer, and it unblocks more legitimate sources than
 any other single change found so far.
 

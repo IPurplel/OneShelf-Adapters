@@ -40,6 +40,7 @@ never changes a trust level by itself.
 
 runs every declared capability of one adapter against the live site through OneShelf Core's runtime, fetcher
 and egress policy, chained as a library chains them, and opens the files and images it reaches with Core's
-validators; any request robots.txt disallows (RFC 9309, redirects included) fails the check ([source-discovery.md](source-discovery.md#3-toolslive-check)). Record the outcome in
+validators (a text reader's output is built into the `.ostext` file Download Missing would store and
+validated as one); any request robots.txt disallows (RFC 9309, redirects included) fails the check ([source-discovery.md](source-discovery.md#3-toolslive-check)). Record the outcome in
 [source-matrix.md](source-matrix.md). Maintainers can also run OneShelf's own live suite against the Official
 adapters through the **Live source check** workflow (manual dispatch).

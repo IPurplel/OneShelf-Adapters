@@ -94,6 +94,34 @@ cases:
 
 Each fixture answers exactly one URL the recipe requests. See [testing.md](testing.md).
 
+## Text reading units (plugin API 1.2)
+
+A `reader` recipe returns either image pages (`url`) or text (`html`), never both. Text is for sources whose
+content is prose on a web page: wiki pages, web novels, plain-text corpora. OneShelf sanitises it to a text
+allowlist before anything else sees it, splits long units into sections, reads it in the Book Reader in the
+language's own direction, and Download Missing stores it as a `.ostext` file. It is never turned into EPUB.
+An adapter that uses any of this declares `api: '1.2'`, and a OneShelf without text units refuses it.
+
+```yaml
+extract:
+  items: {css: "html"}
+  fields:
+    # Every content block except the site's navigation, joined into one unit.
+    html: {xpath: "//main/*[not(contains(@class, 'nav'))]", markup: outer, all: true,
+           transforms: [{join: {sep: ""}}]}
+    title: {css: "head > title::text", transforms: [trim]}
+```
+
+`markup: inner` takes what is inside one element (`html: {css: "#chapter", markup: inner}`); a JSON string
+is markup already (`html: {json: "$.parse.text"}`). Relative links resolve against the page's `<base>` when it
+declares one. Images are dropped in this version (their alt text is kept). Test the text, not the markup:
+
+```yaml
+  expect: {min_items: 1, complete: true, text_contains: "It is a truth universally acknowledged", min_text_chars: 300}
+```
+
+`oneshelf.wikisource-en` and `oneshelf.wikisource-ar` are complete examples.
+
 ## From the OneShelf Adapter Generator
 
 OneShelf's Adapter Generator can draft an adapter from a site and export a **submission bundle**. That
