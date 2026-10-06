@@ -1,0 +1,8 @@
+base_url: https://api.wikimedia.org
+# No url_patterns: OneShelf matches a pasted address only against an adapter's own network domains, and
+# this adapter reaches Wikisource only through api.wikimedia.org, so a wikisource.org address would never
+# be recognised. Works are found by search.
+# The API Portal allows 500 anonymous requests an hour; stay well inside that.
+rate_limit:
+  requests_per_minute: 6
+  concurrency: 1

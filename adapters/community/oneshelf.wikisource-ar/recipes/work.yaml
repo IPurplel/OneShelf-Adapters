@@ -1,0 +1,9 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/core/v1/wikisource/ar/page/{listing_key:path}/html"
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "head > title::text", required: true, transforms: [trim]}

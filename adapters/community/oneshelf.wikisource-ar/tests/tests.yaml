@@ -1,0 +1,54 @@
+# Fixtures are live API Portal responses (2026-10-06) cut to what the recipes read; the catalog page
+# keeps links that are not subpages (the author, a category) to show they yield no unit.
+cases:
+- capability: search
+  inputs:
+    query: كليلة ودمنة
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/ar/search/page?q=%D9%83%D9%84%D9%8A%D9%84%D8%A9%20%D9%88%D8%AF%D9%85%D9%86%D8%A9&limit=50
+    file: fixtures/search.json
+  expect:
+    min_items: 2
+    complete: true
+    fields_present:
+    - listing_key
+    - title
+    first:
+      listing_key: كليلة_ودمنة
+- capability: work
+  inputs:
+    listing_key: كليلة_ودمنة
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/ar/page/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9/html
+    file: fixtures/work.html
+  expect:
+    first:
+      title: كليلة ودمنة
+- capability: catalog
+  inputs:
+    listing_key: كليلة_ودمنة
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/ar/page/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9/html
+    file: fixtures/work.html
+  expect:
+    min_items: 4
+    complete: true
+    first:
+      unit_key: كليلة_ودمنة
+      title: null
+- capability: reader
+  inputs:
+    unit_key: كليلة_ودمنة/باب_مقدمة_الكتاب
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/ar/page/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9%2F%D8%A8%D8%A7%D8%A8_%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8/html
+    file: fixtures/chapter.html
+  expect:
+    min_items: 1
+    complete: true
+    fields_present:
+    - html
+    - title
+    first:
+      title: باب مقدمة الكتاب
+    text_contains: بيدبا الفيلسوف الهندي
+    min_text_chars: 300

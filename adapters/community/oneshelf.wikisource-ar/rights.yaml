@@ -1,0 +1,38 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+# OneShelf Core does not read this file; the repository's tests do, and so do reviewers.
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+# Arabic Wikisource's own copyright policy (an official policy, read 2026-10-06) puts its content under
+# the GNU Free Documentation License, unversioned (so any version, 1.1 or later), and deletes anything
+# added from a source that does not allow it. That is the grant relied on here.
+license:
+  id: GFDL-1.1-or-later
+  url: https://www.gnu.org/licenses/fdl-1.3.html
+commercial_use: allowed_with_conditions
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "From Arabic Wikisource (ويكي مصدر) — https://ar.wikisource.org/ (GNU Free Documentation License)"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Arabic Wikisource's policy places all its content under the GFDL and deletes anything whose source does
+    not allow that, so eligibility is not decided per page. The reader reads a page's text through the Wikimedia API Portal
+    (api.wikimedia.org, robots.txt allows it; ar.wikisource.org/w/ is disallowed and never used) and
+    leaves out the navigation header and the licence banner. It keeps no images. Search, catalog and reader
+    were checked live on 2026-10-06.
+  exclusion_tests: []
+evidence:
+  - claim: "Official policy: Wikisource content is under the GNU Free Documentation License; anyone may copy, modify and distribute any part of it under the same licence, with attribution."
+    url: https://ar.wikisource.org/wiki/%D9%88%D9%8A%D9%83%D9%8A_%D9%85%D8%B5%D8%AF%D8%B1:%D8%AD%D9%82%D9%88%D9%82_%D8%A7%D9%84%D9%86%D8%B3%D8%AE
+  - claim: "Official policy: any addition found to come from a source that does not allow the free licence is deleted."
+    url: https://ar.wikisource.org/wiki/%D9%88%D9%8A%D9%83%D9%8A_%D9%85%D8%B5%D8%AF%D8%B1:%D8%AD%D9%82%D9%88%D9%82_%D8%A7%D9%84%D9%86%D8%B3%D8%AE
+  - claim: The Wikimedia API Portal serves page HTML for every Wikimedia project, Wikisource included, and its robots.txt allows it.
+    url: https://api.wikimedia.org/robots.txt
+  - claim: ar.wikisource.org's robots.txt disallows /w/ (its own API), which this adapter does not use.
+    url: https://ar.wikisource.org/robots.txt
+last_verified: 2026-10-06
