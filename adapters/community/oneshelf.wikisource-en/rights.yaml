@@ -1,0 +1,37 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+# OneShelf Core does not read this file; the repository's tests do, and so do reviewers.
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+# The transcriptions are contributors' work under CC BY-SA 4.0 (and the GFDL); the works transcribed must
+# themselves be public domain or freely licensed, so nothing on the site is under a narrower grant.
+license:
+  id: CC-BY-SA-4.0
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+commercial_use: allowed_with_conditions
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "From English Wikisource — https://en.wikisource.org/ (CC BY-SA 4.0; the work itself is public domain or freely licensed)"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Wikisource admits only works that are public domain or under a free licence, and forbids fair use, so
+    eligibility is not decided per page. The reader reads a page's text through the Wikimedia API Portal
+    (api.wikimedia.org, robots.txt allows it; en.wikisource.org/w/ is disallowed and never used) and
+    leaves out the navigation header and the licence banner. It keeps no images. Search, catalog and reader
+    were checked live on 2026-10-06.
+  exclusion_tests: []
+evidence:
+  - claim: "All works on Wikisource must be in the public domain or released under a license compatible with the free content definition; fair use is explicitly prohibited."
+    url: https://en.wikisource.org/wiki/Wikisource:Copyright_policy
+  - claim: "Unless otherwise noted, all user contributions to Wikisource are released under CC BY-SA 4.0 and the GFDL."
+    url: https://en.wikisource.org/wiki/Wikisource:Copyright_policy
+  - claim: The Wikimedia API Portal serves page HTML for every Wikimedia project, Wikisource included, and its robots.txt allows it.
+    url: https://api.wikimedia.org/robots.txt
+  - claim: en.wikisource.org's robots.txt disallows /w/ (its own API), which this adapter does not use.
+    url: https://en.wikisource.org/robots.txt
+last_verified: 2026-10-06

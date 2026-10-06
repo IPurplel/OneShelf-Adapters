@@ -1,0 +1,54 @@
+# Fixtures are live API Portal responses (2026-10-06) cut to what the recipes read; the catalog page
+# keeps two links that are not subpages (an author, a special page) to show they yield no unit.
+cases:
+- capability: search
+  inputs:
+    query: pride and prejudice
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/en/search/page?q=pride%20and%20prejudice&limit=50
+    file: fixtures/search.json
+  expect:
+    min_items: 2
+    complete: true
+    fields_present:
+    - listing_key
+    - title
+    first:
+      listing_key: Pride_and_Prejudice
+- capability: work
+  inputs:
+    listing_key: Pride_and_Prejudice_(1813)
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/en/page/Pride_and_Prejudice_%281813%29/html
+    file: fixtures/work.html
+  expect:
+    first:
+      title: Pride and Prejudice (1813)
+- capability: catalog
+  inputs:
+    listing_key: Pride_and_Prejudice_(1813)
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/en/page/Pride_and_Prejudice_%281813%29/html
+    file: fixtures/work.html
+  expect:
+    min_items: 4
+    complete: true
+    first:
+      unit_key: Pride_and_Prejudice_(1813)
+      title: null
+- capability: reader
+  inputs:
+    unit_key: Pride_and_Prejudice_(1813)/Volume_1/Chapter_1
+  fixtures:
+  - url: https://api.wikimedia.org/core/v1/wikisource/en/page/Pride_and_Prejudice_%281813%29%2FVolume_1%2FChapter_1/html
+    file: fixtures/chapter.html
+  expect:
+    min_items: 1
+    complete: true
+    fields_present:
+    - html
+    - title
+    first:
+      title: Chapter 1
+    text_contains: It is a truth universally acknowledged
+    min_text_chars: 300

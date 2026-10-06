@@ -1,0 +1,23 @@
+schema: oneshelf.osp/1
+id: oneshelf.wikisource-en
+name: English Wikisource
+version: 0.1.0
+api: '1.2'
+description: >-
+  Public-domain and freely licensed texts transcribed on English Wikisource, read as text (plugin API
+  1.2). Search finds works (top-level pages); a work's units are the page itself followed by every
+  subpage it links to (volumes and chapters, in the order the page lists them). Each unit is read and
+  downloaded as sanitised text without Wikisource's navigation header or licence banner. Uses the
+  Wikimedia API Portal because en.wikisource.org's robots.txt disallows its own /w/ API. No images (text
+  units keep none in this version), no author field, no pasted wikisource.org addresses. Search reads
+  Wikisource's first 50 matches and keeps the works among them (chapters match too, and are dropped). A
+  title with several editions is a versions page whose one unit lists them; the editions are found by
+  search as works of their own.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [api.wikimedia.org]
+  cdn_domains: []
+defaults:
+  language: en
+  content_type: book

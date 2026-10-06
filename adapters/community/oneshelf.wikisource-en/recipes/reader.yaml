@@ -1,0 +1,25 @@
+# A unit is one page, read as text (plugin API 1.2). Its content is every block of the page's sections
+# except Wikisource's navigation header (class ws-noexport, which Wikisource's own export leaves out too)
+# and the licence banner (licenseContainer; the rights are recorded in rights.yaml). OneShelf Core
+# sanitises the joined markup before anything else sees it.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/core/v1/wikisource/en/page/{unit_key:path}/html"
+response:
+  format: html
+extract:
+  items: {css: "html"}
+  fields:
+    html:
+      xpath: >-
+        //body//section/*[not(self::section)]
+        [not(contains(concat(' ', normalize-space(@class), ' '), ' ws-noexport '))]
+        [not(contains(concat(' ', normalize-space(@class), ' '), ' licenseContainer '))]
+      markup: outer
+      all: true
+      transforms: [{join: {sep: ""}}]
+    title: {css: "head > title::text", transforms: [{regex_extract: {pattern: '([^/]+)$', group: 1}}, trim]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,33 @@
+# The work's page is the first unit (it is the whole text of a one-page work, and the contents of a
+# longer one); then every subpage of this work that the page links to, in page order. Parsoid names the
+# page in <link rel="dc:isVersionOf" href="//en.wikisource.org/wiki/Name"> (percent-encoded) and in
+# <title> (with spaces), and a subpage link is href="./Name/Chapter_1" (not encoded) — so only links
+# under the title's name are items: another work, its subpages, an author or a namespace page never are.
+# Both forms become the same kind of key, the decoded page name; a link's #fragment is dropped, so a
+# footnote link is the chapter it is in.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/core/v1/wikisource/en/page/{listing_key:path}/html"
+response:
+  format: html
+extract:
+  items:
+    xpath: >-
+      //head/link[@rel='dc:isVersionOf']
+      | //body//a[@rel='mw:WikiLink'][starts-with(@href, concat('./',
+        translate(normalize-space(//head/title), ' ', '_'), '/'))]
+  fields:
+    unit_key:
+      xpath: "@href"
+      required: true
+      transforms:
+        - {regex_replace: {pattern: '[?#].*$', replacement: ''}}
+        - url_decode
+        - {regex_replace: {pattern: '^//en\.wikisource\.org/wiki/(.+)$', replacement: './\1/'}}
+        - {regex_extract: {pattern: '^\./(.+?)/?$', group: 1}}
+    # "Pride and Prejudice (1813)/Volume 1/Chapter 1" → "Volume 1/Chapter 1"; the work page has none.
+    title: {xpath: "@title", transforms: [{regex_extract: {pattern: '^[^/]+/(.+)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,18 @@
+# Wikisource's own search through the API Portal. It also finds chapters (subpages, "Work/Chapter 1");
+# only top-level pages are works, so a key containing "/" yields no entry.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/core/v1/wikisource/en/search/page?q={query:url}&limit=50"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.pages[*]"}
+  fields:
+    listing_key: {json: "$.key", required: true, transforms: [{regex_extract: {pattern: '^([^/]+)$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    description: {json: "$.description"}
+pagination:
+  mode: none
+  complete_when: single_response
