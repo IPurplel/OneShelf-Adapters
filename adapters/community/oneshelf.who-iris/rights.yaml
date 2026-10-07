@@ -1,0 +1,29 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed
+derivatives: unknown
+attribution:
+  required: true
+  text: "World Health Organization, WHO IRIS — https://iris.who.int/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    WHO's recent publications are CC BY-NC-SA 3.0 IGO and their pages say so; older documents state no licence. An item has a unit, and its PDF is offered, only while the item's own page links a
+    Creative Commons licence (the signposting rel="license" link, or the licence badge) and names its PDF; an
+    item without one has neither (tests 3, 4). Licences differ per item (some non-commercial), so commercial
+    use is marked unknown; the PDF is stored unaltered for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: An item page with its Creative Commons licence link and citation_pdf_url.
+    url: https://iris.who.int/items/eb2b6676-8177-4897-ad01-0018b86db28f
+  - claim: robots.txt disallows search, browse and the REST API except bitstreams; Crawl-delay 10.
+    url: https://iris.who.int/robots.txt
+last_verified: 2026-10-07

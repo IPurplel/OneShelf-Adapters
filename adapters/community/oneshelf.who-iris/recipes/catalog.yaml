@@ -1,0 +1,26 @@
+# An item is one Reading Unit (one_shot) — only while its page links a Creative Commons licence (the
+# signposting rel="license" link, or the licence badge) and declares a PDF file (as the downloads recipe
+# reads it). The template joins the item's key
+# with both, and the pattern keeps it only then.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//link[@rel = 'license']/@href | //ds-client-cc-license-icons//a[contains(@href, 'creativecommons.org/')]/@href)"}
+    pdf: {xpath: "(//link[@rel = 'item'][@type = 'application/pdf'][contains(@href, '/bitstreams/')]/@href | //a[contains(@href, '/bitstreams/')][normalize-space(.) = 'Download PDF']/@href)"}
+  items: {xpath: "/html"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}|{pdf}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^((?:(?:items|entities/publication)/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|handle/10665/[0-9]+))\|https?://creativecommons\.org/(?:licenses|publicdomain)/[^|]+\|(?:https?://iris\.who\.int)?/bitstreams/[0-9a-f-]{36}/download$', group: 1}}]
+    title: {css: "meta[name=citation_title]::attr(content)", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

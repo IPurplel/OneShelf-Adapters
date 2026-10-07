@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.who-iris
+name: WHO IRIS
+version: 0.1.0
+api: '1.2'
+description: >-
+  WHO IRIS: the World Health Organization's publications and governing-body documents, as PDF. An item is a work with one unit, downloaded as the PDF the
+  repository names for it — only while the item's own page links a Creative Commons licence (recent publications CC BY-NC-SA 3.0 IGO; older documents state no licence and are not offered).
+  Open an item by pasting its address (iris.who.int/items/…, /entities/publication/… or /handle/…). No search:
+  the repository's robots.txt disallows its search pages and its API except file downloads.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [iris.who.int]
+defaults:
+  language: en
+  content_type: paper
