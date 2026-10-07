@@ -1,0 +1,21 @@
+# Every page of the issue, in the manifest's order, from the library's IIIF image service at up to 2048
+# pixels on the long side — only while the manifest carries the Public Domain Mark.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/presentation/ANNO/{unit_key:path}/manifest/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.license"}
+  items: {json: "$.sequences[0].canvases[*].images[0].resource.service['@id']"}
+  fields:
+    url:
+      template: "{item}/full/!2048,2048/0/default.jpg|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^(https://iiif\.onb\.ac\.at/images/ANNO/[a-z0-9]+[0-9]{8}/[0-9]{8}/full/!2048,2048/0/default\.jpg)\|https?://creativecommons\.org/publicdomain/mark/1\.0/?$', group: 1}}]
+pagination:
+  mode: none
+  complete_when: single_response

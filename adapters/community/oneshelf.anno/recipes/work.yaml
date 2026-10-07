@@ -1,0 +1,18 @@
+# The issue's language is the manifest's "Languages" entry (the eighth); only a plain language code is
+# taken, so a manifest arranged otherwise falls back to German.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/presentation/ANNO/{listing_key:path}/manifest/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.label", required: true, transforms: [trim]}
+    creator: {json: "$.attribution[0]['@value']"}
+    description: {template: "Austrian Newspapers Online (ANNO), Österreichische Nationalbibliothek"}
+    language:
+      json: "$.metadata[7].value"
+      transforms: [{regex_extract: {pattern: '^(ger|lat|ita|fre|hun|cze|pol|slv|hrv|eng)$', group: 1}}, {regex_replace: {pattern: '^ger$', replacement: de}}]
+    content_type: {template: "other"}

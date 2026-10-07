@@ -1,0 +1,24 @@
+# An issue is one Reading Unit (one_shot), read as the sequence of its pages — only while its manifest
+# carries the Public Domain Mark: the template joins the issue id with the manifest's licence and the
+# pattern keeps it only then.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/presentation/ANNO/{listing_key:path}/manifest/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.license"}
+  items: {json: "$"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([a-z0-9]+[0-9]{8})\|https?://creativecommons\.org/publicdomain/mark/1\.0/?$', group: 1}}]
+    title: {json: "$.label", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

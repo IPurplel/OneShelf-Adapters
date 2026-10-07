@@ -1,0 +1,2355 @@
+{
+  "@context" : "http://iiif.io/api/presentation/2/context.json",
+  "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest",
+  "@type" : "sc:Manifest",
+  "label" : "Wiener Zeitung 1800-01-01",
+  "metadata" : [
+    {
+      "label" : [
+        {
+          "@value" : "Id",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Id",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "wrz18000101"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Title",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Titel",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "Wiener Zeitung"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Type",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Typ",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "newspaper"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Place of Publications",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Erscheinungsort",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "<a href='http://d-nb.info/gnd/4066009-6'>Wien</a>"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Date Issued",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Erscheinungsdatum",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "1800-01-01"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Subject Heading",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Schlagworte",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "<a href='http://d-nb.info/gnd/4067510-5'>Tageszeitung</a>"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Disseminator",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Anbieter",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "<a href='http://anno.onb.ac.at/'>Austrian Newspapers Online</a>"
+    },
+    {
+      "label" : [
+        {
+          "@value" : "Languages",
+          "@language" : "en"
+        },
+        {
+          "@value" : "Sprachen",
+          "@language" : "ger"
+        }
+      ],
+      "value" : "ger"
+    }
+  ],
+  "description" : "Wiener Zeitung 1800-01-01",
+  "viewingDirection" : "left-to-right",
+  "viewingHint" : "paged",
+  "license" : "http://creativecommons.org/publicdomain/mark/1.0/",
+  "attribution" : [
+    {
+      "@value" : "Austrian National Library",
+      "@language" : "en"
+    },
+    {
+      "@value" : "Österreichische Nationalbibliothek",
+      "@language" : "ger"
+    }
+  ],
+  "logo" : "https://iiif.onb.ac.at/logo/",
+  "seeAlso" : [
+    {
+      "@id" : "http://anno.onb.ac.at/cgi-content/anno_pdf.pl?aid=wrz&datum=18000101",
+      "format" : "application/pdf"
+    },
+    {
+      "@id" : "http://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18000101",
+      "format" : "text/html"
+    },
+    {
+      "@id" : "http://data.onb.ac.at/ANNO/wrz18000101.rdf",
+      "format" : "application/rdf+xml"
+    }
+  ],
+  "sequences" : [
+    {
+      "@context" : "http://iiif.io/api/presentation/2/context.json",
+      "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/sequence/normal",
+      "@type" : "sc:Sequence",
+      "startCanvas" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000001",
+      "canvases" : [
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000001",
+          "@type" : "sc:Canvas",
+          "label" : "00000001",
+          "height" : 2467,
+          "width" : 1813,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000001",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000001/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2467,
+                "width" : 1813,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000001",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000001"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000001.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000001.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000001"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000002",
+          "@type" : "sc:Canvas",
+          "label" : "00000002",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000002",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000002/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000002",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000002"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000002.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000002.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000002"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000003",
+          "@type" : "sc:Canvas",
+          "label" : "00000003",
+          "height" : 2467,
+          "width" : 1813,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000003",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000003/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2467,
+                "width" : 1813,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000003",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000003"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000003.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000003.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000003"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000004",
+          "@type" : "sc:Canvas",
+          "label" : "00000004",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000004",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000004/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000004",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000004"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000004.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000004.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000004"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000005",
+          "@type" : "sc:Canvas",
+          "label" : "00000005",
+          "height" : 2467,
+          "width" : 1813,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000005",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000005/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2467,
+                "width" : 1813,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000005",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000005"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000005.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000005.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000005"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000006",
+          "@type" : "sc:Canvas",
+          "label" : "00000006",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000006",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000006/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000006",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000006"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000006.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000006.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000006"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000007",
+          "@type" : "sc:Canvas",
+          "label" : "00000007",
+          "height" : 2467,
+          "width" : 1813,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000007",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000007/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2467,
+                "width" : 1813,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000007",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000007"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000007.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000007.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000007"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000008",
+          "@type" : "sc:Canvas",
+          "label" : "00000008",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000008",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000008/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000008",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000008"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000008.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000008.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000008"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000009",
+          "@type" : "sc:Canvas",
+          "label" : "00000009",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000009",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000009/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000009",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000009"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000009.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000009.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000009"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000010",
+          "@type" : "sc:Canvas",
+          "label" : "00000010",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000010",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000010/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000010",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000010"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000010.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000010.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000010"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000011",
+          "@type" : "sc:Canvas",
+          "label" : "00000011",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000011",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000011/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000011",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000011"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000011.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000011.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000011"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000012",
+          "@type" : "sc:Canvas",
+          "label" : "00000012",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000012",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000012/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000012",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000012"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000012.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000012.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000012"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000013",
+          "@type" : "sc:Canvas",
+          "label" : "00000013",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000013",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000013/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000013",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000013"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000013.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000013.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000013"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000014",
+          "@type" : "sc:Canvas",
+          "label" : "00000014",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000014",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000014/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000014",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000014"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000014.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000014.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000014"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000015",
+          "@type" : "sc:Canvas",
+          "label" : "00000015",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000015",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000015/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000015",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000015"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000015.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000015.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000015"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000016",
+          "@type" : "sc:Canvas",
+          "label" : "00000016",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000016",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000016/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000016",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000016"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000016.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000016.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000016"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000017",
+          "@type" : "sc:Canvas",
+          "label" : "00000017",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000017",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000017/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000017",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000017"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000017.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000017.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000017"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000018",
+          "@type" : "sc:Canvas",
+          "label" : "00000018",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000018",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000018/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000018",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000018"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000018.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000018.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000018"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000019",
+          "@type" : "sc:Canvas",
+          "label" : "00000019",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000019",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000019/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000019",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000019"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000019.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000019.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000019"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000020",
+          "@type" : "sc:Canvas",
+          "label" : "00000020",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000020",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000020/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000020",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000020"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000020.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000020.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000020"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000021",
+          "@type" : "sc:Canvas",
+          "label" : "00000021",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000021",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000021/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000021",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000021"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000021.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000021.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000021"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000022",
+          "@type" : "sc:Canvas",
+          "label" : "00000022",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000022",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000022/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000022",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000022"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000022.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000022.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000022"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000023",
+          "@type" : "sc:Canvas",
+          "label" : "00000023",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000023",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000023/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000023",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000023"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000023.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000023.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000023"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000024",
+          "@type" : "sc:Canvas",
+          "label" : "00000024",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000024",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000024/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000024",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000024"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000024.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000024.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000024"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000025",
+          "@type" : "sc:Canvas",
+          "label" : "00000025",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000025",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000025/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000025",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000025"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000025.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000025.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000026",
+          "@type" : "sc:Canvas",
+          "label" : "00000026",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000026",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000026/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000026",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000026"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000026.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000026.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000026"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000027",
+          "@type" : "sc:Canvas",
+          "label" : "00000027",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000027",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000027/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000027",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000027"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000027.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000027.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000027"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000028",
+          "@type" : "sc:Canvas",
+          "label" : "00000028",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000028",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000028/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000028",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000028"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000028.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000028.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000028"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000029",
+          "@type" : "sc:Canvas",
+          "label" : "00000029",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000029",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000029/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000029",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000029"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000029.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000029.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000029"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000030",
+          "@type" : "sc:Canvas",
+          "label" : "00000030",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000030",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000030/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000030",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000030"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000030.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000030.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000030"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000031",
+          "@type" : "sc:Canvas",
+          "label" : "00000031",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000031",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000031/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000031",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000031"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000031.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000031.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000031"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000032",
+          "@type" : "sc:Canvas",
+          "label" : "00000032",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000032",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000032/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000032",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000032"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000032.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000032.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000032"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000033",
+          "@type" : "sc:Canvas",
+          "label" : "00000033",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000033",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000033/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000033",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000033"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000033.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000033.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000033"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000034",
+          "@type" : "sc:Canvas",
+          "label" : "00000034",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000034",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000034/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000034",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000034"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000034.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000034.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000034"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000035",
+          "@type" : "sc:Canvas",
+          "label" : "00000035",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000035",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000035/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000035",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000035"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000035.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000035.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000035"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000036",
+          "@type" : "sc:Canvas",
+          "label" : "00000036",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000036",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000036/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000036",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000036"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000036.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000036.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000036"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000037",
+          "@type" : "sc:Canvas",
+          "label" : "00000037",
+          "height" : 2466,
+          "width" : 1798,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000037",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000037/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2466,
+                "width" : 1798,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000037",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000037"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000037.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000037.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000037"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context" : "http://iiif.io/api/presentation/2/context.json",
+          "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000038",
+          "@type" : "sc:Canvas",
+          "label" : "00000038",
+          "height" : 2402,
+          "width" : 1812,
+          "metadata" : [
+            {
+              "label" : "Resolution",
+              "value" : "300dpi"
+            },
+            {
+              "label" : "Color Depth",
+              "value" : "0bpp"
+            }
+          ],
+          "images" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/annotation/00000038",
+              "@type" : "oa:Annotation",
+              "motivation" : "sc:painting",
+              "resource" : {
+                "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000038/full/full/0/default.jpg",
+                "@type" : "dctypes:Image",
+                "height" : 2402,
+                "width" : 1812,
+                "format" : "image/jpeg",
+                "service" : {
+                  "@context" : "http://iiif.io/api/image/2/context.json",
+                  "@id" : "https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000038",
+                  "profile" : "https://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000038"
+            }
+          ],
+          "otherContent" : [
+            {
+              "@context" : "http://iiif.io/api/presentation/2/context.json",
+              "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000038.json",
+              "@type" : "sc:AnnotationList",
+              "resources" : [
+                {
+                  "@type" : "oa:Annotation",
+                  "motivation" : "sc:painting",
+                  "resource" : {
+                    "@id" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/resource/00000038.xml",
+                    "@type" : "dctypes:Text",
+                    "format" : "application/xml+alto"
+                  },
+                  "on" : "https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/canvas/00000038"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

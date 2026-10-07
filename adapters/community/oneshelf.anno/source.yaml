@@ -1,0 +1,13 @@
+base_url: https://iiif.onb.ac.at
+url_patterns:
+  - pattern: '^https://iiif\.onb\.ac\.at/presentation/ANNO/([a-z0-9]+[0-9]{8})/manifest/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+  - pattern: '^https://iiif\.onb\.ac\.at/gui/manifest\.html\?manifest=https(?::|%3A)(?://|%2F%2F)iiif\.onb\.ac\.at(?:/|%2F)presentation(?:/|%2F)ANNO(?:/|%2F)([a-z0-9]+[0-9]{8})(?:/|%2F)manifest'
+    capability: work
+    id_group: 1
+# iiif.onb.ac.at has no robots.txt (400). ONB Labs asks that clients avoid many concurrent requests; one at a
+# time, 20 a minute. anno.onb.ac.at itself now answers with a Cloudflare Turnstile check and is not used.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

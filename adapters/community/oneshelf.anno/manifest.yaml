@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.anno
+name: ANNO — Austrian Newspapers Online
+version: 0.1.0
+api: '1.0'
+description: >-
+  ANNO, the Austrian National Library's historical newspapers and periodicals, read through the library's
+  IIIF service (ONB Labs). An issue is a work and is read as its page images. Open one by pasting its IIIF
+  manifest address (iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest/) or the library's IIIF viewer
+  link for it; the key is ANNO's issue id (newspaper code and date). The
+  service offers issues older than 1906; an issue is read only while its manifest carries the Public Domain
+  Mark. No search: ANNO's own pages ask a browser check, and the IIIF service has no issue listing.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [iiif.onb.ac.at]
+defaults:
+  language: de
+  content_type: other

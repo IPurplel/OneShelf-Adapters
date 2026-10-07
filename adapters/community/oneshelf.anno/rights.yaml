@@ -1,0 +1,33 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: unknown
+derivatives: unknown
+attribution:
+  required: true
+  text: "ANNO — Austrian Newspapers Online, Österreichische Nationalbibliothek (via ONB Labs IIIF)"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each ANNO manifest from the ONB's IIIF service states its licence; the issues served (older than 1906)
+    carry the Public Domain Mark. The API itself is published under "No Copyright – Non-Commercial Use Only"
+    (rightsstatements.org NoC-NC), so commercial use is marked not allowed. An issue has a unit, and pages,
+    only while its own manifest carries the Public Domain Mark (tests 3, 4). ONB asks clients not to send
+    many concurrent requests; the adapter sends one at a time, 20 a minute. Its mass-download protection
+    concerns the ABO book collection, which this adapter does not read.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: A manifest with "license" http://creativecommons.org/publicdomain/mark/1.0/.
+    url: https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest/
+  - claim: "API licence: No Copyright – Non-Commercial Use Only; SACHA offers ANNO objects only up until 140 years ago."
+    url: https://iiif.onb.ac.at/api/
+  - claim: iiif.onb.ac.at has no robots.txt (HTTP 400); anno.onb.ac.at answers with a Cloudflare Turnstile check.
+    url: https://iiif.onb.ac.at/robots.txt
+last_verified: 2026-10-07

@@ -1,0 +1,35 @@
+# manifest-wrz18000101.json is the live manifest (2026-10-07). manifest-constructed-in-copyright.json is the
+# live Kikeriki 1880-01-04 manifest with its licence changed to In Copyright: the service serves no issue
+# without the Public Domain Mark, so the refusal is tested on a constructed one.
+cases:
+- capability: work
+  inputs: {listing_key: wrz18000101}
+  fixtures: [{url: 'https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest/', file: fixtures/manifest-wrz18000101.json}]
+  expect:
+    first: {title: Wiener Zeitung 1800-01-01, creator: Austrian National Library, language: de}
+- capability: catalog
+  inputs: {listing_key: wrz18000101}
+  fixtures: [{url: 'https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest/', file: fixtures/manifest-wrz18000101.json}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: wrz18000101}
+- capability: reader
+  inputs: {unit_key: wrz18000101}
+  fixtures: [{url: 'https://iiif.onb.ac.at/presentation/ANNO/wrz18000101/manifest/', file: fixtures/manifest-wrz18000101.json}]
+  expect:
+    min_items: 38
+    complete: true
+    first: {url: 'https://iiif.onb.ac.at/images/ANNO/wrz18000101/00000001/full/!2048,2048/0/default.jpg'}
+# 3: an issue whose manifest is not marked public domain has no unit …
+- capability: catalog
+  inputs: {listing_key: kik18800104}
+  fixtures: [{url: 'https://iiif.onb.ac.at/presentation/ANNO/kik18800104/manifest/', file: fixtures/manifest-constructed-in-copyright.json}]
+  expect:
+    first: {unit_key: null}
+# 4: … and no pages.
+- capability: reader
+  inputs: {unit_key: kik18800104}
+  fixtures: [{url: 'https://iiif.onb.ac.at/presentation/ANNO/kik18800104/manifest/', file: fixtures/manifest-constructed-in-copyright.json}]
+  expect:
+    first: {url: null}
