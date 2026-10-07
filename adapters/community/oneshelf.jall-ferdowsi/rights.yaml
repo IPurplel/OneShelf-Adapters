@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors, زبان و ادبیات عربی (Journal of Arabic Language and Literature), Ferdowsi University of Mashhad — https://jall.um.ac.ir/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Every page of the journal states "This work is licensed under a Creative Commons Attribution 4.0
+    International License" (rel="license"), and its open-access policy publishes all articles under CC BY
+    4.0. The catalog and downloads also read that licence link on the page they fetch and offer nothing
+    without it. The article PDF is stored unaltered.
+  exclusion_tests: []
+evidence:
+  - claim: "This work is licensed under a Creative Commons Attribution 4.0 International License."
+    url: https://jall.um.ac.ir/journal/about?lang=en
+  - claim: An article page with its PDF (citation_pdf_url) and the licence.
+    url: https://jall.um.ac.ir/article_47990.html
+  - claim: robots.txt allows everything (it disallows only BLEXBot).
+    url: https://jall.um.ac.ir/robots.txt
+last_verified: 2026-10-07

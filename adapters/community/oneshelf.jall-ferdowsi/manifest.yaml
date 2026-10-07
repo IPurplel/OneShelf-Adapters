@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.jall-ferdowsi
+name: Journal of Arabic Language and Literature (Ferdowsi University of Mashhad)
+version: 0.1.0
+api: '1.0'
+description: >-
+  زبان و ادبیات عربی — the Journal of Arabic Language and Literature of Ferdowsi University of Mashhad, an
+  open-access journal whose articles, in Arabic and Persian, are published under Creative Commons
+  Attribution 4.0. An issue is a work and its articles are units, each downloaded as the journal's PDF
+  (right-to-left text). Open an issue by pasting its address (jall.um.ac.ir/issue_….html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [jall.um.ac.ir]
+defaults:
+  language: ar
+  content_type: paper

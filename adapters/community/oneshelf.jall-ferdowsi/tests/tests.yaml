@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: issue_6321_6350}
+  fixtures: [{url: 'https://jall.um.ac.ir/issue_6321_6350.html', file: fixtures/issue_6321_6350.html}]
+  expect:
+    first: {title: "زبان و ادبیات عربی — دوره 17، شماره 4 - شماره پیاپی 43، زمستان 1404", language: ar}
+- capability: catalog
+  inputs: {listing_key: issue_6321_6350}
+  fixtures: [{url: 'https://jall.um.ac.ir/issue_6321_6350.html', file: fixtures/issue_6321_6350.html}]
+  expect:
+    min_items: 6
+    complete: true
+    first: {unit_key: article_47990}
+- capability: downloads
+  inputs: {unit_key: article_47990}
+  fixtures: [{url: 'https://jall.um.ac.ir/article_47990.html', file: fixtures/article_47990.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jall.um.ac.ir/article_47990_bc79189a81dd58572abc54d122649815.pdf', format: pdf}
