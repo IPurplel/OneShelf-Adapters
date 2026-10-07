@@ -1,0 +1,20 @@
+# The book's EPUB from the library's own media store, under the same condition as catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/api/2/books/{unit_key:path}/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    preview: {json: "$.preview"}
+    epub: {json: "$.epub"}
+  items: {json: "$"}
+  fields:
+    url: {template: "{epub}|{preview}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://wolnelektury\.pl/media/book/epub/[A-Za-z0-9._-]+\.epub)\|(?i:false)$', group: 1}}]}
+    format: {template: "epub", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,36 @@
+# The library's own search (API v2), 20 books a page, following the API's next link.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/api/2/books/?search={query:url}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.member[*]"}
+  fields:
+    listing_key: {json: "$.slug", required: true, transforms: [{regex_extract: {pattern: '^([a-z0-9-]+)$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    url: {json: "$.url"}
+    creator: {json: "$.authors[*].name", all: true, transforms: [{join: {sep: ", "}}]}
+    cover_url: {json: "$.cover_thumb"}
+    language:
+      json: "$.language"
+      transforms:
+        - {regex_replace: {pattern: "^pol$", replacement: pl}}
+        - {regex_replace: {pattern: "^eng$", replacement: en}}
+        - {regex_replace: {pattern: "^(?:fre|fra)$", replacement: fr}}
+        - {regex_replace: {pattern: "^(?:ger|deu)$", replacement: de}}
+        - {regex_replace: {pattern: "^rus$", replacement: ru}}
+        - {regex_replace: {pattern: "^ita$", replacement: it}}
+        - {regex_replace: {pattern: "^lit$", replacement: lt}}
+        - {regex_replace: {pattern: "^ukr$", replacement: uk}}
+        - {regex_replace: {pattern: "^(?:cze|ces)$", replacement: cs}}
+        - {regex_replace: {pattern: "^lat$", replacement: la}}
+        - {regex_replace: {pattern: "^epo$", replacement: eo}}
+        - {regex_replace: {pattern: "^spa$", replacement: es}}
+    content_type: {template: "book"}
+pagination:
+  mode: next_link
+  max_pages: 5
+  next: {json: "$.view.next"}

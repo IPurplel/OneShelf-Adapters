@@ -1,0 +1,39 @@
+# Fixtures are live API responses (2026-10-07). pan-tadeusz-preview.json is pan-tadeusz.json with
+# "preview": true (a labelled test variant; no book was in preview on that day): cases 4 and 5 offer nothing.
+cases:
+- capability: search
+  inputs: {query: tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/?search=tadeusz', file: fixtures/search-tadeusz.json}]
+  expect:
+    min_items: 5
+    complete: true
+    fields_present: [listing_key, title, creator, language]
+- capability: work
+  inputs: {listing_key: pan-tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/pan-tadeusz/', file: fixtures/pan-tadeusz.json}]
+  expect:
+    first: {title: 'Pan Tadeusz, czyli ostatni zajazd na Litwie', creator: Adam Mickiewicz, language: pl}
+- capability: catalog
+  inputs: {listing_key: pan-tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/pan-tadeusz/', file: fixtures/pan-tadeusz.json}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: pan-tadeusz, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: pan-tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/pan-tadeusz/', file: fixtures/pan-tadeusz.json}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://wolnelektury.pl/media/book/epub/pan-tadeusz.epub', format: epub}
+- capability: catalog
+  inputs: {listing_key: pan-tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/pan-tadeusz/', file: fixtures/pan-tadeusz-preview.json}]
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: pan-tadeusz}
+  fixtures: [{url: 'https://wolnelektury.pl/api/2/books/pan-tadeusz/', file: fixtures/pan-tadeusz-preview.json}]
+  expect:
+    first: {url: null}

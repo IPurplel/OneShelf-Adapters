@@ -1,0 +1,38 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-SA-3.0
+  url: https://creativecommons.org/licenses/by-sa/3.0/
+commercial_use: allowed_with_conditions
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "Wolne Lektury (Fundacja Wolne Lektury) — https://wolnelektury.pl/katalog/lektura/<slug>/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Every work in the library is in the public domain or under a free licence ("Wszystkie utwory w
+    bibliotece znajdują się w domenie publicznej bądź są udostępnione na jednej z wolnych licencji"); the
+    foundation's notes, motifs and editorial material are under the Free Art License 1.3 or CC BY-SA 3.0, and
+    each book's XML names its own status (dc:rights: "Domena publiczna – Adam Mickiewicz zm. 1855", or
+    "Licencja Wolnej Sztuki 1.3"). The licence id above is the stricter of the two the foundation uses for
+    its own material. A book still in the supporters-only preview (preview: true) has no unit and no file
+    (tests 4 and 5, on a labelled variant).
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "All works in the library are in the public domain or under a free licence, so they may be freely published and distributed; additional material is under the Free Art License 1.3 or CC BY-SA 3.0."
+    url: https://wolnelektury.pl/info/prawa/
+  - claim: A public-domain book's own rights statement (dc:rights).
+    url: https://wolnelektury.pl/media/book/xml/pan-tadeusz.xml
+  - claim: A contemporary work under the Free Art License 1.3 (dc:rights).
+    url: https://wolnelektury.pl/media/book/xml/foks-wiersze-o-fryzjerach-tlumaczac-pana-tadeusza-na-bulgarski.xml
+  - claim: The foundation publishes an API and OAI-PMH for reuse.
+    url: https://wolnelektury.pl/info/o-projekcie/
+  - claim: robots.txt disallows /szukaj/, /przypisy/, /katalog/custompdf/ and some tools, none used here.
+    url: https://wolnelektury.pl/robots.txt
+last_verified: 2026-10-07

@@ -1,0 +1,21 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4) — unless it is still in the supporters-only
+# preview (preview: true), when it has no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/2/books/{listing_key:path}/"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    preview: {json: "$.preview"}
+  items: {json: "$"}
+  fields:
+    unit_key: {template: "{listing_key}|{preview}", required: true,
+               transforms: [{regex_extract: {pattern: '^([a-z0-9-]+)\|(?i:false)$', group: 1}}]}
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
