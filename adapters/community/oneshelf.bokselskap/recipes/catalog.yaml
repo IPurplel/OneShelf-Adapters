@@ -1,0 +1,20 @@
+# The parts in the book's own table of contents (#innhold_liste), in that order. The "previous"/"next"
+# arrows beside it are not part of the list. Each part keeps its address.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/boker/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "#innhold_liste li a"}
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://www\.bokselskap\.no/boker/[a-z0-9_-]+/[a-z0-9_-]+)$', group: 1}}]}
+    unit_key: {xpath: "@href", required: true,
+               transforms: [{regex_extract: {pattern: '^https://www\.bokselskap\.no/boker/([a-z0-9_-]+/[a-z0-9_-]+)$', group: 1}}]}
+    title: {xpath: "text()", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

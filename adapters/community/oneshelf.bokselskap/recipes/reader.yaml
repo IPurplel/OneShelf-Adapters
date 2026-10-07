@@ -1,0 +1,18 @@
+# A part, read as text (plugin API 1.2): the text block (#text_inner) only — the table of contents,
+# arrows, sidebar (publisher, downloads, "about this book") and footer are outside it. OneShelf Core
+# sanitises it.
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "#text_inner"}
+  fields:
+    html: {xpath: ".", markup: inner}
+    title: {css: "h1.page_title::text", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

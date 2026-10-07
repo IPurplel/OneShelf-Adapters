@@ -1,0 +1,30 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: search
+  inputs: {query: ibsen}
+  fixtures: [{url: 'https://www.bokselskap.no/?s=ibsen', file: fixtures/search-ibsen.html}]
+  expect:
+    min_items: 4
+    complete: true
+    first: {listing_key: tancredibsen, title: Tancred Ibsens film- manuskripter}
+- capability: work
+  inputs: {listing_key: eyolf}
+  fixtures: [{url: 'https://www.bokselskap.no/boker/eyolf', file: fixtures/eyolf.html}]
+  expect:
+    first: {title: Lille Eyolf, creator: Henrik Ibsen, language: 'no'}
+- capability: catalog
+  inputs: {listing_key: eyolf}
+  fixtures: [{url: 'https://www.bokselskap.no/boker/eyolf', file: fixtures/eyolf.html}]
+  expect:
+    min_items: 6
+    complete: true
+    first: {unit_key: eyolf/tittelside, url: 'https://www.bokselskap.no/boker/eyolf/tittelside'}
+- capability: reader
+  inputs: {unit_key: eyolf/akt1, url: 'https://www.bokselskap.no/boker/eyolf/akt1'}
+  fixtures: [{url: 'https://www.bokselskap.no/boker/eyolf/akt1', file: fixtures/eyolf-akt1.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {title: FØRSTE AKT}
+    text_contains: En smukt og rigt udstyret havestue
+    min_text_chars: 20000

@@ -1,0 +1,34 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_access_publisher
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: not_allowed
+derivatives: unknown
+attribution:
+  required: true
+  text: "bokselskap.no (Det Norske Språk- og Litteraturselskap) — https://www.bokselskap.no/boker/<slug>"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Bokselskap publishes Norwegian texts whose authors died at least 70 years ago, or with the rights
+    holder's permission, and states: "Generelt gjelder det at du fritt kan bruke materiale fra dette
+    nettstedet til private, ikke-kommersielle formål. All annen bruk skal avtales skriftlig" (material may be
+    used freely for private, non-commercial purposes; any other use by written agreement). Editors of
+    critical editions and writers of introductions hold rights in their contributions. The site itself offers
+    every book for download (EPUB, MOBI, PDF). OneShelf keeps a copy for the user's private reading only —
+    within that grant; nothing is redistributed. No other use is implied.
+  exclusion_tests: []
+evidence:
+  - claim: "Material may be used freely for private, non-commercial purposes; all other use requires written agreement. Texts are those whose authors died at least 70 years ago or that the rights holder allowed."
+    url: https://www.bokselskap.no/hjelp_om
+  - claim: A book page offers the whole book for download (EPUB, MOBI, PDF).
+    url: https://www.bokselskap.no/boker/eyolf
+  - claim: robots.txt disallows only /wp-admin/.
+    url: https://www.bokselskap.no/robots.txt
+last_verified: 2026-10-07

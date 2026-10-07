@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.bokselskap
+name: Bokselskap
+version: 0.1.0
+api: '1.2'
+description: >-
+  Bokselskap.no, the Norwegian Society for Language and Literature's library of Norwegian classics (Ibsen,
+  Collett, Bjørnson, Hamsun's early work, Sivle …), read as text (plugin API 1.2). A book's units are the
+  parts its table of contents lists, in that order, each read without the site's navigation, sidebar or
+  download box. Search is the site's own book search. Bokselskap allows its material to be used freely for
+  private, non-commercial purposes, which is what a personal OneShelf library is; no other use is implied.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [www.bokselskap.no]
+defaults:
+  language: 'no'
+  content_type: book

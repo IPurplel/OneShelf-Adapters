@@ -1,0 +1,14 @@
+# A book's address opens its first part; the header names the book and its author.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/boker/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "#book_header h1::text", required: true, transforms: [trim]}
+    creator: {css: "#book_header p a::text", all: true, transforms: [{join: {sep: ", "}}]}
+    language: {template: "no"}
+    content_type: {template: "book"}

@@ -1,0 +1,19 @@
+# The site's own search; only its book hits (ul.book_hits) are works — its page hits are parts of books.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/?s={query:url}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "ul.book_hits li.bok a.bok_lenke"}
+  fields:
+    listing_key: {xpath: "@href", required: true,
+                  transforms: [{regex_extract: {pattern: '^https://www\.bokselskap\.no/boker/([a-z0-9_-]+)$', group: 1}}]}
+    title: {css: ".book_title::text", required: true, transforms: [trim]}
+    url: {xpath: "@href"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response
