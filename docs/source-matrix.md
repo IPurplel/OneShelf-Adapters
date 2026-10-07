@@ -565,7 +565,7 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 [candidate-sources.md](candidate-sources.md) and, from eBible.org on, from discovery round 3
 ([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
 grades and the live checks behind the rows below). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
-The round-3 text adapters (Runeberg, OpenEdition) need a Core with plugin API 1.2, which is not yet the
+The round-3 text adapters (Runeberg, OpenEdition, Sefaria) need a Core with plugin API 1.2, which is not yet the
 tooling pin.
 
 | Source | Adapter | Status | Tier | Capabilities | Languages | Access |
@@ -581,6 +581,8 @@ tooling pin.
 | [meson press](https://meson.press/) | `oneshelf.meson-press` | `VERIFIED` | Community | work, catalog, downloads | en, de | Per book: Creative Commons only (10 of 91 state none) |
 | [Amherst College Press](https://www.fulcrum.org/amherst) | `oneshelf.amherst-college-press` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: Open Access and CC (Fulcrum) |
 | [University of Michigan Press (open access)](https://www.fulcrum.org/michigan) | `oneshelf.university-of-michigan-press` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: Open Access and CC (sold books listed, no unit) |
+| [Sefaria](https://www.sefaria.org/) (original texts) | `oneshelf.sefaria` | `VERIFIED` | Community | search, work, catalog, reader (text) | he (also Aramaic, Judeo-Arabic) | Per version: public domain, CC0 or CC only ("unknown"/"Copyright" excluded) |
+| [Sefaria](https://www.sefaria.org/) (English) | `oneshelf.sefaria-english` | `VERIFIED` | Community | search, work, catalog, reader (text) | en | Per version: public domain, CC0 or CC only |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required

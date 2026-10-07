@@ -122,7 +122,13 @@ declares one. Images are dropped in this version (their alt text is kept). Test 
   expect: {min_items: 1, complete: true, text_contains: "It is a truth universally acknowledged", min_text_chars: 300}
 ```
 
-`oneshelf.wikisource-en` and `oneshelf.wikisource-ar` are complete examples.
+A reader result is one unit however many items it has: a chapter that arrives verse by verse (one item per
+verse) is joined and read as one chapter. In a list, a template may use `{position}`, the item's 1-based place
+in the whole list — for a source whose only identity for a chapter is where it stands
+(`unit_key: {template: "{listing_key}.{position}"}`, API 1.2).
+
+`oneshelf.wikisource-en` and `oneshelf.wikisource-ar` are complete examples; `oneshelf.sefaria` uses
+`{position}` and verse-by-verse items.
 
 ## From the OneShelf Adapter Generator
 

@@ -11,10 +11,10 @@ http is recorded as what an ordinary permitted client meets. This table is gener
 
 ## Summary
 
-- **Technical grade:** A 2, B 9, C 9, D 1, F 14
+- **Technical grade:** A 2, B 10, C 8, D 1, F 14
 - **Rights:** `CREATOR_AUTHORIZED` 1, `FREE_OFFICIAL` 2, `OPEN_LICENSED` 16, `PUBLIC_DOMAIN` 8, `RESTRICTED` 2, `RIGHTS_UNCLEAR` 6
 - **robots/access:** Allowed 18, Disallowed 1, Partial 4, Unavailable 12
-- **Decision:** BLOCKED 21, COVERED 1, HELD 1, IMPLEMENTED 7, QUEUED 5
+- **Decision:** BLOCKED 21, COVERED 1, HELD 1, IMPLEMENTED 8, QUEUED 4
 
 Grades: A straightforward and stable; B viable with normal recipe features; C viable but fragile or limited;
 D major obstacle; F unsuitable now (unreachable, forbidden or gone). Access: Allowed (no rule against the
@@ -25,7 +25,7 @@ paths are disallowed), Unavailable (challenge, block, rate limit, http downgrade
 
 | # | Source | Category | Rights | Rights evidence | robots / access | Grade | Endpoints | Decision | Reason / adapter |
 |---:|---|---|---|---|---|---|---|---|---|
-| 1 | [Sefaria](https://www.sefaria.org/) | Jewish texts (Hebrew, Aramaic, English, …) | `OPEN_LICENSED` | Each text version carries its own `license` in `/api/v3/texts` (PD, CC0, CC BY, CC BY-SA, CC BY-NC; some none); Sefaria's licensing help page | Allowed | C | `/api/v3/texts/<ref>`, `/api/shape/<title>`, `/api/v2/index/<title>`, `/api/name/<q>` | `QUEUED` | Needs Core work: chapters exist only as positions in `/api/shape` (no reference per chapter; Talmud amudim 2a/2b with empty leading slots), verses arrive as separate items, and the version must follow the track's language. See *Queued* below. |
+| 1 | [Sefaria](https://www.sefaria.org/) | Jewish texts (Hebrew, Aramaic, English, …) | `OPEN_LICENSED` | Each text version carries its own `license` in `/api/v3/texts` (PD, CC0, CC BY, CC BY-SA, CC BY-NC; some none); Sefaria's licensing help page | Allowed | B | `/api/name/<q>`, `/api/v2/index/<title>?with_content_counts=1`, `/api/v3/texts/<ref>?version=source|english` | `IMPLEMENTED` | `oneshelf.sefaria` (original texts) and `oneshelf.sefaria-english` — with two Core additions ({position}; one unit per reader result). Talmud, named-part and three-level texts have no units |
 | 2 | [Projekt Runeberg](https://runeberg.org/) | Nordic literature (sv, no, da, fi, is …) | `PUBLIC_DOMAIN` | /admin/: works published once the author has been dead 70+ years; newer works carry a copyright notice (pol95: "view it on screen") | Partial | B | `/<work>/` (table of contents), `/<work>/NN.html` (chapters) | `IMPLEMENTED` | `oneshelf.runeberg` — text editions only; scanned-facsimile works and works under copyright have no units |
 | 3 | [Chinese Text Project](https://ctext.org/) | Chinese classics | `RESTRICTED` | Terms page: "you do not have authorization to scrape this page"; data access is through a subscription API | Partial | F | `api.ctext.org` (robots-disallowed), HTML text pages | `BLOCKED` | The site forbids automated access and runs anti-scraping measures; the API host is robots-disallowed |
 | 4 | [Kanripo](https://www.kanripo.org/) | Chinese texts | `RIGHTS_UNCLEAR` | Not reachable | Unavailable | F | — | `BLOCKED` | Cloudflare challenge ("Just a moment…") on the front page |
@@ -61,7 +61,7 @@ paths are disallowed), Unavailable (challenge, block, rate limit, http downgrade
 | 34 | [Amherst College Press](https://www.fulcrum.org/amherst) | Humanities books | `OPEN_LICENSED` | Per book: Open Access indicator and CC BY-NC(-ND) | Allowed | B | `/amherst.json`, `/concern/monographs/<id>` | `IMPLEMENTED` | `oneshelf.amherst-college-press` |
 | 35 | [University of Michigan Press (open access)](https://www.fulcrum.org/michigan) | Scholarly books | `OPEN_LICENSED` | Per book: Open Access indicator and CC licence; the press also sells books | Allowed | C | `/michigan.json`, `/concern/monographs/<id>` | `IMPLEMENTED` | `oneshelf.university-of-michigan-press` — search lists sold books too (the open-access facet is challenged) |
 
-## Implemented — seven adapters
+## Implemented — nine adapters
 
 All in `adapters/community/`, each with `rights.yaml`, packaged tests with exclusion cases where rights are
 per item, and live checks on real works (`./tools/live-check`, 2026-10-07). Text adapters need a Core with
@@ -76,6 +76,8 @@ plugin API 1.2 (see *Core* below).
 | `oneshelf.meson-press` | work, catalog, downloads (PDF) | a CC link on the book page | 5 books PASS (PDFs 127–344 pages; de, en); `the-cyborg`, `politik-der-mikroentscheidungen` (no licence) refused; all 91 books read for licences (81 CC) |
 | `oneshelf.amherst-college-press` | search, work, catalog, downloads (EPUB, PDF) | Open Access indicator and CC licence (as `oneshelf.lever-press`) | 5 of 6 books PASS; `3197xq18h` has an EPUB over live-check's 150 MB cap (a tooling limit; Core's download cap is 256 MB) |
 | `oneshelf.university-of-michigan-press` | search, work, catalog, downloads (EPUB, PDF) | the same | 6 open-access books PASS; `td96k4269` (sold) and `1n79h7388` (open access without a licence) refused |
+| `oneshelf.sefaria` | search, work, catalog, reader (text, version=source) | the version's own licence on every segment: public domain, CC0 or Creative Commons | 7 works PASS (Genesis 50, Psalms 150, Pirkei Avot 6, Mishnah Berakhot 9, Mishneh Torah Prayer 15, Shulchan Arukh OC 697, Kuzari 5 chapters; Hebrew and Judeo-Arabic, rtl, one unit per chapter — Psalm 119 is 176 verses in one unit); Babylonian Talmud (Berakhot) refused |
+| `oneshelf.sefaria-english` | the same, version=english | the same | 5 works PASS (Genesis, Pirkei Avot, Mishnah Berakhot, Bereshit Rabbah 100 chapters, Kuzari); Shulchan Arukh OC (English licence "unknown") refused |
 
 **Language and direction.** eBible maps Ethnologue codes to two-letter codes for 15 common languages (others stay
 ISO 639-3). meson maps its language words. Runeberg and OpenEdition read the page's own language; text-unit
@@ -90,7 +92,7 @@ failed page is never complete (see *Core*).
 
 ## Core (OneShelf `feature/text-reading-units`, not on main, not the tooling pin)
 
-Two generic fixes found while building these adapters, each with tests (backend: 1,361 passed):
+Generic changes made while building these adapters, each with tests (backend: 1,371 passed):
 
 - **c7fcce8 — a page cut at the item cap is never a complete list.** A list page with more than 5,000 items was
   cut silently and could still be reported complete, so a shortened catalog could replace a trusted one. Found
@@ -98,18 +100,15 @@ Two generic fixes found while building these adapters, each with tests (backend:
 - **656550c — refuse an xpath field that yields a string or number.** `normalize-space()`, `string()`, `count()`
   return a value; Scrapling splits it into characters and the recipe crashed at run time. Package validation
   now refuses them (no published adapter used one).
+- **4f4567e — `{position}` in list templates; template names are validated.** An item's 1-based place in the
+  whole list (across pages), for sources whose only identity for an entry is where it stands — Sefaria lists
+  chapters only as a count of segments each. `validate_templates` existed but was never called; package
+  validation now refuses a template name it cannot have (no published adapter used one).
+- **e59bfcf — the text items of one reader result are one unit.** A chapter that arrives verse by verse was
+  sectioned per verse; reader, Download Missing and live-check now join a result's items and section once.
 
 ## Queued — eligible or likely eligible, not built
 
-- **Sefaria** (`C`, high value: Hebrew/Aramaic originals and translations, per-version licences, RTL). Design:
-  search through `/api/name/<q>` (`completion_objects` of type `ref`); work from `/api/v2/index/<title>`;
-  catalog from `/api/shape/<title>` — which gives only an array of verse counts, so a unit key needs the
-  item's position (`<title>.<n>`) — a Core template placeholder for an item's 1-based position would express
-  it; reader from `/api/v3/texts/<ref>?version=source`, whose verses are separate strings: the version's
-  `license` gates through a document value (the NIJL/Acomics pattern), and Core would need to treat all text
-  items of one reader result as one unit (today each item is sectioned separately). Talmud (amudim 2a/2b,
-  empty leading slots) and complex texts do not map to positions and would be excluded. Translation choice
-  by track language has no declarative form yet.
 - **e-codices** (`B`, held): IIIF manifests with CC BY-NC 4.0, an HTML search, one adapter like
   `oneshelf.digital-bodleian`. Its robots.txt disallows AI agents by name; a maintainer should build and
   verify it with OneShelf's client (rate 6/min for its Crawl-delay 10).
