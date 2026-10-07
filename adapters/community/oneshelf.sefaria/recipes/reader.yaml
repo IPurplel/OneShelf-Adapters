@@ -1,0 +1,29 @@
+# A chapter in the text's source version (version=source: the original language, usually the edition Sefaria marks primary), read as text (plugin API 1.2). Its segments
+# (verses, mishnayot, halakhot) arrive one per item; each becomes a paragraph with its number ({position}),
+# and OneShelf Core reads them as one unit. Every segment carries the version's licence, and a segment is
+# offered only while that licence is open (public domain, CC0, Creative Commons) — a version marked
+# "unknown" or "Copyright" yields nothing, so the chapter fails closed. Inline footnotes (Sefaria's
+# footnote-marker and footnote elements) are left out of the text.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/api/v3/texts/{unit_key:path}?version=source"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.versions[0].license"}
+    ref: {json: "$.heRef"}
+  items: {json: "$.versions[0].text[*]"}
+  fields:
+    html:
+      template: "<p><sup>{position}</sup> {item}</p>|{licence}"
+      transforms:
+        - {regex_extract: {pattern: '^((?s:.*))\|(?:Public Domain|CC0|CC-BY|CC-BY-SA|CC-BY-NC|CC-BY-NC-SA|CC-BY-ND|CC-BY-NC-ND)$', group: 1}}
+        - {regex_replace: {pattern: '<sup class="footnote-marker">[^<]*</sup>', replacement: ''}}
+        - {regex_replace: {pattern: '<i class="footnote">(?s:.*?)</i>', replacement: ''}}
+    title: {template: "{ref}"}
+pagination:
+  mode: none
+  complete_when: single_response

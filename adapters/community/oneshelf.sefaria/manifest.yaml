@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.sefaria
+name: Sefaria (original texts)
+version: 0.1.0
+api: '1.2'
+description: >-
+  The Jewish library of Sefaria — Tanakh, Mishnah, Tosefta, Midrash, Mishneh Torah, Shulchan Arukh and more
+  — in its original texts — Hebrew and Aramaic, some Judeo-Arabic, read as text chapter by chapter (plugin API 1.2). A chapter is read only while
+  its version states an open licence (public domain, CC0 or Creative Commons); a version marked "unknown"
+  or "Copyright" offers no text. Works whose chapters are not plain numbers are not offered: the Babylonian
+  Talmud (pages 2a, 2b…), texts made of named parts, and commentaries with a third level of addressing.
+  Search uses Sefaria's own title search; it also suggests topics and people, which are left out.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [www.sefaria.org]
+defaults:
+  language: he
+  content_type: book

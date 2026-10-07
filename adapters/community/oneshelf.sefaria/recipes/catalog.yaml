@@ -1,0 +1,28 @@
+# A work's chapters. Sefaria lists them only as a count of segments per chapter (content_counts), so a
+# chapter is where it stands: chapter n is <title>.n ({position}, plugin API 1.2). Only works whose first
+# level is a plain number (Perek, Siman, Chapter …) are offered: the Babylonian Talmud counts pages 2a, 2b
+# (addressType "Talmud"), so its positions are not its references; a text made of named parts has no
+# counts; a commentary with a third level of addressing has a list per chapter and no plain count. Those
+# give no units or an incomplete catalog. A chapter with no segments in Sefaria's index is kept as a unit,
+# so the numbering of the rest stays true.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/v2/index/{listing_key:path}?with_content_counts=1"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    address: {json: "$.schema.addressTypes[0]"}
+  items: {json: "$.schema.content_counts[*]"}
+  fields:
+    unit_key:
+      template: "{listing_key}.{position}|{item}|{address}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^(.+\.[1-9][0-9]*)\|[0-9]+\|(?:Perek|Chapter|Siman|Integer|Section|Paragraph|Piska|Mitzvah|Letter|Halakhah|Seif|Verse|Line|Volume|Book|Gate|Mishnah)$', group: 1}}]
+    number: {template: "{position}"}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

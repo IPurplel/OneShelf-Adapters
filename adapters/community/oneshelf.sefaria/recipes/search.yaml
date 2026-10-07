@@ -1,0 +1,19 @@
+# Sefaria's title search (the name API). It suggests texts ("ref"), topics and people; a text's key is its
+# English title, which begins with a capital letter, while topic and person keys are lowercase slugs — so
+# only keys that begin with a capital letter are works.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/api/name/{query:path}?limit=30"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.completion_objects[*]"}
+  fields:
+    listing_key: {json: "$.key", required: true, transforms: [{regex_extract: {pattern: '^([A-Z][^/]*)$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response
