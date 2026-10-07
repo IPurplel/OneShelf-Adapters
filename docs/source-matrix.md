@@ -565,7 +565,8 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 [candidate-sources.md](candidate-sources.md) and, from eBible.org on, from discovery round 3
 ([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
 grades and the live checks behind the rows below) and, from Wolne Lektury on, round 4
-([discovery-round4-2026-10.md](discovery-round4-2026-10.md)). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+([discovery-round4-2026-10.md](discovery-round4-2026-10.md)), and from NASA NTRS on, round 5
+([discovery-round5-2026-10.md](discovery-round5-2026-10.md)). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
 The round-3 text adapters (Runeberg, OpenEdition, Sefaria) need a Core with plugin API 1.2, which is not yet the
 tooling pin.
 
@@ -597,6 +598,17 @@ tooling pin.
 | [World Bank Open Knowledge Repository](https://openknowledge.worldbank.org/) | `oneshelf.world-bank-okr` | `VERIFIED` | Community | work, catalog, downloads | en (also fr, es …) | Per item: Creative Commons only (mostly CC BY 3.0 IGO) |
 | [WHO IRIS](https://iris.who.int/) | `oneshelf.who-iris` | `VERIFIED` | Community | work, catalog, downloads | multilingual | Per item: Creative Commons only (recent CC BY-NC-SA 3.0 IGO; older documents excluded) |
 | [FAO Open Knowledge](https://openknowledge.fao.org/) | `oneshelf.fao-knowledge` | `VERIFIED` | Community | work, catalog, downloads | multilingual | Per item: Creative Commons only (meeting documents without a licence excluded) |
+| [NASA Technical Reports Server](https://ntrs.nasa.gov/) | `oneshelf.nasa-ntrs` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per record: public use permitted, no third-party material |
+| [GovInfo](https://www.govinfo.gov/) | `oneshelf.govinfo` | `VERIFIED` | Community | work, catalog, downloads | en | Public domain (17 U.S.C. § 105); Government-authored collections only |
+| [Érudit](https://www.erudit.org/) | `oneshelf.erudit` | `VERIFIED` | Community | work, catalog, reader (text) | fr | Per article: Creative Commons only |
+| [CyberLeninka](https://cyberleninka.ru/) | `oneshelf.cyberleninka` | `VERIFIED` | Community | work, catalog, reader (text) | ru | Per article: CC BY badge only |
+| [Elejandría](https://www.elejandria.com/) | `oneshelf.elejandria` | `VERIFIED` | Community | work, catalog, downloads | es | Public domain / open (site statement; free in Spain) |
+| [Brogo](https://icculus.org/mwm/brogo/home.html) | `oneshelf.brogo` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-SA 4.0 / GFDL (creator) |
+| [Journal of Arabic Language and Literature (Ferdowsi)](https://jall.um.ac.ir/) | `oneshelf.jall-ferdowsi` | `VERIFIED` | Community | work, catalog, downloads | ar, fa | CC BY 4.0 (journal) |
+| [Translation Researches in Arabic Language and Literature (ATU)](https://rctall.atu.ac.ir/) | `oneshelf.rctall-atu` | `VERIFIED` | Community | work, catalog, downloads | fa, ar | CC BY-NC 4.0 (journal) |
+| [Arabic Literature (University of Tehran)](https://jalit.ut.ac.ir/) | `oneshelf.jalit-ut` | `VERIFIED` | Community | work, catalog, downloads | ar, fa | CC BY-NC 4.0 (journal) |
+| [Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran)](https://jal-lq.ut.ac.ir/) | `oneshelf.ibn-almuqaffa-ut` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY-NC 4.0 (journal) |
+| [Chitanka](https://chitanka.info/) | `oneshelf.chitanka` | `VERIFIED` | Community | search, work, catalog, reader (text) | bg | Per text: public domain or CC marks only |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
