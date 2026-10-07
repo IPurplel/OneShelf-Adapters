@@ -236,16 +236,15 @@ def _text_unit_check(entries, path: Path, language: str | None) -> dict:
     # have produced an entry with text.
     from oneshelf.text.container import TextUnit, write_text_container
     from oneshelf.text.direction import content_direction
-    from oneshelf.text.sanitise import plain_text, sanitise, split_sections
+    from oneshelf.text.sanitise import plain_text, unit_sections
 
-    sections = []
     for entry in entries:
         if not entry.html:
             return {"problem": f"item {entry.index} has no text"}
-        sections.extend(split_sections(sanitise(entry.html)))
+    sections = unit_sections([(entry.html, entry.title) for entry in entries])  # one result is one unit
     if not sections:
         return {"problem": "no text once sanitised"}
-    write_text_container(path, TextUnit(title=entries[0].title, language=language,
+    write_text_container(path, TextUnit(title=next((e.title for e in entries if e.title), None), language=language,
                                         direction=content_direction(language), source_url=None, sections=sections))
     verdict = validate(path)
     check = {"validated_as": verdict.format, "sections": len(sections),
