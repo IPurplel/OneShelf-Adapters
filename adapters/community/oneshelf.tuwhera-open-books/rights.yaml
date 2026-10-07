@@ -1,0 +1,34 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "The book's author(s) as named on its Tuwhera page — https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/<id>"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Every book page states its own licence with a rel="license" link. On 2026-10-07 all twelve books carried
+    one: nine CC BY 4.0 and three CC BY-NC 4.0 (books 7, 8 and 10). The catalog unit and the download links
+    are offered only while the page links a creativecommons.org/licenses/ licence; a page without one offers
+    neither (tests 4 and 5). Every Creative Commons variant is admitted: a personal copy of the unmodified
+    file is within NC and ND.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: A book page states "This work is licensed under a Creative Commons Attribution 4.0 International License" with a rel="license" link.
+    url: https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2
+  - claim: A book under CC BY-NC 4.0.
+    url: https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/7
+  - claim: Tuwhera describes itself as AUT Library's open-access publishing initiative.
+    url: https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog
+  - claim: robots.txt on ojs.aut.ac.nz answers with an HTML page and states no rules.
+    url: https://ojs.aut.ac.nz/robots.txt
+last_verified: 2026-10-07

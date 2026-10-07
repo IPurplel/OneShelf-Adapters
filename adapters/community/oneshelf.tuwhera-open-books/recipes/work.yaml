@@ -1,0 +1,16 @@
+# The book page's own citation metadata (Highwire tags OMP writes for every published book).
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/tuwhera-open-monographs/1/catalog/book/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "meta[name=citation_title]::attr(content)", required: true, transforms: [trim]}
+    creator: {xpath: "//meta[@name='citation_author']/@content", all: true, transforms: [{join: {sep: ", "}}]}
+    description: {css: "meta[name=citation_abstract]::attr(content)", transforms: [trim]}
+    language: {css: "meta[name=citation_language]::attr(content)", transforms: [trim]}
+    cover_url: {css: ".item.cover img::attr(src)", transforms: [normalize_url]}
+    content_type: {template: "book"}

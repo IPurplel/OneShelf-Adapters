@@ -1,0 +1,20 @@
+# The press's own catalogue search (OMP). It answers every match on one page; the catalogue is small.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/tuwhera-open-monographs/1/search?query={query:url}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: ".obj_monograph_summary"}
+  fields:
+    listing_key: {css: "h2.title a::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: '/tuwhera-open-monographs/1/catalog/book/([0-9]+)$', group: 1}}]}
+    title: {css: "h2.title a::text", required: true, transforms: [trim]}
+    url: {css: "h2.title a::attr(href)", transforms: [normalize_url]}
+    cover_url: {css: "a.cover img::attr(src)", transforms: [normalize_url]}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

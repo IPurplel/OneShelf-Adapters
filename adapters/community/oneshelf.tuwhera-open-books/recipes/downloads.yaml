@@ -1,0 +1,20 @@
+# The book's files from its Downloads block, in page order, each typed by its own label (ePub or PDF; any
+# other format offers nothing). The link opens OMP's viewer; the file itself is the same address under
+# /download/. Under the same condition as catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/tuwhera-open-monographs/1/catalog/book/{unit_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//div[contains(@class, 'item files')]//a[contains(@class, 'cmp_download_link')][//a[@rel='license'][starts-with(@href, 'https://creativecommons.org/licenses/')]]"}
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://ojs\.aut\.ac\.nz/tuwhera-open-monographs/1/catalog/)view(/[0-9]+/[0-9]+/[0-9]+)$', group: 0}},
+                       {regex_replace: {pattern: '/catalog/view/', replacement: '/catalog/download/'}}]}
+    format: {xpath: "text()", required: true, transforms: [trim, {regex_extract: {pattern: '^(?i:(epub|pdf))$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,19 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4) — only while its page links a Creative Commons
+# licence (rel="license"). Without one there is no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/tuwhera-open-monographs/1/catalog/book/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//meta[@name='citation_title'][//a[@rel='license'][starts-with(@href, 'https://creativecommons.org/licenses/')]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {xpath: "@content", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+    release_date: {xpath: "//meta[@name='citation_publication_date']/@content", transforms: [parse_date]}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.tuwhera-open-books
+name: Tuwhera Open Access Books (AUT)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Tuwhera Open Access Books, the open-access monograph press of Auckland University of Technology's
+  library (Open Monograph Press). A book is one Reading Unit, downloaded as its EPUB or PDF — only while its
+  page links a Creative Commons licence. Search is the press's own catalogue search. A small catalogue
+  (twelve books in October 2026), mostly New Zealand health, education and marine science. No page reader.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [ojs.aut.ac.nz]
+defaults:
+  language: en
+  content_type: book

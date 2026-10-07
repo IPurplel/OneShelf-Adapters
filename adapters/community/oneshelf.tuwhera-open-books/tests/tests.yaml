@@ -1,0 +1,44 @@
+# Fixtures are live pages (2026-10-07). book-2-no-licence.html is book-2.html with its licence links removed.
+cases:
+- capability: search
+  inputs: {query: health}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/search?query=health', file: fixtures/search-health.html}
+  expect:
+    min_items: 2
+    complete: true
+    fields_present: [listing_key, title, url, cover_url]
+- capability: work
+  inputs: {listing_key: '2'}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2', file: fixtures/book-2.html}
+  expect:
+    first: {title: 'The Book of Evan: The work and life of Evan McAra Sherrard', creator: Keith Tudor, language: en}
+- capability: catalog
+  inputs: {listing_key: '2'}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2', file: fixtures/book-2.html}
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '2', unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: '2'}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2', file: fixtures/book-2.html}
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/download/2/3/17', format: epub}
+- capability: catalog
+  inputs: {listing_key: '2'}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2', file: fixtures/book-2-no-licence.html}
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: '2'}
+  fixtures:
+  - {url: 'https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog/book/2', file: fixtures/book-2-no-licence.html}
+  expect:
+    first: {url: null}

@@ -1,0 +1,9 @@
+base_url: https://ojs.aut.ac.nz
+url_patterns:
+  - pattern: '^https://ojs\.aut\.ac\.nz/tuwhera-open-monographs/1/catalog/book/([0-9]+)'
+    capability: work
+    id_group: 1
+# robots.txt on ojs.aut.ac.nz answers with an HTML page (no rules); be polite anyway.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1
