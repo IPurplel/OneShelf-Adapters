@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.jalit-ut
+name: Arabic Literature (University of Tehran)
+version: 0.1.0
+api: '1.0'
+description: >-
+  ادب عربی — Arabic Literature (University of Tehran): an open-access journal of Arabic literature, its articles in Arabic and
+  Persian under Creative Commons Attribution-NonCommercial 4.0. An issue is a work and its articles are
+  units, each downloaded as the journal's PDF (right-to-left text). Open an issue by pasting its address
+  (jalit.ut.ac.ir/issue_….html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [jalit.ut.ac.ir]
+defaults:
+  language: ar
+  content_type: paper

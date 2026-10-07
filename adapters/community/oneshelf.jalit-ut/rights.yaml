@@ -1,0 +1,26 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-NC-4.0
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+commercial_use: not_allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors, ادب عربی, University of Tehran — https://jalit.ut.ac.ir/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Access to articles of the Journal of Arabic Literature is free under the Creative Commons licence (CC BY-NC); every page links CC BY-NC 4.0. The catalog and downloads read that licence link on the page they fetch and offer nothing without it. The article PDF is stored unaltered for private, non-commercial reading.
+  exclusion_tests: []
+evidence:
+  - claim: "Access to articles of the Journal of Arabic Literature is free under the Creative Commons licence (CC BY-NC); every page links CC BY-NC 4.0."
+    url: https://jalit.ut.ac.ir/journal/about?lang=en
+  - claim: robots.txt allows everything (it disallows only BLEXBot).
+    url: https://jalit.ut.ac.ir/robots.txt
+last_verified: 2026-10-07

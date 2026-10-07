@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: issue_12936_13099}
+  fixtures: [{url: 'https://jalit.ut.ac.ir/issue_12936_13099.html', file: fixtures/issue_12936_13099.html}]
+  expect:
+    first: {title: "ادب عربی — دوره 17، شماره 2 - شماره پیاپی 44، بهار 1404، صفحه 1-186", language: ar}
+- capability: catalog
+  inputs: {listing_key: issue_12936_13099}
+  fixtures: [{url: 'https://jalit.ut.ac.ir/issue_12936_13099.html', file: fixtures/issue_12936_13099.html}]
+  expect:
+    min_items: 7
+    complete: true
+    first: {unit_key: article_95225}
+- capability: downloads
+  inputs: {unit_key: article_95225}
+  fixtures: [{url: 'https://jalit.ut.ac.ir/article_95225.html', file: fixtures/article_95225.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jalit.ut.ac.ir/article_95225_e15a2d99651f9ec7d1629d3545ac2bee.pdf', format: pdf}
