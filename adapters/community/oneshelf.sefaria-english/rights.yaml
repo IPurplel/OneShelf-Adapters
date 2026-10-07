@@ -1,0 +1,39 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The version's title and source as Sefaria names them (versionTitle, versionSource) — https://www.sefaria.org/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Sefaria licenses each version of a text separately and states it in the API (versions[].license):
+    "Public Domain", "CC0", a Creative Commons licence, "unknown" (copyright status not yet verified) or a
+    "Copyright: …" notice. The reader reads the default English version of a chapter, and every segment carries
+    that version's licence: a segment is offered only while it is public domain, CC0 or Creative Commons,
+    so a chapter whose version is unknown or copyrighted yields nothing (test 5). Works whose chapters are
+    not plain numbers (the Babylonian Talmud's pages, named parts, three-level commentaries) have no usable
+    catalog (test 4). Every Creative Commons variant is admitted: a personal copy of the unmodified text is
+    within NC and ND.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "Open access is a core value at Sefaria; public-domain texts can be reused without restriction, Creative Commons texts under their terms, and texts with no noted licence have not had their copyright status verified."
+    url: https://help.sefaria.org/hc/en-us/articles/18490043237148-How-to-Find-and-Understand-Licensing-or-Copyright-Information
+  - claim: Sefaria offers its text database and API to developers for their own apps.
+    url: https://developers.sefaria.org/
+  - claim: A chapter whose version is openly licensed (license field in the response).
+    url: https://www.sefaria.org/api/v3/texts/Genesis.1?version=english
+  - claim: A chapter refused because the Shulchan Arukh's default English version (licence "unknown").
+    url: https://www.sefaria.org/api/v3/texts/Shulchan%20Arukh%2C%20Orach%20Chayim.1?version=english
+  - claim: robots.txt disallows only /activity/ and the login and register pages.
+    url: https://www.sefaria.org/robots.txt
+last_verified: 2026-10-07

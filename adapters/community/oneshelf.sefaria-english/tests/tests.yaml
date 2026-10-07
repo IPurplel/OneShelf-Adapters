@@ -1,0 +1,69 @@
+# Fixtures are live API responses (2026-10-07). Exclusions: the Babylonian Talmud has page addressing (case 4),
+# and the Shulchan Arukh's default English version has licence "unknown" (case 5).
+cases:
+- capability: search
+  inputs:
+    query: genesis
+  fixtures:
+  - url: https://www.sefaria.org/api/name/genesis?limit=30
+    file: fixtures/genesis-name.json
+  expect:
+    min_items: 5
+    complete: true
+    first:
+      listing_key: Genesis
+      title: Genesis
+- capability: work
+  inputs:
+    listing_key: Genesis
+  fixtures:
+  - url: https://www.sefaria.org/api/v2/index/Genesis
+    file: fixtures/genesis-index.json
+  expect:
+    first:
+      title: Genesis
+      original_title: בראשית
+- capability: catalog
+  inputs:
+    listing_key: Genesis
+  fixtures:
+  - url: https://www.sefaria.org/api/v2/index/Genesis?with_content_counts=1
+    file: fixtures/genesis-counts.json
+  expect:
+    min_items: 50
+    complete: true
+    first:
+      unit_key: Genesis.1
+      number: '1'
+      unit_type: chapter
+- capability: reader
+  inputs:
+    unit_key: Genesis.1
+  fixtures:
+  - url: https://www.sefaria.org/api/v3/texts/Genesis.1?version=english
+    file: fixtures/genesis1-english.json
+  expect:
+    min_items: 31
+    complete: true
+    first:
+      title: Genesis 1
+    text_contains: When God began to create heaven and earth
+    min_text_chars: 40
+- capability: catalog
+  inputs:
+    listing_key: Berakhot
+  fixtures:
+  - url: https://www.sefaria.org/api/v2/index/Berakhot?with_content_counts=1
+    file: fixtures/berakhot-counts.json
+  expect:
+    first:
+      unit_key: null
+- capability: reader
+  inputs:
+    unit_key: Shulchan Arukh, Orach Chayim.1
+  fixtures:
+  - url: https://www.sefaria.org/api/v3/texts/Shulchan%20Arukh%2C%20Orach%20Chayim.1?version=english
+    file: fixtures/oc1-english.json
+  expect:
+    first:
+      html: null

@@ -1,0 +1,10 @@
+base_url: https://www.sefaria.org
+url_patterns:
+  - pattern: '^https://www\.sefaria\.org/([A-Z][^/?#.]*)(?:\?[^#]*)?$'
+    capability: work
+    id_group: 1
+# robots.txt disallows only /activity/ and the login and register pages. Sefaria publishes this API for
+# reuse; stay polite.
+rate_limit:
+  requests_per_minute: 30
+  concurrency: 1
