@@ -74,7 +74,9 @@ pagination:
 ```
 
 Fields can use `css`, `xpath`, `json` (JSON path) or `template`, with transforms such as `trim`,
-`regex_extract`, and others the validator lists. Every request URL must resolve to a declared domain.
+`regex_extract`, and others the validator lists. An XPath field selects nodes, attributes or `text()`; an
+expression that returns a value (`normalize-space()`, `string()`, `count()`) is refused by the validator — select
+`text()` and add `trim` instead. Every request URL must resolve to a declared domain.
 `adapters/official/` has complete examples of HTML, JSON-API, OPDS/XML and paginated sources.
 
 ## Tests

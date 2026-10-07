@@ -562,7 +562,11 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
 ## Later additions
 
 Adapters added after the 60-candidate audit, from the investigation backlog in
-[candidate-sources.md](candidate-sources.md). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+[candidate-sources.md](candidate-sources.md) and, from eBible.org on, from discovery round 3
+([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
+grades and the live checks behind the rows below). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+The round-3 text adapters (Runeberg, OpenEdition) need a Core with plugin API 1.2, which is not yet the
+tooling pin.
 
 | Source | Adapter | Status | Tier | Capabilities | Languages | Access |
 |---|---|---|---|---|---|---|
@@ -570,6 +574,13 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 | [NIJL Kokusho Database](https://kokusho.nijl.ac.jp/) | `oneshelf.nijl-kokusho` | `VERIFIED` | Community | search, work, catalog, reader | ja | Per item: CC / PDM only (All-Rights-Reserved excluded) |
 | [Acomics](https://acomics.ru/) | `oneshelf.acomics` | `VERIFIED` | Community | search, work, catalog, reader | ru | Per comic: pages only for CC/PDM/CC0 originals (translations and unlicensed comics excluded) |
 | [Sandra and Woo](https://www.sandraandwoo.com/) | `oneshelf.sandra-and-woo` | `VERIFIED` | Community | work, catalog, reader | en | CC BY-NC-ND 3.0 (site-wide) |
+| [eBible.org](https://ebible.org/) | `oneshelf.ebible` | `VERIFIED` | Community | work, catalog, downloads | per translation (~1,000) | Per translation: public domain or Creative Commons only ("All rights reserved" excluded) |
+| [Project Runeberg](https://runeberg.org/) | `oneshelf.runeberg` | `VERIFIED` | Community | work, catalog, reader (text) | sv, no, da, fi, is … | Public domain; works with Runeberg's copyright notice excluded |
+| [OpenEdition Books](https://books.openedition.org/) | `oneshelf.openedition-books` | `VERIFIED` | Community | work, catalog, reader (text) | fr, en, es, pt, it | Per book: Creative Commons only (Freemium excluded) |
+| [Tuwhera Open Access Books](https://ojs.aut.ac.nz/tuwhera-open-monographs/1/catalog) | `oneshelf.tuwhera-open-books` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: CC BY / CC BY-NC |
+| [meson press](https://meson.press/) | `oneshelf.meson-press` | `VERIFIED` | Community | work, catalog, downloads | en, de | Per book: Creative Commons only (10 of 91 state none) |
+| [Amherst College Press](https://www.fulcrum.org/amherst) | `oneshelf.amherst-college-press` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: Open Access and CC (Fulcrum) |
+| [University of Michigan Press (open access)](https://www.fulcrum.org/michigan) | `oneshelf.university-of-michigan-press` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: Open Access and CC (sold books listed, no unit) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
