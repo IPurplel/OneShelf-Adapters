@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.amherst-college-press
+name: Amherst College Press
+version: 0.1.0
+api: '1.0'
+description: >-
+  Amherst College Press, a fully open-access publisher of peer-reviewed humanities and social-science books,
+  on the Fulcrum platform. A book is one Reading Unit, downloaded as its EPUB or PDF — but only while its
+  Fulcrum page shows both the "Open Access" indicator and a Creative Commons licence (Fulcrum also hosts
+  other publishers' restricted books). Search is Amherst College Press's own catalogue on Fulcrum. No page
+  reader.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [www.fulcrum.org]
+defaults:
+  language: en
+  content_type: book

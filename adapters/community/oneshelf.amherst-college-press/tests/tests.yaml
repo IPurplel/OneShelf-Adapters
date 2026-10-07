@@ -1,0 +1,52 @@
+# Fixtures are live responses (2026-10-07). monograph-not-open.html is monograph-m900nx46q.html without its
+# Open Access indicator (cases 4, 5: nothing is offered).
+cases:
+- capability: search
+  inputs: {query: abortion, page: 1}
+  fixtures:
+  - url: https://www.fulcrum.org/amherst.json?locale=en&q=abortion&page=1
+    file: fixtures/search-abortion.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {listing_key: m900nx46q, title: 'Abortion Pills: US History and Politics'}
+- capability: work
+  inputs: {listing_key: m900nx46q}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/m900nx46q?locale=en
+    file: fixtures/monograph-m900nx46q.html
+  expect:
+    fields_present: [title, creator]
+    first: {title: 'Abortion Pills: US History and Politics', creator: 'Carrie Baker'}
+- capability: catalog
+  inputs: {listing_key: m900nx46q}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/m900nx46q?locale=en
+    file: fixtures/monograph-m900nx46q.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: m900nx46q, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: m900nx46q}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/m900nx46q?locale=en
+    file: fixtures/monograph-m900nx46q.html
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://www.fulcrum.org/ebooks/sj139493s/download?locale=en', format: epub}
+- capability: catalog
+  inputs: {listing_key: m900nx46q}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/m900nx46q?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: m900nx46q}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/m900nx46q?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    first: {url: null}

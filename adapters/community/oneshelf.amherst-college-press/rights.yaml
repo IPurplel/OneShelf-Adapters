@@ -1,0 +1,33 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The book's author(s) as named on its Fulcrum page — https://www.fulcrum.org/concern/monographs/<id>"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each Fulcrum book page shows an "Open Access" indicator when the book is free, and its own Creative
+    Commons licence when it has one. The catalog unit and the EPUB/PDF are offered only while the page shows
+    both (the same rule as oneshelf.lever-press); a page without the indicator offers nothing (tests 4, 5).
+    Books by Amherst College Press that are sold, or open access without a licence, are listed by search but
+    have no unit. Every Creative Commons variant is admitted: a personal copy of the unmodified file is
+    within NC and ND.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: A book page with the Open Access indicator, a Creative Commons licence and EPUB/PDF downloads.
+    url: https://www.fulcrum.org/concern/monographs/m900nx46q
+  - claim: The press's catalogue on Fulcrum.
+    url: https://www.fulcrum.org/amherst
+  - claim: www.fulcrum.org has no robots.txt (404); the open-access facet of the catalogue page is behind a browser challenge and is not used.
+    url: https://www.fulcrum.org/robots.txt
+last_verified: 2026-10-07
