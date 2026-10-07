@@ -1,0 +1,20 @@
+# A translation is one Reading Unit, the Master's one_shot (§4.4) — only while its own copyright page
+# (/<id>/copyright.htm, the statement eBible.org publishes with the text) says it is in the public domain
+# or under a Creative Commons licence. "Copyright … All rights reserved" pages say neither, and offer no unit.
+# (The details page is not used for this: for at least one translation it says "public domain" while the
+# copyright page and eBible.org's catalogue name a copyright holder; the stricter statement wins.)
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}/copyright.htm"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//body[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'public domain') or contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'creative commons') or .//a[contains(@href, 'creativecommons.org/licenses/')]]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

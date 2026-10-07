@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.ebible
+name: eBible.org
+version: 0.1.0
+api: '1.0'
+description: >-
+  Bible translations in over a thousand languages from eBible.org. A translation is a work and one Reading
+  Unit, downloaded as eBible.org's own EPUB — only while the translation's copyright page states that it
+  is in the public domain or under a Creative Commons licence (most translations are CC BY-NC-ND or CC
+  BY-SA; some are "All rights reserved" and offer nothing). No search: eBible.org has none, and its list of
+  1,551 translations cannot be narrowed by a query, so works are opened by pasting a translation's
+  eBible.org address (…/find/details.php?id=…). Languages are ISO 639-3 codes, given as two-letter codes
+  where the common languages have one.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [ebible.org]
+defaults:
+  content_type: book

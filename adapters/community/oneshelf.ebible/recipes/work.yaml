@@ -1,0 +1,34 @@
+# The translation's details page. Its title is the vernacular one; the English title (an <h2> where the
+# two differ) is an alias. The language is the ISO 639-3 code eBible.org links to Ethnologue with, as the
+# two-letter code where one of the common languages has one.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/find/details.php?id={listing_key:url}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1::text", required: true, transforms: [trim]}
+    aliases: {css: "h2::text", all: true, transforms: [trim]}
+    language:
+      xpath: "(//a[starts-with(@href, 'http://www.ethnologue.com/language/')])[1]/@href"
+      transforms:
+        - {regex_extract: {pattern: '/language/([a-z]{3})$', group: 1}}
+        - {regex_replace: {pattern: "^eng$", replacement: en}}
+        - {regex_replace: {pattern: "^arb$", replacement: ar}}
+        - {regex_replace: {pattern: "^fra$", replacement: fr}}
+        - {regex_replace: {pattern: "^deu$", replacement: de}}
+        - {regex_replace: {pattern: "^spa$", replacement: es}}
+        - {regex_replace: {pattern: "^por$", replacement: pt}}
+        - {regex_replace: {pattern: "^rus$", replacement: ru}}
+        - {regex_replace: {pattern: "^ita$", replacement: it}}
+        - {regex_replace: {pattern: "^nld$", replacement: nl}}
+        - {regex_replace: {pattern: "^cmn$", replacement: zh}}
+        - {regex_replace: {pattern: "^hin$", replacement: hi}}
+        - {regex_replace: {pattern: "^ind$", replacement: id}}
+        - {regex_replace: {pattern: "^heb$", replacement: he}}
+        - {regex_replace: {pattern: "^swh$", replacement: sw}}
+        - {regex_replace: {pattern: "^ron$", replacement: ro}}
+    content_type: {template: "book"}

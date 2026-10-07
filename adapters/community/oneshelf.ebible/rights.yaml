@@ -1,0 +1,41 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The translation's copyright holder as named on its eBible.org copyright page — https://ebible.org/<id>/copyright.htm"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Every translation has its own copyright statement at /<id>/copyright.htm. Of 1,551 translations,
+    eBible.org's catalogue marks 1,294 redistributable (public domain, or Creative Commons — mostly CC
+    BY-NC-ND 4.0 and CC BY-SA 4.0) and 257 not. The catalog unit and the EPUB are offered only while that
+    page says "public domain" or "Creative Commons", or links a creativecommons.org licence; "Copyright …
+    All rights reserved" pages contain none of these (sampled 2026-10-07: mza, gde, bjn, ronbtf) and offer
+    nothing (tests 5 and 6). The details page is not used as the gate: for ronbtf it says "public domain"
+    while the copyright page and the catalogue name a copyright holder, and the stricter statement wins.
+    Every Creative Commons variant is admitted: a personal copy of the unmodified EPUB is within NC and ND.
+  exclusion_tests: [5, 6]
+evidence:
+  - claim: The World English Bible is in the public domain ("You may copy, publish, … distribute, redistribute").
+    url: https://ebible.org/engwebp/copyright.htm
+  - claim: The Arabic Van Dyck Bible is in the public domain.
+    url: https://ebible.org/arb-vd/copyright.htm
+  - claim: A translation "made available to you under the terms of the Creative Commons Attribution-Noncommercial-No Derivatives license 4.0".
+    url: https://ebible.org/aai/copyright.htm
+  - claim: A translation that is "All rights reserved" and is not offered.
+    url: https://ebible.org/mza/copyright.htm
+  - claim: eBible.org's catalogue lists each translation's copyright and a Redistributable flag.
+    url: https://ebible.org/Scriptures/translations.csv
+  - claim: robots.txt restricts only Baiduspider.
+    url: https://ebible.org/robots.txt
+last_verified: 2026-10-07

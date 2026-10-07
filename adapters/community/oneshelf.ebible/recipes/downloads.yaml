@@ -1,0 +1,18 @@
+# The translation's EPUB (eBible.org's own, at /epub/<id>.epub), under the same condition as catalog.yaml,
+# read from the same copyright page.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:path}/copyright.htm"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//body[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'public domain') or contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'creative commons') or .//a[contains(@href, 'creativecommons.org/licenses/')]]"}
+  fields:
+    url: {template: "https://ebible.org/epub/{unit_key}.epub", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://ebible\.org/epub/[A-Za-z0-9-]+\.epub)$', group: 1}}]}
+    format: {template: "epub", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

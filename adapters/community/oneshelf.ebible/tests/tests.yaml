@@ -1,0 +1,51 @@
+# Fixtures are live pages (2026-10-07). mza is "Copyright © 2015 Wycliffe Bible Translators, Inc. … All
+# rights reserved": the exclusion cases (5, 6) show it offers no unit and no file.
+cases:
+- capability: work
+  inputs: {listing_key: arb-vd}
+  fixtures:
+  - {url: 'https://ebible.org/find/details.php?id=arb-vd', file: fixtures/details-arb-vd.html}
+  expect:
+    first: {title: 'الكتاب المقدس باللغة العربية، فان دايك', language: ar}
+- capability: work
+  inputs: {listing_key: engwebp}
+  fixtures:
+  - {url: 'https://ebible.org/find/details.php?id=engwebp', file: fixtures/details-engwebp.html}
+  expect:
+    first: {title: World English Bible, language: en}
+- capability: catalog
+  inputs: {listing_key: engwebp}
+  fixtures:
+  - {url: 'https://ebible.org/engwebp/copyright.htm', file: fixtures/copyright-engwebp.html}
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: engwebp, unit_type: one_shot}
+- capability: catalog
+  inputs: {listing_key: aai}
+  fixtures:
+  - {url: 'https://ebible.org/aai/copyright.htm', file: fixtures/copyright-aai.html}
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: aai}
+- capability: downloads
+  inputs: {unit_key: arb-vd}
+  fixtures:
+  - {url: 'https://ebible.org/arb-vd/copyright.htm', file: fixtures/copyright-arb-vd.html}
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://ebible.org/epub/arb-vd.epub', format: epub}
+- capability: catalog
+  inputs: {listing_key: mza}
+  fixtures:
+  - {url: 'https://ebible.org/mza/copyright.htm', file: fixtures/copyright-mza.html}
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: mza}
+  fixtures:
+  - {url: 'https://ebible.org/mza/copyright.htm', file: fixtures/copyright-mza.html}
+  expect:
+    first: {url: null}
