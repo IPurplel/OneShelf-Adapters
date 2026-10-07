@@ -1,0 +1,56 @@
+# Fixtures are live pages (2026-10-07). Exclusions: pol95 is under copyright (Runeberg's notice; cases 5, 6),
+# aofram is a scanned facsimile edition with raw OCR (cases 7, 8).
+cases:
+- capability: work
+  inputs: {listing_key: rodarum}
+  fixtures: [{url: 'https://runeberg.org/rodarum/', file: fixtures/rodarum.html}]
+  expect:
+    first: {title: Röda rummet, creator: August Strindberg, language: sv}
+- capability: catalog
+  inputs: {listing_key: rodarum}
+  fixtures: [{url: 'https://runeberg.org/rodarum/', file: fixtures/rodarum.html}]
+  expect:
+    min_items: 30
+    complete: true
+    first: {unit_key: rodarum/01, title: Stockholm i fågelperspektiv, url: 'https://runeberg.org/rodarum/01.html'}
+- capability: catalog
+  inputs: {listing_key: kalevala}
+  fixtures: [{url: 'https://runeberg.org/kalevala/', file: fixtures/kalevala.html}]
+  expect:
+    min_items: 50
+    complete: true
+    first: {unit_key: kalevala/01, title: Ensimmäinen runo}
+- capability: reader
+  inputs: {unit_key: rodarum/01, url: 'https://runeberg.org/rodarum/01.html'}
+  fixtures: [{url: 'https://runeberg.org/rodarum/01.html', file: fixtures/rodarum-01.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {title: Stockholm i fågelperspektiv}
+    text_contains: Det var en afton i början av maj
+    min_text_chars: 20000
+- capability: work
+  inputs: {listing_key: pol95}
+  fixtures: [{url: 'https://runeberg.org/pol95/', file: fixtures/pol95.html}]
+  expect:
+    first: {title: Poesi on line 1995}
+- capability: catalog
+  inputs: {listing_key: pol95}
+  fixtures: [{url: 'https://runeberg.org/pol95/', file: fixtures/pol95.html}]
+  expect:
+    first: {unit_key: null}
+- capability: reader
+  inputs: {unit_key: pol95/aa, url: 'https://runeberg.org/pol95/aa.html'}
+  fixtures: [{url: 'https://runeberg.org/pol95/aa.html', file: fixtures/pol95-aa.html}]
+  expect:
+    first: {html: null}
+- capability: catalog
+  inputs: {listing_key: aofram}
+  fixtures: [{url: 'https://runeberg.org/aofram/', file: fixtures/aofram.html}]
+  expect:
+    first: {unit_key: null}
+- capability: reader
+  inputs: {unit_key: aofram/0007, url: 'https://runeberg.org/aofram/0007.html'}
+  fixtures: [{url: 'https://runeberg.org/aofram/0007.html', file: fixtures/aofram-0007.html}]
+  expect:
+    first: {html: null}

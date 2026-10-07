@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.runeberg
+name: Project Runeberg
+version: 0.1.0
+api: '1.2'
+description: >-
+  Project Runeberg, the Nordic library of public-domain literature (Swedish, Norwegian, Danish, Finnish,
+  Icelandic and more), read as text (plugin API 1.2). A work's units are the chapters its table of
+  contents lists, in that order, each read without Runeberg's navigation and footer. Only Runeberg's text
+  editions are offered: works published as scanned facsimile pages with OCR text (four-digit page files,
+  multi-volume works with a page viewer) have no units here, nor do works Runeberg marks as still under
+  copyright (viewable on screen only). No search: Runeberg's search and download scripts are
+  disallowed by its robots.txt, so works are opened by pasting a runeberg.org address
+  (https://runeberg.org/<work>/). No images (text units keep none in this version).
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [runeberg.org]
+defaults:
+  content_type: book

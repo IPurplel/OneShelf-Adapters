@@ -1,0 +1,33 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: collection
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Project Runeberg — https://runeberg.org/<work>/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Runeberg publishes works whose authors died more than 70 years ago, and also a few newer works it may
+    only show on screen; those carry its copyright notice (img /admin/copyright.gif, "protected by copyright
+    … you are welcome to view it on screen") on the index and on every page. Such a work has no catalog
+    units and its pages yield no text (tests 5, 6). Only text editions are read: scanned facsimile pages
+    (four-digit page files, whose text is raw, often unproofread OCR beside the image) are not units and
+    yield no text either (tests 7, 8). search.pl and download.pl are robots-disallowed and never used.
+  exclusion_tests: [5, 6, 7, 8]
+evidence:
+  - claim: "Runeberg respects copyright; works are published when their creators have been dead for more than 70 years."
+    url: https://runeberg.org/admin/
+  - claim: "A newer work carries the notice: \"protected by copyright, restricting your legal rights to reproduce it. However, you are welcome to view it on screen\"."
+    url: https://runeberg.org/pol95/
+  - claim: robots.txt asks for Crawl-delay 2 and disallows search.pl, download.pl and the other scripts; content pages are allowed.
+    url: https://runeberg.org/robots.txt
+last_verified: 2026-10-07

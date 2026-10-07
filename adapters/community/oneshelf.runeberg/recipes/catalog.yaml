@@ -1,0 +1,33 @@
+# The pages the work's table of contents links to, in its order. Only links in the page's content count —
+# after Runeberg's navigation form and before its footer rule — so "Previous"/"Next" (which on an index
+# point at the last and first page) never reorder the work. Only a relative link to a sibling page of
+# this work is an item (an author, another work or the catalogue is linked with a "/" path, and the
+# work's own index is not a unit); a #fragment is dropped, so a link into a page is that page. Each unit
+# keeps its absolute address. A four-digit page (0007.html) is a scanned page of a facsimile edition, whose
+# text is raw OCR beside the image: those are not offered (see reader.yaml), so they are not units either.
+# A work less than 70 years old carries Runeberg's copyright notice (img /admin/copyright.gif: "protected
+# by copyright … you are welcome to view it on screen"); it has no units at all.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items:
+    xpath: >-
+      //body[not(.//img[@src='/admin/copyright.gif'])]//a[@href][preceding::form][not(ancestor::form)][following::hr]
+      [contains(@href, '.html')][not(contains(@href, '/'))][not(contains(@href, ':'))]
+      [not(starts-with(@href, 'index'))]
+      [not(string-length(substring-before(@href, '.html')) = 4
+           and translate(substring-before(@href, '.html'), '0123456789', '') = '')]
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [normalize_url, {regex_extract: {pattern: '^(https://runeberg\.org/[a-z0-9]+/[0-9a-z_-]+\.html)(?:#.*)?$', group: 1}}]}
+    unit_key: {xpath: "@href", required: true,
+               transforms: [normalize_url, {regex_extract: {pattern: '^https://runeberg\.org/([a-z0-9]+/[0-9a-z_-]+)\.html(?:#.*)?$', group: 1}}]}
+    title: {xpath: "text()", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

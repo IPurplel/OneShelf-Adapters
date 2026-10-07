@@ -1,0 +1,10 @@
+base_url: https://runeberg.org
+url_patterns:
+  - pattern: '^https?://runeberg\.org/([a-z0-9]+)/(?:index\.html)?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt asks for Crawl-delay: 2 and disallows search.pl, download.pl and the other scripts, none of
+# which this adapter requests. 20 a minute keeps three seconds between requests.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

@@ -1,0 +1,22 @@
+# A page, read as text (plugin API 1.2): the body's content between Runeberg's navigation form and its
+# footer rule (<hr noshade>, then the change log and validator badges). OneShelf Core sanitises it. A page
+# that shows a scanned image is a facsimile page whose text is raw, often unproofread OCR mixed with the
+# proofreading status; it yields nothing, so the reader fails closed rather than offer it. Neither does a
+# page with Runeberg's copyright notice (a work under copyright: on-screen viewing only).
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "html"}
+  fields:
+    html: {xpath: "//body[not(.//img[@alt='scanned image'])][not(.//img[@src='/admin/copyright.gif'])]/*[preceding-sibling::form][following-sibling::hr[@noshade]]",
+           markup: outer, all: true,
+           transforms: [{join: {sep: ""}}]}
+    title: {xpath: "(//font[@size='+2']/b)[1]/text()", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response
