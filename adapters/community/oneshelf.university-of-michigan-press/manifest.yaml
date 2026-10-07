@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.university-of-michigan-press
+name: University of Michigan Press (open access)
+version: 0.1.0
+api: '1.0'
+description: >-
+  The open-access books of the University of Michigan Press, on the Fulcrum platform. A book is one Reading
+  Unit, downloaded as its EPUB or PDF — only while its Fulcrum page shows both the "Open Access" indicator
+  and a Creative Commons licence. Search is the press's whole catalogue on Fulcrum (its open-access filter is
+  behind a browser challenge and is not used), so most results are books the press sells, which show their
+  details but have no unit; so do the open-access books that state no licence. No page reader.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [www.fulcrum.org]
+defaults:
+  language: en
+  content_type: book

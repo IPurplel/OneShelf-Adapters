@@ -1,0 +1,17 @@
+# A book is one Reading Unit, the Master's one_shot (§4.4) — only while its page shows the "Open Access"
+# indicator and a Creative Commons licence. Either missing, and there is no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/concern/monographs/{listing_key:path}?locale=en"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//h1[//div[@class='access']/img[@alt='Open Access']][//a[contains(@href, 'creativecommons.org/licenses/')]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

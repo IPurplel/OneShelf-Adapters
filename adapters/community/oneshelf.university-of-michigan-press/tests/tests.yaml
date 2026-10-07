@@ -1,0 +1,52 @@
+# Fixtures are live responses (2026-10-07). monograph-not-open.html is monograph-hq37vq792.html without its
+# Open Access indicator (cases 4, 5: nothing is offered).
+cases:
+- capability: search
+  inputs: {query: vidding, page: 1}
+  fixtures:
+  - url: https://www.fulcrum.org/michigan.json?locale=en&q=vidding&page=1
+    file: fixtures/search-vidding.json
+  expect:
+    min_items: 1
+    complete: true
+    first: {listing_key: hq37vq792, title: 'Vidding: A History'}
+- capability: work
+  inputs: {listing_key: hq37vq792}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/hq37vq792?locale=en
+    file: fixtures/monograph-hq37vq792.html
+  expect:
+    fields_present: [title, creator]
+    first: {title: 'Vidding: A History', creator: 'Francesca Coppa'}
+- capability: catalog
+  inputs: {listing_key: hq37vq792}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/hq37vq792?locale=en
+    file: fixtures/monograph-hq37vq792.html
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: hq37vq792, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: hq37vq792}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/hq37vq792?locale=en
+    file: fixtures/monograph-hq37vq792.html
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://www.fulcrum.org/ebooks/2v23vw87z/download?locale=en', format: epub}
+- capability: catalog
+  inputs: {listing_key: hq37vq792}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/hq37vq792?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: hq37vq792}
+  fixtures:
+  - url: https://www.fulcrum.org/concern/monographs/hq37vq792?locale=en
+    file: fixtures/monograph-not-open.html
+  expect:
+    first: {url: null}

@@ -1,0 +1,8 @@
+base_url: https://www.fulcrum.org
+url_patterns:
+  - pattern: '^https://www\.fulcrum\.org/concern/monographs/([a-z0-9]{9})'
+    capability: work
+    id_group: 1
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1
