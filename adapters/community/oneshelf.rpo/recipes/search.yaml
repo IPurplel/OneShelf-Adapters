@@ -1,0 +1,17 @@
+# RPO's poets listing, filtered by name (its own "combine" filter). A poet's key is the slug of the page.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/poets?combine={query:url}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[@hreflang = 'und'][starts-with(@href, '/poets/')][not(contains(@class, 'more-link'))]"}
+  fields:
+    listing_key: {xpath: "./@href", required: true, transforms: [{regex_extract: {pattern: '^/poets/([a-z0-9-]+)$', group: 1}}]}
+    title: {xpath: "./text()", required: true, transforms: [trim]}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

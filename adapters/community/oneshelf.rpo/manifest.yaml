@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.rpo
+name: Representative Poetry Online
+version: 0.1.0
+api: '1.2'
+description: >-
+  Representative Poetry Online (University of Toronto Libraries): an anthology of poetry in English from
+  Old English to the twentieth century, with notes. A poet is a work; each poem is read as text (plugin API
+  1.2). Only poets whose RPO page gives a death year of 1955 or earlier — public domain at life plus 70
+  years — are offered; RPO also publishes copyrighted poems by permission, and those are left out. Search
+  finds poets by name.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [rpo.library.utoronto.ca]
+defaults:
+  language: en
+  content_type: book

@@ -1,0 +1,10 @@
+base_url: https://rpo.library.utoronto.ca
+url_patterns:
+  - pattern: '^https://rpo\.library\.utoronto\.ca/poets/([a-z0-9-]+)/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows /search/, /onesearch/, admin and user pages; the poets listing (/poets), poet pages
+# and poem pages (/content/, /node/) are allowed.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

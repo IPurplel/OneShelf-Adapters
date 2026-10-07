@@ -1,0 +1,33 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Representative Poetry Online, University of Toronto Libraries — https://rpo.library.utoronto.ca/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    RPO states that most of its poems are in the public domain and that it asserts no copyright in them;
+    poems still in copyright are published by permission and may not be republished. The adapter offers a
+    poem only when its poet died in 1955 or earlier (public domain at life plus 70 years in 2026): the
+    catalog keeps a poet's poems only while the poet page's death date ends in such a year (test 4), and the
+    reader gives a poem's text only while the poem's own page names one poet whose dates end in such a year
+    (test 5). RPO's notes, introductions and indexes (its copyright) are not read.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "Most poems in Representative Poetry Online are in the public domain. The Editors … assert no copyright claim on these works."
+    url: https://rpo.library.utoronto.ca/content/copyright
+  - claim: A poet page's death date (Robert Frost, 1963) — excluded.
+    url: https://rpo.library.utoronto.ca/poets/frost-robert
+  - claim: robots.txt disallows /search/, /onesearch/, admin and user pages only.
+    url: https://rpo.library.utoronto.ca/robots.txt
+last_verified: 2026-10-07

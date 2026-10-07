@@ -1,0 +1,40 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: search
+  inputs: {query: yeats}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/poets?combine=yeats', file: fixtures/search-yeats.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {listing_key: yeats-william-butler, title: 'Yeats, William Butler'}
+- capability: work
+  inputs: {listing_key: brooks-shirley}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/poets/brooks-shirley', file: fixtures/poet-brooks-shirley.html}]
+  expect:
+    first: {title: 'Brooks, Shirley', language: en}
+- capability: catalog
+  inputs: {listing_key: brooks-shirley}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/poets/brooks-shirley', file: fixtures/poet-brooks-shirley.html}]
+  expect:
+    min_items: 7
+    complete: true
+    first: {unit_key: node/78791}
+- capability: reader
+  inputs: {unit_key: content/waggawocky}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/content/waggawocky', file: fixtures/poem-waggawocky.html}]
+  expect:
+    min_items: 1
+    complete: true
+    text_contains: "Beware the Waggawock, my son"
+# 4: a poet who died in 1963 (Robert Frost) has no units.
+- capability: catalog
+  inputs: {listing_key: frost-robert}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/poets/frost-robert', file: fixtures/poet-frost-robert.html}]
+  expect:
+    first: {unit_key: null}
+# 5: his poem's page offers no text either.
+- capability: reader
+  inputs: {unit_key: content/after-apple-picking}
+  fixtures: [{url: 'https://rpo.library.utoronto.ca/content/after-apple-picking', file: fixtures/poem-after-apple-picking.html}]
+  expect:
+    first: {html: null}
