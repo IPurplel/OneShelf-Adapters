@@ -1,0 +1,18 @@
+# Chitanka's search: the texts it finds (authors, series and books are left out). Whether a text may be
+# offered is decided on its own page.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/search?q={query:url}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "h4.text-title a.textlink"}
+  fields:
+    listing_key: {xpath: "./@href", required: true, transforms: [{regex_extract: {pattern: '^/text/([0-9]+-[a-z0-9-]+)$', group: 1}}]}
+    title: {xpath: ".//text()", all: true, required: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

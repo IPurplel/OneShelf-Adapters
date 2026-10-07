@@ -1,0 +1,19 @@
+# A part (or a one-part text), read as text (plugin API 1.2): Chitanka's text block (div#textstart) — not
+# the metadata tabs, comments or navigation. Only under the same rights condition as the catalog.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/text/{unit_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    heading: {css: "h1 span.text-title a::text"}
+  items: {xpath: "//div[@id = 'textstart'][//a[@rel = 'license']][not(//a[@rel = 'license'][not(contains(@href, '/wiki/Public_domain') or contains(@href, 'creativecommons.org/'))])]"}
+  fields:
+    html: {xpath: ".", markup: inner}
+    title: {template: "{heading}"}
+pagination:
+  mode: none
+  complete_when: single_response

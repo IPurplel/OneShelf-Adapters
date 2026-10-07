@@ -1,0 +1,36 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: false
+  text: "Chitanka (Моята библиотека) — https://chitanka.info/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Chitanka states that rights belong to authors and translators; some works are under free licences
+    ("Свободна литература"), and the rest are fully copyrighted and offered only for personal reading.
+    Each text page marks the rights of the original and of the translation (rel="license": Обществено
+    достояние → public domain, a Creative Commons link, or Пълни авторски права → full copyright). A text
+    has units, and its text is read, only while every mark on its page is public domain or Creative
+    Commons (tests 4, 5). Chitanka's file downloads are robots-disallowed and not used; text is read from
+    its reading pages.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "Авторски права: rights belong to authors and translators; free-licence works are labelled; all others are fully copyrighted."
+    url: https://chitanka.info/about
+  - claim: A public-domain text (Под игото, 1894 — Обществено достояние).
+    url: https://chitanka.info/text/3753-pod-igoto
+  - claim: A fully copyrighted text and translation (Пълни авторски права) — not offered.
+    url: https://chitanka.info/text/52881-nikoj-ne-znae-za-nas
+  - claim: robots.txt disallows file downloads (.epub, .fb2.zip, .txt.zip …); text and reading pages are allowed.
+    url: https://chitanka.info/robots.txt
+last_verified: 2026-10-07

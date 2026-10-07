@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.chitanka
+name: Chitanka (Моята библиотека)
+version: 0.1.0
+api: '1.2'
+description: >-
+  Chitanka (Моята библиотека), the Bulgarian online library. A text is a work whose parts are read as text
+  (plugin API 1.2), from Chitanka's own reading pages; Chitanka's file downloads (EPUB, FB2, TXT) are
+  robots-disallowed and not used. Chitanka marks the rights of every text — of the original and of its translation — as
+  public domain (Обществено достояние), a free licence, or full copyright (Пълни авторски права). A text is
+  offered only while every rights mark on its page is public domain or Creative Commons; fully copyrighted
+  texts, which Chitanka offers for personal reading only, are not. Search uses Chitanka's own search.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [chitanka.info]
+defaults:
+  language: bg
+  content_type: book

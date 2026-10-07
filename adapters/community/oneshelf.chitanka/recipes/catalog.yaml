@@ -1,0 +1,30 @@
+# A text's parts (its chapters), in its order, each read from /text/<id>/<part> — the first part is on the
+# text's own page (/text/<id>), which is its key; a text in one part is itself the unit. Only while the page marks rights, and every mark (the original's, the translation's)
+# links public domain (bg.wikipedia.org/wiki/Public_domain) or a Creative Commons licence: a
+# "Пълни авторски права" mark (full copyright) refuses the text.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/text/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items:
+    xpath: >-
+      (//a[starts-with(@href, '/text/')][contains(@href, '#textstart')][//a[@rel = 'license']][not(//a[@rel = 'license'][not(contains(@href, '/wiki/Public_domain') or contains(@href, 'creativecommons.org/'))])]
+      | (//h1/span[@class = 'text-title'])[1][not(//a[starts-with(@href, '/text/')][contains(@href, '#textstart')])][//a[@rel = 'license']][not(//a[@rel = 'license'][not(contains(@href, '/wiki/Public_domain') or contains(@href, 'creativecommons.org/'))])])
+  fields:
+    unit_key:
+      template: "{listing_key}|{item}"
+      required: true
+      transforms:
+        - {regex_replace: {pattern: '^([0-9]+-[a-z0-9-]+)\|<a href="/text/[0-9]+-[a-z0-9-]+/([0-9]+)#textstart"(?s:.*)$', replacement: '\1/\2'}}
+        - {regex_replace: {pattern: '^([0-9]+-[a-z0-9-]+)\|<span class="text-title"(?s:.*)$', replacement: '\1'}}
+        - {regex_replace: {pattern: '^([0-9]+-[a-z0-9-]+)\|<a href="/text/[0-9]+-[a-z0-9-]+#textstart"(?s:.*)$', replacement: '\1'}}
+        - {regex_extract: {pattern: '^([0-9]+-[a-z0-9-]+(?:/[0-9]+)?)$', group: 1}}
+    title: {xpath: ".//text()", all: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

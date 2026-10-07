@@ -1,0 +1,10 @@
+base_url: https://chitanka.info
+url_patterns:
+  - pattern: '^https://chitanka\.info/text/([0-9]+-[a-z0-9-]+)/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows Chitanka's file downloads (.epub, .fb2.zip, .txt.zip …); text pages and their
+# reading pages (/text/<id>/<part>) are allowed.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1
