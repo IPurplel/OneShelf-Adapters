@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/citations/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.title", required: true, transforms: [trim]}
+    creator: {json: "$.authorAffiliations[0].meta.author.name", transforms: [trim]}
+    description: {json: "$.abstract", transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "paper"}

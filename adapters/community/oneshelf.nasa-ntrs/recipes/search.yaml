@@ -1,0 +1,19 @@
+# NTRS's public search, limited to records with a document (disseminated=DOCUMENT_AND_METADATA). Whether a
+# record may be offered is decided by its catalog.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/api/citations/search?q={query:url}&page.size=50&disseminated=DOCUMENT_AND_METADATA"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.results[*]"}
+  fields:
+    listing_key: {json: "$.id", required: true, transforms: [{regex_extract: {pattern: '^([0-9]{8,14})$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    creator: {json: "$.authorAffiliations[0].meta.author.name", transforms: [trim]}
+    content_type: {template: "paper"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,27 @@
+# A record is one Reading Unit (one_shot) — only while NTRS marks it public use permitted
+# (GOV_PUBLIC_USE_PERMITTED: a U.S. Government work; PUBLIC_USE_PERMITTED: cleared for public use), says it
+# contains no third-party material, and has a document. The template joins the record's id with the three,
+# and the pattern keeps it only then. MAY_INCLUDE_COPYRIGHT_MATERIAL and GOV_PERMITTED records have no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/citations/{listing_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    determination: {json: "$.copyright.determinationType"}
+    third_party: {json: "$.copyright.containsThirdPartyMaterial"}
+    available: {json: "$.downloadsAvailable"}
+  items: {json: "$"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{determination}|{third_party}|{available}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([0-9]{8,14})\|(?:GOV_PUBLIC_USE_PERMITTED|PUBLIC_USE_PERMITTED)\|(?i:false)\|(?i:true)$', group: 1}}]
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

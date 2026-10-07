@@ -1,0 +1,24 @@
+# The record's PDF files, at NTRS's own download addresses — only while the record is public use permitted
+# without third-party material (as the catalog).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/api/citations/{unit_key:path}"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    determination: {json: "$.copyright.determinationType"}
+    third_party: {json: "$.copyright.containsThirdPartyMaterial"}
+    available: {json: "$.downloadsAvailable"}
+  items: {json: "$.downloads[*].links.pdf"}
+  fields:
+    url:
+      template: "https://ntrs.nasa.gov{item}|{determination}|{third_party}|{available}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^(https://ntrs\.nasa\.gov/api/citations/[0-9]{8,14}/downloads/[A-Za-z0-9._-]+\.pdf)\|(?:GOV_PUBLIC_USE_PERMITTED|PUBLIC_USE_PERMITTED)\|(?i:false)\|(?i:true)$', group: 1}}]
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

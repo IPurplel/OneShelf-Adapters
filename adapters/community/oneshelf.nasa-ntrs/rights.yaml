@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed
+derivatives: unknown
+attribution:
+  required: false
+  text: "NASA Technical Reports Server — https://ntrs.nasa.gov/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Every NTRS record carries NASA's copyright determination. A record has a unit, and its PDF is offered,
+    only while it is GOV_PUBLIC_USE_PERMITTED (a U.S. Government work, not subject to copyright in the
+    U.S.) or PUBLIC_USE_PERMITTED (cleared for public use), contains no third-party material, and has a
+    document. Records marked MAY_INCLUDE_COPYRIGHT_MATERIAL or GOV_PERMITTED, or with third-party material,
+    have neither (tests 4, 5). In a sample of 300 records with documents, 266 were offered.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: A record with copyright.determinationType GOV_PUBLIC_USE_PERMITTED and containsThirdPartyMaterial false.
+    url: https://ntrs.nasa.gov/api/citations/20140013470
+  - claim: A record marked MAY_INCLUDE_COPYRIGHT_MATERIAL — not offered.
+    url: https://ntrs.nasa.gov/api/citations/20230016438
+  - claim: robots.txt allows everything.
+    url: https://ntrs.nasa.gov/robots.txt
+last_verified: 2026-10-07

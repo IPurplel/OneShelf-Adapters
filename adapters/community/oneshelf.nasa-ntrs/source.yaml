@@ -1,0 +1,10 @@
+base_url: https://ntrs.nasa.gov
+url_patterns:
+  - pattern: '^https://ntrs\.nasa\.gov/(?:citations|api/citations)/([0-9]{8,14})(?:[/?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt allows everything. The public search API (/api/citations/search) and record API
+# (/api/citations/<id>) need no key.
+rate_limit:
+  requests_per_minute: 30
+  concurrency: 1

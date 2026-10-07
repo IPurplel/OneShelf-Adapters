@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.nasa-ntrs
+name: NASA Technical Reports Server
+version: 0.1.0
+api: '1.0'
+description: >-
+  NASA's Technical Reports Server (NTRS): technical reports, conference papers and other scientific and
+  technical information from NASA since 1915. A record is a work with one unit, downloaded as NASA's own
+  PDF — only while NTRS marks it public use permitted (GOV_PUBLIC_USE_PERMITTED or PUBLIC_USE_PERMITTED)
+  with no third-party material. Records that may include copyrighted material are not offered. Search uses
+  NTRS's public API.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [ntrs.nasa.gov]
+defaults:
+  language: en
+  content_type: paper

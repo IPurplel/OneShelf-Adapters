@@ -1,0 +1,40 @@
+# Fixtures are live API responses (2026-10-07).
+cases:
+- capability: search
+  inputs: {query: apollo guidance}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance.json}]
+  expect:
+    min_items: 10
+    complete: true
+    fields_present: [listing_key, title]
+- capability: work
+  inputs: {listing_key: '20140013470'}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20140013470', file: fixtures/citation-20140013470.json}]
+  expect:
+    first: {title: 'NASA Mars 2020 Rover Mission: New Frontiers in Science', creator: 'Calle, Carlos I.'}
+- capability: catalog
+  inputs: {listing_key: '20140013470'}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20140013470', file: fixtures/citation-20140013470.json}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '20140013470'}
+- capability: downloads
+  inputs: {unit_key: '20140013470'}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20140013470', file: fixtures/citation-20140013470.json}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://ntrs.nasa.gov/api/citations/20140013470/downloads/20140013470.pdf', format: pdf}
+# 4: a record marked MAY_INCLUDE_COPYRIGHT_MATERIAL has no unit …
+- capability: catalog
+  inputs: {listing_key: '20230016438'}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20230016438', file: fixtures/citation-20230016438-may-include-copyright.json}]
+  expect:
+    first: {unit_key: null}
+# 5: … and no file.
+- capability: downloads
+  inputs: {unit_key: '20230016438'}
+  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20230016438', file: fixtures/citation-20230016438-may-include-copyright.json}]
+  expect:
+    first: {url: null}
