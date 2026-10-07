@@ -564,7 +564,8 @@ Fields for every source. *Login* is no for every adapter; *Scrapling used* is `i
 Adapters added after the 60-candidate audit, from the investigation backlog in
 [candidate-sources.md](candidate-sources.md) and, from eBible.org on, from discovery round 3
 ([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
-grades and the live checks behind the rows below). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+grades and the live checks behind the rows below) and, from Wolne Lektury on, round 4
+([discovery-round4-2026-10.md](discovery-round4-2026-10.md)). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
 The round-3 text adapters (Runeberg, OpenEdition, Sefaria) need a Core with plugin API 1.2, which is not yet the
 tooling pin.
 
@@ -583,6 +584,14 @@ tooling pin.
 | [University of Michigan Press (open access)](https://www.fulcrum.org/michigan) | `oneshelf.university-of-michigan-press` | `VERIFIED` | Community | search, work, catalog, downloads | en | Per book: Open Access and CC (sold books listed, no unit) |
 | [Sefaria](https://www.sefaria.org/) (original texts) | `oneshelf.sefaria` | `VERIFIED` | Community | search, work, catalog, reader (text) | he (also Aramaic, Judeo-Arabic) | Per version: public domain, CC0 or CC only ("unknown"/"Copyright" excluded) |
 | [Sefaria](https://www.sefaria.org/) (English) | `oneshelf.sefaria-english` | `VERIFIED` | Community | search, work, catalog, reader (text) | en | Per version: public domain, CC0 or CC only |
+| [Wolne Lektury](https://wolnelektury.pl/) | `oneshelf.wolne-lektury` | `VERIFIED` | Community | search, work, catalog, downloads | pl (also translations) | Public domain or free licence (CC BY-SA 3.0); preview books excluded |
+| [Ganjoor](https://ganjoor.net/) | `oneshelf.ganjoor` | `VERIFIED` | Community | search, work, catalog, reader (text, rtl) | fa | Per poet: public domain (died 1374 AH / ~1954 or earlier) |
+| [Litteraturbanken](https://litteraturbanken.se/) | `oneshelf.litteraturbanken` | `VERIFIED` | Community | search, work, catalog, downloads | sv | Per work: EPUB licence CC0 only (863 of 1,643) |
+| [Bokselskap](https://www.bokselskap.no/) | `oneshelf.bokselskap` | `VERIFIED` | Community | search, work, catalog, reader (text) | no (nb, nn) | Publisher grant: free private non-commercial use |
+| [Magyar Elektronikus Könyvtár](https://mek.oszk.hu/) | `oneshelf.mek` | `VERIFIED` | Community | search, work, catalog, downloads | hu | Publisher statement: personal non-commercial copies; single-file documents only |
+| [Folger Shakespeare](https://www.folger.edu/explore/shakespeares-works/) | `oneshelf.folger-shakespeare` | `VERIFIED` | Community | work, catalog, downloads | en | Publisher grant: free for all non-commercial purposes |
+| [TextGrid Digitale Bibliothek](https://textgridrep.org/) | `oneshelf.textgrid-digitale-bibliothek` | `VERIFIED` | Community | search, work, catalog, reader (text) | de | Per edition: Digitale Bibliothek project and CC BY 3.0 DE only |
+| [Siyavula open textbooks](https://www.siyavula.com/read) | `oneshelf.siyavula` | `VERIFIED` | Community | work, catalog, downloads | en, af | Per file: CC BY / CC BY-ND only (closed-copyright books excluded) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
