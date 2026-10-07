@@ -1,0 +1,38 @@
+# Fixtures are live pages (2026-10-07). pur/314943 is a Freemium book of the Presses universitaires de
+# Rennes (free to read on screen, no licence): it has no units and its parts yield no text (cases 4, 5).
+cases:
+- capability: work
+  inputs: {listing_key: obp/16312}
+  fixtures: [{url: 'https://books.openedition.org/obp%2F16312', file: fixtures/obp-16312.html}]
+  expect:
+    first: {title: Studies in Rabbinic Hebrew, creator: Shai Heijmans, language: en}
+- capability: catalog
+  inputs: {listing_key: obp/16312}
+  fixtures: [{url: 'https://books.openedition.org/obp%2F16312', file: fixtures/obp-16312.html}]
+  expect:
+    min_items: 11
+    complete: true
+    first: {unit_key: obp/16367, title: Introduction, url: 'https://books.openedition.org/obp/16367'}
+- capability: reader
+  inputs: {unit_key: obp/16377, url: 'https://books.openedition.org/obp/16377'}
+  fixtures: [{url: 'https://books.openedition.org/obp/16377', file: fixtures/obp-16377.html}]
+  expect:
+    min_items: 1
+    complete: true
+    text_contains: In the Babylonian Talmud there frequently occur two similar proper names
+    min_text_chars: 15000
+- capability: work
+  inputs: {listing_key: pur/314943}
+  fixtures: [{url: 'https://books.openedition.org/pur%2F314943', file: fixtures/pur-314943.html}]
+  expect:
+    first: {language: fr}
+- capability: catalog
+  inputs: {listing_key: pur/314943}
+  fixtures: [{url: 'https://books.openedition.org/pur%2F314943', file: fixtures/pur-314943.html}]
+  expect:
+    first: {unit_key: null}
+- capability: reader
+  inputs: {unit_key: pur/315209, url: 'https://books.openedition.org/pur/315209'}
+  fixtures: [{url: 'https://books.openedition.org/pur/315209', file: fixtures/pur-315209.html}]
+  expect:
+    first: {html: null}

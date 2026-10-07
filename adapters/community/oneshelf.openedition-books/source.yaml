@@ -1,0 +1,10 @@
+base_url: https://books.openedition.org
+url_patterns:
+  - pattern: '^https://books\.openedition\.org/([a-z0-9-]+/[0-9]+)(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows /admin, /catalogue and /api, none of which this adapter requests. The listing key
+# is "<publisher>/<id>"; its "/" travels percent-encoded, which OpenEdition serves as the same page.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

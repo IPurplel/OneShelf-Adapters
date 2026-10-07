@@ -1,0 +1,36 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The book's author(s) and publisher as named on its OpenEdition Books page — https://books.openedition.org/<publisher>/<id>"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each book and each part states its licence in OpenEdition's licence block. Books released under
+    Creative Commons show a.license__logo linking creativecommons.org/licenses/ ("Le texte seul est
+    utilisable sous licence Creative Commons …"); Freemium books state the "Licence OpenEdition Books",
+    which is not an open licence, and are only read on OpenEdition. A book offers units, and a part offers
+    text, only while its own page shows the Creative Commons link (tests 4, 5). The licences cover the text
+    only ("Les autres éléments (illustrations…) sont « Tous droits réservés »"): text units keep no images.
+    Every Creative Commons variant is admitted: a personal copy of the unmodified text is within NC and ND.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "A CC BY 4.0 book: \"Le texte seul est utilisable sous licence Creative Commons - Attribution 4.0 International - CC BY 4.0. Les autres éléments (illustrations, fichiers annexes importés) sont « Tous droits réservés »\"."
+    url: https://books.openedition.org/obp/16312
+  - claim: A Freemium book under the "Licence OpenEdition Books", not an open licence.
+    url: https://books.openedition.org/cdf/10192
+  - claim: The Licence OpenEdition Books.
+    url: https://www.openedition.org/12554
+  - claim: robots.txt disallows /admin, /catalogue and /api only.
+    url: https://books.openedition.org/robots.txt
+last_verified: 2026-10-07

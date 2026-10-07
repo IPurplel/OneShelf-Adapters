@@ -1,0 +1,17 @@
+# A part, read as text (plugin API 1.2): the main full text block (div.full_text--main) — without the
+# book navigation, outline, notes panel or sharing tools — only while the page shows a Creative Commons
+# licence. OneShelf Core sanitises it; illustrations are dropped (their rights are reserved).
+capability: reader
+inputs: [unit_key, url]
+request:
+  url: "{url:absolute}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//div[contains(concat(' ', normalize-space(@class), ' '), ' full_text--main ')][//a[contains(@class, 'license__logo')][starts-with(@href, 'https://creativecommons.org/licenses/')]]"}
+  fields:
+    html: {xpath: ".", markup: inner}
+pagination:
+  mode: none
+  complete_when: single_response

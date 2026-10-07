@@ -1,0 +1,22 @@
+# The book's parts from its own table of contents (a.summary__link, each with the part's title), in the
+# book's order — only while the book page shows a Creative Commons licence (OpenEdition's licence block,
+# a.license__logo). A Freemium book has no licence and no units. A link that is not a part of a book on
+# OpenEdition Books yields no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[contains(concat(' ', normalize-space(@class), ' '), ' summary__link ')][//a[contains(@class, 'license__logo')][starts-with(@href, 'https://creativecommons.org/licenses/')]]"}
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [normalize_url, {regex_extract: {pattern: '^(https://books\.openedition\.org/[a-z0-9-]+/[0-9]+)$', group: 1}}]}
+    unit_key: {xpath: "@href", required: true,
+               transforms: [normalize_url, {regex_extract: {pattern: '^https://books\.openedition\.org/([a-z0-9-]+/[0-9]+)$', group: 1}}]}
+    title: {xpath: "@title", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

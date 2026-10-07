@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.openedition-books
+name: OpenEdition Books (Creative Commons)
+version: 0.1.0
+api: '1.2'
+description: >-
+  Books on OpenEdition Books (humanities and social sciences, mostly French, also English, Spanish,
+  Portuguese, Italian) that their publisher has released under a Creative Commons licence, read as text
+  chapter by chapter (plugin API 1.2). A book's units are its parts in the book's own order; each is read
+  without OpenEdition's navigation, and only while the page shows a Creative Commons licence — the many
+  "Freemium" books, free to read on OpenEdition but not licensed, have no units. Illustrations are left
+  out (OpenEdition's licences cover the text only, and text units keep no images in this version). No
+  search: OpenEdition's search is a JavaScript application and /catalogue is robots-disallowed, so a book
+  is opened by pasting its address (https://books.openedition.org/<publisher>/<id>).
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [books.openedition.org]
+defaults:
+  content_type: book
