@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.siyavula
+name: Siyavula open textbooks
+version: 0.1.0
+api: '1.0'
+description: >-
+  Siyavula's open textbooks for South African schools — Mathematics, Mathematical Literacy, Natural and
+  Physical Sciences, Life Sciences, grades 4–12, in English and Afrikaans. One work, "Siyavula open
+  textbooks", whose units are the learner books and teacher's guides Siyavula publishes under CC BY or
+  CC BY-ND, each downloaded as Siyavula's own PDF or EPUB (a unit's name is its file name: grade, subject,
+  learner or teacher, language, licence). The closed-copyright Information Technology and Computer
+  Applications Technology books are not offered. Open it by pasting https://www.siyavula.com/read.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.siyavula.com]
+defaults:
+  language: en
+  content_type: book

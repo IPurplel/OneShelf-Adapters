@@ -1,0 +1,23 @@
+# The unit's file, at Siyavula's own address for it — PDF or EPUB as its name says. Only keys in the open
+# subjects' folders are accepted (the catalog gives no others).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/read"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//li[contains(@class, 'sv-book__url')]/a[starts-with(@href, '/downloads/books/')][contains(., '(CC-BY')])[1]"}
+  fields:
+    url:
+      template: "https://www.siyavula.com/downloads/books/{unit_key}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^(https://www\.siyavula\.com/downloads/books/(?:maths|maths-lit|science|life-science)/[A-Za-z0-9_.-]+\.(?:pdf|epub))$', group: 1}}]
+    format:
+      template: "{unit_key}"
+      required: true
+      transforms: [{regex_extract: {pattern: '\.(pdf|epub)$', group: 1}}]
+pagination:
+  mode: none
+  complete_when: single_response

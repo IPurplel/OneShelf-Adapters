@@ -1,0 +1,24 @@
+# One unit per file whose own link states a Creative Commons licence ("PDF (CC-BY-ND)", "ePUB (CC-BY)"), in
+# the page's order; its key is the file's path under /downloads/books/ and its name the file name. Files
+# marked "Closed copyright" (Information Technology, Computer Applications Technology) have no unit, and
+# keys are limited to the open subjects' folders.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//li[contains(@class, 'sv-book__url')]/a[starts-with(@href, '/downloads/books/')][contains(., '(CC-BY')][not(contains(., 'Closed'))]"}
+  fields:
+    unit_key:
+      xpath: "./@href"
+      required: true
+      transforms: [{regex_extract: {pattern: '^/downloads/books/((?:maths|maths-lit|science|life-science)/[A-Za-z0-9_.-]+\.(?:pdf|epub))$', group: 1}}]
+    title:
+      xpath: "./@href"
+      transforms: [{regex_extract: {pattern: '/([^/]+)$', group: 1}}]
+pagination:
+  mode: none
+  complete_when: single_response

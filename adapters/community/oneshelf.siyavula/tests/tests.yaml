@@ -1,0 +1,27 @@
+# The fixture is the live page of open textbooks (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: read}
+  fixtures: [{url: 'https://www.siyavula.com/read', file: fixtures/read.html}]
+  expect:
+    first: {title: Siyavula open textbooks, creator: Siyavula}
+- capability: catalog
+  inputs: {listing_key: read}
+  fixtures: [{url: 'https://www.siyavula.com/read', file: fixtures/read.html}]
+  expect:
+    min_items: 140
+    complete: true
+    first: {unit_key: maths/Gr7A_Mathematics_Learner_Afr.pdf, title: Gr7A_Mathematics_Learner_Afr.pdf}
+- capability: downloads
+  inputs: {unit_key: maths/Gr10_Mathematics_Learner_Eng_CC-BY.epub}
+  fixtures: [{url: 'https://www.siyavula.com/read', file: fixtures/read.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.siyavula.com/downloads/books/maths/Gr10_Mathematics_Learner_Eng_CC-BY.epub', format: epub}
+# 3: a closed-copyright book (Information Technology) has no download.
+- capability: downloads
+  inputs: {unit_key: it/IT_theory_book_grade10.epub}
+  fixtures: [{url: 'https://www.siyavula.com/read', file: fixtures/read.html}]
+  expect:
+    first: {url: null}

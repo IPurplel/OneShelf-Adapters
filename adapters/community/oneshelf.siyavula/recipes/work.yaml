@@ -1,0 +1,15 @@
+# Siyavula's page of open textbooks is the one work; its key is "read".
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {template: "Siyavula open textbooks", required: true}
+    creator: {template: "Siyavula"}
+    description: {css: "section.sv-section--lead p::text", transforms: [trim, {regex_replace: {pattern: '\s+', replacement: " "}}]}
+    language: {template: "en"}
+    content_type: {template: "book"}

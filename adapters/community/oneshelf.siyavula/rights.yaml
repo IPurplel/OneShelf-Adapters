@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: unknown
+attribution:
+  required: true
+  text: "Siyavula open textbooks (CC BY 3.0 / CC BY-ND 3.0) — https://www.siyavula.com/read"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Siyavula labels every file on its open-textbook page with its licence: branded versions CC BY-ND 3.0,
+    unbranded versions CC BY 3.0, and the Information Technology and Computer Applications Technology
+    books "Closed copyright". The catalog gives a unit only for a file whose own link states CC-BY or
+    CC-BY-ND, and keys are limited to the open subjects' folders (maths, maths-lit, science, life-science);
+    the closed books live in cat/ and it/ and have no unit or download (test 3). Files are stored unaltered,
+    which CC BY-ND allows.
+  exclusion_tests: [3]
+evidence:
+  - claim: Each file's licence is stated on its link; the licences are explained at the foot of the page.
+    url: https://www.siyavula.com/read
+  - claim: robots.txt disallows account, ordering and practice pages only.
+    url: https://www.siyavula.com/robots.txt
+last_verified: 2026-10-07
