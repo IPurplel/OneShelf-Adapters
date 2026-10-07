@@ -1,0 +1,21 @@
+# The document's own EPUB and PDF as its page links them (/<folder>/<id>/<id>.epub|pdf, never the volumes
+# of a split document), each typed by its extension; under the same condition as catalog.yaml. The PDF
+# comes first when there are both: MEK's EPUBs are generated and some are broken (Egri csillagok's spine
+# names a file the archive lacks), and Download Missing takes the first file.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:segments}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  order: reverse
+  items: {xpath: "//a[contains(concat(' ', normalize-space(@class), ' '), ' cssfile ')][contains(concat(' ', normalize-space(@class), ' '), ' epub ') or contains(concat(' ', normalize-space(@class), ' '), ' pdf ')][string-length(@href) - string-length(translate(@href, '/', '')) = 3]"}
+  fields:
+    url: {xpath: "@href", required: true, transforms: [normalize_url,
+          {regex_extract: {pattern: '^(https://mek\.oszk\.hu/[0-9]{5}/[0-9]{5}/[0-9]{5}\.(?:epub|pdf))$', group: 1}}]}
+    format: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '\.(epub|pdf)$', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

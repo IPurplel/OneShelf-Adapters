@@ -1,0 +1,19 @@
+# A document is one Reading Unit, the Master's one_shot (§4.4) — when its page offers its own EPUB or PDF
+# (/<folder>/<id>/<id>.epub|pdf). A document split into several files (volumes in a pdf/ subfolder) has no
+# unit: Download Missing keeps one file per unit, and the first volume alone would not be the document.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:segments}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//h3[@class='title'][//a[contains(concat(' ', normalize-space(@class), ' '), ' cssfile ')][contains(concat(' ', normalize-space(@class), ' '), ' epub ') or contains(concat(' ', normalize-space(@class), ' '), ' pdf ')][string-length(@href) - string-length(translate(@href, '/', '')) = 3]])[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {xpath: "text()", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

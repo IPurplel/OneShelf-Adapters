@@ -1,0 +1,33 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_access_publisher
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: not_allowed
+derivatives: not_allowed
+attribution:
+  required: true
+  text: "Országos Széchényi Könyvtár, Magyar Elektronikus Könyvtár — https://mek.oszk.hu/<path>/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    MEK's statement, linked from every document page: a document "may be freely copied in digital form, but
+    only for personal, non-commercial use, without alteration and with proper attribution"; copyright stays
+    with the author; documents made available as out-of-commerce works "may be downloaded for private use";
+    a Creative Commons licence on a work permits what it permits. OneShelf stores MEK's own EPUB or PDF
+    unaltered, for the user's private reading — within that grant; nothing is redistributed. A document whose
+    page offers neither file has no unit (tests 4, 5, on a labelled variant).
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "MEK documents may be freely copied in digital form for personal, non-commercial use, unaltered and attributed; out-of-commerce works may be downloaded for private use."
+    url: https://mek.oszk.hu/html/allando/copyright.htm
+  - claim: A document page with EPUB and PDF versions and the link to that statement.
+    url: https://mek.oszk.hu/00500/00597/
+  - claim: robots.txt disallows a list of individual documents only.
+    url: https://mek.oszk.hu/robots.txt
+last_verified: 2026-10-07

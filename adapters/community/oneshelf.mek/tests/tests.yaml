@@ -1,0 +1,39 @@
+# Fixtures are live pages (2026-10-07). 00597-no-files.html is 00597.html without its EPUB and PDF links
+# (cases 4 and 5: no unit and no file).
+cases:
+- capability: search
+  inputs: {query: Toldi}
+  fixtures: [{url: 'https://mek.oszk.hu/hu/search/elfull/', file: fixtures/search-toldi.html}]
+  expect:
+    min_items: 10
+    complete: true
+    first: {listing_key: 07900/07990, title: Arany János munkái, creator: Arany János}
+- capability: work
+  inputs: {listing_key: 00500/00597}
+  fixtures: [{url: 'https://mek.oszk.hu/00500/00597/', file: fixtures/00597.html}]
+  expect:
+    first: {title: Arany János összes költeményei, creator: Arany János, language: hu}
+- capability: catalog
+  inputs: {listing_key: 00500/00597}
+  fixtures: [{url: 'https://mek.oszk.hu/00500/00597/', file: fixtures/00597.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: 00500/00597, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: 00500/00597}
+  fixtures: [{url: 'https://mek.oszk.hu/00500/00597/', file: fixtures/00597.html}]
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://mek.oszk.hu/00500/00597/00597.pdf', format: pdf}
+- capability: catalog
+  inputs: {listing_key: 00500/00597}
+  fixtures: [{url: 'https://mek.oszk.hu/00500/00597/', file: fixtures/00597-no-files.html}]
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: 00500/00597}
+  fixtures: [{url: 'https://mek.oszk.hu/00500/00597/', file: fixtures/00597-no-files.html}]
+  expect:
+    first: {url: null}

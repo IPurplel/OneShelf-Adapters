@@ -1,0 +1,22 @@
+# MEK's own title search (a form posted to /hu/search/elfull/), up to 50 hits.
+capability: search
+inputs: [query]
+request:
+  method: POST
+  url: "{base_url}/hu/search/elfull/"
+  form: {dc_title: "{query}", dc_creator: "", dc_subject: "", id: "", size: "50", sort: "", from: "0"}
+response:
+  format: html
+extract:
+  items: {css: "a.itemlink"}
+  fields:
+    listing_key: {xpath: "@href", required: true,
+                  transforms: [{regex_extract: {pattern: '^https://mek\.oszk\.hu/([0-9]{5}/[0-9]{5})/?$', group: 1}}]}
+    title: {css: "div.dctitle::text", required: true, transforms: [trim]}
+    creator: {css: "div.dcauthor::text", transforms: [trim]}
+    url: {xpath: "@href"}
+    language: {template: "hu"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,11 @@
+base_url: https://mek.oszk.hu
+url_patterns:
+  - pattern: '^https://mek\.oszk\.hu/([0-9]{5}/[0-9]{5})/?(?:index\.phtml)?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows a list of individual documents (by path) and nothing this adapter needs in general;
+# a disallowed document is refused by OneShelf's fetcher like any other disallowed path. A document's key
+# is its path, "00500/00597" (the {listing_key:segments} encoder keeps its "/", plugin API 1.2).
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

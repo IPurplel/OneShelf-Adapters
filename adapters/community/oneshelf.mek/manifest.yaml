@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.mek
+name: Magyar Elektronikus Könyvtár (MEK)
+version: 0.1.0
+api: '1.2'
+description: >-
+  The Hungarian Electronic Library of the National Széchényi Library: Hungarian literature, scholarship and
+  reference works. Search is MEK's own title search. A document is one Reading Unit, downloaded as MEK's
+  PDF or EPUB of it (the PDF first: some generated EPUBs are broken) (whichever the document page offers; DOC, RTF and ZIP versions are not used); a document
+  split into several files (multi-volume PDFs) has no unit. Search matches titles, not authors. MEK lets
+  its documents be copied in digital form for personal, non-commercial use, unaltered and with attribution
+  — what a personal OneShelf library is; no other use is implied. No page reader.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [mek.oszk.hu]
+defaults:
+  language: hu
+  content_type: book
