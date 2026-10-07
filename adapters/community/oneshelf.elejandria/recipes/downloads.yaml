@@ -1,0 +1,27 @@
+# The book's files, from its download buttons: each button's address carries the book and file ids, and
+# the file itself is at /libro/link_descarga_libro/<book>/<file> (the address the download page links).
+# EPUB first (the page lists PDF first): Download Missing takes the first. MOBI files are not offered.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/libro/{unit_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[contains(@class, 'download-link')][contains(@href, '/libro/descargar/')][.//img[@alt = 'Descargar en PDF' or @alt = 'Descargar en ePub']]"}
+  order: reverse
+  fields:
+    url:
+      xpath: "./@href"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^https://www\.elejandria\.com/libro/descargar/[a-z0-9-]+/[a-z0-9-]+/([0-9]+/[0-9]+)$', group: 1}}
+        - {regex_replace: {pattern: '^', replacement: 'https://www.elejandria.com/libro/link_descarga_libro/'}}
+    format:
+      xpath: ".//img/@alt"
+      required: true
+      transforms: [{regex_extract: {pattern: '^Descargar en (PDF|ePub)$', group: 1}}, {regex_replace: {pattern: '^PDF$', replacement: pdf}}, {regex_replace: {pattern: '^ePub$', replacement: epub}}]
+pagination:
+  mode: none
+  complete_when: single_response

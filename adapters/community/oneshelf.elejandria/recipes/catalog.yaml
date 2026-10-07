@@ -1,0 +1,17 @@
+# A book is one Reading Unit (one_shot), while its page offers a download.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/libro/{listing_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//h1)[1][//a[contains(@class, 'download-link')][contains(@href, '/libro/descargar/')]]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true}
+    title: {css: "h1::text", transforms: [trim, {regex_replace: {pattern: '^Libro\s+', replacement: ''}}]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

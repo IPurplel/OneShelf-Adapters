@@ -1,0 +1,10 @@
+base_url: https://www.elejandria.com
+url_patterns:
+  - pattern: '^https://www\.elejandria\.com/libro/([a-z0-9-]+/[a-z0-9-]+/[0-9]+)/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows /buscar, /libros/buscar, e-mail and administration pages; book pages and their
+# download links are allowed.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: public_domain
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: unknown
+derivatives: unknown
+attribution:
+  required: false
+  text: "Elejandría — https://www.elejandria.com/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Elejandría states that "all our books are in the public domain or under open licences" and, on each
+    book, that the ebook is free of copyright restrictions in Spain — readers outside Spain should check that
+    it is free where they are (as with Project Gutenberg). Some editions are Elejandría's own translations,
+    which it publishes free under the same statement. OneShelf stores Elejandría's EPUB or PDF unaltered
+    for private reading.
+  exclusion_tests: []
+evidence:
+  - claim: "Elejandría es un portal web para descargar libros gratis y de forma legal. Todos nuestros libros están en dominio público o con licencias abiertas."
+    url: https://www.elejandria.com/aviso-legal
+  - claim: 'Each book page: "Este libro electrónico está libre de restricciones de derechos de autor en España."'
+    url: https://www.elejandria.com/libro/hechos-de-pedro/anonimo/2735
+  - claim: robots.txt disallows search, e-mail and administration pages only.
+    url: https://www.elejandria.com/robots.txt
+last_verified: 2026-10-07

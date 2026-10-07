@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.elejandria
+name: Elejandría
+version: 0.1.0
+api: '1.2'
+description: >-
+  Elejandría: free Spanish-language ebooks — classics in the public domain and Elejandría's own
+  translations — as EPUB and PDF. A book is a work with one unit, downloaded as Elejandría's EPUB (PDF as
+  well). Elejandría states that every book is in the public domain or openly licensed, and that each is
+  free of copyright restrictions in Spain; readers elsewhere should check their own laws. Open a book by
+  pasting its Elejandría address; Elejandría's search is robots-disallowed.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.elejandria.com]
+defaults:
+  language: es
+  content_type: book

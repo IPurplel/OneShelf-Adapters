@@ -1,0 +1,21 @@
+# The fixture is the live book page (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: hechos-de-pedro/anonimo/2735}
+  fixtures: [{url: 'https://www.elejandria.com/libro/hechos-de-pedro/anonimo/2735', file: fixtures/book-hechos-de-pedro-2735.html}]
+  expect:
+    first: {title: Hechos de Pedro, creator: Anónimo, language: es}
+- capability: catalog
+  inputs: {listing_key: hechos-de-pedro/anonimo/2735}
+  fixtures: [{url: 'https://www.elejandria.com/libro/hechos-de-pedro/anonimo/2735', file: fixtures/book-hechos-de-pedro-2735.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: hechos-de-pedro/anonimo/2735}
+- capability: downloads
+  inputs: {unit_key: hechos-de-pedro/anonimo/2735}
+  fixtures: [{url: 'https://www.elejandria.com/libro/hechos-de-pedro/anonimo/2735', file: fixtures/book-hechos-de-pedro-2735.html}]
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://www.elejandria.com/libro/link_descarga_libro/2735/6597', format: epub}

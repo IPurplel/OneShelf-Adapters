@@ -1,0 +1,18 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/libro/{listing_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title:
+      css: "h1::text"
+      required: true
+      transforms: [trim, {regex_replace: {pattern: '^Libro\s+', replacement: ''}}]
+    creator:
+      css: "a.secondary-text-color[href*='/autor/']::text"
+      transforms: [trim, {regex_replace: {pattern: '^de\s+', replacement: ''}}]
+    language: {template: "es"}
+    content_type: {template: "book"}
