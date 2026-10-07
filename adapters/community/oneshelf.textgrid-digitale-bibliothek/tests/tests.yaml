@@ -1,0 +1,40 @@
+# Fixtures are live responses (2026-10-07).
+cases:
+- capability: search
+  inputs: {query: Goethe}
+  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50', file: fixtures/search-goethe.xml}]
+  expect:
+    min_items: 40
+    complete: true
+    fields_present: [listing_key, title, creator]
+- capability: work
+  inputs: {listing_key: 11d4b.0}
+  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/info/textgrid:11d4b.0/metadata', file: fixtures/meta-11d4b.0.xml}]
+  expect:
+    first: {title: Faust. Eine Tragödie, creator: 'Goethe, Johann Wolfgang von', language: de}
+- capability: catalog
+  inputs: {listing_key: 11d4b.0}
+  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/info/textgrid:11d4b.0/metadata', file: fixtures/meta-11d4b.0.xml}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: 11d4b.0}
+# 3: a work record (not an edition, no licence) has no unit.
+- capability: catalog
+  inputs: {listing_key: 11d4c.0}
+  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/info/textgrid:11d4c.0/metadata', file: fixtures/meta-11d4c.0-work.xml}]
+  expect:
+    first: {unit_key: null}
+# 4: an edition of another TextGrid project (ELTeC, CC BY 4.0) is not this source and has no unit.
+- capability: catalog
+  inputs: {listing_key: 41fj3.0}
+  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/info/textgrid:41fj3.0/metadata', file: fixtures/meta-41fj3.0-eltec.xml}]
+  expect:
+    first: {unit_key: null}
+- capability: reader
+  inputs: {unit_key: sftw.0}
+  fixtures: [{url: 'https://textgridlab.org/1.0/aggregator/html/textgrid:sftw.0', file: fixtures/html-sftw.0.html}]
+  expect:
+    min_items: 1
+    complete: true
+    text_contains: Goethe

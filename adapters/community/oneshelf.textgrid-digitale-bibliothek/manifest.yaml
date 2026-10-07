@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.textgrid-digitale-bibliothek
+name: TextGrid Digitale Bibliothek
+version: 0.1.0
+api: '1.2'
+description: >-
+  The TextGrid Digitale Bibliothek: German-language literature from its beginnings to the early twentieth
+  century (the Zeno.org corpus), edited in TEI by TextGrid and published under CC BY 3.0 DE. An edition is one
+  work and is read as text (plugin API 1.2), as one unit sectioned by OneShelf Core. Only editions of the
+  Digitale Bibliothek project that state that licence are offered. Search uses TextGrid's public search.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [textgridlab.org, textgridrep.org]
+defaults:
+  language: de
+  content_type: book

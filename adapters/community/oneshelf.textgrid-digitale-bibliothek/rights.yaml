@@ -1,0 +1,30 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: open_license
+rights_granularity: item
+license:
+  id: CC-BY-3.0-DE
+  url: https://creativecommons.org/licenses/by/3.0/de/legalcode
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "TextGrid Digitale Bibliothek (CC BY 3.0 DE, by-Nennung TextGrid) — https://textgridrep.org/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Every edition's TextGrid metadata names its project and its licence. The Digitale Bibliothek's editions
+    state CC BY 3.0 DE (the underlying texts are public domain; TextGrid's annotation is licensed). Search
+    lists, and the catalog gives a unit for, only an edition whose own metadata names the Digitale Bibliothek
+    project, the edition format and that licence; a work record or an edition of another TextGrid project
+    has no unit (tests 3, 4).
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: An edition's metadata with its project and its CC BY 3.0 DE licence statement.
+    url: https://textgridlab.org/1.0/tgsearch-public/info/textgrid:11d4b.0/metadata
+  - claim: robots.txt disallows only the zip, teicorpus and epub aggregators.
+    url: https://textgridlab.org/robots.txt
+last_verified: 2026-10-07

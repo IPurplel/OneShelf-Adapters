@@ -1,0 +1,17 @@
+# The edition, read as text (plugin API 1.2), from TextGrid's HTML rendering of its TEI. Each top-level
+# part (front matter, acts, chapters) is an item; OneShelf Core joins them into one unit and sections it.
+# TextGrid's generated headers and footers, and the stylesheet links, are left out.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/1.0/aggregator/html/textgrid:{unit_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//body/div[not(contains(@class, 'stdheader'))][not(contains(@class, 'stdfooter'))]"}
+  fields:
+    html: {xpath: ".", markup: outer}
+pagination:
+  mode: none
+  complete_when: single_response

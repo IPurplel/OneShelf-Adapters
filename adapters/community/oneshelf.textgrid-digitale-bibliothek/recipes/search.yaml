@@ -1,0 +1,19 @@
+# TextGrid's public search, limited to editions of the Digitale Bibliothek project. An edition is offered
+# only while its own metadata names that project and CC BY 3.0 DE.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/1.0/tgsearch-public/search?q={query:url}&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  items: {xpath: "//object[.//project[@id = 'TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c']][.//format[normalize-space(.) = 'text/tg.edition+tg.aggregation+xml']][.//license[@licenseuri = 'http://creativecommons.org/licenses/by/3.0/de/legalcode']]"}
+  fields:
+    listing_key: {xpath: ".//textgriduri/text()", required: true, transforms: [trim, {regex_extract: {pattern: '^textgrid:([a-z0-9]+\.[0-9]+)$', group: 1}}]}
+    title: {xpath: ".//provided/title/text()", required: true, transforms: [trim]}
+    creator: {xpath: ".//edition/agent[@role = 'author']/text()", transforms: [trim]}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

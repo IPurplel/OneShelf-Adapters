@@ -1,0 +1,17 @@
+# An edition is one unit, keyed by its TextGrid URI — only while its metadata names the Digitale Bibliothek
+# project and CC BY 3.0 DE. Anything else (another project, a work record, an item) has no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/1.0/tgsearch-public/info/textgrid:{listing_key:path}/metadata"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  items: {xpath: "//object[.//project[@id = 'TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c']][.//format[normalize-space(.) = 'text/tg.edition+tg.aggregation+xml']][.//license[@licenseuri = 'http://creativecommons.org/licenses/by/3.0/de/legalcode']]"}
+  fields:
+    unit_key: {xpath: ".//textgriduri/text()", required: true, transforms: [trim, {regex_extract: {pattern: '^textgrid:([a-z0-9]+\.[0-9]+)$', group: 1}}]}
+    title: {xpath: ".//provided/title/text()", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response
