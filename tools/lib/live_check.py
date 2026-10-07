@@ -152,7 +152,10 @@ async def run(adapter_id: str, args) -> int:
             if "catalog" in declared and listing_key is not None:
                 result = await attempt("catalog", {"listing_key": listing_key, "language": manifest.defaults.language})
                 if isinstance(result, ListResult) and result.entries:
-                    unit = result.entries[0]
+                    # The unit asked for, when it is in the catalog — its own address goes with it, so a
+                    # reader that follows a unit's URL reads that unit and not the first one.
+                    unit = next((u for u in result.entries if args.unit_key and u.unit_key == args.unit_key),
+                                result.entries[0])
             unit_inputs = {"unit_key": args.unit_key or (unit.unit_key if unit else None)
                            or tested.get("downloads", tested.get("reader", {})).get("unit_key"),
                            "url": unit.url if unit else None, "language": manifest.defaults.language}
