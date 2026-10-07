@@ -1,0 +1,21 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/get_work_info?lbworkid={listing_key:url}&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  fields:
+    title: {json: "$.data[0].title", required: true, transforms: [trim]}
+    creator: {json: "$.data[0].main_author.full_name", transforms: [trim]}
+    language:
+      json: "$.data[0].language"
+      transforms:
+        - {regex_replace: {pattern: "^swe$", replacement: sv}}
+        - {regex_replace: {pattern: "^(?:fin)$", replacement: fi}}
+        - {regex_replace: {pattern: "^(?:ger|deu)$", replacement: de}}
+        - {regex_replace: {pattern: "^(?:fre|fra)$", replacement: fr}}
+        - {regex_replace: {pattern: "^eng$", replacement: en}}
+        - {regex_replace: {pattern: "^lat$", replacement: la}}
+    content_type: {template: "book"}

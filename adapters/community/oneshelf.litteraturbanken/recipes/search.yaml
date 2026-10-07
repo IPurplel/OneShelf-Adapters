@@ -1,0 +1,27 @@
+# The bank's own search over its e-texts (list_all with a filter string), 50 at a time.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/api/list_all/etext?exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro&filter_string={query:url}&to=50"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.data[*]"}
+  fields:
+    listing_key: {json: "$.lbworkid", required: true, transforms: [{regex_extract: {pattern: '^(lb[0-9]+)$', group: 1}}]}
+    title: {json: "$.title", required: true, transforms: [trim]}
+    creator: {json: "$.main_author.full_name", transforms: [trim]}
+    language:
+      json: "$.language"
+      transforms:
+        - {regex_replace: {pattern: "^swe$", replacement: sv}}
+        - {regex_replace: {pattern: "^(?:fin)$", replacement: fi}}
+        - {regex_replace: {pattern: "^(?:ger|deu)$", replacement: de}}
+        - {regex_replace: {pattern: "^(?:fre|fra)$", replacement: fr}}
+        - {regex_replace: {pattern: "^eng$", replacement: en}}
+        - {regex_replace: {pattern: "^lat$", replacement: la}}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,70 @@
+# Fixtures are live API responses (2026-10-07). lb262922 (Strindberg, Samlade Verk) is under the bank's own
+# licence lb-assv, not CC0: cases 4 and 5 offer nothing.
+cases:
+- capability: search
+  inputs:
+    query: Lagerlöf
+  fixtures:
+  - url: https://litteraturbanken.se/api/list_all/etext?exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro&filter_string=Lagerl%C3%B6f&to=50
+    file: fixtures/search-lagerlof.json
+  expect:
+    min_items: 5
+    complete: true
+    fields_present:
+    - listing_key
+    - title
+    - creator
+    - language
+- capability: work
+  inputs:
+    listing_key: lb12106
+  fixtures:
+  - url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb12106&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro
+    file: fixtures/work-lb12106.json
+  expect:
+    first:
+      title: Kejsarn av Portugallien. En värmlandsberättelse
+      creator: Selma Lagerlöf
+      language: sv
+- capability: catalog
+  inputs:
+    listing_key: lb12106
+  fixtures:
+  - url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb12106&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro
+    file: fixtures/work-lb12106.json
+  expect:
+    min_items: 1
+    complete: true
+    first:
+      unit_key: lb12106
+      unit_type: one_shot
+- capability: downloads
+  inputs:
+    unit_key: lb12106
+  fixtures:
+  - url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb12106&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro
+    file: fixtures/work-lb12106.json
+  expect:
+    min_items: 1
+    complete: true
+    first:
+      url: https://litteraturbanken.se/api/epub/LagerlofS_KejsarnAvPortugallien.epub
+      format: epub
+- capability: catalog
+  inputs:
+    listing_key: lb262922
+  fixtures:
+  - url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb262922&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro
+    file: fixtures/work-lb262922.json
+  expect:
+    first:
+      unit_key: null
+- capability: downloads
+  inputs:
+    unit_key: lb262922
+  fixtures:
+  - url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb262922&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro
+    file: fixtures/work-lb262922.json
+  expect:
+    first:
+      url: null

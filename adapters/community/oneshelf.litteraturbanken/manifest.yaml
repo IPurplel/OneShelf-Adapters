@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.litteraturbanken
+name: Litteraturbanken
+version: 0.1.0
+api: '1.0'
+description: >-
+  Litteraturbanken, the Swedish Literature Bank: Swedish classics as edited e-texts. Search is the bank's
+  own API. A work is one Reading Unit, downloaded as Litteraturbanken's EPUB — only when that EPUB is
+  released under CC0 (863 of 1,643 e-texts in October 2026); works under the bank's own licences
+  (lb-2-20120306, lb-assv …) show their details but have no unit. No page reader.
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [litteraturbanken.se]
+defaults:
+  language: sv
+  content_type: book

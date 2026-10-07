@@ -1,0 +1,34 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Litteraturbanken — https://litteraturbanken.se/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Every e-text in Litteraturbanken's API carries a licence code for the text and for its EPUB. Of 1,643
+    e-texts on 2026-10-07, 863 are "cc-0" (CC0 1.0: no rights reserved); the others are under the bank's own
+    licences (lb-2-20120306: 566, lb-assv: 129, lb-svs: 58, and a few author-specific ones), whose terms are
+    not stated in the API and are not treated as open. A work has a unit, and its EPUB is offered, only when
+    epub_license is "cc-0" and has_epub is true; otherwise neither (tests 4, 5).
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: A CC0 work (epub_license "cc-0") with its EPUB.
+    url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb12106&mediatype=etext
+  - claim: A work under the bank's own licence lb-assv, not offered.
+    url: https://litteraturbanken.se/api/get_work_info?lbworkid=lb262922&mediatype=etext
+  - claim: The public API, documented with OpenAPI.
+    url: https://litteraturbanken.se/api/docs
+  - claim: robots.txt states no rules.
+    url: https://litteraturbanken.se/robots.txt
+last_verified: 2026-10-07

@@ -1,0 +1,5 @@
+base_url: https://litteraturbanken.se
+# robots.txt states no rules (only a sitemap). Works are identified by Litteraturbanken's lbworkid.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

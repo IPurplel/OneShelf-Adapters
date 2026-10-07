@@ -1,0 +1,22 @@
+# A work is one Reading Unit, the Master's one_shot (§4.4) — only when it has an EPUB and that EPUB is
+# released under CC0 (epub_license "cc-0"). The bank's own licences are not open licences and offer no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/get_work_info?lbworkid={listing_key:url}&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.data[0].epub_license"}
+    has_epub: {json: "$.data[0].has_epub"}
+  items: {json: "$.data[0]"}
+  fields:
+    unit_key: {template: "{listing_key}|{licence}|{has_epub}", required: true,
+               transforms: [{regex_extract: {pattern: '^(lb[0-9]+)\|cc-0\|(?i:true)$', group: 1}}]}
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,23 @@
+# The work's EPUB, which Litteraturbanken names <author id>_<title path>.epub (the ASCII forms), under the
+# same condition as catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/api/get_work_info?lbworkid={unit_key:url}&mediatype=etext&exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    licence: {json: "$.data[0].epub_license"}
+    has_epub: {json: "$.data[0].has_epub"}
+    author: {json: "$.data[0].main_author.authorid_norm"}
+    title: {json: "$.data[0].titlepath_norm"}
+  items: {json: "$.data[0]"}
+  fields:
+    url: {template: "https://litteraturbanken.se/api/epub/{author}_{title}.epub|{licence}|{has_epub}", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://litteraturbanken\.se/api/epub/[A-Za-z0-9]+_[A-Za-z0-9]+\.epub)\|cc-0\|(?i:true)$', group: 1}}]}
+    format: {template: "epub", required: true}
+pagination:
+  mode: none
+  complete_when: single_response
