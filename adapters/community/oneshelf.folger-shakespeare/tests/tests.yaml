@@ -1,0 +1,21 @@
+# The fixture is the live download page (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: works}
+  fixtures: [{url: 'https://www.folger.edu/explore/shakespeares-works/download/', file: fixtures/download.html}]
+  expect:
+    first: {title: The Folger Shakespeare, creator: William Shakespeare, language: en}
+- capability: catalog
+  inputs: {listing_key: works}
+  fixtures: [{url: 'https://www.folger.edu/explore/shakespeares-works/download/', file: fixtures/download.html}]
+  expect:
+    min_items: 42
+    complete: true
+    first: {unit_key: AWW, title: "All's Well That Ends Well"}
+- capability: downloads
+  inputs: {unit_key: JC_}
+  fixtures: [{url: 'https://www.folger.edu/explore/shakespeares-works/download/', file: fixtures/download.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://flgr.sh/txtfssJC_pdf', format: pdf}

@@ -1,0 +1,10 @@
+base_url: https://www.folger.edu
+url_patterns:
+  - pattern: '^https://www\.folger\.edu/explore/shakespeares-(works)/download/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows only /admin/*. A file link (flgr.sh/txtfss<code>pdf) redirects to the Folger's own
+# asset bucket (folger-main-site-assets.s3.amazonaws.com), declared as the files host.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

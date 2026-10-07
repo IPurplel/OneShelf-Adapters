@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.folger-shakespeare
+name: Folger Shakespeare
+version: 0.1.0
+api: '1.0'
+description: >-
+  The Folger Shakespeare: the Folger Shakespeare Library's editions of Shakespeare's plays and poems. One work,
+  "The Folger Shakespeare", whose units are the plays and poems the Folger offers as PDF, in its own order;
+  each is downloaded as that PDF. The Folger makes these files free to use for all non-commercial purposes —
+  a personal OneShelf library is one. Open it by pasting the Folger's download page address
+  (https://www.folger.edu/explore/shakespeares-works/download/). No search; no page reader.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.folger.edu, flgr.sh]
+  cdn_domains: [folger-main-site-assets.s3.amazonaws.com]
+defaults:
+  language: en
+  content_type: book

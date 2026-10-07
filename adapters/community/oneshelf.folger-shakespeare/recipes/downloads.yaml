@@ -1,0 +1,18 @@
+# The play's PDF, at the Folger's own short link for it (it redirects to the Folger's asset bucket) — only
+# while the page still lists that link.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/explore/shakespeares-works/download/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[starts-with(@href, 'https://flgr.sh/txtfss')][substring(@href, string-length(@href) - 2) = 'pdf'])[1]"}
+  fields:
+    url: {template: "https://flgr.sh/txtfss{unit_key}pdf", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://flgr\.sh/txtfss[A-Za-z0-9]+_?pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_access_publisher
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: unknown
+derivatives: unknown
+attribution:
+  required: true
+  text: "The Folger Shakespeare, Folger Shakespeare Library — https://www.folger.edu/explore/shakespeares-works/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The Folger offers every play and poem for download in several formats and states that "these files are
+    free to use for all non-commercial purposes", including offline reading on any device. OneShelf stores the
+    Folger's own PDF unaltered for the user's private reading — within that grant. The plays are public domain;
+    the Folger's editorial text is its own, and nothing is redistributed.
+  exclusion_tests: []
+evidence:
+  - claim: "These files are free to use for all non-commercial purposes."
+    url: https://www.folger.edu/explore/shakespeares-works/download/
+  - claim: The usage guidelines describe the PDFs for offline reading on any device.
+    url: https://www.folger.edu/explore/shakespeares-works/download/usage-guidelines/
+  - claim: robots.txt disallows only /admin/*.
+    url: https://www.folger.edu/robots.txt
+last_verified: 2026-10-07

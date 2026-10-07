@@ -1,0 +1,25 @@
+# One unit per play or poem the Folger offers as a PDF, in the page's order; its key is the Folger's own
+# file code (flgr.sh/txtfss<code>pdf: AWW, Ham, JC_ …). The complete-works entry ("All") is left out: it is the
+# same texts again. An entry without a PDF has no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/explore/shakespeares-{listing_key:path}/download/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items:
+    xpath: >-
+      //div[contains(concat(' ', normalize-space(@class), ' '), ' js-accordion ')]
+      [not(.//a[@href = 'https://flgr.sh/txtfssAllpdf'])]
+      [.//a[starts-with(@href, 'https://flgr.sh/txtfss')][substring(@href, string-length(@href) - 2) = 'pdf']]
+  fields:
+    unit_key:
+      xpath: "(.//a[starts-with(@href, 'https://flgr.sh/txtfss')][substring(@href, string-length(@href) - 2) = 'pdf'])[1]/@href"
+      required: true
+      transforms: [{regex_extract: {pattern: '^https://flgr\.sh/txtfss([A-Za-z0-9]+_?)pdf$', group: 1}}]
+    title: {xpath: "(.//div[contains(@class, 'js-accordion__header')]/span)[2]/text()", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response

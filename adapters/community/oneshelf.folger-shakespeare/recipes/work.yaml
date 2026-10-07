@@ -1,0 +1,15 @@
+# The Folger's page of downloadable texts is the one work; its key is "works".
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/explore/shakespeares-{listing_key:path}/download/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {template: "The Folger Shakespeare", required: true}
+    creator: {template: "William Shakespeare"}
+    description: {css: "meta[name=description]::attr(content)", transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}
