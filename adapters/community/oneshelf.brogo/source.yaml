@@ -1,0 +1,9 @@
+base_url: https://icculus.org
+url_patterns:
+  - pattern: '^https://icculus\.org/mwm/brogo/archives/((?:19|20)[0-9]{2})/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# icculus.org robots.txt disallows only /remakequake/forum/.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

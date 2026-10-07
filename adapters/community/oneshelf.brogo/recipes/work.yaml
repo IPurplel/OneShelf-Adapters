@@ -1,0 +1,13 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/mwm/brogo/archives/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1::text", required: true, transforms: [trim]}
+    creator: {template: "Malcolm Wilson"}
+    language: {template: "en"}
+    content_type: {template: "comic"}

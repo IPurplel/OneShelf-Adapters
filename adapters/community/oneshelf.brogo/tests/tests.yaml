@@ -1,0 +1,21 @@
+# Fixtures are live archive pages (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: '2010'}
+  fixtures: [{url: 'https://icculus.org/mwm/brogo/archives/2010', file: fixtures/year-2010.html}]
+  expect:
+    first: {title: 2010 Brogo Archives, creator: Malcolm Wilson}
+- capability: catalog
+  inputs: {listing_key: '2010'}
+  fixtures: [{url: 'https://icculus.org/mwm/brogo/archives/2010', file: fixtures/year-2010.html}]
+  expect:
+    min_items: 12
+    complete: true
+    first: {unit_key: 2010/january, title: January}
+- capability: reader
+  inputs: {unit_key: 2010/march}
+  fixtures: [{url: 'https://icculus.org/mwm/brogo/archives/2010/march.html', file: fixtures/month-2010-march.html}]
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://icculus.org/mwm/brogo/comics/strip2010-3-27.gif'}

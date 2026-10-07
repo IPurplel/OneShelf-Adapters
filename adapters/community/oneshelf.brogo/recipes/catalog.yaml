@@ -1,0 +1,22 @@
+# The year's months, in the archive's order; a month's key is <year>/<month> (its page, <month>.html).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/mwm/brogo/archives/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[substring(@href, string-length(@href) - 4) = '.html'][not(contains(@href, '/'))]"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{item}"
+      required: true
+      transforms:
+        - {regex_replace: {pattern: '^([0-9]{4})\|<a href="([a-z]+)\.html"(?s:.*)$', replacement: '\1/\2'}}
+        - {regex_extract: {pattern: '^([0-9]{4}/(?:january|february|march|april|may|june|july|august|september|october|november|december))$', group: 1}}
+    title: {xpath: "./text()", transforms: [trim]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

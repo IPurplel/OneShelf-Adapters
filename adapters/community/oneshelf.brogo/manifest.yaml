@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.brogo
+name: Brogo
+version: 0.1.0
+api: '1.2'
+description: >-
+  Brogo, Malcolm Wilson's webcomic (2005–), released under Creative Commons Attribution-ShareAlike 4.0
+  and/or the GNU Free Documentation License 1.3. A year of the archive is a work; its months are its units,
+  each read as that month's strips. Open a year by pasting its archive address
+  (icculus.org/mwm/brogo/archives/2010).
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [icculus.org]
+defaults:
+  language: en
+  content_type: comic

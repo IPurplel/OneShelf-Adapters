@@ -1,0 +1,19 @@
+# A month's strips, in the page's order, from the comic's own image files.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/mwm/brogo/archives/{unit_key:segments}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//img[contains(@src, '/comics/strip')]"}
+  fields:
+    url:
+      xpath: "./@src"
+      required: true
+      transforms: [{regex_extract: {pattern: '^\.\./\.\./comics/(strip[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}[a-z]?\.(?:gif|png|jpe?g))$', group: 1}}, {regex_replace: {pattern: '^', replacement: 'https://icculus.org/mwm/brogo/comics/'}}]
+    page_label: {xpath: "./@alt", transforms: [trim]}
+pagination:
+  mode: none
+  complete_when: single_response
