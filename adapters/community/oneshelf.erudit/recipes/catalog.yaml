@@ -1,0 +1,21 @@
+# The issue's articles, in its order; an article's key is its path (journal/issue/<id>ar). Whether an
+# article's text may be read is decided on the article's own page (reader).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/fr/revues/{listing_key:segments}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "h6.bib-record__title a"}
+  fields:
+    unit_key:
+      xpath: "./@href"
+      required: true
+      transforms: [{regex_extract: {pattern: '^/fr/revues/([a-z0-9-]+/[0-9]{4}-v[0-9a-z-]+/[0-9]+ar)/$', group: 1}}]
+    title: {xpath: ".//text()", all: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\\s+', replacement: " "}}, trim]}
+    unit_type: {template: "article"}
+pagination:
+  mode: none
+  complete_when: single_response

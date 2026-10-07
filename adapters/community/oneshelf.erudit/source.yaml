@@ -1,0 +1,9 @@
+base_url: https://www.erudit.org
+url_patterns:
+  - pattern: '^https://www\.erudit\.org/(?:fr|en)/revues/([a-z0-9-]+/[0-9]{4}-v[0-9a-z-]+)/?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt states no rules (Disallow: empty).
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

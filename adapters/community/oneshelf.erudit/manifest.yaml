@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.erudit
+name: Érudit
+version: 0.1.0
+api: '1.2'
+description: >-
+  Érudit, the Canadian platform of French-language scholarly journals. A journal issue is a work and its
+  articles are its units, each read as text (plugin API 1.2): the article's body only. An article's text is
+  offered only while its own page states a Creative Commons licence; articles under "Tous droits réservés"
+  (and those offered as PDF only) give no text. Open an issue by pasting its Érudit address.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [www.erudit.org]
+defaults:
+  language: fr
+  content_type: paper

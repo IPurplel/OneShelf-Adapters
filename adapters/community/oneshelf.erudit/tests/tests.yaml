@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: enjeux/2026-v13-n1-enjeux010822}
+  fixtures: [{url: 'https://www.erudit.org/fr/revues/enjeux/2026-v13-n1-enjeux010822/', file: fixtures/issue-enjeux-2026-v13-n1.html}]
+  expect:
+    first: {title: "Le travail enseignant en contexte linguistique minoritaire au Canada. Enjeux et société", language: fr}
+- capability: catalog
+  inputs: {listing_key: enjeux/2026-v13-n1-enjeux010822}
+  fixtures: [{url: 'https://www.erudit.org/fr/revues/enjeux/2026-v13-n1-enjeux010822/', file: fixtures/issue-enjeux-2026-v13-n1.html}]
+  expect:
+    min_items: 6
+    complete: true
+    first: {unit_key: enjeux/2026-v13-n1-enjeux010822/1125358ar}
+- capability: reader
+  inputs: {unit_key: enjeux/2026-v13-n1-enjeux010822/1125358ar}
+  fixtures: [{url: 'https://www.erudit.org/fr/revues/enjeux/2026-v13-n1-enjeux010822/1125358ar/', file: fixtures/article-1125358ar-cc-by-sa.html}]
+  expect:
+    min_items: 1
+    complete: true
+    text_contains: "Le travail quotidien du personnel enseignant est complexe"
+# 3: an article under "Tous droits réservés" gives no text, though its body is on the page.
+- capability: reader
+  inputs: {unit_key: cqd/2019-v48-n1-cqd05651/1073337ar}
+  fixtures: [{url: 'https://www.erudit.org/fr/revues/cqd/2019-v48-n1-cqd05651/1073337ar/', file: fixtures/article-1073337ar-all-rights-reserved.html}]
+  expect:
+    first: {html: null}

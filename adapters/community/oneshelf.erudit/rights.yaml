@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The article's journal and Érudit — https://www.erudit.org/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each Érudit article page states its rights: a Creative Commons licence (p.licence, linking
+    creativecommons.org) or "Tous droits réservés © <publisher>". An issue's articles are listed with their
+    titles; an article's text is read only while its own page links a Creative Commons licence (test 3: a
+    2019 article whose body is on the page under "Tous droits réservés" gives no text). Every Creative
+    Commons variant is admitted: a personal copy of the unmodified text is within NC and ND.
+  exclusion_tests: [3]
+evidence:
+  - claim: An article licensed CC BY-SA 3.0 (p.licence).
+    url: https://www.erudit.org/fr/revues/enjeux/2026-v13-n1-enjeux010822/1125358ar/
+  - claim: An article under "Tous droits réservés" — not read.
+    url: https://www.erudit.org/fr/revues/cqd/2019-v48-n1-cqd05651/1073337ar/
+  - claim: robots.txt states no rules.
+    url: https://www.erudit.org/robots.txt
+last_verified: 2026-10-07

@@ -1,0 +1,14 @@
+# The issue page: its theme or volume as the title, the journal as the creator.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/fr/revues/{listing_key:segments}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "title::text", required: true, transforms: [trim, {regex_replace: {pattern: '\s*–\s*Érudit$', replacement: ''}}]}
+    description: {css: "meta[name=description]::attr(content)", transforms: [trim]}
+    language: {template: "fr"}
+    content_type: {template: "paper"}
