@@ -592,6 +592,11 @@ tooling pin.
 | [Folger Shakespeare](https://www.folger.edu/explore/shakespeares-works/) | `oneshelf.folger-shakespeare` | `VERIFIED` | Community | work, catalog, downloads | en | Publisher grant: free for all non-commercial purposes |
 | [TextGrid Digitale Bibliothek](https://textgridrep.org/) | `oneshelf.textgrid-digitale-bibliothek` | `VERIFIED` | Community | search, work, catalog, reader (text) | de | Per edition: Digitale Bibliothek project and CC BY 3.0 DE only |
 | [Siyavula open textbooks](https://www.siyavula.com/read) | `oneshelf.siyavula` | `VERIFIED` | Community | work, catalog, downloads | en, af | Per file: CC BY / CC BY-ND only (closed-copyright books excluded) |
+| [Representative Poetry Online](https://rpo.library.utoronto.ca/) | `oneshelf.rpo` | `VERIFIED` | Community | search, work, catalog, reader (text) | en | Per poet: public domain (died 1955 or earlier); in-copyright poems excluded |
+| [ANNO — Austrian Newspapers Online](https://anno.onb.ac.at/) (ONB IIIF) | `oneshelf.anno` | `VERIFIED` | Community | work, catalog, reader | de | Per issue: Public Domain Mark (issues before 1906); API NoC-NC |
+| [World Bank Open Knowledge Repository](https://openknowledge.worldbank.org/) | `oneshelf.world-bank-okr` | `VERIFIED` | Community | work, catalog, downloads | en (also fr, es …) | Per item: Creative Commons only (mostly CC BY 3.0 IGO) |
+| [WHO IRIS](https://iris.who.int/) | `oneshelf.who-iris` | `VERIFIED` | Community | work, catalog, downloads | multilingual | Per item: Creative Commons only (recent CC BY-NC-SA 3.0 IGO; older documents excluded) |
+| [FAO Open Knowledge](https://openknowledge.fao.org/) | `oneshelf.fao-knowledge` | `VERIFIED` | Community | work, catalog, downloads | multilingual | Per item: Creative Commons only (meeting documents without a licence excluded) |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
