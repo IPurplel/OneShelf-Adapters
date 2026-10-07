@@ -9,7 +9,7 @@ response:
   format: html
 extract:
   values:
-    issue: {xpath: "(//section[@id = 'contentList']//i[contains(@class, 'fa-bookmark')]/following-sibling::span)[1]/text()"}
+    issue: {xpath: "(//i[contains(@class, 'fa-bookmark')]/following-sibling::span)[1]/text()"}
   fields:
     title: {template: "زبان و ادبیات عربی — {issue}", required: true}
     description: {css: "meta[name=description]::attr(content)", transforms: [trim]}
