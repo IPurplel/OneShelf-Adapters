@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.rctall-atu
+name: Translation Researches in Arabic Language and Literature (ATU)
+version: 0.1.0
+api: '1.0'
+description: >-
+  پژوهش‌های ترجمه در زبان و ادبیات عربی — Translation Researches in the Arabic Language and Literature,
+  Allameh Tabataba'i University: an open-access journal on translation between Arabic and Persian, its
+  articles in Persian and Arabic under Creative Commons Attribution-NonCommercial 4.0. An issue is a work and
+  its articles are units, each downloaded as the journal's PDF (right-to-left text). Open an issue by
+  pasting its address (rctall.atu.ac.ir/issue_….html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [rctall.atu.ac.ir]
+defaults:
+  language: fa
+  content_type: paper

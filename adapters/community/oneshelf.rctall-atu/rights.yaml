@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-NC-4.0
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+commercial_use: not_allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors, پژوهش‌های ترجمه در زبان و ادبیات عربی, Allameh Tabataba'i University — https://rctall.atu.ac.ir/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The journal's pages state its licence, Creative Commons Attribution-NonCommercial 4.0 (rel="license"),
+    and its open-access policy publishes all articles under it. The catalog and downloads read that licence
+    link on the page they fetch and offer nothing without it. The article PDF is stored unaltered for
+    private, non-commercial reading.
+  exclusion_tests: []
+evidence:
+  - claim: The journal's pages link the CC BY-NC 4.0 licence (rel="license").
+    url: https://rctall.atu.ac.ir/issue_350_351.html
+  - claim: "Open access policy: articles are published under the terms of a Creative Commons License."
+    url: https://rctall.atu.ac.ir/page_367.html?lang=en
+  - claim: robots.txt allows everything (it disallows only BLEXBot).
+    url: https://rctall.atu.ac.ir/robots.txt
+last_verified: 2026-10-07

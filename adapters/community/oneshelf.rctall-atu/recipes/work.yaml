@@ -1,0 +1,18 @@
+# The issue page (the journal's own site, Sinaweb): the journal's name and the issue's volume, number and
+# season.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    issue: {xpath: "(//i[contains(@class, 'fa-bookmark')]/following-sibling::span)[1]/text()"}
+  fields:
+    title: {template: "پژوهش‌های ترجمه در زبان و ادبیات عربی — {issue}", required: true}
+    description: {css: "meta[name=description]::attr(content)", transforms: [trim]}
+    creator: {template: "پژوهش‌های ترجمه در زبان و ادبیات عربی (Allameh Tabataba’i University)"}
+    language: {template: "fa"}
+    content_type: {template: "paper"}

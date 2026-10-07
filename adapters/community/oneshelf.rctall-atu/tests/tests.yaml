@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: issue_350_351}
+  fixtures: [{url: 'https://rctall.atu.ac.ir/issue_350_351.html', file: fixtures/issue_350_351.html}]
+  expect:
+    first: {title: "پژوهش‌های ترجمه در زبان و ادبیات عربی — دوره 1، شماره 1، دی 1390", language: fa}
+- capability: catalog
+  inputs: {listing_key: issue_350_351}
+  fixtures: [{url: 'https://rctall.atu.ac.ir/issue_350_351.html', file: fixtures/issue_350_351.html}]
+  expect:
+    min_items: 8
+    complete: true
+    first: {unit_key: article_1949}
+- capability: downloads
+  inputs: {unit_key: article_1949}
+  fixtures: [{url: 'https://rctall.atu.ac.ir/article_1949.html', file: fixtures/article_1949.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://rctall.atu.ac.ir/article_1949_36ac8e558ac7690b6f44e2cb5ef93322.pdf', format: pdf}
