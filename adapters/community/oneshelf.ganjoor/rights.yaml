@@ -1,0 +1,37 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Ganjoor (گنجور) — https://ganjoor.net/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Ganjoor collects classical Persian poetry from free sources and publishes its whole collection as a free
+    database "so that other groups can use it to do similar work"; it excludes contemporary poets because
+    their work is under copyright. Its FAQ adds that it has not legally reviewed the freedom of the data
+    itself, since most texts come from printed editions that state nothing. The poems are centuries old; a
+    few poets died in the twentieth century (15 after 1930, 8 after 1955 — e.g. Shahriar 1988). A poem is
+    read only while its poet died before 1375 AH (about 1955), more than 70 years ago; later poets' poems are
+    listed but yield no text (test 4). The editions' editorial work (critical editions by modern scholars)
+    is not separately licensed; this adapter copies the poem text only, for personal reading.
+  exclusion_tests: [4]
+evidence:
+  - claim: Ganjoor publishes its collection as a free database so that others can use it to do similar work.
+    url: https://ganjoor.net/about
+  - claim: "Contemporary poets' works are under copyright and are not published on Ganjoor; Ganjoor has not independently reviewed the legal freedom of its data."
+    url: https://ganjoor.net/faq
+  - claim: Each poet carries a death year (deathYearInLHijri) in the API.
+    url: https://api.ganjoor.net/api/ganjoor/poets
+  - claim: api.ganjoor.net's robots.txt disallows nothing.
+    url: https://api.ganjoor.net/robots.txt
+last_verified: 2026-10-07

@@ -1,0 +1,20 @@
+# Ganjoor's poem search. Each hit names its poem's place ("حافظ » غزلیات » غزل شمارهٔ ۱", /hafez/ghazal/sh1);
+# the work is the collection that holds it (/hafez/ghazal), so several hits from one collection are one
+# result.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/api/ganjoor/poems/search?term={query:url}&poetId=0&catId=0&PageNumber=1&PageSize=50"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$[*]"}
+  fields:
+    listing_key: {json: "$.fullUrl", required: true, transforms: [{regex_extract: {pattern: '^(/[a-z0-9-]+(?:/[a-z0-9-]+)*)/[^/]+$', group: 1}}]}
+    title: {json: "$.fullTitle", required: true, transforms: [{regex_extract: {pattern: '^(.+) » [^»]+$', group: 1}}, trim]}
+    language: {template: "fa"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

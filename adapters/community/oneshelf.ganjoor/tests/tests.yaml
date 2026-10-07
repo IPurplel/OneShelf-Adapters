@@ -1,0 +1,58 @@
+# Fixtures are live API responses (2026-10-07). Case 4 is a poem by Shahriar (died 1988): no text.
+cases:
+- capability: search
+  inputs:
+    query: ساقی
+  fixtures:
+  - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=1&PageSize=50
+    file: fixtures/search-saqi.json
+  expect:
+    min_items: 5
+    complete: true
+    first:
+      listing_key: /roodaki/baghimande
+      title: رودکی » قصاید و قطعات
+- capability: work
+  inputs:
+    listing_key: /hafez/ghazal
+  fixtures:
+  - url: https://api.ganjoor.net/api/ganjoor/cat?url=%2Fhafez%2Fghazal&poems=false
+    file: fixtures/cat-hafez-ghazal.json
+  expect:
+    first:
+      title: حافظ » غزلیات
+      creator: حافظ شیرازی
+      language: fa
+- capability: catalog
+  inputs:
+    listing_key: /hafez/ghazal
+  fixtures:
+  - url: https://api.ganjoor.net/api/ganjoor/cat?url=%2Fhafez%2Fghazal&poems=true
+    file: fixtures/cat-hafez-ghazal-poems.json
+  expect:
+    min_items: 495
+    complete: true
+    first:
+      unit_key: '2130'
+      title: غزل شمارهٔ ۱
+- capability: reader
+  inputs:
+    unit_key: '2130'
+  fixtures:
+  - url: https://api.ganjoor.net/api/ganjoor/poem/2130?catInfo=true&catPoems=false&rhymes=false&recitations=false&images=false&songs=false&comments=false&verseDetails=false&navigation=false&relatedpoems=false
+    file: fixtures/poem-2130.json
+  expect:
+    min_items: 1
+    complete: true
+    first:
+      title: حافظ » غزلیات » غزل شمارهٔ ۱
+    min_text_chars: 300
+- capability: reader
+  inputs:
+    unit_key: '48848'
+  fixtures:
+  - url: https://api.ganjoor.net/api/ganjoor/poem/48848?catInfo=true&catPoems=false&rhymes=false&recitations=false&images=false&songs=false&comments=false&verseDetails=false&navigation=false&relatedpoems=false
+    file: fixtures/poem-48848.json
+  expect:
+    first:
+      html: null

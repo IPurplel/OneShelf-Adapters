@@ -1,0 +1,7 @@
+base_url: https://api.ganjoor.net
+# No url_patterns: works are reached through api.ganjoor.net, so a pasted ganjoor.net address would not be
+# recognised (OneShelf matches pasted addresses against an adapter's own domains).
+# api.ganjoor.net's robots.txt disallows nothing; ganjoor.net's only the account pages.
+rate_limit:
+  requests_per_minute: 30
+  concurrency: 1

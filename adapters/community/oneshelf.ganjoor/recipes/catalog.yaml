@@ -1,0 +1,18 @@
+# The collection's poems, in Ganjoor's order; a poem's key is Ganjoor's own poem id. A collection made only
+# of sub-collections has no poems of its own and so no units.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/ganjoor/cat?url={listing_key:url}&poems=true"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  items: {json: "$.cat.poems[*]"}
+  fields:
+    unit_key: {json: "$.id", required: true, transforms: [{regex_extract: {pattern: '^([1-9][0-9]*)$', group: 1}}]}
+    title: {json: "$.title", transforms: [trim]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

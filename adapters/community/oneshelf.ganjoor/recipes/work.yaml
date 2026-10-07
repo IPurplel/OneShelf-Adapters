@@ -1,0 +1,19 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/api/ganjoor/cat?url={listing_key:url}&poems=false"
+  headers: {Accept: application/json}
+response:
+  format: json
+extract:
+  values:
+    root: {json: "$.cat.ancestors[0].title"}
+    cat: {json: "$.cat.title"}
+  fields:
+    # "حافظ » غزلیات", as Ganjoor and search name it; a poet's top collection has no ancestor and is its title.
+    title: {template: "{root} » {cat}", required: true}
+    original_title: {json: "$.cat.title", transforms: [trim]}
+    creator: {json: "$.poet.name", transforms: [trim]}
+    description: {json: "$.poet.description", transforms: [trim]}
+    language: {template: "fa"}
+    content_type: {template: "book"}

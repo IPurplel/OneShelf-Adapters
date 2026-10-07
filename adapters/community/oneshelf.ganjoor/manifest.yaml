@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.ganjoor
+name: گنجور (Ganjoor)
+version: 0.1.0
+api: '1.2'
+description: >-
+  Ganjoor, the library of classical Persian poetry — Hafez, Saadi, Rumi, Ferdowsi, Khayyam and some 240
+  poets — read as text (plugin API 1.2), right to left. A work is one of a poet's collections as Ganjoor
+  divides them (Hafez's ghazals, Saadi's Golestan chapters …); its units are the poems, in Ganjoor's order.
+  Search finds poems through Ganjoor's search API and lists the collections they belong to. A collection
+  that only groups other collections (the Shahnameh's top level, a poet's main page) has no poems of its own
+  and no units; open one of its sub-collections. Poems by poets who died less than 70 years ago (Ganjoor
+  has a few, such as Shahriar) are listed but yield no text.
+publisher: OneShelf
+capabilities: [search, work, catalog, reader]
+network:
+  domains: [api.ganjoor.net]
+defaults:
+  language: fa
+  content_type: book
