@@ -1,0 +1,30 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: open_license
+rights_granularity: item
+license:
+  id: CC-BY-4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors and journal, via CyberLeninka — https://cyberleninka.ru/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    CyberLeninka places journals under licence agreements with their publishers, most of whom publish under
+    Creative Commons Attribution; each article page shows its licence as a badge ("CC BY"). An article has a
+    unit, and its text is read, only while its page carries that badge; an article without it has neither
+    (tests 3, 4, on a constructed page: no unlicensed article was reachable from allowed pages). The text
+    is CyberLeninka's recognised text of the article, stored unaltered for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: An article page with the "CC BY" Creative Commons badge (div.label-cc).
+    url: https://cyberleninka.ru/article/n/vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii
+  - claim: robots.txt disallows search, the API, the viewer and PDFs; article pages are allowed.
+    url: https://cyberleninka.ru/robots.txt
+last_verified: 2026-10-07

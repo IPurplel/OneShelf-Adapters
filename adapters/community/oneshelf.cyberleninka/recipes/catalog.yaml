@@ -1,0 +1,24 @@
+# An article is one Reading Unit (one_shot) — only while its page carries CyberLeninka's Creative Commons
+# badge ("CC BY", "CC BY-SA" …): the template joins the article's key with the badge and the pattern keeps
+# it only then.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/article/n/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {css: "div.label-cc::text"}
+  items: {css: "meta[name=citation_title]"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([a-z0-9-]+)\|\s*CC(?: BY(?:-[A-Z]{2})*| 0| ?0)\s*$', group: 1}}]
+    title: {css: "meta[name=citation_title]::attr(content)", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

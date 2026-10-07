@@ -1,0 +1,23 @@
+# The article's text, read as text (plugin API 1.2): CyberLeninka's article body (div.ocr) — not the site's
+# panels, keywords or advertising slot (an empty div, removed by Core's sanitiser). Only while the page
+# carries the Creative Commons badge.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/article/n/{unit_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {css: "div.label-cc::text"}
+    heading: {css: "meta[name=citation_title]::attr(content)"}
+  items: {css: "div.ocr"}
+  fields:
+    html:
+      template: "{item}|{licence}"
+      transforms: [{regex_extract: {pattern: '^((?s:.*))\|\s*CC(?: BY(?:-[A-Z]{2})*| 0| ?0)\s*$', group: 1}}]
+    title: {template: "{heading}"}
+pagination:
+  mode: none
+  complete_when: single_response

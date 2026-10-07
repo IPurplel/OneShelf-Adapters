@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.cyberleninka
+name: CyberLeninka
+version: 0.1.0
+api: '1.2'
+description: >-
+  CyberLeninka (КиберЛенинка), the Russian open-access library of scholarly articles. An article is a work
+  with one unit, read as text (plugin API 1.2): the article's text as CyberLeninka publishes it (recognised
+  from the PDF, so its layout is plain). An article is read only while its page marks it with a Creative
+  Commons licence (the "CC BY" badge). Open an article by pasting its CyberLeninka address; CyberLeninka's
+  search, API and PDFs are robots-disallowed.
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [cyberleninka.ru]
+defaults:
+  language: ru
+  content_type: paper

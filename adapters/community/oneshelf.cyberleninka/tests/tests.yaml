@@ -1,0 +1,34 @@
+# article-vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii.html is the live page (2026-10-07). article-constructed-without-licence.html is the same page
+# with its Creative Commons badge removed: it tests the gate.
+cases:
+- capability: work
+  inputs: {listing_key: vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii}
+  fixtures: [{url: 'https://cyberleninka.ru/article/n/vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii', file: fixtures/article-vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii.html}]
+  expect:
+    first: {title: Возможные пути развития открытой науки в России, language: ru}
+- capability: catalog
+  inputs: {listing_key: vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii}
+  fixtures: [{url: 'https://cyberleninka.ru/article/n/vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii', file: fixtures/article-vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii}
+- capability: reader
+  inputs: {unit_key: vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii}
+  fixtures: [{url: 'https://cyberleninka.ru/article/n/vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii', file: fixtures/article-vozmozhnye-puti-razvitiya-otkrytoy-nauki-v-rossii.html}]
+  expect:
+    min_items: 1
+    complete: true
+    text_contains: КиберЛенинка
+# 3: an article without the Creative Commons badge has no unit …
+- capability: catalog
+  inputs: {listing_key: unlicensed}
+  fixtures: [{url: 'https://cyberleninka.ru/article/n/unlicensed', file: fixtures/article-constructed-without-licence.html}]
+  expect:
+    first: {unit_key: null}
+# 4: … and no text.
+- capability: reader
+  inputs: {unit_key: unlicensed}
+  fixtures: [{url: 'https://cyberleninka.ru/article/n/unlicensed', file: fixtures/article-constructed-without-licence.html}]
+  expect:
+    first: {html: null}

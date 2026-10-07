@@ -1,0 +1,14 @@
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/article/n/{listing_key:path}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "meta[name=citation_title]::attr(content)", required: true, transforms: [trim]}
+    creator: {css: "meta[name=citation_author]::attr(content)", transforms: [trim]}
+    description: {css: "meta[name=description]::attr(content)", transforms: [trim]}
+    language: {template: "ru"}
+    content_type: {template: "paper"}
