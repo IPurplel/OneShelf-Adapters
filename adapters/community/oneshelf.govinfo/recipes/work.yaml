@@ -1,0 +1,18 @@
+# The package's MODS record. An unknown package answers with an HTML "Page Not Found" page, which has no
+# MODS title, so it opens nothing.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/metadata/pkg/{listing_key:path}/mods.xml"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//mods/titleinfo/title)[1]/text()", required: true, transforms: [trim]}
+    creator: {xpath: "(//mods/name[@type = 'corporate']/namepart)[1]/text()", transforms: [trim]}
+    description: {xpath: "(//mods/abstract)[1]/text()", transforms: [trim]}
+    language:
+      xpath: "(//mods/language/languageterm[@type = 'code'])[1]/text()"
+      transforms: [trim, {regex_replace: {pattern: '^eng$', replacement: en}}, {regex_replace: {pattern: '^spa$', replacement: es}}]
+    content_type: {template: "book"}

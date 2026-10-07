@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.govinfo
+name: GovInfo (U.S. Government Publishing Office)
+version: 0.1.0
+api: '1.0'
+description: >-
+  Official publications of the U.S. federal government from GovInfo, the Government Publishing Office's
+  repository: the Economic Report of the President, the Budget of the U.S. Government, GAO reports, the
+  Government Manual, congressional committee reports, United States Reports, public laws and the Statutes
+  at Large — works of the U.S. Government, in the public domain (17 U.S.C. § 105). A package is a work with
+  one unit, downloaded as GovInfo's PDF. Collections that commonly reprint third-party material (hearings,
+  committee prints, general publications) are not offered. Open a package by pasting its GovInfo address;
+  GovInfo's search is robots-disallowed and its API needs a key.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.govinfo.gov]
+defaults:
+  language: en
+  content_type: book

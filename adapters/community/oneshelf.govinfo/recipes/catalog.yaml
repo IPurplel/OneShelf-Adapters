@@ -1,0 +1,25 @@
+# A package is one Reading Unit (one_shot) — only for the collections of works authored by the U.S.
+# Government (ERP, BUDGET, GAOREPORTS, GOVMAN, CRPT, USREPORTS, PLAW, STATUTE), and only while its MODS record
+# names the package's PDF. Hearings, committee prints and general publications may reprint copyrighted
+# third-party material and have no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/metadata/pkg/{listing_key:path}/mods.xml"
+  headers: {Accept: application/xml}
+response:
+  format: html
+extract:
+  values:
+    pdf: {xpath: "(//mods/location/url[@displaylabel = 'PDF rendition'])[1]/text()"}
+  items: {xpath: "(//mods/titleinfo/title)[1]"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{pdf}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^((?:ERP|BUDGET|GAOREPORTS|GOVMAN|CRPT|USREPORTS|PLAW|STATUTE)-[A-Za-z0-9-]+)\|https://www\.govinfo\.gov/content/pkg/(?:ERP|BUDGET|GAOREPORTS|GOVMAN|CRPT|USREPORTS|PLAW|STATUTE)-[A-Za-z0-9-]+/pdf/[A-Za-z0-9-]+\.pdf$', group: 1}}]
+    title: {xpath: "./text()", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,10 @@
+base_url: https://www.govinfo.gov
+url_patterns:
+  - pattern: '^https://www\.govinfo\.gov/(?:app/details|content/pkg|metadata/pkg)/([A-Z]+-[A-Za-z0-9-]+)(?:[/?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows /search/ and /app/search/; package metadata (/metadata/pkg/<id>/mods.xml) and content
+# (/content/pkg/<id>/pdf/<id>.pdf) are allowed. The GovInfo API needs an api.data.gov key and is not used.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

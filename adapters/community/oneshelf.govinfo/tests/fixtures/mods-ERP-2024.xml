@@ -1,0 +1,2510 @@
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" ID="P0b002ee1c5c35ce2">
+    <name type="corporate">
+         <namePart>United States Government Publishing Office</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+              <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+        </role>
+         <role>
+              <roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+              <roleTerm authority="marcrelator" type="code">dst</roleTerm>
+        </role>
+    </name>
+    <name type="corporate">
+         <namePart>United States</namePart>
+         <namePart>Executive Office of the President</namePart>
+         <namePart>Council of Economic Advisers</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">author</roleTerm>
+              <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+         <description>Government Organization</description>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+         <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    </language>
+    <extension>
+         <collectionCode>ERP</collectionCode>
+         <category>Budget and Presidential Materials</category>
+         <waisDatabaseName>2024_erp</waisDatabaseName>
+         <branch>executive</branch>
+         <dateIngested>2024-03-20</dateIngested>
+    </extension>
+    <originInfo>
+         <publisher>U.S. Government Publishing Office</publisher>
+         <dateIssued encoding="w3cdtf">2024-03-01</dateIssued>
+         <issuance>continuing</issuance>
+         <frequency authority="marcfrequency">annual</frequency>
+    </originInfo>
+    <physicalDescription>
+         <note type="source content type">deposited</note>
+         <digitalOrigin>born digital</digitalOrigin>
+         <extent>487 digital object pages</extent>
+    </physicalDescription>
+    <classification authority="sudocs">PR JRB.9:</classification>
+    <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024</identifier>
+    <identifier type="local">P0b002ee1c5c35ce2</identifier>
+    <identifier type="issn">0193-1180</identifier>
+    <identifier type="ILS system id">000567953</identifier>
+    <identifier type="former package identifier">f:app_a1.wais</identifier>
+    <recordInfo>
+         <recordContentSource authority="marcorg">DGPO</recordContentSource>
+         <recordCreationDate encoding="w3cdtf">2024-03-20</recordCreationDate>
+         <recordChangeDate encoding="w3cdtf">2025-04-03</recordChangeDate>
+         <recordIdentifier source="DGPO">ERP-2024</recordIdentifier>
+         <recordOrigin>machine generated</recordOrigin>
+         <languageOfCataloging>
+              <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    <accessCondition type="GPO scope determination">fdlp</accessCondition>
+    <extension>
+         <docClass>HDOC</docClass>
+         <accessId>ERP-2024</accessId>
+         <congress>118</congress>
+         <number>95</number>
+         <president id="JRB" number="46" party="D" yearsInOffice="2021-2025">
+                                
+              <name type="authority-lnf">Biden, Joseph R., Jr.</name>
+                                
+              <name type="authority-fnf">Joseph R. Biden Jr.</name>
+                                
+              <name type="authority-other">Joe Biden</name>
+                                
+              <name type="authority-other">Joseph Biden</name>
+                                
+              <name type="authority-other">Joseph Robinette Biden</name>
+                            
+        </president>
+         <isCurrentEdition>false</isCurrentEdition>
+         <editionId>ERP</editionId>
+    </extension>
+    <titleInfo>
+         <title>Economic Report of the President (2024)</title>
+    </titleInfo>
+    <location>
+         <url displayLabel="PDF rendition" access="raw object">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024.pdf</url>
+    </location>
+    <identifier type="preferred citation">Econ. Rept. 2024</identifier>
+    <identifier type="preferred citation">H. Doc. 118-95</identifier>
+    <name type="personal">
+         <namePart>United States</namePart>
+         <namePart>Joseph R. Biden Jr.</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">author</roleTerm>
+              <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+         <description>President of the United States</description>
+    </name>
+    <relatedItem type="constituent" ID="id-app_a1" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-frontmatter/mods.xml">
+         <titleInfo>
+              <title>Economic Report of the President</title>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-frontmatter.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b4</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-frontmatter.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d8</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-frontmatter</identifier>
+         <identifier type="former granule identifier">f:app_a1.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-frontmatter</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-frontmatter.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-frontmatter.htm</url>
+        </location>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Economic Report of the President; </searchTitle>
+              <granuleClass>FRONTMATTER</granuleClass>
+              <accessId>ERP-2024-frontmatter</accessId>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-app_a2" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-toc/mods.xml">
+         <titleInfo>
+              <title>Table of Contents</title>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-toc.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-toc.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e4</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-toc</identifier>
+         <identifier type="former granule identifier">f:app_a2.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-toc</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-toc.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-toc.htm</url>
+        </location>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table of Contents; </searchTitle>
+              <granuleClass>TOC</granuleClass>
+              <accessId>ERP-2024-toc</accessId>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-app_b1" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-appendixB/mods.xml">
+         <titleInfo>
+              <title>Statistical Tables Relating To Income, Employment, And Production</title>
+              <partName>Appendix B</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-appendixB.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-appendixB.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e6</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-appendixB</identifier>
+         <identifier type="former granule identifier">f:app_b1.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-appendixB</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-appendixB.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-appendixB.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Appendix B</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Appendix B: Statistical Tables Relating To Income, Employment, And Production; </searchTitle>
+              <granuleClass>APPENDIX</granuleClass>
+              <accessId>ERP-2024-appendixB</accessId>
+              <heading>Appendix B</heading>
+              <granuleNumber>B</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c1" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter1/mods.xml">
+         <titleInfo>
+              <title>The Benefits of Full Employment</title>
+              <partName>Chapter 1</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter1.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218af</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter1.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218dd</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter1</identifier>
+         <identifier type="former granule identifier">f:erp_c1.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter1</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter1.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter1.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 1</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 1: The Benefits of Full Employment; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter1</accessId>
+              <heading>Chapter 1</heading>
+              <granuleNumber>1</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c2" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter2/mods.xml">
+         <titleInfo>
+              <title>The Year in Review and the Years Ahead</title>
+              <partName>Chapter 2</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter2.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter2.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d7</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter2</identifier>
+         <identifier type="former granule identifier">f:erp_c2.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter2</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter2.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter2.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 2</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 2: The Year in Review and the Years Ahead; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter2</accessId>
+              <heading>Chapter 2</heading>
+              <granuleNumber>2</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c3" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter3/mods.xml">
+         <titleInfo>
+              <title>Population, Aging, and the Economy</title>
+              <partName>Chapter 3</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter3.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter3.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218cd</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter3</identifier>
+         <identifier type="former granule identifier">f:erp_c3.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter3</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter3.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter3.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 3</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 3: Population, Aging, and the Economy; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter3</accessId>
+              <heading>Chapter 3</heading>
+              <granuleNumber>3</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c4" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter4/mods.xml">
+         <titleInfo>
+              <title>Increasing the Supply of Affordable Housing: Economic Insights and Federal Policy Solutions</title>
+              <partName>Chapter 4</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter4.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188e</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter4.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218db</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter4</identifier>
+         <identifier type="former granule identifier">f:erp_c4.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter4</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter4.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter4.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 4</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 4: Increasing the Supply of Affordable Housing: Economic Insights and Federal Policy Solutions; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter4</accessId>
+              <heading>Chapter 4</heading>
+              <granuleNumber>4</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c5" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter5/mods.xml">
+         <titleInfo>
+              <title>International Trade and Investment Flows</title>
+              <partName>Chapter 5</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter5.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721890</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter5.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218df</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter5</identifier>
+         <identifier type="former granule identifier">f:erp_c5.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter5</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter5.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter5.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 5</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 5: International Trade and Investment Flows; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter5</accessId>
+              <heading>Chapter 5</heading>
+              <granuleNumber>5</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c6" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter6/mods.xml">
+         <titleInfo>
+              <title>Accelerating the Clean Energy Transition</title>
+              <partName>Chapter 6</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter6.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188f</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter6.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190e</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter6</identifier>
+         <identifier type="former granule identifier">f:erp_c6.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter6</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter6.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter6.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 6</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 6: Accelerating the Clean Energy Transition; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter6</accessId>
+              <heading>Chapter 6</heading>
+              <granuleNumber>6</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c7" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-chapter7/mods.xml">
+         <titleInfo>
+              <title>An Economic Framework for Understanding Artificial Intelligence</title>
+              <partName>Chapter 7</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter7.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721893</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter7.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721917</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter7</identifier>
+         <identifier type="former granule identifier">f:erp_c7.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-chapter7</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-chapter7.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-chapter7.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Chapter 7</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Chapter 7: An Economic Framework for Understanding Artificial Intelligence; </searchTitle>
+              <granuleClass>CHAPTER</granuleClass>
+              <accessId>ERP-2024-chapter7</accessId>
+              <heading>Chapter 7</heading>
+              <granuleNumber>7</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c8" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-other/mods.xml">
+         <titleInfo>
+              <title>References</title>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-other.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721892</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-other.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218fc</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-other</identifier>
+         <identifier type="former granule identifier">f:erp_c8.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-other</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-other.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-other.htm</url>
+        </location>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); References; </searchTitle>
+              <granuleClass>OTHER</granuleClass>
+              <accessId>ERP-2024-other</accessId>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_c9" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-appendixA/mods.xml">
+         <titleInfo>
+              <title>Report to the President on the Activities of the Council of Economic Advisers during 2023</title>
+              <partName>Appendix A</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-appendixA.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721896</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-appendixA.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218fe</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-appendixA</identifier>
+         <identifier type="former granule identifier">f:erp_c9.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-appendixA</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-appendixA.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-appendixA.htm</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Appendix A</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Appendix A: Report to the President on the Activities of the Council of Economic Advisers during 2023; </searchTitle>
+              <granuleClass>APPENDIX</granuleClass>
+              <accessId>ERP-2024-appendixA</accessId>
+              <heading>Appendix A</heading>
+              <granuleNumber>A</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b1" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table1/mods.xml">
+         <titleInfo>
+              <title>Percent changes in real gross domestic product, 1973-2023</title>
+              <partName>Table B-1</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table1.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table1.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ec</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table1.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721935</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table1</identifier>
+         <identifier type="former granule identifier">f:erp_b1.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table1</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table1.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table1.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table1.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-1</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-1: Percent changes in real gross domestic product, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table1</accessId>
+              <heading>Table B-1</heading>
+              <granuleNumber>1</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b2" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table2/mods.xml">
+         <titleInfo>
+              <title>Contributions to percent change in real gross domestic product, 1973 - 2023</title>
+              <partName>Table B-2</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table2.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189d</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table2.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721906</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table2.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721952</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table2</identifier>
+         <identifier type="former granule identifier">f:erp_b2.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table2</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table2.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table2.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table2.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-2</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-2: Contributions to percent change in real gross domestic product, 1973 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table2</accessId>
+              <heading>Table B-2</heading>
+              <granuleNumber>2</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b3" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table3/mods.xml">
+         <titleInfo>
+              <title>Gross domestic product, 2008 - 2023</title>
+              <partName>Table B-3</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table3.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17217d6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table3.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190d</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table3.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721923</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table3</identifier>
+         <identifier type="former granule identifier">f:erp_b3.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table3</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table3.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table3.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table3.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-3</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-3: Gross domestic product, 2008 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table3</accessId>
+              <heading>Table B-3</heading>
+              <granuleNumber>3</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b4" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table4/mods.xml">
+         <titleInfo>
+              <title>Percentage shares of gross domestic product, 1973 - 2023</title>
+              <partName>Table B-4</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table4.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table4.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721914</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table4.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721941</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table4</identifier>
+         <identifier type="former granule identifier">f:erp_b4.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table4</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table4.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table4.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table4.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-4</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-4: Percentage shares of gross domestic product, 1973 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table4</accessId>
+              <heading>Table B-4</heading>
+              <granuleNumber>4</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b5" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table5/mods.xml">
+         <titleInfo>
+              <title>Chain-type price indexes for gross domestic product, 1973 - 2023</title>
+              <partName>Table B-5</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table5.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table5.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table5.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721927</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table5</identifier>
+         <identifier type="former granule identifier">f:erp_b5.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table5</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table5.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table5.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table5.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-5</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-5: Chain-type price indexes for gross domestic product, 1973 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table5</accessId>
+              <heading>Table B-5</heading>
+              <granuleNumber>5</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b6" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table6/mods.xml">
+         <titleInfo>
+              <title>Gross value added by sector, 1973 - 2023</title>
+              <partName>Table B-6</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table6.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table6.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table6.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721934</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table6</identifier>
+         <identifier type="former granule identifier">f:erp_b6.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table6</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table6.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table6.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table6.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-6</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-6: Gross value added by sector, 1973 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table6</accessId>
+              <heading>Table B-6</heading>
+              <granuleNumber>6</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b7" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table7/mods.xml">
+         <titleInfo>
+              <title>Real gross value added by sector, 1973 - 2023</title>
+              <partName>Table B-7</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table7.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ae</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table7.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table7.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721950</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table7</identifier>
+         <identifier type="former granule identifier">f:erp_b7.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table7</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table7.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table7.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table7.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-7</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-7: Real gross value added by sector, 1973 - 2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table7</accessId>
+              <heading>Table B-7</heading>
+              <granuleNumber>7</granuleNumber>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b8" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table8/mods.xml">
+         <titleInfo>
+              <title>Gross domestic product (GDP) by industry, value added, in current dollars and as a percentage of GDP, 2017-2023</title>
+              <partName>Table B-8</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table8.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ad</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table8.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ef</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table8.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194f</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table8</identifier>
+         <identifier type="former granule identifier">f:erp_b8.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table8</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table8.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table8.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table8.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-8</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-8: Gross domestic product (GDP) by industry, value added, in current dollars and as a percentage of GDP, 2017-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table8</accessId>
+              <heading>Table B-8</heading>
+              <granuleNumber>8</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b9" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table9/mods.xml">
+         <titleInfo>
+              <title>Real gross domestic product by industry, value added, and percent changes, 2017-2023</title>
+              <partName>Table B-9</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table9.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table9.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table9.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721951</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table9</identifier>
+         <identifier type="former granule identifier">f:erp_b9.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table9</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table9.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table9.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table9.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-9</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-9: Real gross domestic product by industry, value added, and percent changes, 2017-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table9</accessId>
+              <heading>Table B-9</heading>
+              <granuleNumber>9</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b10" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table10/mods.xml">
+         <titleInfo>
+              <title>Personal consumption expenditures, 1973-2023</title>
+              <partName>Table B-10</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table10.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721891</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table10.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table10.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721939</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table10</identifier>
+         <identifier type="former granule identifier">f:erp_b10.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table10</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table10.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table10.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table10.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-10</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-10: Personal consumption expenditures, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table10</accessId>
+              <heading>Table B-10</heading>
+              <granuleNumber>10</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b11" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table11/mods.xml">
+         <titleInfo>
+              <title>Real personal consumption expenditures, 2007-2023</title>
+              <partName>Table B-11</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table11.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721895</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table11.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721913</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table11.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721938</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table11</identifier>
+         <identifier type="former granule identifier">f:erp_b11.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table11</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table11.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table11.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table11.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-11</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-11: Real personal consumption expenditures, 2007-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table11</accessId>
+              <heading>Table B-11</heading>
+              <granuleNumber>11</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b12" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table12/mods.xml">
+         <titleInfo>
+              <title>Private fixed investment by type, 1973-2023</title>
+              <partName>Table B-12</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table12.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721894</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table12.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721907</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table12.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193b</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table12</identifier>
+         <identifier type="former granule identifier">f:erp_b12.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table12</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table12.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table12.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table12.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-12</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-12: Private fixed investment by type, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table12</accessId>
+              <heading>Table B-12</heading>
+              <granuleNumber>12</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b13" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table13/mods.xml">
+         <titleInfo>
+              <title>Real private fixed investment by type, 2007-2023</title>
+              <partName>Table B-13</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table13.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721898</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table13.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218dc</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table13.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193a</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table13</identifier>
+         <identifier type="former granule identifier">f:erp_b13.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table13</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table13.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table13.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table13.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-13</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-13: Real private fixed investment by type, 2007-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table13</accessId>
+              <heading>Table B-13</heading>
+              <granuleNumber>13</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b14" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table14/mods.xml">
+         <titleInfo>
+              <title>Foreign transactions in the national income and product accounts, 1973-2023</title>
+              <partName>Table B-14</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table14.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721897</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table14.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d4</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table14.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193d</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table14</identifier>
+         <identifier type="former granule identifier">f:erp_b14.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table14</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table14.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table14.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table14.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-14</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-14: Foreign transactions in the national income and product accounts, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table14</accessId>
+              <heading>Table B-14</heading>
+              <granuleNumber>14</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b15" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table15/mods.xml">
+         <titleInfo>
+              <title>Real exports and imports of goods and services, 2007-2023</title>
+              <partName>Table B-15</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table15.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721899</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table15.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table15.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193c</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table15</identifier>
+         <identifier type="former granule identifier">f:erp_b15.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table15</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table15.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table15.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table15.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-15</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-15: Real exports and imports of goods and services, 2007-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table15</accessId>
+              <heading>Table B-15</heading>
+              <granuleNumber>15</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b16" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table16/mods.xml">
+         <titleInfo>
+              <title>Sources of personal income, 1973-2023</title>
+              <partName>Table B-16</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table16.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189a</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table16.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ea</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table16.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193f</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table16</identifier>
+         <identifier type="former granule identifier">f:erp_b16.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table16</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table16.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table16.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table16.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-16</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-16: Sources of personal income, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table16</accessId>
+              <heading>Table B-16</heading>
+              <granuleNumber>16</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b17" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table17/mods.xml">
+         <titleInfo>
+              <title>Disposition of personal income, 1973-2023</title>
+              <partName>Table B-17</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table17.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189c</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table17.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721909</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table17.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172193e</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table17</identifier>
+         <identifier type="former granule identifier">f:erp_b17.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table17</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table17.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table17.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table17.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-17</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-17: Disposition of personal income, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table17</accessId>
+              <heading>Table B-17</heading>
+              <granuleNumber>17</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b18" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table18/mods.xml">
+         <titleInfo>
+              <title>Total and per capita disposable personal income and personal consumption expenditures, and per capita gross domestic product, in current and real dollars, 1973-2023</title>
+              <partName>Table B-18</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table18.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189b</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table18.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721910</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table18.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721940</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table18</identifier>
+         <identifier type="former granule identifier">f:erp_b18.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table18</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table18.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table18.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table18.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-18</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-18: Total and per capita disposable personal income and personal consumption expenditures, and per capita gross domestic product, in current and real dollars, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table18</accessId>
+              <heading>Table B-18</heading>
+              <granuleNumber>18</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b19" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table19/mods.xml">
+         <titleInfo>
+              <title>Gross saving and investment, 1973-2023</title>
+              <partName>Table B-19</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table19.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189e</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table19.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721916</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table19.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721953</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table19</identifier>
+         <identifier type="former granule identifier">f:erp_b19.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table19</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table19.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table19.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table19.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-19</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-19: Gross saving and investment, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table19</accessId>
+              <heading>Table B-19</heading>
+              <granuleNumber>19</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b20" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table20/mods.xml">
+         <titleInfo>
+              <title>Median money income (in 2023 dollars) and poverty status of families and people, by race, 2014-2022</title>
+              <partName>Table B-20</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table20.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172189f</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table20.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218eb</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table20.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721955</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table20</identifier>
+         <identifier type="former granule identifier">f:erp_b20.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table20</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table20.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table20.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table20.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-20</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-20: Median money income (in 2023 dollars) and poverty status of families and people, by race, 2014-2022; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table20</accessId>
+              <heading>Table B-20</heading>
+              <granuleNumber>20</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b21" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table21/mods.xml">
+         <titleInfo>
+              <title>Real farm income, 1957-2024</title>
+              <partName>Table B-21</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table21.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table21.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218de</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table21.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721954</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table21</identifier>
+         <identifier type="former granule identifier">f:erp_b21.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table21</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table21.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table21.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table21.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-21</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-21: Real farm income, 1957-2024; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table21</accessId>
+              <heading>Table B-21</heading>
+              <granuleNumber>21</granuleNumber>
+              <tableGroup>National Income or Expenditure</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b22" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table22/mods.xml">
+         <titleInfo>
+              <title>Civilian labor force, 1929-2023</title>
+              <partName>Table B-22</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table22.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table22.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table22.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721957</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table22</identifier>
+         <identifier type="former granule identifier">f:erp_b22.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table22</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table22.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table22.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table22.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-22</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-22: Civilian labor force, 1929-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table22</accessId>
+              <heading>Table B-22</heading>
+              <granuleNumber>22</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b23" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table23/mods.xml">
+         <titleInfo>
+              <title>Civilian employment by sex, age, and demographic characteristic, 1978-2023</title>
+              <partName>Table B-23</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table23.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table23.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table23.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721956</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table23</identifier>
+         <identifier type="former granule identifier">f:erp_b23.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table23</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table23.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table23.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table23.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-23</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-23: Civilian employment by sex, age, and demographic characteristic, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table23</accessId>
+              <heading>Table B-23</heading>
+              <granuleNumber>23</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b24" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table24/mods.xml">
+         <titleInfo>
+              <title>Unemployment by sex, age, and demographic characteristic, 1978-2023</title>
+              <partName>Table B-24</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table24.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table24.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190f</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table24.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191a</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table24</identifier>
+         <identifier type="former granule identifier">f:erp_b24.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table24</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table24.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table24.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table24.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-24</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-24: Unemployment by sex, age, and demographic characteristic, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table24</accessId>
+              <heading>Table B-24</heading>
+              <granuleNumber>24</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b25" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table25/mods.xml">
+         <titleInfo>
+              <title>Civilian labor force participation rate, 1978-2023</title>
+              <partName>Table B-25</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table25.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table25.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190c</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table25.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721919</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table25</identifier>
+         <identifier type="former granule identifier">f:erp_b25.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table25</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table25.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table25.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table25.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-25</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-25: Civilian labor force participation rate, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table25</accessId>
+              <heading>Table B-25</heading>
+              <granuleNumber>25</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b26" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table26/mods.xml">
+         <titleInfo>
+              <title>Civilian employment/population ratio, 1978-2023</title>
+              <partName>Table B-26</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table26.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ca</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table26.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721902</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table26.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191d</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table26</identifier>
+         <identifier type="former granule identifier">f:erp_b26.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table26</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table26.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table26.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table26.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-26</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-26: Civilian employment/population ratio, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table26</accessId>
+              <heading>Table B-26</heading>
+              <granuleNumber>26</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b27" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table27/mods.xml">
+         <titleInfo>
+              <title>Civilian unemployment rate, 1978-2023</title>
+              <partName>Table B-27</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table27.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table27.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218fa</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table27.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191c</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table27</identifier>
+         <identifier type="former granule identifier">f:erp_b27.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table27</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table27.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table27.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table27.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-27</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-27: Civilian unemployment rate, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table27</accessId>
+              <heading>Table B-27</heading>
+              <granuleNumber>27</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b28" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table28/mods.xml">
+         <titleInfo>
+              <title>Unemployment by duration and reason, 1978-2023</title>
+              <partName>Table B-28</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table28.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218cc</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table28.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table28.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191f</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table28</identifier>
+         <identifier type="former granule identifier">f:erp_b28.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table28</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table28.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table28.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table28.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-28</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-28: Unemployment by duration and reason, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table28</accessId>
+              <heading>Table B-28</heading>
+              <granuleNumber>28</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b29" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table29/mods.xml">
+         <titleInfo>
+              <title>Employees on nonagricultural payrolls, by major industry, 1978-2023</title>
+              <partName>Table B-29</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table29.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218cb</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table29.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ff</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table29.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191e</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table29</identifier>
+         <identifier type="former granule identifier">f:erp_b29.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table29</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table29.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table29.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table29.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-29</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-29: Employees on nonagricultural payrolls, by major industry, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table29</accessId>
+              <heading>Table B-29</heading>
+              <granuleNumber>29</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b30" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table30/mods.xml">
+         <titleInfo>
+              <title>Hours and earnings in private nonagricultural industries, 1978-2023</title>
+              <partName>Table B-30</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table30.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17217d5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table30.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table30.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721922</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table30</identifier>
+         <identifier type="former granule identifier">f:erp_b30.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table30</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table30.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table30.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table30.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-30</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-30: Hours and earnings in private nonagricultural industries, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table30</accessId>
+              <heading>Table B-30</heading>
+              <granuleNumber>30</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b31" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table31/mods.xml">
+         <titleInfo>
+              <title>Employment cost index, private industry, 2006-2023</title>
+              <partName>Table B-31</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table31.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17217d8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table31.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table31.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721926</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table31</identifier>
+         <identifier type="former granule identifier">f:erp_b31.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table31</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table31.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table31.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table31.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-31</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-31: Employment cost index, private industry, 2006-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table31</accessId>
+              <heading>Table B-31</heading>
+              <granuleNumber>31</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b32" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table32/mods.xml">
+         <titleInfo>
+              <title>Productivity and related data, business and nonfarm business sectors, 1973-2023</title>
+              <partName>Table B-32</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table32.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17217d7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table32.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table32.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721924</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table32</identifier>
+         <identifier type="former granule identifier">f:erp_b32.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table32</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table32.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table32.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table32.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-32</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-32: Productivity and related data, business and nonfarm business sectors, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table32</accessId>
+              <heading>Table B-32</heading>
+              <granuleNumber>32</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b33" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table33/mods.xml">
+         <titleInfo>
+              <title>Changes in productivity and related data, business and nonfarm business sectors, 1973-2023</title>
+              <partName>Table B-33</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table33.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721889</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table33.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e9</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table33.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721949</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table33</identifier>
+         <identifier type="former granule identifier">f:erp_b33.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table33</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table33.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table33.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table33.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-33</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-33: Changes in productivity and related data, business and nonfarm business sectors, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table33</accessId>
+              <heading>Table B-33</heading>
+              <granuleNumber>33</granuleNumber>
+              <tableGroup>Production and Business Activity</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b34" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table34/mods.xml">
+         <titleInfo>
+              <title>Industrial production indexes, major industry divisions, 1978-2023</title>
+              <partName>Table B-34</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table34.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d1721888</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table34.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721905</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table34.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194b</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table34</identifier>
+         <identifier type="former granule identifier">f:erp_b34.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table34</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table34.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table34.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table34.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-34</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-34: Industrial production indexes, major industry divisions, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table34</accessId>
+              <heading>Table B-34</heading>
+              <granuleNumber>34</granuleNumber>
+              <tableGroup>Production and Business Activity</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b35" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table35/mods.xml">
+         <titleInfo>
+              <title>Capacity utilization rates, 1978-2023</title>
+              <partName>Table B-35</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table35.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188b</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table35.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721901</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table35.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194a</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table35</identifier>
+         <identifier type="former granule identifier">f:erp_b35.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table35</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table35.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table35.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table35.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-35</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-35: Capacity utilization rates, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table35</accessId>
+              <heading>Table B-35</heading>
+              <granuleNumber>35</granuleNumber>
+              <tableGroup>Labor Market Indicators</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b36" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table36/mods.xml">
+         <titleInfo>
+              <title>New private housing units started, authorized, and completed and houses sold, 1978-2023</title>
+              <partName>Table B-36</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table36.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188a</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table36.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table36.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194d</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table36</identifier>
+         <identifier type="former granule identifier">f:erp_b36.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table36</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table36.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table36.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table36.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-36</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-36: New private housing units started, authorized, and completed and houses sold, 1978-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table36</accessId>
+              <heading>Table B-36</heading>
+              <granuleNumber>36</granuleNumber>
+              <tableGroup>Production and Business Activity</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b37" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table37/mods.xml">
+         <titleInfo>
+              <title>Manufacturing and trade sales and inventories, 1981-2023</title>
+              <partName>Table B-37</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table37.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188d</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table37.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721912</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table37.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194c</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table37</identifier>
+         <identifier type="former granule identifier">f:erp_b37.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table37</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table37.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table37.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table37.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-37</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-37: Manufacturing and trade sales and inventories, 1981-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table37</accessId>
+              <heading>Table B-37</heading>
+              <granuleNumber>37</granuleNumber>
+              <tableGroup>Production and Business Activity</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b38" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table38/mods.xml">
+         <titleInfo>
+              <title>Changes in consumer price indexes, 1981-2023</title>
+              <partName>Table B-38</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table38.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d172188c</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table38.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190b</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table38.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172194e</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table38</identifier>
+         <identifier type="former granule identifier">f:erp_b38.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table38</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table38.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table38.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table38.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-38</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-38: Changes in consumer price indexes, 1981-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table38</accessId>
+              <heading>Table B-38</heading>
+              <granuleNumber>38</granuleNumber>
+              <tableGroup>Prices</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b39" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table39/mods.xml">
+         <titleInfo>
+              <title>Price indexes for personal consumption expenditures, and percent changes, 1973-2023</title>
+              <partName>Table B-39</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table39.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table39.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table39.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721942</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table39</identifier>
+         <identifier type="former granule identifier">f:erp_b39.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table39</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table39.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table39.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table39.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-39</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-39: Price indexes for personal consumption expenditures, and percent changes, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table39</accessId>
+              <heading>Table B-39</heading>
+              <granuleNumber>39</granuleNumber>
+              <tableGroup>Prices</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b40" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table40/mods.xml">
+         <titleInfo>
+              <title>Money stock and debt measures, 1986-2023</title>
+              <partName>Table B-40</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table40.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218b8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table40.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table40.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721944</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table40</identifier>
+         <identifier type="former granule identifier">f:erp_b40.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table40</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table40.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table40.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table40.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-40</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-40: Money stock and debt measures, 1986-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table40</accessId>
+              <heading>Table B-40</heading>
+              <granuleNumber>40</granuleNumber>
+              <tableGroup>Money Stock, Credit, and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b41" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table41/mods.xml">
+         <titleInfo>
+              <title>Consumer credit outstanding, 1973-2023</title>
+              <partName>Table B-41</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table41.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218bb</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table41.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721915</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table41.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721943</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table41</identifier>
+         <identifier type="former granule identifier">f:erp_b41.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table41</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table41.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table41.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table41.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-41</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-41: Consumer credit outstanding, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table41</accessId>
+              <heading>Table B-41</heading>
+              <granuleNumber>41</granuleNumber>
+              <tableGroup>Money Stock, Credit, and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b42" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table42/mods.xml">
+         <titleInfo>
+              <title>Bond yields and interest rates, 1953-2023</title>
+              <partName>Table B-42</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table42.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ba</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table42.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721908</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table42.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721946</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table42</identifier>
+         <identifier type="former granule identifier">f:erp_b42.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table42</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table42.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table42.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table42.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-42</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-42: Bond yields and interest rates, 1953-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table42</accessId>
+              <heading>Table B-42</heading>
+              <granuleNumber>42</granuleNumber>
+              <tableGroup>Money Stock, Credit, and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b43" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table43/mods.xml">
+         <titleInfo>
+              <title>Mortgage debt outstanding by type of property and of financing, 1963-2023</title>
+              <partName>Table B-43</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table43.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218bc</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table43.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218fd</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table43.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721945</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table43</identifier>
+         <identifier type="former granule identifier">f:erp_b43.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table43</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table43.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table43.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table43.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-43</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-43: Mortgage debt outstanding by type of property and of financing, 1963-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table43</accessId>
+              <heading>Table B-43</heading>
+              <granuleNumber>43</granuleNumber>
+              <tableGroup>Money Stock, Credit, and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b44" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table44/mods.xml">
+         <titleInfo>
+              <title>Mortgage debt outstanding by holder, 1963-2023</title>
+              <partName>Table B-44</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table44.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218bd</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table44.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218fb</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table44.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721948</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table44</identifier>
+         <identifier type="former granule identifier">f:erp_b44.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table44</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table44.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table44.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table44.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-44</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-44: Mortgage debt outstanding by holder, 1963-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table44</accessId>
+              <heading>Table B-44</heading>
+              <granuleNumber>44</granuleNumber>
+              <tableGroup>Money Stock, Credit, and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b45" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table45/mods.xml">
+         <titleInfo>
+              <title>Federal receipts, outlays, surplus or deficit, and debt, fiscal years 1959-2025</title>
+              <partName>Table B-45</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table45.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218bf</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table45.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table45.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721947</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table45</identifier>
+         <identifier type="former granule identifier">f:erp_b45.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table45</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table45.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table45.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table45.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-45</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-45: Federal receipts, outlays, surplus or deficit, and debt, fiscal years 1959-2025; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table45</accessId>
+              <heading>Table B-45</heading>
+              <granuleNumber>45</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b46" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table46/mods.xml">
+         <titleInfo>
+              <title>Federal receipts, outlays, surplus or deficit, and debt, as percent of gross domestic product, fiscal years 1954-2025</title>
+              <partName>Table B-46</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table46.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218be</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table46.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ed</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table46.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721937</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table46</identifier>
+         <identifier type="former granule identifier">f:erp_b46.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table46</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table46.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table46.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table46.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-46</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-46: Federal receipts, outlays, surplus or deficit, and debt, as percent of gross domestic product, fiscal years 1954-2025; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table46</accessId>
+              <heading>Table B-46</heading>
+              <granuleNumber>46</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b47" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table47/mods.xml">
+         <titleInfo>
+              <title>Federal receipts and outlays, by major category, and surplus or deficit, fiscal years 1959-2025</title>
+              <partName>Table B-47</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table47.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c1</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table47.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table47.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721936</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table47</identifier>
+         <identifier type="former granule identifier">f:erp_b47.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table47</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table47.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table47.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table47.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-47</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-47: Federal receipts and outlays, by major category, and surplus or deficit, fiscal years 1959-2025; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table47</accessId>
+              <heading>Table B-47</heading>
+              <granuleNumber>47</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b48" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table48/mods.xml">
+         <titleInfo>
+              <title>Federal receipts, outlays, surplus or deficit, and debt, fiscal years 2020-2025</title>
+              <partName>Table B-48</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table48.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table48.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218da</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table48.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721925</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table48</identifier>
+         <identifier type="former granule identifier">f:erp_b48.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table48</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table48.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table48.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table48.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-48</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-48: Federal receipts, outlays, surplus or deficit, and debt, fiscal years 2020-2025; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table48</accessId>
+              <heading>Table B-48</heading>
+              <granuleNumber>48</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b49" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table49/mods.xml">
+         <titleInfo>
+              <title>Federal and State and local government current receipts and expenditures, national income and product accounts (NIPA) basis, 1973-2023</title>
+              <partName>Table B-49</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table49.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table49.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table49.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721928</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table49</identifier>
+         <identifier type="former granule identifier">f:erp_b49.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table49</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table49.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table49.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table49.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-49</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-49: Federal and State and local government current receipts and expenditures, national income and product accounts (NIPA) basis, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table49</accessId>
+              <heading>Table B-49</heading>
+              <granuleNumber>49</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b50" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table50/mods.xml">
+         <titleInfo>
+              <title>State and local government revenues and expenditures, fiscal years 1958-2021</title>
+              <partName>Table B-50</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table50.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table50.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table50.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192a</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table50</identifier>
+         <identifier type="former granule identifier">f:erp_b50.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table50</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table50.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table50.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table50.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-50</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-50: State and local government revenues and expenditures, fiscal years 1958-2021; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table50</accessId>
+              <heading>Table B-50</heading>
+              <granuleNumber>50</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b51" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table51/mods.xml">
+         <titleInfo>
+              <title>U.S. Treasury securities outstanding by kind of obligation, 1983-2023</title>
+              <partName>Table B-51</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table51.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c4</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table51.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721903</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table51.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721929</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table51</identifier>
+         <identifier type="former granule identifier">f:erp_b51.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table51</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table51.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table51.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table51.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-51</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-51: U.S. Treasury securities outstanding by kind of obligation, 1983-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table51</accessId>
+              <heading>Table B-51</heading>
+              <granuleNumber>51</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b52" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table52/mods.xml">
+         <titleInfo>
+              <title>Estimated ownership of U.S. Treasury securities, 2009-2023</title>
+              <partName>Table B-52</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table52.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218c6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table52.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721904</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table52.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192b</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table52</identifier>
+         <identifier type="former granule identifier">f:erp_b52.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table52</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table52.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table52.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table52.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-52</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-52: Estimated ownership of U.S. Treasury securities, 2009-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table52</accessId>
+              <heading>Table B-52</heading>
+              <granuleNumber>52</granuleNumber>
+              <tableGroup>Government Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b53" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table53/mods.xml">
+         <titleInfo>
+              <title>Corporate profits with inventory valuation and capital consumption adjustments, 1973-2023</title>
+              <partName>Table B-53</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table53.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a4</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table53.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table53.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192c</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table53</identifier>
+         <identifier type="former granule identifier">f:erp_b53.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table53</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table53.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table53.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table53.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-53</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-53: Corporate profits with inventory valuation and capital consumption adjustments, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table53</accessId>
+              <heading>Table B-53</heading>
+              <granuleNumber>53</granuleNumber>
+              <tableGroup>Corporate Profits and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b54" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table54/mods.xml">
+         <titleInfo>
+              <title>Corporate profits by industry, 1973-2023</title>
+              <partName>Table B-54</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table54.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a3</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table54.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721911</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table54.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192e</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table54</identifier>
+         <identifier type="former granule identifier">f:erp_b54.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table54</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table54.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table54.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table54.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-54</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-54: Corporate profits by industry, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table54</accessId>
+              <heading>Table B-54</heading>
+              <granuleNumber>54</granuleNumber>
+              <tableGroup>Corporate Profits and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b55" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table55/mods.xml">
+         <titleInfo>
+              <title>Historical stock prices and yields, 1949-2003</title>
+              <partName>Table B-55</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table55.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a6</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table55.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d172190a</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table55.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192d</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table55</identifier>
+         <identifier type="former granule identifier">f:erp_b55.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table55</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table55.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table55.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table55.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-55</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-55: Historical stock prices and yields, 1949-2003; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table55</accessId>
+              <heading>Table B-55</heading>
+              <granuleNumber>55</granuleNumber>
+              <tableGroup>Corporate Profits and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b56" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table56/mods.xml">
+         <titleInfo>
+              <title>Common stock prices and yields, 2000-2023</title>
+              <partName>Table B-56</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table56.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a5</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table56.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218e0</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table56.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721930</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table56</identifier>
+         <identifier type="former granule identifier">f:erp_b56.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table56</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table56.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table56.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table56.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-56</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-56: Common stock prices and yields, 2000-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table56</accessId>
+              <heading>Table B-56</heading>
+              <granuleNumber>56</granuleNumber>
+              <tableGroup>Corporate Profits and Finance</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b57" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table57/mods.xml">
+         <titleInfo>
+              <title>U.S. international transactions, 1973-2023</title>
+              <partName>Table B-57</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table57.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a8</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table57.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218d2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table57.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172192f</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table57</identifier>
+         <identifier type="former granule identifier">f:erp_b57.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table57</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table57.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table57.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table57.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-57</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-57: U.S. international transactions, 1973-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table57</accessId>
+              <heading>Table B-57</heading>
+              <granuleNumber>57</granuleNumber>
+              <tableGroup>International Statistics</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b58" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table58/mods.xml">
+         <titleInfo>
+              <title>U.S. international trade in goods on balance of payments (BOP) and Census basis, and trade in services on BOP basis, 1994-2023</title>
+              <partName>Table B-58</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table58.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218a7</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table58.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f2</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table58.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721932</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table58</identifier>
+         <identifier type="former granule identifier">f:erp_b58.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table58</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table58.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table58.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table58.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-58</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-58: U.S. international trade in goods on balance of payments (BOP) and Census basis, and trade in services on BOP basis, 1994-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table58</accessId>
+              <heading>Table B-58</heading>
+              <granuleNumber>58</granuleNumber>
+              <tableGroup>International Statistics</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b59" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table59/mods.xml">
+         <titleInfo>
+              <title>U.S. international trade in goods and services by area and country, 2000-2022</title>
+              <partName>Table B-59</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table59.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218aa</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table59.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ee</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table59.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721931</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table59</identifier>
+         <identifier type="former granule identifier">f:erp_b59.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table59</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table59.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table59.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table59.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-59</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-59: U.S. international trade in goods and services by area and country, 2000-2022; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table59</accessId>
+              <heading>Table B-59</heading>
+              <granuleNumber>59</granuleNumber>
+              <tableGroup>International Statistics</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b60" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table60/mods.xml">
+         <titleInfo>
+              <title>Foreign exchange rates, 2003-2023</title>
+              <partName>Table B-60</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table60.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ac</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table60.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d1721900</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table60.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d1721933</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table60</identifier>
+         <identifier type="former granule identifier">f:erp_b60.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table60</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table60.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table60.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table60.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-60</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-60: Foreign exchange rates, 2003-2023; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table60</accessId>
+              <heading>Table B-60</heading>
+              <granuleNumber>60</granuleNumber>
+              <tableGroup>International Statistics</tableGroup>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-erp_b61" xlink:href="https://www.govinfo.gov/metadata/granule/ERP-2024/ERP-2024-table61/mods.xml">
+         <titleInfo>
+              <title>Growth rates in real gross domestic product by area and country, 2005-2024</title>
+              <partName>Table B-61</partName>
+        </titleInfo>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table61.htm">
+              <identifier type="FDsys Unique ID">D09002ee1d17218ab</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table61.pdf">
+              <identifier type="FDsys Unique ID">D09002ee1d17218f4</identifier>
+        </relatedItem>
+         <relatedItem type="otherFormat" xlink:href="https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table61.xls">
+              <identifier type="FDsys Unique ID">D09002ee1d172191b</identifier>
+        </relatedItem>
+         <identifier type="uri">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table61</identifier>
+         <identifier type="former granule identifier">f:erp_b61.wais</identifier>
+         <location>
+              <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/ERP-2024/ERP-2024-table61</url>
+              <url access="raw object" displayLabel="PDF rendition">https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024-table61.pdf</url>
+              <url access="raw object" displayLabel="HTML rendition">https://www.govinfo.gov/content/pkg/ERP-2024/html/ERP-2024-table61.htm</url>
+              <url access="raw object" displayLabel="XLS rendition">https://www.govinfo.gov/content/pkg/ERP-2024/xls/ERP-2024-table61.xls</url>
+        </location>
+         <identifier type="preferred citation">Econ. Rept. 2024, Table B-61</identifier>
+         <extension>
+              <searchTitle>
+                Econ. Rept. 2024;
+                2024 ERP; Economic Report of the President (2024); Table B-61: Growth rates in real gross domestic product by area and country, 2005-2024; </searchTitle>
+              <granuleClass>TABLE</granuleClass>
+              <accessId>ERP-2024-table61</accessId>
+              <heading>Table B-61</heading>
+              <granuleNumber>61</granuleNumber>
+              <tableGroup>International Statistics</tableGroup>
+        </extension>
+    </relatedItem>
+</mods>

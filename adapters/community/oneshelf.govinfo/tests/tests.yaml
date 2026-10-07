@@ -1,0 +1,33 @@
+# Fixtures are live MODS records (2026-10-07).
+cases:
+- capability: work
+  inputs: {listing_key: ERP-2024}
+  fixtures: [{url: 'https://www.govinfo.gov/metadata/pkg/ERP-2024/mods.xml', file: fixtures/mods-ERP-2024.xml}]
+  expect:
+    first: {title: Economic Report of the President (2024), language: en}
+- capability: catalog
+  inputs: {listing_key: ERP-2024}
+  fixtures: [{url: 'https://www.govinfo.gov/metadata/pkg/ERP-2024/mods.xml', file: fixtures/mods-ERP-2024.xml}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: ERP-2024}
+- capability: downloads
+  inputs: {unit_key: ERP-2024}
+  fixtures: [{url: 'https://www.govinfo.gov/metadata/pkg/ERP-2024/mods.xml', file: fixtures/mods-ERP-2024.xml}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.govinfo.gov/content/pkg/ERP-2024/pdf/ERP-2024.pdf', format: pdf}
+# 3: a congressional hearing (a real one, with its PDF; hearings may reprint copyrighted submissions) has no unit …
+- capability: catalog
+  inputs: {listing_key: CHRG-119hhrg62598}
+  fixtures: [{url: 'https://www.govinfo.gov/metadata/pkg/CHRG-119hhrg62598/mods.xml', file: fixtures/mods-CHRG-119hhrg62598-hearing.xml}]
+  expect:
+    first: {unit_key: null}
+# 4: … and no file.
+- capability: downloads
+  inputs: {unit_key: CHRG-119hhrg62598}
+  fixtures: [{url: 'https://www.govinfo.gov/metadata/pkg/CHRG-119hhrg62598/mods.xml', file: fixtures/mods-CHRG-119hhrg62598-hearing.xml}]
+  expect:
+    first: {url: null}

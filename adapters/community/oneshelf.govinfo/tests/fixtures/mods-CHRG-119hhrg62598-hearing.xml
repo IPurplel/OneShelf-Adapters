@@ -1,0 +1,357 @@
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" ID="P0b002ee1dea3c0b6">
+    <name type="corporate">
+         <namePart>United States Government Publishing Office</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+              <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+        </role>
+         <role>
+              <roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+              <roleTerm authority="marcrelator" type="code">dst</roleTerm>
+        </role>
+    </name>
+    <name type="corporate">
+         <namePart>United States</namePart>
+         <namePart>Congress</namePart>
+         <namePart>House of Representatives</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">author</roleTerm>
+              <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+         <description>Government Organization</description>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+         <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    </language>
+    <extension>
+         <collectionCode>CHRG</collectionCode>
+         <category>Congressional Committee Materials</category>
+         <waisDatabaseName>119_house_hearings</waisDatabaseName>
+         <branch>legislative</branch>
+         <dateIngested>2026-02-18</dateIngested>
+    </extension>
+    <titleInfo>
+         <title>MARKUP OF H.R. 7008, STOP INSIDER TRADING ACT</title>
+    </titleInfo>
+    <titleInfo type="alternative"></titleInfo>
+    <location>
+         <url displayLabel="Content Detail" access="object in context">https://www.govinfo.gov/app/details/CHRG-119hhrg62598</url>
+         <url displayLabel="HTML rendition" access="raw object">https://www.govinfo.gov/content/pkg/CHRG-119hhrg62598/html/CHRG-119hhrg62598.htm</url>
+         <url displayLabel="PDF rendition" access="raw object">https://www.govinfo.gov/content/pkg/CHRG-119hhrg62598/pdf/CHRG-119hhrg62598.pdf</url>
+    </location>
+    <originInfo>
+         <publisher>U.S. Government Publishing Office</publisher>
+         <dateIssued encoding="w3cdtf">2026-01-14</dateIssued>
+         <issuance>monographic</issuance>
+    </originInfo>
+    <physicalDescription>
+         <note type="source content type">deposited</note>
+         <digitalOrigin>born digital</digitalOrigin>
+         <extent>112 digital object pages</extent>
+    </physicalDescription>
+    <classification authority="sudocs">Y 4.H 81/3:ST 7</classification>
+    <identifier type="uri">https://www.govinfo.gov/app/details/CHRG-119hhrg62598</identifier>
+    <identifier type="local">P0b002ee1dea3c0b6</identifier>
+    <identifier type="ILS system id">001468520</identifier>
+    <identifier type="former package identifier">f:62598.txt</identifier>
+    <recordInfo>
+         <recordContentSource authority="marcorg">DGPO</recordContentSource>
+         <recordCreationDate encoding="w3cdtf">2026-02-18</recordCreationDate>
+         <recordChangeDate encoding="w3cdtf">2026-02-19</recordChangeDate>
+         <recordIdentifier source="DGPO">CHRG-119hhrg62598</recordIdentifier>
+         <recordOrigin>machine generated</recordOrigin>
+         <languageOfCataloging>
+              <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    <accessCondition type="GPO scope determination">fdlp</accessCondition>
+    <extension>
+         <docClass>HHRG</docClass>
+         <accessId>CHRG-119hhrg62598</accessId>
+         <type>M</type>
+         <chamber>HOUSE</chamber>
+         <congress years="2025-2026">119</congress>
+         <session>2</session>
+         <heldDate>2026-01-14</heldDate>
+    </extension>
+    <extension>
+         <searchTitle>MARKUP OF H.R. 7008, STOP INSIDER TRADING ACT</searchTitle>
+         <granuleClass>OTHERPART</granuleClass>
+         <accessId>CHRG-119hhrg62598</accessId>
+         <graphicsInPDF>true</graphicsInPDF>
+         <isAppropriation>false</isAppropriation>
+         <jacketId>62-598</jacketId>
+         <congCommittee authorityId="hsha00" chamber="H" congress="119" type="S">
+                                    
+              <name type="authority-standard">Committee on House Administration</name>
+                                    
+              <name type="authority-short">House Administration</name>
+                                
+        </congCommittee>
+         <eventId>118823</eventId>
+         <videoUrl>https://www.youtube.com/embed/GI9wY6XHRJI?enablejsapi=1&amp;rel=0</videoUrl>
+         <congMember bioGuideId="B000740" chamber="H" congress="119" party="R" role="COMMMEMBER" state="OK">
+                                    
+              <name type="parsed">STEPHANIE BICE of Oklahoma</name>
+                                    
+              <name type="authority-fnf">Stephanie I. Bice</name>
+                                    
+              <name type="authority-lnf">Bice, Stephanie I.</name>
+                                    
+              <name type="authority-other">Stephanie Bice</name>
+                                
+        </congMember>
+         <congMember bioGuideId="C001126" chamber="H" congress="119" party="R" role="COMMMEMBER" state="OH">
+                                    
+              <name type="parsed">MIKE CAREY of Ohio</name>
+                                    
+              <name type="authority-fnf">Mike Carey</name>
+                                    
+              <name type="authority-lnf">Carey, Mike</name>
+                                
+        </congMember>
+         <congMember bioGuideId="J000310" chamber="H" congress="119" party="D" role="COMMMEMBER" state="TX">
+                                    
+              <name type="parsed">JULIE JOHNSON of Texas</name>
+                                    
+              <name type="authority-fnf">Julie Johnson</name>
+                                    
+              <name type="authority-lnf">Johnson, Julie</name>
+                                
+        </congMember>
+         <congMember bioGuideId="L000583" chamber="H" congress="119" party="R" role="COMMMEMBER" state="GA">
+                                    
+              <name type="parsed">BARRY LOUDERMILK of Georgia</name>
+                                    
+              <name type="authority-fnf">Barry Loudermilk</name>
+                                    
+              <name type="authority-lnf">Loudermilk, Barry</name>
+                                
+        </congMember>
+         <congMember bioGuideId="L000597" chamber="H" congress="119" party="R" role="COMMMEMBER" state="FL">
+                                    
+              <name type="parsed">LAUREL LEE of Florida</name>
+                                    
+              <name type="authority-fnf">Laurel M. Lee</name>
+                                    
+              <name type="authority-lnf">Lee, Laurel M.</name>
+                                    
+              <name type="authority-other">Laurel Lee</name>
+                                
+        </congMember>
+         <congMember bioGuideId="M001206" chamber="H" congress="119" party="D" role="COMMMEMBER" state="NY">
+                                    
+              <name type="parsed">JOSEPH MORELLE of New York</name>
+                                    
+              <name type="authority-fnf">Joseph D. Morelle</name>
+                                    
+              <name type="authority-lnf">Morelle, Joseph D.</name>
+                                    
+              <name type="authority-other">Joseph Morelle</name>
+                                
+        </congMember>
+         <congMember bioGuideId="M001210" chamber="H" congress="119" party="R" role="COMMMEMBER" state="NC">
+                                    
+              <name type="parsed">GREG MURPHY of North Carolina</name>
+                                    
+              <name type="authority-fnf">Gregory F. Murphy</name>
+                                    
+              <name type="authority-lnf">Murphy, Gregory F.</name>
+                                    
+              <name type="authority-other">Gregory Murphy</name>
+                                
+        </congMember>
+         <congMember bioGuideId="M001211" chamber="H" congress="119" party="R" role="COMMMEMBER" state="IL">
+                                    
+              <name type="parsed">MARY MILLER of Illinois</name>
+                                    
+              <name type="authority-fnf">Mary E. Miller</name>
+                                    
+              <name type="authority-lnf">Miller, Mary E.</name>
+                                    
+              <name type="authority-other">Mary Miller</name>
+                                
+        </congMember>
+         <congMember bioGuideId="S001185" chamber="H" congress="119" party="D" role="COMMMEMBER" state="AL">
+                                    
+              <name type="parsed">TERRI A. SEWELL of Alabama</name>
+                                    
+              <name type="authority-fnf">Terri A. Sewell</name>
+                                    
+              <name type="authority-lnf">Sewell, Terri A.</name>
+                                    
+              <name type="authority-other">Terri Sewell</name>
+                                
+        </congMember>
+         <congMember bioGuideId="S001213" chamber="H" congress="119" party="R" role="COMMMEMBER" state="WI">
+                                    
+              <name type="parsed">BRYAN STEIL of Wisconsin</name>
+                                    
+              <name type="authority-fnf">Bryan Steil</name>
+                                    
+              <name type="authority-lnf">Steil, Bryan</name>
+                                
+        </congMember>
+         <congMember bioGuideId="T000474" chamber="H" congress="119" party="D" role="COMMMEMBER" state="CA">
+                                    
+              <name type="parsed">NORMA TORRES of California</name>
+                                    
+              <name type="authority-fnf">Norma J. Torres</name>
+                                    
+              <name type="authority-lnf">Torres, Norma J.</name>
+                                    
+              <name type="authority-other">Norma Torres</name>
+                                
+        </congMember>
+         <bill congress="119" context="BODY" number="5106" type="HR"></bill>
+         <bill congress="119" context="BODY" number="6731" type="HR"></bill>
+         <bill congress="119" context="COVER" number="7008" type="HR"></bill>
+         <bill congress="119" context="BODY" number="7008" type="HR"></bill>
+         <isNomination>false</isNomination>
+         <isErrata>false</isErrata>
+    </extension>
+    <name type="corporate">
+         <namePart>United States</namePart>
+         <namePart>Congress</namePart>
+         <namePart>House of Representatives</namePart>
+         <namePart>Committee on House Administration</namePart>
+         <role>
+              <roleTerm authority="marcrelator" type="text">associated name</roleTerm>
+              <roleTerm authority="marcrelator" type="code">asn</roleTerm>
+        </role>
+         <description>Government Organization</description>
+    </name>
+    <name type="personal">
+         <namePart>Stephanie I. Bice</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Mike Carey</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Julie Johnson</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Barry Loudermilk</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Laurel M. Lee</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Joseph D. Morelle</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Gregory F. Murphy</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Mary E. Miller</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Terri A. Sewell</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Bryan Steil</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <name type="personal">
+         <namePart>Norma J. Torres</namePart>
+         <affiliation>United States House of Representatives</affiliation>
+         <role>
+              <roleTerm type="text">committee member</roleTerm>
+        </role>
+         <description>United States Congressional Member</description>
+    </name>
+    <relatedItem type="isReferencedBy">
+         <identifier type="Jacket citation"></identifier>
+    </relatedItem>
+    <relatedItem type="isReferencedBy">
+         <titleInfo>
+              <title>United States House Bill 5106 (119th Congress)</title>
+        </titleInfo>
+         <identifier type="Congressional Bill citation">H.R. 5106</identifier>
+         <extension>
+              <congress>119</congress>
+              <context>BODY</context>
+        </extension>
+    </relatedItem>
+    <relatedItem type="isReferencedBy">
+         <titleInfo>
+              <title>United States House Bill 6731 (119th Congress)</title>
+        </titleInfo>
+         <identifier type="Congressional Bill citation">H.R. 6731</identifier>
+         <extension>
+              <congress>119</congress>
+              <context>BODY</context>
+        </extension>
+    </relatedItem>
+    <relatedItem type="isReferencedBy">
+         <titleInfo>
+              <title>United States House Bill 7008 (119th Congress)</title>
+        </titleInfo>
+         <identifier type="Congressional Bill citation">H.R. 7008</identifier>
+         <extension>
+              <congress>119</congress>
+              <context>COVER</context>
+        </extension>
+    </relatedItem>
+    <relatedItem type="isReferencedBy">
+         <titleInfo>
+              <title>United States House Bill 7008 (119th Congress)</title>
+        </titleInfo>
+         <identifier type="Congressional Bill citation">H.R. 7008</identifier>
+         <extension>
+              <congress>119</congress>
+              <context>BODY</context>
+        </extension>
+    </relatedItem>
+</mods>
