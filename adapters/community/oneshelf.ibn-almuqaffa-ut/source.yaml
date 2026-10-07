@@ -1,0 +1,9 @@
+base_url: https://jal-lq.ut.ac.ir
+url_patterns:
+  - pattern: '^https://jal-lq\.ut\.ac\.ir/(issue_[0-9]+_[0-9]+)\.html(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt allows everything (it disallows only BLEXBot).
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

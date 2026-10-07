@@ -1,0 +1,21 @@
+# The issue's articles, in its order; an article's key is its page (article_<id>). The journal publishes
+# every article under Creative Commons Attribution-NonCommercial 4.0.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:path}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "h2.list-article-title a"}
+  fields:
+    unit_key:
+      template: "{item}|"
+      required: true
+      transforms: [{regex_extract: {pattern: 'href="(article_[0-9]+)\.html"(?s:.*)\|$', group: 1}}]
+    title: {xpath: ".//text()", all: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "article"}
+pagination:
+  mode: none
+  complete_when: single_response

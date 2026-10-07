@@ -1,0 +1,20 @@
+# The article's PDF, as its page names it (citation_pdf_url) — (the journal's CC BY-NC 4.0). An article
+# published ahead of its issue may have no PDF yet, and then no file.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:path}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "meta[name=citation_pdf_url]"}
+  fields:
+    url:
+      template: "{item}|"
+      required: true
+      transforms: [{regex_extract: {pattern: 'content="(https://jal-lq\.ut\.ac\.ir/article_[0-9]+_[0-9a-f]+\.pdf)"(?s:.*)\|$', group: 1}}]
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response
