@@ -1,0 +1,18 @@
+# The book's PDF — the page's "Download PDF" link to a file in meson's own uploads — under the same
+# condition as catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/books/{unit_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[starts-with(@href, 'https://meson.press/wp-content/uploads/')][substring(@href, string-length(@href) - 3) = '.pdf'][//a[starts-with(@href, 'https://creativecommons.org/licenses/')]]"}
+  fields:
+    url: {xpath: "@href", required: true,
+          transforms: [{regex_extract: {pattern: '^(https://meson\.press/wp-content/uploads/[0-9]{4}/[0-9]{2}/[^?#]+\.pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

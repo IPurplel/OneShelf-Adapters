@@ -1,0 +1,35 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The book's author(s) as named on its meson press page — https://meson.press/books/<slug>/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    meson press is open access, but each book states its own licence on its page. All 91 books in the
+    sitemap were read on 2026-10-07: 81 link a Creative Commons licence (65 CC BY-SA 4.0, 13 CC BY-NC, 3
+    CC BY-NC-ND), ten link none (e.g. the-cyborg, pattern-discrimination). The catalog unit and the PDF are
+    offered only while the page links a creativecommons.org/licenses/ licence; otherwise neither is (tests 4
+    and 5). Every Creative Commons variant is admitted: a personal copy of the unmodified PDF is within NC
+    and ND.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: A book licensed CC BY-SA 4.0 with a "Download PDF" link.
+    url: https://meson.press/books/zonen/
+  - claim: A book page that links no licence.
+    url: https://meson.press/books/the-cyborg/
+  - claim: The press describes itself as dedicated to open access.
+    url: https://meson.press/books/
+  - claim: robots.txt disallows only /wp-admin/.
+    url: https://meson.press/robots.txt
+last_verified: 2026-10-07

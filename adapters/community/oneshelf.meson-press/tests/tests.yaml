@@ -1,0 +1,36 @@
+# Fixtures are live pages (2026-10-07). zonen-no-licence.html is zonen.html with its licence link removed.
+cases:
+- capability: work
+  inputs: {listing_key: zonen}
+  fixtures: [{url: 'https://meson.press/books/zonen/', file: fixtures/zonen.html}]
+  expect:
+    first: {title: Zonen, language: de}
+- capability: work
+  inputs: {listing_key: children-reinventing-cinema}
+  fixtures: [{url: 'https://meson.press/books/children-reinventing-cinema/', file: fixtures/children-reinventing-cinema.html}]
+  expect:
+    first: {title: Children Reinventing Cinema, language: en, original_title: 'Children Reinventing Cinema. Snapshots from the Early 21st Century'}
+- capability: catalog
+  inputs: {listing_key: zonen}
+  fixtures: [{url: 'https://meson.press/books/zonen/', file: fixtures/zonen.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: zonen, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: zonen}
+  fixtures: [{url: 'https://meson.press/books/zonen/', file: fixtures/zonen.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://meson.press/wp-content/uploads/2025/05/978-3-95796-262-1-Zonen.pdf', format: pdf}
+- capability: catalog
+  inputs: {listing_key: zonen}
+  fixtures: [{url: 'https://meson.press/books/zonen/', file: fixtures/zonen-no-licence.html}]
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: zonen}
+  fixtures: [{url: 'https://meson.press/books/zonen/', file: fixtures/zonen-no-licence.html}]
+  expect:
+    first: {url: null}

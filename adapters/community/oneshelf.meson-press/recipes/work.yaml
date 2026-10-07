@@ -1,0 +1,23 @@
+# The book page. Its language is meson's own word for it (citation_language: "english", "german"), given
+# as a language code.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/books/{listing_key:path}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "h1::text", required: true, transforms: [trim]}
+    original_title: {css: "meta[property='og:title']::attr(content)",
+                     transforms: [html_decode, {regex_replace: {pattern: '\s*›\s*meson press$', replacement: ''}}, trim]}
+    language:
+      css: "meta[name=citation_language]::attr(content)"
+      transforms:
+        - trim
+        - {regex_replace: {pattern: '^(?i:english)\W*$', replacement: en}}
+        - {regex_replace: {pattern: '^(?i:german|deutsch)\W*$', replacement: de}}
+        - {regex_replace: {pattern: '^(?i:french)\W*$', replacement: fr}}
+    cover_url: {css: "meta[property='og:image']::attr(content)", transforms: [normalize_url]}
+    content_type: {template: "book"}

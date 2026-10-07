@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.meson-press
+name: meson press
+version: 0.1.0
+api: '1.0'
+description: >-
+  meson press (Lüneburg), an open-access publisher of media studies and digital culture books in English
+  and German. A book is one Reading Unit, downloaded as its PDF — only while its page links a Creative
+  Commons licence (81 of its 91 books in October 2026: 65 CC BY-SA, 13 CC BY-NC, 3 CC BY-NC-ND; the
+  other ten show none and have no unit). No search: meson's search runs in the
+  browser and its books are not in its public API, so a book is opened by pasting its address
+  (https://meson.press/books/<slug>/). No page reader.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [meson.press]
+defaults:
+  content_type: book
