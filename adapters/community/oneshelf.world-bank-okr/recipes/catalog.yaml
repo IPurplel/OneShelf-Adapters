@@ -1,0 +1,25 @@
+# An item is one Reading Unit (one_shot) — only while its page links a Creative Commons licence (the
+# signposting rel="license" link, or the licence badge) and names a PDF. The template joins the item's key
+# with both, and the pattern keeps it only then.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//link[@rel = 'license']/@href | //ds-client-cc-license-icons//a[contains(@href, 'creativecommons.org/')]/@href)"}
+    pdf: {css: "meta[name=citation_pdf_url]::attr(content)"}
+  items: {xpath: "/html"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}|{pdf}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^((?:(?:items|entities/publication)/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|handle/10986/[0-9]+))\|https?://creativecommons\.org/(?:licenses|publicdomain)/[^|]+\|https?://openknowledge\.worldbank\.org/bitstreams/[0-9a-f-]{36}/download$', group: 1}}]
+    title: {css: "meta[name=citation_title]::attr(content)", transforms: [trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

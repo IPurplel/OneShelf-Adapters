@@ -1,0 +1,25 @@
+# The item's PDF, at the repository's own download address for it (citation_pdf_url, taken as https) —
+# only while the page links a Creative Commons licence.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//link[@rel = 'license']/@href | //ds-client-cc-license-icons//a[contains(@href, 'creativecommons.org/')]/@href)"}
+    pdf: {css: "meta[name=citation_pdf_url]::attr(content)"}
+  items: {xpath: "/html"}
+  fields:
+    url:
+      template: "{pdf}|{licence}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^(https?://openknowledge\.worldbank\.org/bitstreams/[0-9a-f-]{36}/download)\|https?://creativecommons\.org/(?:licenses|publicdomain)/[^|]+$', group: 1}}
+        - {regex_replace: {pattern: '^http://', replacement: 'https://'}}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

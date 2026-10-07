@@ -1,0 +1,29 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed
+derivatives: unknown
+attribution:
+  required: true
+  text: "World Bank Open Knowledge Repository — https://openknowledge.worldbank.org/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each OKR item page states its licence; most items are CC BY 3.0 IGO, some CC BY-NC 3.0 IGO. An item has a unit, and its PDF is offered, only while the item's own page links a
+    Creative Commons licence (the signposting rel="license" link, or the licence badge) and names its PDF; an
+    item without one has neither (tests 3, 4). Licences differ per item (some non-commercial), so commercial
+    use is marked unknown; the PDF is stored unaltered for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: An item page with its Creative Commons licence link and citation_pdf_url.
+    url: https://openknowledge.worldbank.org/entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12
+  - claim: robots.txt disallows search, browse and the REST API except bitstreams; Crawl-delay 10.
+    url: https://openknowledge.worldbank.org/robots.txt
+last_verified: 2026-10-07

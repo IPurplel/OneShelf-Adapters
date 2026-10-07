@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.world-bank-okr
+name: World Bank Open Knowledge Repository
+version: 0.1.0
+api: '1.2'
+description: >-
+  World Bank Open Knowledge Repository: the World Bank's reports, working papers and books, as PDF. An item is a work with one unit, downloaded as the PDF the
+  repository names for it — only while the item's own page links a Creative Commons licence (most items CC BY 3.0 IGO).
+  Open an item by pasting its address (openknowledge.worldbank.org/items/…, /entities/publication/… or /handle/…). No search:
+  the repository's robots.txt disallows its search pages and its API except file downloads.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [openknowledge.worldbank.org]
+defaults:
+  language: en
+  content_type: paper

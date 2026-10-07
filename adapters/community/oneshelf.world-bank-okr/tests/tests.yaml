@@ -1,0 +1,34 @@
+# Fixtures are live item pages (2026-10-07), trimmed to their <head> (without styles and scripts) and the
+# licence badge: what the recipes read.
+cases:
+- capability: work
+  inputs: {listing_key: entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12}
+  fixtures: [{url: 'https://openknowledge.worldbank.org/entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12', file: fixtures/item-0771d1f2.html}]
+  expect:
+    first: {title: "Priorities for Sustainable Growth : A Strategy for Agriculture Sector Development in Tajikistan, Technical Annex 5. Agriculture Growth Decomposition"}
+- capability: catalog
+  inputs: {listing_key: entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12}
+  fixtures: [{url: 'https://openknowledge.worldbank.org/entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12', file: fixtures/item-0771d1f2.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12}
+- capability: downloads
+  inputs: {unit_key: entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12}
+  fixtures: [{url: 'https://openknowledge.worldbank.org/entities/publication/0771d1f2-0426-594f-8713-c01e7cd42e12', file: fixtures/item-0771d1f2.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://openknowledge.worldbank.org/bitstreams/634e9e9f-2803-5980-8630-6512e197d4a2/download', format: pdf}
+# 3: an item page served without its metadata (no licence link, no PDF) — no unit …
+- capability: catalog
+  inputs: {listing_key: entities/publication/d48ddb6e-4d8b-53a9-9b4d-822986bed3a5}
+  fixtures: [{url: 'https://openknowledge.worldbank.org/entities/publication/d48ddb6e-4d8b-53a9-9b4d-822986bed3a5', file: fixtures/item-d48ddb6e-no-metadata.html}]
+  expect:
+    first: {unit_key: null}
+# 4: … and no file.
+- capability: downloads
+  inputs: {unit_key: entities/publication/d48ddb6e-4d8b-53a9-9b4d-822986bed3a5}
+  fixtures: [{url: 'https://openknowledge.worldbank.org/entities/publication/d48ddb6e-4d8b-53a9-9b4d-822986bed3a5', file: fixtures/item-d48ddb6e-no-metadata.html}]
+  expect:
+    first: {url: null}
