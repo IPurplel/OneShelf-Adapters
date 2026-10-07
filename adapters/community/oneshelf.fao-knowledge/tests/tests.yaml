@@ -1,0 +1,34 @@
+# Fixtures are live item pages (2026-10-07), trimmed to their <head> (without styles and scripts) and the
+# licence badge: what the recipes read.
+cases:
+- capability: work
+  inputs: {listing_key: handle/20.500.14283/cc7724en}
+  fixtures: [{url: 'https://openknowledge.fao.org/handle/20.500.14283/cc7724en', file: fixtures/item-cc7724en.html}]
+  expect:
+    first: {title: "The State of Food and Agriculture 2023"}
+- capability: catalog
+  inputs: {listing_key: handle/20.500.14283/cc7724en}
+  fixtures: [{url: 'https://openknowledge.fao.org/handle/20.500.14283/cc7724en', file: fixtures/item-cc7724en.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: handle/20.500.14283/cc7724en}
+- capability: downloads
+  inputs: {unit_key: handle/20.500.14283/cc7724en}
+  fixtures: [{url: 'https://openknowledge.fao.org/handle/20.500.14283/cc7724en', file: fixtures/item-cc7724en.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://openknowledge.fao.org/server/api/core/bitstreams/5aac5078-625d-4b94-b964-bea40493016c/content', format: pdf}
+# 3: an item whose page shows no licence (a 1940s letter) — no unit …
+- capability: catalog
+  inputs: {listing_key: handle/20.500.14283/a06078en}
+  fixtures: [{url: 'https://openknowledge.fao.org/handle/20.500.14283/a06078en', file: fixtures/item-a06078en-no-licence.html}]
+  expect:
+    first: {unit_key: null}
+# 4: … and no file.
+- capability: downloads
+  inputs: {unit_key: handle/20.500.14283/a06078en}
+  fixtures: [{url: 'https://openknowledge.fao.org/handle/20.500.14283/a06078en', file: fixtures/item-a06078en-no-licence.html}]
+  expect:
+    first: {url: null}

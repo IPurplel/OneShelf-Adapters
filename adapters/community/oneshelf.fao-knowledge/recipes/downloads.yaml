@@ -1,0 +1,28 @@
+# The item's PDF files, read from the repository's file endpoint (/server/api/core/bitstreams/<id>/content,
+# which robots.txt allows; the /bitstreams/<id>/download address is a route of the web application and
+# sometimes answers with its HTML page): the files the item page declares as PDF —
+# the signposting links (rel="item", type application/pdf) or the links labelled "Download PDF" — never the
+# citation_pdf_url tag, which may point to an EPUB. Only while the page links a Creative Commons licence.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//link[@rel = 'license']/@href | //ds-client-cc-license-icons//a[contains(@href, 'creativecommons.org/')]/@href)"}
+  items: {xpath: "//link[@rel = 'item'][@type = 'application/pdf'][contains(@href, '/bitstreams/')] | //a[contains(@href, '/bitstreams/')][normalize-space(.) = 'Download PDF']"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: 'href="(?:https?://openknowledge\.fao\.org)?(/bitstreams/[0-9a-f-]{36}/download)"(?s:.*)\|https?://creativecommons\.org/(?:licenses|publicdomain)/[^|]+$', group: 1}}
+        - {regex_replace: {pattern: '^/bitstreams/', replacement: 'https://openknowledge.fao.org/server/api/core/bitstreams/'}}
+        - {regex_replace: {pattern: '/download$', replacement: '/content'}}
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

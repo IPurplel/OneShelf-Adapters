@@ -1,0 +1,24 @@
+# The item page, rendered by the server, with Highwire Press citation tags.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key:segments}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {css: "meta[name=citation_title]::attr(content)", required: true, transforms: [trim]}
+    creator: {css: "meta[name=citation_author]::attr(content)", transforms: [trim]}
+    description: {css: "meta[name=citation_publisher]::attr(content)", transforms: [trim, {regex_replace: {pattern: '\s*;\s*$', replacement: ''}}]}
+    language:
+      css: "meta[name=citation_language]::attr(content)"
+      transforms:
+        - {regex_replace: {pattern: '^(?:en(?:_[A-Z]{2})?|English)$', replacement: en}}
+        - {regex_replace: {pattern: '^(?:fr(?:_[A-Z]{2})?|French|Français)$', replacement: fr}}
+        - {regex_replace: {pattern: '^(?:es(?:_[A-Z]{2})?|Spanish|Español)$', replacement: es}}
+        - {regex_replace: {pattern: '^(?:ar(?:_[A-Z]{2})?|Arabic|العربية)$', replacement: ar}}
+        - {regex_replace: {pattern: '^(?:ru(?:_[A-Z]{2})?|Russian|Русский)$', replacement: ru}}
+        - {regex_replace: {pattern: '^(?:zh(?:_[A-Z]{2})?|Chinese|中文)$', replacement: zh}}
+        - {regex_extract: {pattern: '^([a-z]{2})$', group: 1}}
+    content_type: {template: "paper"}
