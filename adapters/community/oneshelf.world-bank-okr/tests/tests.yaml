@@ -19,7 +19,7 @@ cases:
   expect:
     min_items: 1
     complete: true
-    first: {url: 'https://openknowledge.worldbank.org/bitstreams/634e9e9f-2803-5980-8630-6512e197d4a2/download', format: pdf}
+    first: {url: 'https://openknowledge.worldbank.org/server/api/core/bitstreams/634e9e9f-2803-5980-8630-6512e197d4a2/content', format: pdf}
 # 3: an item page served without its metadata (no licence link, no PDF) — no unit …
 - capability: catalog
   inputs: {listing_key: entities/publication/d48ddb6e-4d8b-53a9-9b4d-822986bed3a5}
