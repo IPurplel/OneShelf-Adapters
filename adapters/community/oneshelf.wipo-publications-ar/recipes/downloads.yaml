@@ -1,0 +1,23 @@
+# The publication's Arabic PDF, as its page links it under "Download" — only while the page states a Creative
+# Commons licence.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/publications/en/details.jsp?id={unit_key}&plang=AR"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//p[starts-with(normalize-space(.), 'License:')]/a[contains(@href, 'creativecommons.org/licenses/')]/@href)[1]"}
+  items: {xpath: "(//div[@id='download']//a[starts-with(@href, 'https://www.wipo.int/edocs/pubdocs/ar/')])[1]"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: 'href="(https://www\.wipo\.int/edocs/pubdocs/ar/[^"]+\.pdf)"(?s:.*)\|https://creativecommons\.org/licenses/[a-z-]+/[0-9.]+/(?:igo/)?(?:deed\.[a-z]+)?$', group: 1}}]
+    format: {template: "pdf", required: true}
+    language: {template: "ar"}
+pagination:
+  mode: none
+  complete_when: single_response

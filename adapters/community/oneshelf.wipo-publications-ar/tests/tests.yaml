@@ -1,0 +1,47 @@
+# Fixtures are live pages (2026-10-08).
+cases:
+# 0: Arabic query — one page of 26 results (search lists publications as WIPO does, licensed or not).
+- capability: search
+  inputs: {query: البراءات}
+  fixtures:
+  - url: 'https://www.wipo.int/publications/en/search.jsp?q=%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA&lang=AR&rows=250&sort=score'
+    file: fixtures/search-ar.html
+  expect:
+    min_items: 26
+    complete: true
+    fields_present: [listing_key, title, language]
+    first: {listing_key: '4549', title: "االستعراض السنوي لمعاهدة البراءات 2021 – المعالم الرئيسية", language: ar}
+# 1: a CC BY 4.0 publication — Arabic title from its Arabic PDF.
+- capability: work
+  inputs: {listing_key: '4686'}
+  fixtures: [{url: 'https://www.wipo.int/publications/en/details.jsp?id=4686&plang=AR', file: fixtures/details-4686.html}]
+  expect:
+    first: {title: "حقائق وأرقام الويبو حول الملكية الفكرية 2023", original_title: "WIPO IP Facts and Figures 2023", language: ar}
+# 2: … one unit …
+- capability: catalog
+  inputs: {listing_key: '4686'}
+  fixtures: [{url: 'https://www.wipo.int/publications/en/details.jsp?id=4686&plang=AR', file: fixtures/details-4686.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: '4686'}
+# 3: … its Arabic PDF; a CC BY-NC-SA 3.0 IGO publication is offered the same way.
+- capability: downloads
+  inputs: {unit_key: '4511'}
+  fixtures: [{url: 'https://www.wipo.int/publications/en/details.jsp?id=4511&plang=AR', file: fixtures/details-4511.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.wipo.int/edocs/pubdocs/ar/wipo_pub_628_2020.pdf', format: pdf}
+# 4: a publication whose page states no licence (Berne Convention, Arabic translation) — no unit …
+- capability: catalog
+  inputs: {listing_key: '317'}
+  fixtures: [{url: 'https://www.wipo.int/publications/en/details.jsp?id=317&plang=AR', file: fixtures/details-317.html}]
+  expect:
+    first: {unit_key: null}
+# 5: … and no file.
+- capability: downloads
+  inputs: {unit_key: '317'}
+  fixtures: [{url: 'https://www.wipo.int/publications/en/details.jsp?id=317&plang=AR', file: fixtures/details-317.html}]
+  expect:
+    first: {url: null}

@@ -1,0 +1,21 @@
+# The publication's page, with its Arabic edition chosen (plang=AR): the Arabic title is the label of the
+# Arabic PDF link ("<title>, (pdf)"); the page's heading is the English title.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/publications/en/details.jsp?id={listing_key}&plang=AR"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title:
+      xpath: "(//div[@id='download']//a[starts-with(@href, 'https://www.wipo.int/edocs/pubdocs/ar/')]/img/@alt)[1]"
+      required: true
+      transforms: [{regex_replace: {pattern: ',\s*\(pdf\)\s*$', replacement: ''}}, trim]
+    original_title: {css: "meta[name=citation_title]::attr(content)", transforms: [trim]}
+    description: {css: "meta[property='og:description']::attr(content)", transforms: [trim]}
+    cover_url: {css: "meta[property='og:image']::attr(content)", transforms: [normalize_url]}
+    creator: {template: "المنظمة العالمية للملكية الفكرية (WIPO)"}
+    language: {template: "ar"}
+    content_type: {template: "book"}

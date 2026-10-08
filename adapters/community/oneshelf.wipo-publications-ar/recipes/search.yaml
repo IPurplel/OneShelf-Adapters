@@ -1,0 +1,24 @@
+# WIPO's own publications search, limited to publications with an Arabic edition (lang=AR). A result's title
+# is its Arabic title; its key is the publication id. Results are listed as WIPO lists them, licensed or not:
+# the catalog decides on the licence. One request of up to 250 results: with a query, WIPO's search ignores
+# its own offset (every "next" page repeats results 1-50), and all of WIPO's Arabic publications (226 on
+# 2026-10-08) fit in one response, so the answer is complete.
+capability: search
+inputs: [query]
+request:
+  url: "{base_url}/publications/en/search.jsp?q={query}&lang=AR&rows=250&sort=score"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.media.line"}
+  fields:
+    listing_key: {xpath: "(.//strong/a/@href)[1]", required: true, transforms: [{regex_extract: {pattern: 'details\.jsp\?id=([0-9]+)', group: 1}}]}
+    title: {xpath: "(.//strong/a)[1]", required: true, transforms: [trim]}
+    description: {xpath: "(.//div[contains(@class, 'media-body')]/p[not(strong)][not(starts-with(normalize-space(.), 'Publication year:'))])[1]", transforms: [trim]}
+    cover_url: {xpath: "(.//img/@src)[1]", transforms: [normalize_url]}
+    language: {template: "ar"}
+    content_type: {template: "book"}
+pagination:
+  mode: none
+  complete_when: single_response

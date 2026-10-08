@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.wipo-publications-ar
+name: WIPO Publications (Arabic)
+version: 0.1.0
+api: '1.0'
+description: >-
+  منشورات الويبو — the World Intellectual Property Organization's publications in their Arabic editions, as
+  PDF (right-to-left text). A publication is a work with one unit, downloaded as its Arabic PDF — only while
+  the publication's own page links a Creative Commons licence (most CC BY 4.0 or CC BY 3.0 IGO; treaty texts
+  and many older publications state none and are not offered). Search finds WIPO's Arabic publications, or
+  open one by pasting its address (wipo.int/publications/…/details.jsp?id=…).
+publisher: OneShelf
+capabilities: [search, work, catalog, downloads]
+network:
+  domains: [www.wipo.int]
+defaults:
+  language: ar
+  content_type: book

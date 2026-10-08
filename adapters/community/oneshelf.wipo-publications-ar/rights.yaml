@@ -1,0 +1,38 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "World Intellectual Property Organization (WIPO), WIPO Publications — https://www.wipo.int/publications/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    WIPO's Open Access Policy issues new publications under CC BY 4.0 "except for some content published under
+    more restrictive terms", and each publication's page states its own licence ("License:" with a Creative
+    Commons link). Of WIPO's 226 Arabic publications (2026-10-08), 94 state CC BY 4.0, 81 CC BY 3.0 IGO, 2
+    CC BY-NC-SA 3.0 IGO and 49 none (treaty texts and most publications before 2017). A publication has a
+    unit, and its Arabic PDF is offered, only while its page links a Creative Commons licence and names an
+    Arabic PDF; one without has neither (tests 4, 5). Search lists publications as WIPO lists them. Licences
+    differ per item (two are non-commercial), so commercial use is marked unknown. The licences do not cover
+    third-party content inside a publication (such as stock images); the PDF is stored unaltered for private
+    reading.
+  exclusion_tests: [4, 5]
+evidence:
+  - claim: "Except for some content published under more restrictive terms, new WIPO online publications and other online content are issued under an Attribution 4.0 International CC license (CC BY 4.0)."
+    url: https://www.wipo.int/en/web/terms-of-use
+  - claim: A publication page with its licence (CC BY 4.0) and its Arabic PDF.
+    url: https://www.wipo.int/publications/en/details.jsp?id=4686&plang=AR
+  - claim: A publication page without a licence (Berne Convention, Arabic translation) — not offered.
+    url: https://www.wipo.int/publications/en/details.jsp?id=317&plang=AR
+  - claim: robots.txt disallows neither /publications/ nor /edocs/pubdocs/.
+    url: https://www.wipo.int/robots.txt
+last_verified: 2026-10-08

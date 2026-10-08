@@ -1,0 +1,27 @@
+# A publication is one Reading Unit (one_shot) — only while its page states a Creative Commons licence (the
+# "License:" paragraph) and links an Arabic PDF. The template joins the key with both, and the pattern keeps
+# it only then; a publication without a licence (treaty texts, most older ones) has no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/publications/en/details.jsp?id={listing_key}&plang=AR"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//p[starts-with(normalize-space(.), 'License:')]/a[contains(@href, 'creativecommons.org/licenses/')]/@href)[1]"}
+    pdf: {xpath: "(//div[@id='download']//a[starts-with(@href, 'https://www.wipo.int/edocs/pubdocs/ar/')]/@href)[1]"}
+  items: {xpath: "/html"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}|{pdf}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([0-9]+)\|https://creativecommons\.org/licenses/[a-z-]+/[0-9.]+/(?:igo/)?(?:deed\.[a-z]+)?\|https://www\.wipo\.int/edocs/pubdocs/ar/[^|]+\.pdf$', group: 1}}]
+    title:
+      xpath: "(//div[@id='download']//a[starts-with(@href, 'https://www.wipo.int/edocs/pubdocs/ar/')]/img/@alt)[1]"
+      transforms: [{regex_replace: {pattern: ',\s*\(pdf\)\s*$', replacement: ''}}, trim]
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
