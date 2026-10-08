@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.lasem-semnan
+name: Studies in Arabic Language and Literature (Semnan University)
+version: 0.1.0
+api: '1.0'
+description: >-
+  دراسات في اللغة العربيّة وآدابها — Studies in Arabic Language and Literature (Semnan University): an
+  open-access journal of Arabic language and literature, its articles in Arabic under Creative Commons
+  Attribution 4.0. An issue is a work and its articles are units, each downloaded as the journal's PDF
+  (right-to-left text). Open an issue by pasting its address (lasem.semnan.ac.ir/issue_….html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [lasem.semnan.ac.ir]
+defaults:
+  language: ar
+  content_type: paper

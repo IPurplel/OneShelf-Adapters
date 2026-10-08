@@ -1,0 +1,30 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors, دراسات في اللغة العربيّة وآدابها (Studies in Arabic Language and Literature), Semnan University — https://lasem.semnan.ac.ir/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    Every page of the journal states "دراسات في اللغة العربيّة و آدابها مرخّص بموجب رخصة المشاع الإبداعي"
+    with a link to Creative Commons Attribution 4.0. The catalog and downloads read that licence link on the
+    page they fetch and offer nothing without it. The article PDF is stored unaltered.
+  exclusion_tests: []
+evidence:
+  - claim: "دراسات في اللغة العربيّة و آدابها مرخّص بموجب رخصة المشاع الإبداعي (CC BY 4.0), on every page."
+    url: https://lasem.semnan.ac.ir/
+  - claim: An article page with its PDF (citation_pdf_url) and the licence.
+    url: https://lasem.semnan.ac.ir/article_8494.html
+  - claim: robots.txt allows everything but the site's internals (/class/, /data/, /lib/, /request/, /tmp/, /main/).
+    url: https://lasem.semnan.ac.ir/robots.txt
+last_verified: 2026-10-08

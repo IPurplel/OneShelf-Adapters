@@ -1,0 +1,22 @@
+# The article's PDF, as its page names it (citation_pdf_url) — while the page states CC BY 4.0. An article
+# published ahead of its issue may have no PDF yet, and then no file.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key:path}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//a[contains(@href, 'creativecommons.org/licenses/')]/@href)[1]"}
+  items: {css: "meta[name=citation_pdf_url]"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: 'content="(https://lasem\.semnan\.ac\.ir/article_[0-9]+_[0-9a-f]+\.pdf)"(?s:.*)\|https?://creativecommons\.org/licenses/by/4\.0/?$', group: 1}}]
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

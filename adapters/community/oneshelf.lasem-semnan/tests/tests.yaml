@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-08).
+cases:
+- capability: work
+  inputs: {listing_key: issue_957_1010}
+  fixtures: [{url: 'https://lasem.semnan.ac.ir/issue_957_1010.html', file: fixtures/issue_957_1010.html}]
+  expect:
+    first: {title: "دراسات في اللغة العربيّة وآدابها — السنة 16، العدد 42، مارس 2026،  الصفحة  1-406 (السنة السادسة عشرة، العدد الثاني والأربعون، خريف 2025م وشتاء 1404هـ.ش / 2026م)", language: ar}
+- capability: catalog
+  inputs: {listing_key: issue_957_1010}
+  fixtures: [{url: 'https://lasem.semnan.ac.ir/issue_957_1010.html', file: fixtures/issue_957_1010.html}]
+  expect:
+    min_items: 12
+    complete: true
+    first: {unit_key: article_8494}
+- capability: downloads
+  inputs: {unit_key: article_8494}
+  fixtures: [{url: 'https://lasem.semnan.ac.ir/article_8494.html', file: fixtures/article_8494.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://lasem.semnan.ac.ir/article_8494_fb6c4e0b4b90ebfb5a35ca7a9cbf1d16.pdf', format: pdf}
