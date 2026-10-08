@@ -1,0 +1,22 @@
+# The article's PDF, as its page names it (citation_pdf_url) — only while the page states a Creative Commons
+# licence (its DC.Rights meta tag).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/index.php/chariaa/ar/article/view/{unit_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//meta[@name='DC.Rights'][starts-with(@content, 'https://creativecommons.org/licenses/')]/@content)[1]"}
+  items: {css: "meta[name=citation_pdf_url]"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: 'content="(https://journals\.imist\.ma/index\.php/chariaa/(?:[a-z]{2}(?:_[A-Z]{2})?/)?article/download/[0-9]+/[A-Za-z0-9_-]+)"(?s:.*)\|https://creativecommons\.org/licenses/[a-z-]+/[0-9.]+/?$', group: 1}}]
+    format: {template: "pdf", required: true}
+pagination:
+  mode: none
+  complete_when: single_response

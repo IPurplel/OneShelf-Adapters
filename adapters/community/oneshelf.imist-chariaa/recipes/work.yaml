@@ -1,0 +1,18 @@
+# The issue page (Open Journal Systems 3, default theme): the journal's name and the issue's heading (volume,
+# number, year and title).
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/index.php/chariaa/ar/issue/view/{listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    issue: {xpath: "(//div[contains(@class, 'page_issue')]//h1)[1]", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+  fields:
+    title: {template: "مجلة كلية الشريعة-أكادير — {issue}", required: true}
+    cover_url: {xpath: "(//div[contains(@class, 'obj_issue_toc')]//div[contains(@class, 'cover')]//img/@src)[1]", transforms: [normalize_url]}
+    creator: {template: "مجلة كلية الشريعة-أكادير"}
+    language: {template: "ar"}
+    content_type: {template: "paper"}

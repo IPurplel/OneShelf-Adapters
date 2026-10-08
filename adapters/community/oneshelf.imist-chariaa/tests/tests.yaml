@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '441'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/chariaa/ar/issue/view/441', file: fixtures/issue_441.html}]
+  expect:
+    first: {title: "مجلة كلية الشريعة-أكادير — مجلد 2 عدد 10 (2026): جهود المغاربة في خدمة السيرة النبوية", language: ar}
+- capability: catalog
+  inputs: {listing_key: '441'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/chariaa/ar/issue/view/441', file: fixtures/issue_441.html}]
+  expect:
+    min_items: 13
+    complete: true
+    first: {unit_key: '8980'}
+- capability: downloads
+  inputs: {unit_key: '8980'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/chariaa/ar/article/view/8980', file: fixtures/article_8980.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.imist.ma/index.php/chariaa/article/download/8980/8163', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '8980'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/chariaa/ar/article/view/8980', file: fixtures/synthetic-no-licence_8980.html}]
+  expect:
+    first: {url: null}
