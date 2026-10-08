@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '666'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Prometheus/issue/view/666', file: fixtures/issue_666.html}]
+  expect:
+    first: {title: "مجلة بروميثيوس الدولية للدراسات والأبحاث في العلوم الإنسانية والاجتماعية والقانونية — مجلد 1 عدد 4 (2026): مجلة بروميثيوس الدولية المحكمة للدراسات والأبحاث في العلوم الإنسانية والاجتماعية والقانونية", language: ar}
+- capability: catalog
+  inputs: {listing_key: '666'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Prometheus/issue/view/666', file: fixtures/issue_666.html}]
+  expect:
+    min_items: 26
+    complete: true
+    first: {unit_key: '13490'}
+- capability: downloads
+  inputs: {unit_key: '13490'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Prometheus/article/view/13490', file: fixtures/article_13490.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.imist.ma/index.php/Prometheus/article/download/13490/8049', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '13490'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Prometheus/article/view/13490', file: fixtures/synthetic-no-licence_13490.html}]
+  expect:
+    first: {url: null}
