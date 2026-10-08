@@ -1,0 +1,19 @@
+# The issue's articles, in its order; an article's key is its id (article/view/<id>). Titles are the issue
+# page's (its interface is English). Whether an article's PDF is offered is decided on the article's own page
+# (downloads). Front matter, editorials and board lists have unlinked headings and are not units.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/index.php/tajseer/issue/view/{listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.article-summary h3.media-heading a[href*='/article/view/']"}
+  fields:
+    unit_key: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '/index\.php/tajseer/article/view/([0-9]+)$', group: 1}}]}
+    title: {xpath: ".//text()", all: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "article"}
+pagination:
+  mode: none
+  complete_when: single_response

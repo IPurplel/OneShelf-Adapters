@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.tajseer-qu
+name: Tajseer Journal (Qatar University)
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة تجسير — Tajseer Journal (Qatar University Press): an open-access, peer-reviewed journal of interdisciplinary studies in the humanities and social sciences, its articles mostly in Arabic. An issue is a work and its
+  articles are units, each downloaded as the journal's PDF — only while the article's own page states a Creative
+  Commons licence (CC BY 4.0 (2019–2021) or CC BY-NC 4.0 (since)). Open an issue by pasting its address
+  (journals.qu.edu.qa/index.php/tajseer/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.qu.edu.qa]
+defaults:
+  language: ar
+  content_type: paper

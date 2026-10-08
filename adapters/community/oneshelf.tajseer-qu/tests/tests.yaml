@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '255'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/tajseer/issue/view/255', file: fixtures/issue_255.html}]
+  expect:
+    first: {title: "مجلة تجسير — Vol. 8 No. 1 (2026): June 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '255'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/tajseer/issue/view/255', file: fixtures/issue_255.html}]
+  expect:
+    min_items: 9
+    complete: true
+    first: {unit_key: '6573'}
+- capability: downloads
+  inputs: {unit_key: '6573'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/tajseer/article/view/6573', file: fixtures/article_6573.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.qu.edu.qa/index.php/tajseer/article/download/6573/3538', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '6573'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/tajseer/article/view/6573', file: fixtures/synthetic-no-licence_6573.html}]
+  expect:
+    first: {url: null}
