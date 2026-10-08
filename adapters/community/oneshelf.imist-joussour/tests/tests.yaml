@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '3670'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Joussour/issue/view/3670', file: fixtures/issue_3670.html}]
+  expect:
+    first: {title: "جسور — مجلد 10 عدد 02 (2024): استراتيجيات التدريس بين الخلفيات العلمية والمنهجية، والممارسات المهنية", language: ar}
+- capability: catalog
+  inputs: {listing_key: '3670'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Joussour/issue/view/3670', file: fixtures/issue_3670.html}]
+  expect:
+    min_items: 8
+    complete: true
+    first: {unit_key: '69961'}
+- capability: downloads
+  inputs: {unit_key: '69961'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Joussour/article/view/69961', file: fixtures/article_69961.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://revues.imist.ma/index.php/Joussour/article/download/69961/34842', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '69961'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Joussour/article/view/69961', file: fixtures/synthetic-no-licence_69961.html}]
+  expect:
+    first: {url: null}

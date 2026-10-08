@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.imist-joussour
+name: "جسور (IMIST, Morocco)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  جسور — an open-access Moroccan journal on IMIST's journal portal (Open Journal Systems), its articles in
+  Arabic. An issue is a work and its articles are units, each downloaded as the journal's PDF — only while the
+  article's own page states a Creative Commons licence (CC BY-NC 4.0 on the articles sampled). Open an issue by pasting its
+  address (revues.imist.ma/index.php/Joussour/…issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [revues.imist.ma]
+defaults:
+  language: ar
+  content_type: paper

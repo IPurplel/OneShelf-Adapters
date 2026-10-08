@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The article's authors, جسور, via IMIST — https://revues.imist.ma/index.php/Joussour"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each article page of the journal (Open Journal Systems on IMIST's portal) states its own licence in
+    machine-readable form: a DC.Rights meta tag linking Creative Commons (CC BY-NC 4.0 on the articles sampled,
+    2026-10-08). An issue's articles are listed with their titles; an article's PDF is offered only while its
+    own page states a Creative Commons licence (test 3: the same page with its licence removed, marked
+    SYNTHETIC, gives no file). Commercial use and derivatives depend on each article's licence and are marked
+    unknown; the PDF is stored unaltered for private reading.
+  exclusion_tests: [3]
+evidence:
+  - claim: An article page with DC.Rights https://creativecommons.org/licenses/by-nc/4.0 and citation_pdf_url.
+    url: https://revues.imist.ma/index.php/Joussour/article/view/69961
+  - claim: robots.txt disallows only /cache/ and editorial, login, user, gateway and search paths.
+    url: https://revues.imist.ma/robots.txt
+last_verified: 2026-10-08
