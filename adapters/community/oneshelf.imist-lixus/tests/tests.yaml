@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '3678'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Lixus/ar/issue/view/3678', file: fixtures/issue_3678.html}]
+  expect:
+    first: {title: "مجلة ليكسوس:في التاريخ والعلوم الإنسانية — مجلد 4 عدد 63 (2026): مجلد4 عدد 63 (2026): مجلة ليكسوس،العدد 63،شتنبر 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '3678'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Lixus/ar/issue/view/3678', file: fixtures/issue_3678.html}]
+  expect:
+    min_items: 20
+    complete: true
+    first: {unit_key: '70327'}
+- capability: downloads
+  inputs: {unit_key: '70327'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Lixus/ar/article/view/70327', file: fixtures/article_70327.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://revues.imist.ma/index.php/Lixus/article/download/70327/34990', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '70327'}
+  fixtures: [{url: 'https://revues.imist.ma/index.php/Lixus/ar/article/view/70327', file: fixtures/synthetic-no-licence_70327.html}]
+  expect:
+    first: {url: null}

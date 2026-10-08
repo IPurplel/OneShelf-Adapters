@@ -1,0 +1,18 @@
+# The issue's articles, in its order; an article's key is its id (article/view/<id>). Whether an article's
+# PDF is offered is decided on the article's own page (downloads).
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/index.php/Lixus/ar/issue/view/{listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.obj_article_summary h3.title a[href*='/article/view/']"}
+  fields:
+    unit_key: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '/index\.php/Lixus/(?:[a-z]{2}(?:_[A-Z]{2})?/)?article/view/([0-9]+)$', group: 1}}]}
+    title: {xpath: ".//text()", all: true, transforms: [{join: {sep: " "}}, {regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "article"}
+pagination:
+  mode: none
+  complete_when: single_response
