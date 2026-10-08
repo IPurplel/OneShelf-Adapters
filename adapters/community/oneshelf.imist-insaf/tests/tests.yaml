@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '447'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/INSAF/ar/issue/view/447', file: fixtures/issue_447.html}]
+  expect:
+    first: {title: "مجلة إنصاف — مجلد 1 عدد 15 (2026): إنصاف", language: ar}
+- capability: catalog
+  inputs: {listing_key: '447'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/INSAF/ar/issue/view/447', file: fixtures/issue_447.html}]
+  expect:
+    min_items: 10
+    complete: true
+    first: {unit_key: '8148'}
+- capability: downloads
+  inputs: {unit_key: '8148'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/INSAF/ar/article/view/8148', file: fixtures/article_8148.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.imist.ma/index.php/INSAF/article/download/8148/4821', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '8148'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/INSAF/ar/article/view/8148', file: fixtures/synthetic-no-licence_8148.html}]
+  expect:
+    first: {url: null}
