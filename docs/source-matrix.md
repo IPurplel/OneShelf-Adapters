@@ -566,7 +566,8 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 ([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
 grades and the live checks behind the rows below) and, from Wolne Lektury on, round 4
 ([discovery-round4-2026-10.md](discovery-round4-2026-10.md)), and from NASA NTRS on, round 5
-([discovery-round5-2026-10.md](discovery-round5-2026-10.md), including its 2026-10-08 follow-up: Semnan and Isfahan). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+([discovery-round5-2026-10.md](discovery-round5-2026-10.md), including its 2026-10-08 follow-up: Semnan and Isfahan), and from WIPO on, round 6
+([discovery-round6-2026-10.md](discovery-round6-2026-10.md): Arabic sources, the UN Digital Library first). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
 The round-3 text adapters (Runeberg, OpenEdition, Sefaria) need a Core with plugin API 1.2, which is not yet the
 tooling pin.
 
@@ -610,6 +611,17 @@ tooling pin.
 | [Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran)](https://jal-lq.ut.ac.ir/) | `oneshelf.ibn-almuqaffa-ut` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY-NC 4.0 (journal) |
 | [Studies in Arabic Language and Literature (Semnan)](https://lasem.semnan.ac.ir/) | `oneshelf.lasem-semnan` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY 4.0 (journal) |
 | [Research in Arabic Language (Isfahan)](https://rall.ui.ac.ir/) | `oneshelf.rall-ui` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY-NC-ND 4.0 (journal) |
+| [WIPO Publications (Arabic editions)](https://www.wipo.int/publications/) | `oneshelf.wipo-publications-ar` | `VERIFIED` | Community | search, work, catalog, downloads | ar | Per publication: Creative Commons only (CC BY 4.0 / CC BY 3.0 IGO / CC BY-NC-SA 3.0 IGO; 49 of 226 without a licence excluded) |
+| [Tajseer Journal (Qatar University)](https://journals.qu.edu.qa/index.php/tajseer) | `oneshelf.tajseer-qu` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: CC BY 4.0 / CC BY-NC 4.0 (DC.Rights) |
+| [Journal of College of Sharia and Islamic Studies (Qatar University)](https://journals.qu.edu.qa/index.php/sharia) | `oneshelf.sharia-qu` | `VERIFIED` | Community | work, catalog, downloads | ar, en | Per article: CC BY-NC 4.0 (DC.Rights) |
+| [مجلة بروميثيوس الدولية (IMIST, Morocco)](https://journals.imist.ma/index.php/Prometheus) | `oneshelf.imist-prometheus` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY 4.0 sampled; DC.Rights) |
+| [مجلة إنصاف (IMIST, Morocco)](https://journals.imist.ma/index.php/INSAF) | `oneshelf.imist-insaf` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY-NC-ND 4.0 sampled; DC.Rights) |
+| [مجلة الديداكتيك للعلوم التربوية (IMIST, Morocco)](https://journals.imist.ma/index.php/DidaSE) | `oneshelf.imist-didase` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY 4.0 sampled; DC.Rights) |
+| [مجلة المنبر القانوني (IMIST, Morocco)](https://journals.imist.ma/index.php/tribunejuridique) | `oneshelf.imist-tribunejuridique` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY-NC-ND 4.0 sampled; DC.Rights) |
+| [مجلة كلية الشريعة-أكادير (IMIST, Morocco)](https://journals.imist.ma/index.php/chariaa) | `oneshelf.imist-chariaa` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY 4.0 sampled; DC.Rights) |
+| [دفاتر برلمانية (IMIST, Morocco)](https://journals.imist.ma/index.php/Dafatir-Barlamania) | `oneshelf.imist-dafatir-barlamania` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY-NC-ND 4.0 sampled; DC.Rights) |
+| [جسور (IMIST, Morocco)](https://revues.imist.ma/index.php/Joussour) | `oneshelf.imist-joussour` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY-NC 4.0 sampled; DC.Rights) |
+| [ليكسوس: في التاريخ والعلوم الإنسانية (IMIST, Morocco)](https://revues.imist.ma/index.php/Lixus) | `oneshelf.imist-lixus` | `VERIFIED` | Community | work, catalog, downloads | ar | Per article: Creative Commons only (CC BY-NC-ND 4.0 sampled; DC.Rights) |
 | [Chitanka](https://chitanka.info/) | `oneshelf.chitanka` | `VERIFIED` | Community | search, work, catalog, reader (text) | bg | Per text: public domain or CC marks only |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
