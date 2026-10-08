@@ -1,0 +1,30 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-NC-ND-4.0
+  url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+commercial_use: not_allowed
+redistribution: allowed
+derivatives: not_allowed
+attribution:
+  required: true
+  text: "The article's authors, بحوث في اللغة العربية (Research in Arabic Language), University of Isfahan — https://rall.ui.ac.ir/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The journal states "Access: Open Access (Published articles are free to access and download)" and
+    "Rall by University of Isfahan is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+    4.0 International License". The licence is stated journal-wide (its about page), not on issue or article
+    pages, so it applies to the whole source. The article PDF is stored unaltered for private,
+    non-commercial reading.
+  exclusion_tests: []
+evidence:
+  - claim: "Rall by University of Isfahan is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License."
+    url: https://rall.ui.ac.ir/journal/about?lang=en
+  - claim: robots.txt allows everything but the site's internals (/class/, /data/, /lib/, /request/, /tmp/, /main/).
+    url: https://rall.ui.ac.ir/robots.txt
+last_verified: 2026-10-08

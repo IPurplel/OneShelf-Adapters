@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-08).
+cases:
+- capability: work
+  inputs: {listing_key: issue_5462_5523}
+  fixtures: [{url: 'https://rall.ui.ac.ir/issue_5462_5523.html', file: fixtures/issue_5462_5523.html}]
+  expect:
+    first: {title: "بحوث في اللغة العربية — المجلد 18، العدد 36، أكتوبر 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: issue_5462_5523}
+  fixtures: [{url: 'https://rall.ui.ac.ir/issue_5462_5523.html', file: fixtures/issue_5462_5523.html}]
+  expect:
+    min_items: 10
+    complete: true
+    first: {unit_key: article_30812}
+- capability: downloads
+  inputs: {unit_key: article_30812}
+  fixtures: [{url: 'https://rall.ui.ac.ir/article_30812.html', file: fixtures/article_30812.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://rall.ui.ac.ir/article_30812_d37aaee0a6a244694e1320ecafa046d8.pdf', format: pdf}

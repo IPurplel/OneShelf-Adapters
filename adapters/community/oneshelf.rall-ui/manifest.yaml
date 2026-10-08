@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.rall-ui
+name: Research in Arabic Language (University of Isfahan)
+version: 0.1.0
+api: '1.0'
+description: >-
+  بحوث في اللغة العربية — Research in Arabic Language (University of Isfahan): an open-access journal of
+  Arabic language and literature, its articles in Arabic under Creative Commons
+  Attribution-NonCommercial-NoDerivatives 4.0. An issue is a work and its articles are units, each
+  downloaded as the journal's PDF (right-to-left text). Open an issue by pasting its address
+  (rall.ui.ac.ir/issue_….html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [rall.ui.ac.ir]
+defaults:
+  language: ar
+  content_type: paper
