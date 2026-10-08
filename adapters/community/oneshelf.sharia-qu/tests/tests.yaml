@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '256'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/sharia/issue/view/256', file: fixtures/issue_256.html}]
+  expect:
+    first: {title: "مجلة كلية الشريعة والدراسات الإسلامية — Vol. 44 No. 2 (2026): July 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '256'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/sharia/issue/view/256', file: fixtures/issue_256.html}]
+  expect:
+    min_items: 12
+    complete: true
+    first: {unit_key: '6772'}
+- capability: downloads
+  inputs: {unit_key: '6771'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/sharia/article/view/6771', file: fixtures/article_6771.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.qu.edu.qa/index.php/sharia/article/download/6771/3576', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '6771'}
+  fixtures: [{url: 'https://journals.qu.edu.qa/index.php/sharia/article/view/6771', file: fixtures/synthetic-no-licence_6771.html}]
+  expect:
+    first: {url: null}

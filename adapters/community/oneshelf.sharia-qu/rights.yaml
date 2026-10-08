@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: allowed
+attribution:
+  required: true
+  text: "The article's authors, مجلة كلية الشريعة والدراسات الإسلامية (Journal of College of Sharia and Islamic Studies), Qatar University Press — https://journals.qu.edu.qa/index.php/sharia"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each article page of the journal (Open Journal Systems) states its own licence in machine-readable form: a
+    DC.Rights meta tag and a rel="license" link to Creative Commons — CC BY-NC 4.0 in every article sampled
+    from the first to the latest issue (2026-10-08). An issue's articles are listed with their titles; an
+    article's PDF is offered only while its own page states a Creative Commons licence (test 3: the same page
+    with its licence removed, marked SYNTHETIC, gives no file). Licences differ by year (some non-commercial),
+    so commercial use is marked unknown; the PDF is stored unaltered for private reading.
+  exclusion_tests: [3]
+evidence:
+  - claim: An article page with DC.Rights https://creativecommons.org/licenses/…, rel="license" and citation_pdf_url.
+    url: https://journals.qu.edu.qa/index.php/sharia/article/view/6771
+  - claim: robots.txt disallows only /cache/.
+    url: https://journals.qu.edu.qa/robots.txt
+last_verified: 2026-10-08

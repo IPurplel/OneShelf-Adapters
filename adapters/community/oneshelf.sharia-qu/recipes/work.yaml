@@ -1,0 +1,19 @@
+# The issue page (Open Journal Systems, Qatar University Press theme): the journal's name and the issue's
+# volume, number and date, from the breadcrumb.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/index.php/sharia/issue/view/{listing_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    issue: {xpath: "(//ol[contains(@class, 'breadcrumb')]/li[contains(@class, 'active')])[1]", transforms: [trim]}
+  fields:
+    title: {template: "مجلة كلية الشريعة والدراسات الإسلامية — {issue}", required: true}
+    original_title: {template: "Journal of College of Sharia and Islamic Studies — {issue}"}
+    cover_url: {xpath: "(//div[contains(@class, 'issue-toc')]//a[contains(@class, 'cover')]/img/@src)[1]", transforms: [normalize_url]}
+    creator: {template: "مجلة كلية الشريعة والدراسات الإسلامية (Qatar University Press)"}
+    language: {template: "ar"}
+    content_type: {template: "paper"}

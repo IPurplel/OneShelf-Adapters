@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.sharia-qu
+name: Journal of College of Sharia and Islamic Studies (Qatar University)
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة كلية الشريعة والدراسات الإسلامية — Journal of College of Sharia and Islamic Studies (Qatar University Press): an open-access, peer-reviewed journal of Sharia and Islamic studies, its articles in Arabic and English. An issue is a work and its
+  articles are units, each downloaded as the journal's PDF — only while the article's own page states a Creative
+  Commons licence (CC BY-NC 4.0). Open an issue by pasting its address
+  (journals.qu.edu.qa/index.php/sharia/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.qu.edu.qa]
+defaults:
+  language: ar
+  content_type: paper
