@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '690'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/tribunejuridique/ar/issue/view/690', file: fixtures/issue_690.html}]
+  expect:
+    first: {title: "مجلة المنبر القانوني — مجلد 2 عدد 29 (2026): المنبر القانوني العدد 29", language: ar}
+- capability: catalog
+  inputs: {listing_key: '690'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/tribunejuridique/ar/issue/view/690', file: fixtures/issue_690.html}]
+  expect:
+    min_items: 8
+    complete: true
+    first: {unit_key: '13788'}
+- capability: downloads
+  inputs: {unit_key: '13788'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/tribunejuridique/ar/article/view/13788', file: fixtures/article_13788.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.imist.ma/index.php/tribunejuridique/article/download/13788/DOI', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '13788'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/tribunejuridique/ar/article/view/13788', file: fixtures/synthetic-no-licence_13788.html}]
+  expect:
+    first: {url: null}

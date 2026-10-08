@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.imist-tribunejuridique
+name: "مجلة المنبر القانوني (IMIST, Morocco)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة المنبر القانوني — an open-access Moroccan journal on IMIST's journal portal (Open Journal Systems), its articles in
+  Arabic. An issue is a work and its articles are units, each downloaded as the journal's PDF — only while the
+  article's own page states a Creative Commons licence (CC BY-NC-ND 4.0 on the articles sampled). Open an issue by pasting its
+  address (journals.imist.ma/index.php/tribunejuridique/…issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.imist.ma]
+defaults:
+  language: ar
+  content_type: paper
