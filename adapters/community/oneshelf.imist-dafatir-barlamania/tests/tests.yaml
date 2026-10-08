@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-08), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '574'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Dafatir-Barlamania/ar/issue/view/574', file: fixtures/issue_574.html}]
+  expect:
+    first: {title: "دفاتر برلمانية — مجلد 5 عدد 3 (2026): مجلة دفاتر برلمانية", language: ar}
+- capability: catalog
+  inputs: {listing_key: '574'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Dafatir-Barlamania/ar/issue/view/574', file: fixtures/issue_574.html}]
+  expect:
+    min_items: 9
+    complete: true
+    first: {unit_key: '3310'}
+- capability: downloads
+  inputs: {unit_key: '3310'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Dafatir-Barlamania/ar/article/view/3310', file: fixtures/article_3310.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.imist.ma/index.php/Dafatir-Barlamania/article/download/3310/3257', format: pdf}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '3310'}
+  fixtures: [{url: 'https://journals.imist.ma/index.php/Dafatir-Barlamania/ar/article/view/3310', file: fixtures/synthetic-no-licence_3310.html}]
+  expect:
+    first: {url: null}
