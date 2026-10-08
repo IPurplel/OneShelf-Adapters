@@ -566,7 +566,7 @@ Adapters added after the 60-candidate audit, from the investigation backlog in
 ([discovery-round3-2026-10.md](discovery-round3-2026-10.md): 35 new sites, their rights evidence, endpoints,
 grades and the live checks behind the rows below) and, from Wolne Lektury on, round 4
 ([discovery-round4-2026-10.md](discovery-round4-2026-10.md)), and from NASA NTRS on, round 5
-([discovery-round5-2026-10.md](discovery-round5-2026-10.md)). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
+([discovery-round5-2026-10.md](discovery-round5-2026-10.md), including its 2026-10-08 follow-up: Semnan and Isfahan). Each carries a `rights.yaml` ([rights-model.md](rights-model.md)).
 The round-3 text adapters (Runeberg, OpenEdition, Sefaria) need a Core with plugin API 1.2, which is not yet the
 tooling pin.
 
@@ -608,6 +608,8 @@ tooling pin.
 | [Translation Researches in Arabic Language and Literature (ATU)](https://rctall.atu.ac.ir/) | `oneshelf.rctall-atu` | `VERIFIED` | Community | work, catalog, downloads | fa, ar | CC BY-NC 4.0 (journal) |
 | [Arabic Literature (University of Tehran)](https://jalit.ut.ac.ir/) | `oneshelf.jalit-ut` | `VERIFIED` | Community | work, catalog, downloads | ar, fa | CC BY-NC 4.0 (journal) |
 | [Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran)](https://jal-lq.ut.ac.ir/) | `oneshelf.ibn-almuqaffa-ut` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY-NC 4.0 (journal) |
+| [Studies in Arabic Language and Literature (Semnan)](https://lasem.semnan.ac.ir/) | `oneshelf.lasem-semnan` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY 4.0 (journal) |
+| [Research in Arabic Language (Isfahan)](https://rall.ui.ac.ir/) | `oneshelf.rall-ui` | `VERIFIED` | Community | work, catalog, downloads | ar | CC BY-NC-ND 4.0 (journal) |
 | [Chitanka](https://chitanka.info/) | `oneshelf.chitanka` | `VERIFIED` | Community | search, work, catalog, reader (text) | bg | Per text: public domain or CC marks only |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`

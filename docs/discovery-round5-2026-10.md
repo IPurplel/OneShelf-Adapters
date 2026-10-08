@@ -26,6 +26,25 @@ around, and no terms were accepted on a user's behalf.
 Text adapters (Érudit, CyberLeninka, Chitanka) and Brogo (`{key:segments}`) need plugin API 1.2, which the
 pinned Core does not have.
 
+## Follow-up — 2026-10-08: two more Arabic journals (VERIFIED live, pinned Core)
+
+The two Sinaweb journals left at READY FOR ELIGIBILITY REVIEW (rows 21 and 22) are implemented. Both use
+API 1.0 and pass `check-adapter` on the pinned Core.
+
+| Adapter | Source | Language / type | Rights gate | Live checks |
+|---|---|---|---|---|
+| `oneshelf.lasem-semnan` | lasem.semnan.ac.ir | ar, articles (PDF) | CC BY 4.0 link on the page | 5 PASS (first issue 2010 and latest issue 2026, two articles each; 2011; 22–38 pp) |
+| `oneshelf.rall-ui` | rall.ui.ac.ir | ar, articles (PDF) | CC BY-NC-ND 4.0 (journal-wide, source level) | 5 PASS (first issue 2009, the three 2026 issues, two articles of the latest; 14–22 pp) |
+
+- **Semnan** has the same issue page as `oneshelf.jalit-ut` (`h2.list-article-title`, bookmark-icon heading)
+  and links CC BY 4.0 on every page, so catalog and downloads check the licence on each page as jalit-ut does.
+  Its issue list is `browse?_action=issue` (the round-5 note "different site layout" is about the homepage, not
+  the issue pages).
+- **Isfahan** lists articles as `h5.list-article-title` and has no bookmark icon; the issue heading is the span
+  after "المجلد والعدد". The licence (CC BY-NC-ND 4.0) is on the about page only, not on issue or article
+  pages, so the licence applies to the whole source, as for `oneshelf.ibn-almuqaffa-ut`. No derivatives: the
+  PDF is stored unaltered.
+
 ## Every source
 
 | # | Source | Content | Lang | Rights | robots.txt | Discovery | Item resolution | Format | Core supports | Outcome | Adapter | Blocker / notes |
@@ -50,8 +69,8 @@ pinned Core does not have.
 | 18 | [Emory Open Books (Manifold)](https://openbooks.fchi.emory.edu/) | books | en | RIGHTS_UNCLEAR | — | Manifold | — | — | — | TECHNICALLY BLOCKED | — | manifold.ecds.emory.edu answers HTTP 202 with an empty body (bot gateway) |
 | 19 | [Princeton Digital Library (DPUL)](https://dpul.princeton.edu/) | manuscripts, early Arabic books | ar, fa, … | PUBLIC_DOMAIN (likely) | query URLs disallowed; Crawl-delay 10 | collection pages | item pages | IIIF images | — | TECHNICALLY BLOCKED | — | item pages answer 'Verifying connection' (bot challenge) |
 | 20 | [Egyptian Knowledge Bank journals](https://journals.ekb.eg/) | journal articles | ar, en | OPEN_LICENSED (per journal) | — | Sinaweb | — | PDF | yes | TECHNICALLY BLOCKED | — | every connection reset from this environment |
-| 21 | [Studies on Arabic Language and Literature (Semnan)](https://lasem.semnan.ac.ir/) | journal articles | ar, fa | OPEN_LICENSED (CC BY 4.0, per search result) | allows all | different site layout | — | PDF | likely | READY FOR ELIGIBILITY REVIEW | — | not the Sinaweb issue layout the template reads; needs its own recipes |
-| 22 | [Research in Arabic Language (Isfahan)](https://rall.ui.ac.ir/) | journal articles | ar | OPEN_LICENSED (CC BY-NC-ND 4.0, footer) | allows all | Sinaweb variant | — | PDF | likely | READY FOR ELIGIBILITY REVIEW | — | different issue-page template (no issue heading); needs its own recipes |
+| 21 | [Studies on Arabic Language and Literature (Semnan)](https://lasem.semnan.ac.ir/) | journal articles | ar, fa | OPEN_LICENSED (CC BY 4.0, per search result) | allows all | different site layout | — | PDF | likely | IMPLEMENTED (2026-10-08) | `oneshelf.lasem-semnan` | issue pages are the jalit-ut layout; issues listed at browse?_action=issue |
+| 22 | [Research in Arabic Language (Isfahan)](https://rall.ui.ac.ir/) | journal articles | ar | OPEN_LICENSED (CC BY-NC-ND 4.0, footer) | allows all | Sinaweb variant | — | PDF | likely | IMPLEMENTED (2026-10-08) | `oneshelf.rall-ui` | h5 article titles; heading after "المجلد والعدد"; licence on about page only (source level) |
 | 23 | [Lisan Mobin, Al-Jamea, Arabic Language Studies (Iranian journals)](https://lisanmobin.ikiu.ac.ir/) | journal articles | ar | — | — | — | — | — | — | TECHNICALLY BLOCKED | — | DNS failure from this environment (three hosts) |
 | 24 | [Chronicling America (LOC)](https://chroniclingamerica.loc.gov/) | newspapers | en | PUBLIC_DOMAIN | — | loc.gov JSON API | — | images, OCR | yes | TECHNICALLY BLOCKED | — | redirects to www.loc.gov, which this environment's egress policy refuses — eligible, untestable here |
 | 25 | [UN ESCWA publications](https://www.unescwa.org/publications) | reports | ar, en | FREE_OFFICIAL | — | — | — | PDF | — | TECHNICALLY BLOCKED | — | archive.unescwa.org refused by the egress policy |
@@ -94,8 +113,8 @@ DPUL, Emory, Harvard IIIF, OER Commons, Ubiquity, Luminos, BDH, e-newspaperarchi
 
 ## Best candidates for the next round
 
-- **Sinaweb Arabic journals with other templates** — Studies on Arabic Language and Literature (Semnan, CC BY 4.0)
-  and Research in Arabic Language (Isfahan, CC BY-NC-ND 4.0): eligible, need their own recipes.
+- ~~**Sinaweb Arabic journals with other templates**~~ — implemented 2026-10-08 (`oneshelf.lasem-semnan`,
+  `oneshelf.rall-ui`; see the follow-up above).
 - **UN Digital Library** (6 UN languages including Arabic, free official) — record pages and files not yet examined.
 - **Chronicling America** — public domain, keyless JSON API; blocked only by this environment's egress policy.
 - **Manifold presses** — would work as text units once a text's licence is confirmed (ask the presses / read their
