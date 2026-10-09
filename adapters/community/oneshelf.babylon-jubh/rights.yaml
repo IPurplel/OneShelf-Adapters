@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: unknown
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "The article's authors, مجلة جامعة بابل للعلوم الانسانية, University of Babylon — https://www.journalofbabylon.com/index.php/JUBH"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each article page of the journal (Open Journal Systems) states its own licence in machine-readable form: a
+    DC.Rights meta tag linking Creative Commons (http://creativecommons.org/licenses/by/4.0 on article 6776, 2026-10-09). Not every article
+    carries one, so an issue's articles are listed with their titles and an article's PDF is offered only while
+    its own page states a Creative Commons licence (test 3: the same page with its licence removed, marked
+    SYNTHETIC, gives no file; test 4: a real 2022 article whose DC.Rights links only the journal's own copyright page gives no file, although
+    its sidebar shows a journal-wide CC BY notice). Commercial use and derivatives
+    depend on each article's licence and are marked unknown; the PDF is stored unaltered for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: An article page with DC.Rights http://creativecommons.org/licenses/by/4.0 and citation_pdf_url.
+    url: https://www.journalofbabylon.com/index.php/JUBH/article/view/6776
+  - claim: robots.txt states no rules (only commented content signals).
+    url: https://www.journalofbabylon.com/robots.txt
+last_verified: 2026-10-09

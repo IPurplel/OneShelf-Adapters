@@ -1,0 +1,33 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '90'}
+  fixtures: [{url: 'https://jjes.yu.edu.jo/index.php/jjes/issue/view/90', file: fixtures/issue_90.html}]
+  expect:
+    first: {title: "المجلة الأردنية في العلوم التربوية — Vol. 22 No. 2 (2026)", language: ar}
+- capability: catalog
+  inputs: {listing_key: '90'}
+  fixtures: [{url: 'https://jjes.yu.edu.jo/index.php/jjes/issue/view/90', file: fixtures/issue_90.html}]
+  expect:
+    min_items: 8
+    complete: true
+    first: {unit_key: '1199'}
+- capability: downloads
+  inputs: {unit_key: '1199'}
+  fixtures: [{url: 'https://jjes.yu.edu.jo/index.php/jjes/article/view/1199', file: fixtures/article_1199.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jjes.yu.edu.jo/index.php/jjes/article/download/1199/915', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '1199'}
+  fixtures: [{url: 'https://jjes.yu.edu.jo/index.php/jjes/article/view/1199', file: fixtures/synthetic-no-licence_1199.html}]
+  expect:
+    first: {url: null}
+# 4: a real article that states no Creative Commons licence (DC.Rights: "Copyright (c) 2026 المجلة الأردنية في العلوم التربوية") — no file.
+- capability: downloads
+  inputs: {unit_key: '295'}
+  fixtures: [{url: 'https://jjes.yu.edu.jo/index.php/jjes/article/view/295', file: fixtures/article_295.html}]
+  expect:
+    first: {url: null}

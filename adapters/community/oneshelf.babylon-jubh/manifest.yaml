@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.babylon-jubh
+name: "مجلة جامعة بابل للعلوم الانسانية (University of Babylon, Iraq)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة جامعة بابل للعلوم الانسانية — an open-access journal of University of Babylon (Iraq) on humanities (Journal of University of Babylon for Humanities), published with Open Journal
+  Systems, its articles in Arabic and English. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (www.journalofbabylon.com/index.php/JUBH/issue/view/…; the site's own links on mail.journalofbabylon.com work too).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.journalofbabylon.com]
+defaults:
+  language: ar
+  content_type: paper

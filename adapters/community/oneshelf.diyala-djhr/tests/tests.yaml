@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '150'}
+  fixtures: [{url: 'https://djhr.uodiyala.edu.iq/index.php/DJHR2022/issue/view/150', file: fixtures/issue_150.html}]
+  expect:
+    first: {title: "مجلة ديالى للبحوث الانسانية — مجلد 2 عدد 109 (2026): المجلد الثاني", language: ar}
+- capability: catalog
+  inputs: {listing_key: '150'}
+  fixtures: [{url: 'https://djhr.uodiyala.edu.iq/index.php/DJHR2022/issue/view/150', file: fixtures/issue_150.html}]
+  expect:
+    min_items: 35
+    complete: true
+    first: {unit_key: '6319'}
+- capability: downloads
+  inputs: {unit_key: '6319'}
+  fixtures: [{url: 'https://djhr.uodiyala.edu.iq/index.php/DJHR2022/article/view/6319', file: fixtures/article_6319.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://djhr.uodiyala.edu.iq/index.php/DJHR2022/article/download/6319/4189', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '6319'}
+  fixtures: [{url: 'https://djhr.uodiyala.edu.iq/index.php/DJHR2022/article/view/6319', file: fixtures/synthetic-no-licence_6319.html}]
+  expect:
+    first: {url: null}

@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.kufa-jall
+name: "مجلة اللغة العربية وآدابها (University of Kufa, Iraq)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة اللغة العربية وآدابها — an open-access journal of University of Kufa (Iraq) on Arabic language and literature, published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (journal.uokufa.edu.iq/index.php/jall/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journal.uokufa.edu.iq]
+defaults:
+  language: ar
+  content_type: paper

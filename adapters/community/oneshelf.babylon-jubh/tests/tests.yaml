@@ -1,0 +1,39 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '226'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/issue/view/226', file: fixtures/issue_226.html}]
+  expect:
+    first: {title: "مجلة جامعة بابل للعلوم الانسانية — مجلد 34 عدد 9 (2026)", language: ar}
+- capability: catalog
+  inputs: {listing_key: '226'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/issue/view/226', file: fixtures/issue_226.html}]
+  expect:
+    min_items: 17
+    complete: true
+    first: {unit_key: '6776'}
+- capability: downloads
+  inputs: {unit_key: '6776'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/article/view/6776', file: fixtures/article_6776.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.journalofbabylon.com/index.php/JUBH/article/download/6776/4870', format: pdf, language: en}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '6776'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/article/view/6776', file: fixtures/synthetic-no-licence_6776.html}]
+  expect:
+    first: {url: null}
+# 4: a real 2022 article whose DC.Rights names only the journal's own copyright page (JUBH/CopyrightandLicensing),
+#    not a Creative Commons licence; the page shows the journal-wide CC BY notice only in its sidebar — no file.
+- capability: downloads
+  inputs: {unit_key: '4292'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/article/view/4292', file: fixtures/article_4292.html}]
+  expect:
+    first: {url: null}
+- capability: work
+  inputs: {listing_key: '226'}
+  fixtures: [{url: 'https://www.journalofbabylon.com/index.php/JUBH/issue/view/226', file: fixtures/issue_226.html}]
+  expect:
+    first: {cover_url: 'https://www.journalofbabylon.com/public/journals/3/cover_issue_226_en.jpg'}

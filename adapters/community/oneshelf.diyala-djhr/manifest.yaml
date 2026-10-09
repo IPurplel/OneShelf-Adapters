@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.diyala-djhr
+name: "مجلة ديالى للبحوث الانسانية (University of Diyala, Iraq)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة ديالى للبحوث الانسانية — an open-access journal of University of Diyala (Iraq) on humanities (Diyala Journal for Human Research), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY-NC 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (djhr.uodiyala.edu.iq/index.php/DJHR2022/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [djhr.uodiyala.edu.iq]
+defaults:
+  language: ar
+  content_type: paper

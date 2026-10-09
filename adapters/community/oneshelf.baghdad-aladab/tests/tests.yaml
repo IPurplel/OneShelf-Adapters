@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '179'}
+  fixtures: [{url: 'https://aladabj.uobaghdad.edu.iq/index.php/aladabjournal/issue/view/179', file: fixtures/issue_179.html}]
+  expect:
+    first: {title: "مجلة الآداب — Vol. 68 No. 3 (2026)", language: ar}
+- capability: catalog
+  inputs: {listing_key: '179'}
+  fixtures: [{url: 'https://aladabj.uobaghdad.edu.iq/index.php/aladabjournal/issue/view/179', file: fixtures/issue_179.html}]
+  expect:
+    min_items: 32
+    complete: true
+    first: {unit_key: '5367'}
+- capability: downloads
+  inputs: {unit_key: '5367'}
+  fixtures: [{url: 'https://aladabj.uobaghdad.edu.iq/index.php/aladabjournal/article/view/5367', file: fixtures/article_5367.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://aladabj.uobaghdad.edu.iq/index.php/aladabjournal/article/download/5367/4319', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '5367'}
+  fixtures: [{url: 'https://aladabj.uobaghdad.edu.iq/index.php/aladabjournal/article/view/5367', file: fixtures/synthetic-no-licence_5367.html}]
+  expect:
+    first: {url: null}

@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '143'}
+  fixtures: [{url: 'https://jtuh.org/index.php/jtuh/issue/view/143', file: fixtures/issue_143.html}]
+  expect:
+    first: {title: "مجلة جامعة تكريت للعلوم الإنسانية — Vol. 33 No. 7, 2 (2026): Vol. 33, No.7, Part2", language: ar}
+- capability: catalog
+  inputs: {listing_key: '143'}
+  fixtures: [{url: 'https://jtuh.org/index.php/jtuh/issue/view/143', file: fixtures/issue_143.html}]
+  expect:
+    min_items: 20
+    complete: true
+    first: {unit_key: '6694'}
+- capability: downloads
+  inputs: {unit_key: '6694'}
+  fixtures: [{url: 'https://jtuh.org/index.php/jtuh/article/view/6694', file: fixtures/article_6694.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jtuh.org/index.php/jtuh/article/download/6694/6720', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '6694'}
+  fixtures: [{url: 'https://jtuh.org/index.php/jtuh/article/view/6694', file: fixtures/synthetic-no-licence_6694.html}]
+  expect:
+    first: {url: null}
