@@ -5,11 +5,11 @@ Continues round 9 ([discovery-round9-2026-10.md](discovery-round9-2026-10.md)) o
 - **Access:** OneShelf's own User-Agent, robots.txt first, about one request per second. M'sila's Crawl-delay of 5 s was honoured at 5.5 s. Nothing was bypassed.
 - **Rights:** unchanged ([round 8 rights decision](discovery-round8-2026-10.md#rights-decision-2026-10-09-journal-wide-statements-are-not-enough)). Only a versioned Creative Commons URL in the article's own DC.Rights counts.
 
-This round is discovery only: **nothing was built.**
+Rows 1–3 were implemented on 2026-10-10 after review (see the build notes and live checks below); the others were not built.
 
-**Outcomes (11 sources):** ELIGIBLE NOT BUILT 5, RIGHTS NEED REVIEW 2, TECHNICALLY BLOCKED 3, NOT EXAMINED FURTHER 1.
+**Outcomes (11 sources):** IMPLEMENTED 3, ELIGIBLE NOT BUILT 2, RIGHTS NEED REVIEW 2, TECHNICALLY BLOCKED 3, NOT EXAMINED FURTHER 1.
 
-## Recommended for the next build round
+## Implemented — three adapters (VERIFIED live, pinned Core, API 1.0)
 
 Three journals fit the round-7/8 adapter shape unchanged, sampled six articles from the newest issue and six from a
 mid-archive issue with the shipped gate's regex:
@@ -27,13 +27,30 @@ Build notes:
   - Its recipes must never request a locale switch.
   - Its newest issue (173) holds articles dated 2021 and 2023, so issue order is not date order.
 
+All of them:
+- **Checks:** pass `check-adapter` on the pinned Core (`475c145f`).
+- **Gate:** the round-8 DC.Rights Creative Commons gate. Each has a SYNTHETIC refusal test; adapters with an older unlicensed archive also have a real refusal test.
+- **Mutation check:** with the licence condition removed from the downloads recipe, every refusal test fails.
+- **Licence matrix:** any versioned CC licence URL (http or https, with or without a trailing slash) gives the file. Refused: `publicdomain/zero`, an unversioned `licenses/` URL, a lookalike or other host, a copyright line or copyright page, and a journal-wide notice alone.
+- **Fixtures:** the fixtures' line-end whitespace was normalised outside attribute values. Parse trees are unchanged and raw `git diff --check` is clean.
+
+| Adapter | Live checks (2026-10-10) |
+|---|---|
+| `oneshelf.tripoli-delalat` | 2 PASS: issue 17 (2026, 27 articles) and issue 9 (2023, 22 articles) |
+| `oneshelf.kufa-ksc` | 2 PASS: issue 1101 (2026, 42 pp) and issue 975 (2025, 29 articles) |
+| `oneshelf.msila-japl` | 2 PASS: issue 173 (11 articles) and issue 176 (2022, 31 articles); `rate_limit` 10 requests a minute |
+
+Notes from the build:
+- **Kufa KSC and M'sila JAPL:** the sites' pages are English by default, so their issues list the English titles the journal gives its articles. Files and `citation_language` are Arabic.
+- **M'sila JAPL:** some article addresses are slugs (`article/view/08-05-2012`), so the catalog and the PDF pattern accept `[A-Za-z0-9-]+`.
+
 ## Every source
 
 | # | Source | Content | Lang | Rights | robots.txt | Outcome | Adapter / blocker |
 |---|---|---|---|---|---|---|---|
-| 1 | [University of Tripoli — مجلة دلالات للعلوم الإنسانية والتربوية (Delalat Journal of Humanities and Educational Sciences)](https://j.tu.edu.ly/delalat/index.php/delalat) | humanities, education, Islamic studies | ar | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled (2023, 2026) plus a 2021 article | no robots.txt (404) | ELIGIBLE NOT BUILT | **Recommended.** 17 issues |
-| 2 | [University of Kufa — مجلة مركز دراسات الكوفة (Journal of Kufa Studies Center)](https://journal.uokufa.edu.iq/index.php/ksc) | humanities, social sciences, economics | ar | per article `https://creativecommons.org/licenses/by/4.0`; 12 of 12 sampled (2025, 2026) plus a 2024 article | system paths and `/cache/` only | ELIGIBLE NOT BUILT | **Recommended** |
-| 3 | [University of M'sila — مجلة دفاتر مخبر الشعرية الجزائرية (JAPL)](https://journals.univ-msila.dz/index.php/JAPL) | Arabic literature, poetics, criticism | ar | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 sampled (2022, 2023) plus two more (2021, 2023) | Crawl-delay 5; disallows `setLocale`, `search`, `browse` | ELIGIBLE NOT BUILT | **Recommended.** Its own OJS host, not ASJP |
+| 1 | [University of Tripoli — مجلة دلالات للعلوم الإنسانية والتربوية (Delalat Journal of Humanities and Educational Sciences)](https://j.tu.edu.ly/delalat/index.php/delalat) | humanities, education, Islamic studies | ar | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled (2023, 2026) plus a 2021 article | no robots.txt (404) | IMPLEMENTED | `oneshelf.tripoli-delalat`. 17 issues |
+| 2 | [University of Kufa — مجلة مركز دراسات الكوفة (Journal of Kufa Studies Center)](https://journal.uokufa.edu.iq/index.php/ksc) | humanities, social sciences, economics | ar | per article `https://creativecommons.org/licenses/by/4.0`; 12 of 12 sampled (2025, 2026) plus a 2024 article | system paths and `/cache/` only | IMPLEMENTED | `oneshelf.kufa-ksc` |
+| 3 | [University of M'sila — مجلة دفاتر مخبر الشعرية الجزائرية (JAPL)](https://journals.univ-msila.dz/index.php/JAPL) | Arabic literature, poetics, criticism | ar | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 sampled (2022, 2023) plus two more (2021, 2023) | Crawl-delay 5; disallows `setLocale`, `search`, `browse` | IMPLEMENTED | `oneshelf.msila-japl`. Its own OJS host, not ASJP |
 | 4 | [Al-Mustansiriyah University — مجلة آداب المستنصرية](https://amm.uomustansiriyah.edu.iq/index.php/mustansiriyah) | humanities | ar, fr | per article CC: `https://…/by/4.0` (2023 article) and `http://…/by-sa/4.0` (2024 article); the gate accepts both | only `/cache/` | ELIGIBLE NOT BUILT | Both issue pages examined (113, 127) list **one** article each, although the journal has many. Its catalog structure needs examining before an adapter |
 | 5 | [Tunis University — Joussour](https://joussour.utunis.rnu.tn/index.php/JHASES) | humanities, social sciences | fr (sampled) | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` (plus "Creative Commons CC BY" text) | only `/cache/` | ELIGIBLE NOT BUILT | One issue of five articles so far; sampled article is French. Not the IMIST `joussour` journal of round 3–6 |
 | 6 | [Al-Mustansiriyah University — Mustansiriyah Journal of Humanities](https://mjh.uomustansiriyah.edu.iq/index.php/mjh) | humanities, education | ar | no DC.Rights at all (2026 and 2023 articles) | only `/cache/` | RIGHTS NEED REVIEW | No licence to gate on |

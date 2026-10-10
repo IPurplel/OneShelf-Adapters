@@ -5,11 +5,11 @@ Continues round 8 ([discovery-round8-2026-10.md](discovery-round8-2026-10.md)) b
 - **Access:** every source was read with OneShelf's own User-Agent, robots.txt first, at about one request per second. Nothing was bypassed.
 - **Rights:** unchanged ([round 8 rights decision](discovery-round8-2026-10.md#rights-decision-2026-10-09-journal-wide-statements-are-not-enough)). A licence counts only when the article's own page states it as a versioned Creative Commons licence URL in DC.Rights. A footer, sidebar or site-metadata licence is never taken as an article's licence.
 
-This round is discovery only: **nothing was built.** The candidates below await a decision.
+Rows 1–4 were implemented on 2026-10-10 after review (see the build notes and live checks below); the others were not built. The candidates below await a decision.
 
-**Outcomes (12 sources):** ELIGIBLE NOT BUILT 6, RIGHTS NEED REVIEW 2, TECHNICALLY BLOCKED 3, NOT EXAMINED FURTHER 1.
+**Outcomes (12 sources):** IMPLEMENTED 4, ELIGIBLE NOT BUILT 2, RIGHTS NEED REVIEW 2, TECHNICALLY BLOCKED 3, NOT EXAMINED FURTHER 1.
 
-## Recommended for the next build round
+## Implemented — four adapters (VERIFIED live, pinned Core, API 1.0)
 
 Four journals fit the round-7/8 adapter shape unchanged:
 - one OJS journal per adapter;
@@ -34,14 +34,33 @@ Build notes:
 - **BERJ's `citation_language`:** it reads `en` on 2024 articles whose titles are Arabic, so the 2024 file language would be wrong. The 2024 articles carry no item licence and get no file anyway, so this only affects listed metadata.
 - **JRASHC and BERJ:** like kjlps and Al-Adab in round 7, only part of the archive opens. Older articles stay listed with no file, and no journal-wide fallback is used.
 
+All of them:
+- **Checks:** pass `check-adapter` on the pinned Core (`475c145f`).
+- **Gate:** the round-8 DC.Rights Creative Commons gate. Each has a SYNTHETIC refusal test; adapters with an older unlicensed archive also have a real refusal test.
+- **Mutation check:** with the licence condition removed from the downloads recipe, every refusal test fails.
+- **Licence matrix:** any versioned CC licence URL (http or https, with or without a trailing slash) gives the file. Refused: `publicdomain/zero`, an unversioned `licenses/` URL, a lookalike or other host, a copyright line or copyright page, and a journal-wide notice alone.
+- **Fixtures:** the fixtures' line-end whitespace was normalised outside attribute values. Parse trees are unchanged and raw `git diff --check` is clean.
+
+| Adapter | Live checks (2026-10-10) |
+|---|---|
+| `oneshelf.misurata-arts` | 2 PASS: issue 26 (2026, 19 articles, 24 pp) and issue `issue11-2018` (14 articles, 35 pp) |
+| `oneshelf.mosul-jeh` | 2 PASS: issue 2968 (2026, 50 articles) and issue 2753 (2025, an English article, 22 pp) |
+| `oneshelf.baghdad-jrashc` | 2 PASS: issue 91 (2026) and issue 83 (22 pp). Refused live: article 627 (2020) |
+| `oneshelf.mosul-berj` | 2 PASS: issue 2981 (2026) and issue 2927 (19 pp). Refused live: article 38819 (2022) |
+
+Notes from the build:
+- **Misurata Arts:** older issues have word-style IDs, so the source pattern and the catalog accept `[A-Za-z0-9-]+` for issues and articles. The site's pages are English by default, so the issue lists the English titles the journal gives its articles. Files and `citation_language` are Arabic.
+- **Mosul JEH issue 2867 (2026)** has licensed articles but publishes no PDFs at all. The adapter lists them with no file, which is correct.
+- **Mosul hosts:** both Mosul adapters use the University of Mosul Bootstrap 5 theme. Their catalogs read `div.article-card h6.card-title a`, and the issue heading comes from the breadcrumb.
+
 ## Every source
 
 | # | Source | Content | Lang | Rights | robots.txt | Outcome | Adapter / blocker |
 |---|---|---|---|---|---|---|---|
-| 1 | [Misurata University — مجلة كلية الآداب (Faculty of Arts Journal)](https://hit.misuratau.edu.ly/ojs/index.php/arts) | humanities, social sciences | ar (some en) | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled, 2018 and 2026; also article 229 (2021) | no robots.txt (404) | ELIGIBLE NOT BUILT | **Recommended.** 22 issues on archive page 1; the journal dates its archive from 2014 |
-| 2 | [University of Mosul — مجلة التربية للعلوم الانسانية (Journal of Education for the Humanities)](https://jeh.uomosul.edu.iq/index.php/jeh) | humanities, education | ar, en | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 sampled, plus a 2025 article | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** About 50 articles per issue |
-| 3 | [University of Baghdad — مجلة التراث العلمي العربي (Journal of Arabic Scientific Heritage)](https://jrashc.uobaghdad.edu.iq/index.php/jrashc) | Arabic heritage, history of science, linguistics | ar | per article `https://creativecommons.org/licenses/by/4.0` in 2026 (6/6). 2023 (6/6) and 2020 have no DC.Rights licence, only the journal sidebar `rel=license` | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** The gate refuses the older articles |
-| 4 | [University of Mosul — مجلة ابحاث كلية التربية الاساسية (College of Basic Education Research Journal)](https://berj.uomosul.edu.iq/index.php/berj) | education, humanities | ar, en | per article `https://creativecommons.org/licenses/by/4.0` in 2026 (6/6). 2024 (6/6) and 2022 have none; the site footer's CC BY-NC-SA covers "this OJS site and its metadata" and is not counted | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** Only recent issues open |
+| 1 | [Misurata University — مجلة كلية الآداب (Faculty of Arts Journal)](https://hit.misuratau.edu.ly/ojs/index.php/arts) | humanities, social sciences | ar (some en) | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled, 2018 and 2026; also article 229 (2021) | no robots.txt (404) | IMPLEMENTED | `oneshelf.misurata-arts`. 22 issues on archive page 1; the journal dates its archive from 2014 |
+| 2 | [University of Mosul — مجلة التربية للعلوم الانسانية (Journal of Education for the Humanities)](https://jeh.uomosul.edu.iq/index.php/jeh) | humanities, education | ar, en | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 sampled, plus a 2025 article | only `/cache/` | IMPLEMENTED | `oneshelf.mosul-jeh`. About 50 articles per issue |
+| 3 | [University of Baghdad — مجلة التراث العلمي العربي (Journal of Arabic Scientific Heritage)](https://jrashc.uobaghdad.edu.iq/index.php/jrashc) | Arabic heritage, history of science, linguistics | ar | per article `https://creativecommons.org/licenses/by/4.0` in 2026 (6/6). 2023 (6/6) and 2020 have no DC.Rights licence, only the journal sidebar `rel=license` | only `/cache/` | IMPLEMENTED | `oneshelf.baghdad-jrashc`. The gate refuses the older articles |
+| 4 | [University of Mosul — مجلة ابحاث كلية التربية الاساسية (College of Basic Education Research Journal)](https://berj.uomosul.edu.iq/index.php/berj) | education, humanities | ar, en | per article `https://creativecommons.org/licenses/by/4.0` in 2026 (6/6). 2024 (6/6) and 2022 have none; the site footer's CC BY-NC-SA covers "this OJS site and its metadata" and is not counted | only `/cache/` | IMPLEMENTED | `oneshelf.mosul-berj`. Only recent issues open |
 | 5 | [University of Mosul — آداب الرافدين (Adab Al-Rafidayn)](https://radab.uomosul.edu.iq/index.php/radab) | humanities | ar | per article `https://creativecommons.org/licenses/by/4.0/deed.en` (2026, 6/6). Older issues 1837 and 1801: none | only `/cache/` | ELIGIBLE NOT BUILT | **Needs a recipe variant:** the shipped regex refuses the `/deed.en` suffix; pages have no `citation_*` tags (no `citation_pdf_url`); `DC.Language` says `en` on Arabic articles. Round 8 could not reach this host |
 | 6 | [Palestine Ahliya University — Journal for Research and Studies](https://journal.paluniv.edu.ps/index.php/journal) | humanities, law, social sciences | en (18 of 18 sampled) | per article `https://creativecommons.org/licenses/by/4.0`, 2022–2026 | only `/cache/` | ELIGIBLE NOT BUILT | Fits the gate, but every sampled article is English; outside this round's Arabic focus |
 | 7 | [University of Sirte — مجلة أبحاث (Abhat, Faculty of Arts)](https://journal.su.edu.ly/index.php/abhat) | humanities | ar | DC.Rights only "الحقوق الفكرية (c) 2026 Abhat Journal"; no `rel=license` | only `/cache/` | RIGHTS NEED REVIEW | No licence to gate on |
