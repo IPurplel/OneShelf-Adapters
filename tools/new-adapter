@@ -24,9 +24,9 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("slug", help="lowercase site/project name, e.g. example-site")
     parser.add_argument("--name", help="the source's name (default: from the slug)")
-    parser.add_argument("--category", default="Books", choices=list(adapter_labels.CATEGORIES),
+    parser.add_argument("--category", choices=list(adapter_labels.CATEGORIES),
                         help="what the source holds (default: Books); see docs/adapter-labels.md")
-    parser.add_argument("--language", default="EN",
+    parser.add_argument("--language",
                         help="the content's language code, e.g. AR, or FA/AR, or Multi (default: EN)")
     parser.add_argument("--domain", help="the site's host, e.g. example-site.org (default: <slug>.example.com)")
     parser.add_argument("--publisher", default="Community contributor")
@@ -44,6 +44,11 @@ def main(argv=None) -> int:
             print(f"{plugin_id} already exists in adapters/{tier}/", file=sys.stderr)
             return 1
     name = args.name or args.slug.replace("-", " ").title()
+    if args.category is None or args.language is None:
+        print("note: no --category/--language given, so the name is labelled "
+              f"{args.category or 'Books'} · {args.language or 'EN'}; change it in manifest.yaml if that is wrong",
+              file=sys.stderr)
+    args.category, args.language = args.category or "Books", args.language or "EN"
     label = adapter_labels.SEP.join((name, args.category, args.language))
     try:
         adapter_labels.parse(label)
