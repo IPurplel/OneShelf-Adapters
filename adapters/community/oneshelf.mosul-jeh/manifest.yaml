@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.mosul-jeh
+name: "مجلة التربية للعلوم الانسانية (University of Mosul, Iraq)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة التربية للعلوم الانسانية — an open-access journal of University of Mosul (Iraq) on humanities and education (Journal of Education for the Humanities), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY-NC 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (jeh.uomosul.edu.iq/index.php/jeh/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [jeh.uomosul.edu.iq]
+defaults:
+  language: ar
+  content_type: paper

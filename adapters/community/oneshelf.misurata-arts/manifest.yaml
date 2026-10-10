@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.misurata-arts
+name: "مجلة كلية الآداب (Misurata University, Libya)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة كلية الآداب — an open-access journal of Misurata University (Libya) on humanities and social sciences (Faculty of Arts Journal), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. The journal's pages are English by
+  default, so the issue lists its articles under the English titles the journal gives them. Open an issue by pasting its address
+  (hit.misuratau.edu.ly/ojs/index.php/arts/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [hit.misuratau.edu.ly]
+defaults:
+  language: ar
+  content_type: paper

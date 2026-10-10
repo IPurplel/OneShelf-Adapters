@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.msila-japl
+name: "مجلة دفاتر مخبر الشعرية الجزائرية (University of M'sila, Algeria)"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة دفاتر مخبر الشعرية الجزائرية — an open-access journal of University of M'sila (Algeria) on Arabic literature, poetics and criticism (Notebooks of the Algerian Poetics Laboratory), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY-NC 4.0 on the
+  articles sampled); an article's language is read from its own page. The journal's pages are English by
+  default, so the issue lists its articles under the English titles the journal gives them. Open an issue by pasting its address
+  (journals.univ-msila.dz/index.php/JAPL/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.univ-msila.dz]
+defaults:
+  language: ar
+  content_type: paper

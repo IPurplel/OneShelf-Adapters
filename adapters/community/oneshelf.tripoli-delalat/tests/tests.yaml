@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '17'}
+  fixtures: [{url: 'https://j.tu.edu.ly/delalat/index.php/delalat/issue/view/17', file: fixtures/issue_17.html}]
+  expect:
+    first: {title: "مجلة دلالات للعلوم الإنسانية والتربوية — Vol. 17 (2026)", language: ar}
+- capability: catalog
+  inputs: {listing_key: '17'}
+  fixtures: [{url: 'https://j.tu.edu.ly/delalat/index.php/delalat/issue/view/17', file: fixtures/issue_17.html}]
+  expect:
+    min_items: 27
+    complete: true
+    first: {unit_key: '437'}
+- capability: downloads
+  inputs: {unit_key: '437'}
+  fixtures: [{url: 'https://j.tu.edu.ly/delalat/index.php/delalat/article/view/437', file: fixtures/article_437.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://j.tu.edu.ly/delalat/index.php/delalat/article/download/437/372', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '437'}
+  fixtures: [{url: 'https://j.tu.edu.ly/delalat/index.php/delalat/article/view/437', file: fixtures/synthetic-no-licence_437.html}]
+  expect:
+    first: {url: null}

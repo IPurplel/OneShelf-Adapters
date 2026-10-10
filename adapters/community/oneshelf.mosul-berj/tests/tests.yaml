@@ -1,0 +1,33 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '2981'}
+  fixtures: [{url: 'https://berj.uomosul.edu.iq/index.php/berj/issue/view/2981', file: fixtures/issue_2981.html}]
+  expect:
+    first: {title: "مجلة ابحاث كلية التربية الاساسية — مجلد 22 عدد 3 (2026): المجلد (22) العدد (3) ايلول 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '2981'}
+  fixtures: [{url: 'https://berj.uomosul.edu.iq/index.php/berj/issue/view/2981', file: fixtures/issue_2981.html}]
+  expect:
+    min_items: 25
+    complete: true
+    first: {unit_key: '61955'}
+- capability: downloads
+  inputs: {unit_key: '61955'}
+  fixtures: [{url: 'https://berj.uomosul.edu.iq/index.php/berj/article/view/61955', file: fixtures/article_61955.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://berj.uomosul.edu.iq/index.php/berj/article/download/61955/59853', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '61955'}
+  fixtures: [{url: 'https://berj.uomosul.edu.iq/index.php/berj/article/view/61955', file: fixtures/synthetic-no-licence_61955.html}]
+  expect:
+    first: {url: null}
+# 4: a real article that states no Creative Commons licence (DC.Rights: "none") — no file.
+- capability: downloads
+  inputs: {unit_key: '38819'}
+  fixtures: [{url: 'https://berj.uomosul.edu.iq/index.php/berj/article/view/38819', file: fixtures/article_38819.html}]
+  expect:
+    first: {url: null}
