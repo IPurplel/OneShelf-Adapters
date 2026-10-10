@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.mek
-name: Magyar Elektronikus Könyvtár (MEK)
+name: "Magyar Elektronikus Könyvtár (MEK) · Books · HU"
 version: 0.1.0
 api: '1.2'
 description: >-

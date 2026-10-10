@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Check every adapter's `Source · Category · LANG` name and write docs/adapter-catalogue.md from them.
+#   ./tools/adapter-catalogue            # rewrite the catalogue
+#   ./tools/adapter-catalogue --check    # change nothing; fail on a bad name or a stale catalogue
+# See tools/lib/adapter_labels.py and docs/adapter-labels.md.
+set -euo pipefail
+. "$(dirname "${BASH_SOURCE[0]}")/_env.sh"
+exec "$PY" "$ROOT/tools/lib/adapter_labels.py" "$@"

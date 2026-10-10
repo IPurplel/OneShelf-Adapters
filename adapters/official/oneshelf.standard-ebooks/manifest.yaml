@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.standard-ebooks
-name: Standard Ebooks
+name: "Standard Ebooks · Books · EN"
 version: 1.1.0
 api: '1.0'
 description: >-

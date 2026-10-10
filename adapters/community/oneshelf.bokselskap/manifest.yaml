@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.bokselskap
-name: Bokselskap
+name: "Bokselskap · Books · NO"
 version: 0.1.0
 api: '1.2'
 description: >-

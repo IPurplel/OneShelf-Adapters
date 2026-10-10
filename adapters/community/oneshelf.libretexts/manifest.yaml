@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.libretexts
-name: LibreTexts
+name: "LibreTexts · Textbooks · EN"
 version: 0.1.0
 api: '1.0'
 description: >-

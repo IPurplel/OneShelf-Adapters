@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: {{ID}}
-name: {{NAME}}
+name: "{{LABEL}}"
 version: 0.1.0
 api: '1.0'
 description: >-
@@ -11,4 +11,4 @@ capabilities: [search]
 network:
   domains: [{{DOMAIN}}]
 defaults:
-  language: en
+  language: {{LANGUAGE}}

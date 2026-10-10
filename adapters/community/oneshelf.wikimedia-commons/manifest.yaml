@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.wikimedia-commons
-name: Wikimedia Commons (PDF)
+name: "Wikimedia Commons (PDF) · Digital library · Multi"
 version: 0.1.0
 api: '1.0'
 description: >-

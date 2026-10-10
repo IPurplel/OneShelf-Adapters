@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.litteraturbanken
-name: Litteraturbanken
+name: "Litteraturbanken · Books · SV"
 version: 0.1.0
 api: '1.0'
 description: >-

@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.world-bank-okr
-name: World Bank Open Knowledge Repository
+name: "World Bank Open Knowledge Repository · Reports · EN"
 version: 0.1.0
 api: '1.2'
 description: >-

@@ -15,6 +15,11 @@ OneShelf, open **Sources → Source Registry**: every published adapter is liste
 level, what it can do and what it may reach. Install, update and reinstall happen from that screen, each
 after a review and the adapter's own tests.
 
+Each adapter is named `Source · Category · LANG`, such as `3asq (Al-Aasheq) · Manga · AR` or
+`مجلة آداب الكوفة (University of Kufa, Iraq) · Journal · AR`, so the list says what each one holds and in
+which language. [docs/adapter-catalogue.md](docs/adapter-catalogue.md) lists every adapter by category
+and by language ([docs/adapter-labels.md](docs/adapter-labels.md) explains the labels).
+
 The Registry is published from this repository's [`registry` branch](https://github.com/IPurplel/OneShelf-Adapters/tree/registry) and read over
 HTTPS from `https://raw.githubusercontent.com/IPurplel/OneShelf-Adapters/registry/index.json`. Adapters are updated independently of OneShelf releases: a new or fixed adapter
 reaches existing installations without a new version of OneShelf.

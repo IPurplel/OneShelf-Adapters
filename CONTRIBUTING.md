@@ -36,7 +36,7 @@ open access.
 
 ```bash
 ./tools/bootstrap                                  # once
-./tools/new-adapter example-site --name "Example Site" --domain example-site.org
+./tools/new-adapter example-site --name "Example Site" --category Books --language EN --domain example-site.org
 ```
 
 This creates `adapters/community/oneshelf.example-site` from `templates/basic-source/` — a small working
@@ -46,6 +46,10 @@ adapter with a search recipe, a synthetic fixture and a packaged test. Replace t
 
 - `id` — `oneshelf.<name>`, lowercase, **equal to the directory name**, and never changed once published.
   Name the site or project, not a transient domain.
+- `name` — what the Registry screen shows: `Source · Category · LANG`, e.g. `3asq (Al-Aasheq) · Manga · AR`,
+  at most 80 characters. The category comes from a fixed list and the language is upper-case ISO 639
+  codes or `Multi` ([docs/adapter-labels.md](docs/adapter-labels.md)). After adding or renaming an adapter,
+  run `./tools/adapter-catalogue` to update [docs/adapter-catalogue.md](docs/adapter-catalogue.md).
 - `version` — `MAJOR.MINOR.PATCH`. New adapters start at `0.1.0` or `1.0.0`.
 - `api` — the OneShelf plugin API it targets (`'1.0'` today). You cannot raise this here: plugin API changes
   belong in OneShelf Core.

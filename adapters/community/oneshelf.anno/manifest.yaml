@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.anno
-name: ANNO — Austrian Newspapers Online
+name: "ANNO (Austrian Newspapers Online) · Newspapers · DE"
 version: 0.1.0
 api: '1.0'
 description: >-

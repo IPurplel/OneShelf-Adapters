@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.govinfo
-name: GovInfo (U.S. Government Publishing Office)
+name: "GovInfo (U.S. Government Publishing Office) · Reports · EN"
 version: 0.1.0
 api: '1.0'
 description: >-

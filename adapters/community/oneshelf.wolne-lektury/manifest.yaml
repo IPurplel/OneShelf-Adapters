@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.wolne-lektury
-name: Wolne Lektury
+name: "Wolne Lektury · Books · PL"
 version: 0.1.0
 api: '1.0'
 description: >-

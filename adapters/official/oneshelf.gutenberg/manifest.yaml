@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.gutenberg
-name: Project Gutenberg
+name: "Project Gutenberg · Books · EN"
 version: 2.0.0
 api: '1.0'
 description: >-

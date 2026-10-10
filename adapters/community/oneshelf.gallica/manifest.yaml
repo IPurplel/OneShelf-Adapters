@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.gallica
-name: Gallica (BnF)
+name: "Gallica (BnF) · Digital library · Multi"
 version: 0.1.0
 api: '1.0'
 description: >-

@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.mdz-arabic-manuscripts
-name: MDZ — Arabic Manuscripts (Bayerische Staatsbibliothek)
+name: "MDZ Arabic Manuscripts (Bayerische Staatsbibliothek) · Manuscripts · AR"
 version: 0.1.0
 api: '1.0'
 description: >-

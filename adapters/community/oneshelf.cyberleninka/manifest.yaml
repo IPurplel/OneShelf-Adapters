@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.cyberleninka
-name: CyberLeninka
+name: "CyberLeninka · Papers · RU"
 version: 0.1.0
 api: '1.2'
 description: >-

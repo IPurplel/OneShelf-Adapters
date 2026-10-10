@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.fao-knowledge
-name: FAO Open Knowledge
+name: "FAO Open Knowledge · Reports · EN"
 version: 0.1.0
 api: '1.2'
 description: >-

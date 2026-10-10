@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.openedition-books
-name: OpenEdition Books (Creative Commons)
+name: "OpenEdition Books · Academic books · Multi"
 version: 0.1.0
 api: '1.2'
 description: >-

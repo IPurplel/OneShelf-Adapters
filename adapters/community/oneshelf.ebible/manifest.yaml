@@ -1,6 +1,6 @@
 schema: oneshelf.osp/1
 id: oneshelf.ebible
-name: eBible.org
+name: "eBible.org · Religious texts · Multi"
 version: 0.1.0
 api: '1.0'
 description: >-
