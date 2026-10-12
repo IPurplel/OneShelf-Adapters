@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.rall-ui
 name: "Research in Arabic Language (University of Isfahan) · Journal · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   بحوث في اللغة العربية — Research in Arabic Language (University of Isfahan): an open-access journal of

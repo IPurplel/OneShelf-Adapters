@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.fsu-arabic-short-stories
 name: "FSU Arabic Short Stories · Books · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Short illustrated stories in Arabic for beginning and intermediate learners, written and published

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.comic-book-plus
 name: "Comic Book Plus · Comics · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Public domain Golden Age comics, comic strips and more from Comic Book Plus, which invites everyone to

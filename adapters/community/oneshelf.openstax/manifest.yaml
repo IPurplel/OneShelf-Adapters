@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.openstax
 name: "OpenStax · Textbooks · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Free, peer-reviewed, openly licensed (Creative Commons) college and school textbooks from OpenStax at

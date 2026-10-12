@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.who-iris
 name: "WHO IRIS · Reports · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   WHO IRIS: the World Health Organization's publications and governing-body documents, as PDF. An item is a work with one unit, downloaded as the PDF the

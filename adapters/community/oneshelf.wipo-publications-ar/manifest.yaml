@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.wipo-publications-ar
 name: "WIPO Publications (Arabic) · Reports · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   منشورات الويبو — the World Intellectual Property Organization's publications in their Arabic editions, as

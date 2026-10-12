@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.openedition-books
 name: "OpenEdition Books · Academic books · Multi"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   Books on OpenEdition Books (humanities and social sciences, mostly French, also English, Spanish,

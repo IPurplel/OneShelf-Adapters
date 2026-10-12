@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.jall-ferdowsi
 name: "Journal of Arabic Language and Literature (Ferdowsi, Mashhad) · Journal · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   زبان و ادبیات عربی — the Journal of Arabic Language and Literature of Ferdowsi University of Mashhad, an

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.libretexts
 name: "LibreTexts · Textbooks · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Open educational textbooks from LibreTexts, free to read and download, through the LibreTexts Commons

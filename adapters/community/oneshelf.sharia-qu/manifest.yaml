@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.sharia-qu
 name: "College of Sharia and Islamic Studies Journal (Qatar University) · Journal · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   مجلة كلية الشريعة والدراسات الإسلامية — Journal of College of Sharia and Islamic Studies (Qatar University Press): an open-access, peer-reviewed journal of Sharia and Islamic studies, its articles in Arabic and English. An issue is a work and its

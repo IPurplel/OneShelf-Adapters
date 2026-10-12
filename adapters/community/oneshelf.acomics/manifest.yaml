@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.acomics
 name: "Acomics (Авторский Комикс) · Comics · RU"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Acomics, the Russian-language webcomic hosting platform, read issue by issue. Search, comics and their

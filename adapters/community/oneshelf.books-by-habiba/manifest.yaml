@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.books-by-habiba
 name: "Books by Habiba (Egyptian Arabic) · Children's books · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Illustrated children's books written in Egyptian (Cairene) Arabic — not Modern Standard Arabic — by

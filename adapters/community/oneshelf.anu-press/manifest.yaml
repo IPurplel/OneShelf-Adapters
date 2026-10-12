@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.anu-press
 name: "ANU Press · Academic books · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Free scholarly books from ANU Press, the Australian National University's open-access publisher. A

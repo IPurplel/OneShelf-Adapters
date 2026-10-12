@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.ucl-press
 name: "UCL Press · Academic books · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Open-access books from UCL Press, the UK's first fully open-access university press. A book is one

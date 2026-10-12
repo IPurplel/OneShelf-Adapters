@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.imist-lixus
 name: "مجلة ليكسوس:في التاريخ والعلوم الإنسانية (IMIST, Morocco) · Journal · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   مجلة ليكسوس:في التاريخ والعلوم الإنسانية — an open-access Moroccan journal on IMIST's journal portal (Open Journal Systems), its articles in

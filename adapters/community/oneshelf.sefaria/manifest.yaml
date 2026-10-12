@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.sefaria
 name: "Sefaria (original texts) · Religious texts · HE"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   The Jewish library of Sefaria — Tanakh, Mishnah, Tosefta, Midrash, Mishneh Torah, Shulchan Arukh and more

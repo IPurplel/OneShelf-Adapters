@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.chitanka
 name: "Chitanka (Моята библиотека) · Books · BG"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   Chitanka (Моята библиотека), the Bulgarian online library. A text is a work whose parts are read as text

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.erudit
 name: "Érudit · Papers · FR"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   Érudit, the Canadian platform of French-language scholarly journals. A journal issue is a work and its

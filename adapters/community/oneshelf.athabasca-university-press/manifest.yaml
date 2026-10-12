@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.athabasca-university-press
 name: "Athabasca University Press · Academic books · EN"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Open-access scholarly books from Athabasca University Press, Canada's first open-access university

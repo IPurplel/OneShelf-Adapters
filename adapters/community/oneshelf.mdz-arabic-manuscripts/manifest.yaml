@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.mdz-arabic-manuscripts
 name: "MDZ Arabic Manuscripts (Bayerische Staatsbibliothek) · Manuscripts · AR"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   The Arabic-language manuscripts of the Bavarian State Library's "Arabic Manuscripts" collection in

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.bokselskap
 name: "Bokselskap · Books · NO"
-version: 0.1.0
+version: 0.1.1
 api: '1.2'
 description: >-
   Bokselskap.no, the Norwegian Society for Language and Literature's library of Norwegian classics (Ibsen,

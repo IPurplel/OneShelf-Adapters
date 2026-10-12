@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.wikimedia-commons
 name: "Wikimedia Commons (PDF) · Digital library · Multi"
-version: 0.1.0
+version: 0.1.1
 api: '1.0'
 description: >-
   Scanned books and other PDF documents on Wikimedia Commons, every one public domain or freely licensed
