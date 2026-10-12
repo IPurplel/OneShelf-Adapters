@@ -1,0 +1,46 @@
+# Fixtures are the live page (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: flatland}
+  fixtures: [{url: 'https://www.authorama.com/book/flatland.html', file: fixtures/book-flatland.html}]
+  expect:
+    first: {title: 'Flatland: A Romance of Many Dimensions', creator: Edwin A. Abbott, language: en}
+- capability: catalog
+  inputs: {listing_key: flatland}
+  fixtures: [{url: 'https://www.authorama.com/book/flatland.html', file: fixtures/book-flatland.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: flatland, unit_type: one_shot}
+- capability: reader
+  inputs: {unit_key: flatland}
+  fixtures: [{url: 'https://www.authorama.com/book/flatland.html', file: fixtures/book-flatland.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {title: 'Flatland: A Romance of Many Dimensions'}
+    text_contains: Of the Nature of Flatland
+    min_text_chars: 100000
+# 3, 4: SYNTHETIC (the fixture says so): the same page without its public-domain statement — no unit, no text.
+- capability: catalog
+  inputs: {listing_key: flatland}
+  fixtures: [{url: 'https://www.authorama.com/book/flatland.html', file: fixtures/synthetic-no-statement_book-flatland.html}]
+  expect:
+    first: {unit_key: null}
+- capability: reader
+  inputs: {unit_key: flatland}
+  fixtures: [{url: 'https://www.authorama.com/book/flatland.html', file: fixtures/synthetic-no-statement_book-flatland.html}]
+  expect:
+    first: {html: null}
+# A book whose footer says it "belongs to the public domain", with "By" capitalised in its heading.
+- capability: work
+  inputs: {listing_key: secret-garden}
+  fixtures: [{url: 'https://www.authorama.com/book/secret-garden.html', file: fixtures/book-secret-garden.html}]
+  expect:
+    first: {title: The Secret Garden, creator: Frances Hodgson Burnett}
+- capability: catalog
+  inputs: {listing_key: secret-garden}
+  fixtures: [{url: 'https://www.authorama.com/book/secret-garden.html', file: fixtures/book-secret-garden.html}]
+  expect:
+    min_items: 1
+    first: {unit_key: secret-garden}

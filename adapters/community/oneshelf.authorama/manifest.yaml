@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.authorama
+name: "Authorama · Books · EN"
+version: 0.1.0
+api: '1.2'
+description: >-
+  Authorama, Philipp Lenssen's library of public-domain books (Austen, Carroll, Buchan, Burroughs, Balzac in
+  translation, essays and histories) in clean HTML, read as text (plugin API 1.2). A book is one unit, read
+  from its complete-book page — only while that page's footer states that the complete text is in the public
+  domain. Open a book by pasting any of its addresses (authorama.com/flatland-1.html).
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [www.authorama.com]
+defaults:
+  language: en
+  content_type: book

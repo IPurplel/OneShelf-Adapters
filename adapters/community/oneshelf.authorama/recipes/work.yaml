@@ -1,0 +1,14 @@
+# The book's complete-book page: its title and author from the heading.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/book/{listing_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//div[@class='content']/h1/text())[1]", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    creator: {xpath: "(//div[@class='content']/h1/span[@class='subtitle'])[1]", transforms: [{regex_replace: {pattern: '(?i)^\s*by\s+', replacement: ""}}, trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}

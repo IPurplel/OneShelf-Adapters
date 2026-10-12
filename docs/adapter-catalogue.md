@@ -4,9 +4,9 @@
 
 Every adapter is named `Source · Category · LANG`, as the OneShelf Registry screen shows it ([docs/adapter-labels.md](adapter-labels.md)). This page lists them by category, then by language.
 
-**111 adapters.**
+**112 adapters.**
 
-[Manga](#manga) 2 · [Webtoons](#webtoons) 2 · [Comics](#comics) 7 · [Books](#books) 20 · [Children's books](#childrens-books) 4 · [Academic books](#academic-books) 11 · [Textbooks](#textbooks) 4 · [Poetry](#poetry) 2 · [Religious texts](#religious-texts) 3 · [Journal](#journal) 40 · [Papers](#papers) 3 · [Reports](#reports) 6 · [Manuscripts](#manuscripts) 3 · [Newspapers](#newspapers) 1 · [Digital library](#digital-library) 3
+[Manga](#manga) 2 · [Webtoons](#webtoons) 2 · [Comics](#comics) 7 · [Books](#books) 21 · [Children's books](#childrens-books) 4 · [Academic books](#academic-books) 11 · [Textbooks](#textbooks) 4 · [Poetry](#poetry) 2 · [Religious texts](#religious-texts) 3 · [Journal](#journal) 40 · [Papers](#papers) 3 · [Reports](#reports) 6 · [Manuscripts](#manuscripts) 3 · [Newspapers](#newspapers) 1 · [Digital library](#digital-library) 3
 
 ## By category
 
@@ -46,6 +46,7 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 | ويكي مصدر (Arabic Wikisource) | AR | Community | `oneshelf.wikisource-ar` |
 | Chitanka (Моята библиотека) | BG | Community | `oneshelf.chitanka` |
 | TextGrid Digitale Bibliothek | DE | Community | `oneshelf.textgrid-digitale-bibliothek` |
+| Authorama | EN | Community | `oneshelf.authorama` |
 | English Literature Ebooks (Emma Laybourn) | EN | Community | `oneshelf.englishliteratureebooks` |
 | Folger Shakespeare | EN | Community | `oneshelf.folger-shakespeare` |
 | Project Gutenberg | EN | Official | `oneshelf.gutenberg` |
@@ -205,7 +206,7 @@ An adapter with several languages is listed under each of them.
 | Arabic (AR) | 51 | Manga 1, Books 4, Children's books 3, Journal 40, Reports 1, Manuscripts 2 |
 | Bulgarian (BG) | 1 | Books 1 |
 | German (DE) | 3 | Books 1, Academic books 1, Newspapers 1 |
-| English (EN) | 36 | Webtoons 2, Comics 5, Books 6, Children's books 1, Academic books 9, Textbooks 4, Poetry 1, Religious texts 1, Journal 1, Papers 1, Reports 5 |
+| English (EN) | 37 | Webtoons 2, Comics 5, Books 7, Children's books 1, Academic books 9, Textbooks 4, Poetry 1, Religious texts 1, Journal 1, Papers 1, Reports 5 |
 | Spanish (ES) | 1 | Books 1 |
 | Persian (FA) | 2 | Poetry 1, Journal 1 |
 | French (FR) | 3 | Books 1, Journal 1, Papers 1 |

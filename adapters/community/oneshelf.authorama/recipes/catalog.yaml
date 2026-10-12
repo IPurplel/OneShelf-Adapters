@@ -1,0 +1,19 @@
+# A book is one unit (one_shot) — only while its complete-book page's footer states that the text is in the
+# public domain ("is in the public domain", "belongs to the public domain", "is public domain", or "is
+# copyright-free"). Without that statement there is no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/book/{listing_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//div[@class='content'][p[@class='footer'][contains(., 'public domain') or contains(., 'copyright-free')]]/h1)[1]"}
+  fields:
+    unit_key: {template: "{listing_key}", required: true, transforms: [{regex_extract: {pattern: '^([a-z0-9]+(?:-[a-z0-9]+)*)$', group: 1}}]}
+    title: {xpath: "text()", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response
