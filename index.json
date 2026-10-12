@@ -73,6 +73,15 @@
       "version": "0.1.1"
     },
     {
+      "api": "1.2",
+      "file": "packages/oneshelf.authorama-0.1.0.osp",
+      "id": "oneshelf.authorama",
+      "name": "Authorama · Books · EN",
+      "sha256": "a5d06058d95a0ce4b42f52f90dfd32c0561f167011c05d048fe2ef72e00039e3",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
       "api": "1.0",
       "file": "packages/oneshelf.babylon-jubh-0.1.0.osp",
       "id": "oneshelf.babylon-jubh",
