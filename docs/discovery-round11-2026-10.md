@@ -5,13 +5,13 @@ Continues round 10 ([discovery-round10-2026-10.md](discovery-round10-2026-10.md)
 - **Access:** OneShelf's own User-Agent, robots.txt first, about one request per 1.2–1.5 s. Nothing was bypassed.
 - **Rights:** unchanged ([round 8 rights decision](discovery-round8-2026-10.md#rights-decision-2026-10-09-journal-wide-statements-are-not-enough)). Only a versioned Creative Commons URL in the article's own DC.Rights counts. A footer or sidebar `rel=license` is never taken as the article's licence.
 
-This round is discovery only: **nothing was built.**
+Rows 1–6 were implemented on 2026-10-12 (see the build notes and live checks below); the others were not built.
 
-**Outcomes (15 sources):** ELIGIBLE NOT BUILT 8, RIGHTS NEED REVIEW 6, TECHNICALLY BLOCKED 1.
+**Outcomes (15 sources):** IMPLEMENTED 6, ELIGIBLE NOT BUILT 2, RIGHTS NEED REVIEW 6, TECHNICALLY BLOCKED 1.
 
 **One politeness slip.** M'sila's robots.txt sets `Crawl-delay: 5`. The first probe of its second journal (OLDA, row 6) made four requests about 1.2 s apart before the delay was applied; every later M'sila request was 5.5 s apart. The adapter built in round 10 for the same host (`oneshelf.msila-japl`) is limited to 10 requests a minute.
 
-## Recommended for the next build round
+## Implemented — six adapters (VERIFIED live, pinned Core, API 1.0)
 
 Six journals fit the round-7/8 adapter shape unchanged. The table samples five or six articles per issue with the shipped gate's regex.
 
@@ -33,16 +33,33 @@ Build notes:
   - Its articles are Arabic, English and French, so the per-article language matters.
   - Same host and robots rules as `oneshelf.msila-japl`: one request per 5 s, no locale switch.
 
+All of them:
+- **Checks:** pass `check-adapter` on the pinned Core (`475c145f`). Each adapter has a SYNTHETIC refusal test
+  (its article page with the licence removed gives no file).
+- **Gate:** the round-8 DC.Rights Creative Commons gate, unchanged.
+- **Fixtures:** line-end whitespace was normalised outside attribute values; raw `git diff --check` is clean.
+- **Labels:** named by the label rule ([adapter-labels.md](adapter-labels.md)). Latakia and OLDA name
+  themselves in English on their sites, so their labels use the English names.
+
+| Adapter | Live check (2026-10-12) |
+|---|---|
+| `oneshelf.thamar-edu` | PASS: issue 206 (2026, 24 articles); article 3281 PDF validated (28 pages) |
+| `oneshelf.thamar-arts` | PASS: issue 204 (2026, 35 articles); article 3222 PDF validated |
+| `oneshelf.latakia-humlitr` | PASS: issue 774 (2024, 32 articles); article 18571 PDF validated; `rate_limit` 10 requests a minute |
+| `oneshelf.zawia-uzfaj` | PASS: issue 243 (2026, 25 articles); article 1872 PDF validated |
+| `oneshelf.elmergib-ejhs` | PASS: issue 6 (2026, 20 articles); article 134 PDF validated |
+| `oneshelf.msila-olda` | PASS: issue 424 (2026, 43 articles); article 10018 (English) PDF validated; `rate_limit` 10 requests a minute |
+
 ## Every source
 
 | # | Source | Content | Lang | Rights | robots.txt | Outcome | Adapter / blocker |
 |---|---|---|---|---|---|---|---|
-| 1 | [Thamar University — مجلة كلية التربية (Journal of the Faculty of Education)](https://journal.tu.edu.ye/index.php/edu) | education, humanities, Islamic studies | ar | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled (2016, 2026) plus a 2006 article | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended** |
-| 2 | [Thamar University — مجلة كلية الآداب (Arts)](https://journal.tu.edu.ye/index.php/artsmain) | arts, humanities | ar | per article `https://creativecommons.org/licenses/by/4.0`; 12 of 12 sampled (2023, 2026) | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended** |
-| 3 | [Latakia (formerly Tishreen) University Journal — Arts and Humanities Sciences Series](https://journal.latakia-univ.edu.sy/index.php/humlitr) | Arabic literature, history, philosophy, education | ar (some en) | per article `https://creativecommons.org/licenses/by-nc-sa/4.0` plus `rel=license`; 4 of 5 (2024) and a 2005 article | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** Slow host |
-| 4 | [University of Zawia — مجلة كلية الآداب (UZFAJ)](https://journals.zu.edu.ly/index.php/UZFAJ) | humanities, history, Islamic studies, linguistics | ar (some en) | per article `https://creativecommons.org/licenses/by-nc/4.0`; 16 of 16 in 2023, 2025 and 2026; 0 of 5 in a 2024 issue | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** Part of the archive opens |
-| 5 | [Elmergib University — مجلة العلوم الإنسانية المرقب (Elmergib Journal of Human Science)](https://ehsj.elmergib.edu.ly/index.php/ejhs) | humanities | ar | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 (2024, 2026); a 2023 article has none | only `/cache/` | ELIGIBLE NOT BUILT | **Recommended.** Six issues since 2023. Not the round-9 Elmergib JHAS journal (login only) |
-| 6 | [University of M'sila — El Omda in Linguistics and Discourse Analysis (OLDA)](https://journals.univ-msila.dz/index.php/OLDA) | linguistics, discourse analysis | ar, en, fr | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 (2020, 2026) plus a 2017 article | Crawl-delay 5; disallows `setLocale`, `search`, `browse` | ELIGIBLE NOT BUILT | **Recommended.** See the politeness note above |
+| 1 | [Thamar University — مجلة كلية التربية (Journal of the Faculty of Education)](https://journal.tu.edu.ye/index.php/edu) | education, humanities, Islamic studies | ar | per article DC.Rights `https://creativecommons.org/licenses/by/4.0` plus `rel=license`; 12 of 12 sampled (2016, 2026) plus a 2006 article | only `/cache/` | IMPLEMENTED | `oneshelf.thamar-edu` |
+| 2 | [Thamar University — مجلة كلية الآداب (Arts)](https://journal.tu.edu.ye/index.php/artsmain) | arts, humanities | ar | per article `https://creativecommons.org/licenses/by/4.0`; 12 of 12 sampled (2023, 2026) | only `/cache/` | IMPLEMENTED | `oneshelf.thamar-arts` |
+| 3 | [Latakia (formerly Tishreen) University Journal — Arts and Humanities Sciences Series](https://journal.latakia-univ.edu.sy/index.php/humlitr) | Arabic literature, history, philosophy, education | ar (some en) | per article `https://creativecommons.org/licenses/by-nc-sa/4.0` plus `rel=license`; 4 of 5 (2024) and a 2005 article | only `/cache/` | IMPLEMENTED | `oneshelf.latakia-humlitr`. Slow host |
+| 4 | [University of Zawia — مجلة كلية الآداب (UZFAJ)](https://journals.zu.edu.ly/index.php/UZFAJ) | humanities, history, Islamic studies, linguistics | ar (some en) | per article `https://creativecommons.org/licenses/by-nc/4.0`; 16 of 16 in 2023, 2025 and 2026; 0 of 5 in a 2024 issue | only `/cache/` | IMPLEMENTED | `oneshelf.zawia-uzfaj`. Part of the archive opens |
+| 5 | [Elmergib University — مجلة العلوم الإنسانية المرقب (Elmergib Journal of Human Science)](https://ehsj.elmergib.edu.ly/index.php/ejhs) | humanities | ar | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 (2024, 2026); a 2023 article has none | only `/cache/` | IMPLEMENTED | `oneshelf.elmergib-ejhs`. Six issues since 2023. Not the round-9 Elmergib JHAS journal (login only) |
+| 6 | [University of M'sila — El Omda in Linguistics and Discourse Analysis (OLDA)](https://journals.univ-msila.dz/index.php/OLDA) | linguistics, discourse analysis | ar, en, fr | per article `https://creativecommons.org/licenses/by-nc/4.0`; 12 of 12 (2020, 2026) plus a 2017 article | Crawl-delay 5; disallows `setLocale`, `search`, `browse` | IMPLEMENTED | `oneshelf.msila-olda`. See the politeness note above |
 | 7 | [Al-Saeed University — مجلة جامعة السعيد للعلوم الانسانية](https://journal.alsaeeduni.edu.ye/index.php/sjhas) | humanities, applied sciences | ar | per article `https://creativecommons.org/licenses/by/4.0` in 2026 (6/6); 2023 (6/6) and 2017 have none (an empty second DC.Rights) | only `/cache/` | ELIGIBLE NOT BUILT | Only the newest issue opens; low priority |
 | 8 | [Taiz University (Turba) — مجلة العلوم التربوية و الدراسات الإنسانية](https://hesj.org/ojs/index.php/hesj) | education, humanities | ar | per article CC BY 4.0 on only 1 of 6 (2026) and 0 of 6 (2025); the others have just the sidebar `rel=license` | no rules | ELIGIBLE NOT BUILT | Too few articles carry an item licence; not recommended |
 | 9 | [Sirte University — مجلة جامعة سرت للعلوم الانسانية](https://journal.su.edu.ly/index.php/humanities) | humanities | ar | DC.Rights only "الحقوق الفكرية (c) 2026 مجلة جامعة سرت للعلوم الانسانية" (2026 and 2001) | only `/cache/` | RIGHTS NEED REVIEW | No licence to gate on |
