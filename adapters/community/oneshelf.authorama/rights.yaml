@@ -1,0 +1,37 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Authorama, Philipp Lenssen — https://www.authorama.com/"
+visibility: eligible_items_only
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Authorama republishes public-domain books (mostly from Project Gutenberg) in HTML; its home page says the
+    books' texts and illustrations are in the public domain, and other texts on the site are Creative Commons
+    licensed by Authorama. Each book's own page states it in its footer: "This complete text of Flatland: A
+    Romance of Many Dimensions by Edwin A. Abbott is in the public domain." (Other books' footers say
+    "belongs to the public domain", "is public domain" or "is copyright-free".) A book has a unit, and its
+    text, only while its own page says so (tests 3, 4: the same page without the statement, marked SYNTHETIC).
+    Public-domain status is stated for the United States (books published before 1923); the text is stored
+    for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: "Flatland's complete-book page: \"This complete text of Flatland: A Romance of Many Dimensions by Edwin A. Abbott is in the public domain.\""
+    url: https://www.authorama.com/book/flatland.html
+  - claim: "The Secret Garden's complete-book page: \"This eBook of \u201cThe Secret Garden\u201d by Frances Hodgson Burnett belongs to the public domain.\""
+    url: https://www.authorama.com/book/secret-garden.html
+  - claim: Home page — the books' texts and illustrations are in the public domain; other texts are Creative Commons licensed by Authorama.com.
+    url: https://www.authorama.com/
+  - claim: 'robots.txt has a single rule, "Disallow: text", without a leading slash.'
+    url: https://www.authorama.com/robots.txt
+last_verified: 2026-10-12

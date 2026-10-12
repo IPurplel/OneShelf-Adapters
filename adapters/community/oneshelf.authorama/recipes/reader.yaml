@@ -1,0 +1,18 @@
+# The complete book, read as text (plugin API 1.2): the page's content block (heading, text and footer) — the
+# advertisement column (div.moreInfo) is outside it. Only while the footer states that the text is in the public
+# domain or copyright-free, as in catalog.yaml. OneShelf Core sanitises it.
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/book/{unit_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//div[@class='content'][p[@class='footer'][contains(., 'public domain') or contains(., 'copyright-free')]]"}
+  fields:
+    html: {xpath: ".", markup: inner}
+    title: {xpath: "h1/text()", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+pagination:
+  mode: none
+  complete_when: single_response
