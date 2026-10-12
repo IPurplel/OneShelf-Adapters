@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.jalit-ut
-name: Arabic Literature (University of Tehran)
-version: 0.1.0
+name: "Arabic Literature (University of Tehran) · Journal · AR"
+version: 0.1.1
 api: '1.0'
 description: >-
   ادب عربی — Arabic Literature (University of Tehran): an open-access journal of Arabic literature, its articles in Arabic and

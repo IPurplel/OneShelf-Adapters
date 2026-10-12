@@ -1,0 +1,33 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '1094'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/fqhj/issue/view/1094', file: fixtures/issue_1094.html}]
+  expect:
+    first: {title: "مجلة كلية الفقه — Vol. 1 No. 56 (2026): The Peer-reviewed Journal of the Jurisprudence Faculty", language: ar}
+- capability: catalog
+  inputs: {listing_key: '1094'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/fqhj/issue/view/1094', file: fixtures/issue_1094.html}]
+  expect:
+    min_items: 13
+    complete: true
+    first: {unit_key: '22999'}
+- capability: downloads
+  inputs: {unit_key: '22999'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/fqhj/article/view/22999', file: fixtures/article_22999.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.uokufa.edu.iq/index.php/fqhj/article/download/22999/17230', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '22999'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/fqhj/article/view/22999', file: fixtures/synthetic-no-licence_22999.html}]
+  expect:
+    first: {url: null}
+# 4: a real article that states no Creative Commons licence (DC.Rights: "Copyright (c) 2022 مجلة كلية الفقه") — no file.
+- capability: downloads
+  inputs: {unit_key: '8282'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/fqhj/article/view/8282', file: fixtures/article_8282.html}]
+  expect:
+    first: {url: null}

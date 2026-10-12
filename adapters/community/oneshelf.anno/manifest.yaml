@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.anno
-name: ANNO — Austrian Newspapers Online
-version: 0.1.0
+name: "ANNO (Austrian Newspapers Online) · Newspapers · DE"
+version: 0.1.1
 api: '1.0'
 description: >-
   ANNO, the Austrian National Library's historical newspapers and periodicals, read through the library's

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.wikisource-ar
-name: ويكي مصدر (Arabic Wikisource)
-version: 0.1.0
+name: "ويكي مصدر (Arabic Wikisource) · Books · AR"
+version: 0.1.1
 api: '1.2'
 description: >-
   Public-domain and freely licensed Arabic texts transcribed on Arabic Wikisource (ويكي مصدر), read as

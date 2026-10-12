@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.oapen
-name: OAPEN Library
-version: 0.1.0
+name: "OAPEN Library · Academic books · Multi"
+version: 0.1.1
 api: '1.0'
 description: >-
   Peer-reviewed open-access academic books from the OAPEN Library, every one free to read and download

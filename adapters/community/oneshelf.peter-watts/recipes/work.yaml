@@ -1,0 +1,14 @@
+# The backlist page: Peter Watts's own list of his Creative Commons novels, stories and essays.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/real/{listing_key}.htm"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {template: "Peter Watts — The Backlist", required: true}
+    creator: {xpath: "(//meta[@name='author']/@content)[1]", transforms: [trim]}
+    language: {template: "en"}
+    content_type: {template: "book"}

@@ -1,0 +1,18 @@
+# The download page's books, in its order: one unit per EPUB kept on the site (a unit's key is the EPUB's
+# name), titled by the text before its links. Books kept on other sites (Smashwords) are not units.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[substring(@href, string-length(@href) - 4) = '.epub'][not(contains(@href, '/'))]"}
+  fields:
+    unit_key: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '^([a-z0-9]+(?:-[a-z0-9]+)*)\.epub$', group: 1}}]}
+    title: {xpath: "preceding-sibling::text()[2]", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

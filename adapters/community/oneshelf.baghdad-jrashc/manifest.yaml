@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.baghdad-jrashc
+name: "مجلة التراث العلمي العربي (University of Baghdad, Iraq) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة التراث العلمي العربي — an open-access journal of University of Baghdad (Iraq) on Arabic scientific heritage, history of science and linguistics (Journal of Arabic Scientific Heritage), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (jrashc.uobaghdad.edu.iq/index.php/jrashc/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [jrashc.uobaghdad.edu.iq]
+defaults:
+  language: ar
+  content_type: paper

@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '204'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/artsmain/issue/view/204', file: fixtures/issue_204.html}]
+  expect:
+    first: {title: "مجلة كلية الآداب — Vol. 14 No. 2 (2026)", language: ar}
+- capability: catalog
+  inputs: {listing_key: '204'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/artsmain/issue/view/204', file: fixtures/issue_204.html}]
+  expect:
+    min_items: 35
+    complete: true
+    first: {unit_key: '3222'}
+- capability: downloads
+  inputs: {unit_key: '3222'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/artsmain/article/view/3222', file: fixtures/article_3222.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.tu.edu.ye/index.php/artsmain/article/download/3222/2566', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '3222'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/artsmain/article/view/3222', file: fixtures/synthetic-no-licence_3222.html}]
+  expect:
+    first: {url: null}

@@ -1,0 +1,14 @@
+# A page of the site: its classic poetry ebooks or its abridged classic novels.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//title)[1]", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    creator: {template: "Emma Laybourn (editor)"}
+    language: {template: "en"}
+    content_type: {template: "book"}

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.xkcd
-name: xkcd
-version: 0.1.0
+name: "xkcd · Comics · EN"
+version: 0.1.1
 api: '1.0'
 description: >-
   xkcd, Randall Munroe's webcomic (CC BY-NC 2.5), read comic by comic from the site's own archive and its

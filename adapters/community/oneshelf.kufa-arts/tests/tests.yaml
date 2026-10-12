@@ -1,0 +1,34 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '1000'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/issue/view/1000', file: fixtures/issue_1000.html}]
+  expect:
+    first: {title: "مجلة آداب الكوفة — Vol. 1 No. 69 (2026): Kufa Journal of Arts - September 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '1000'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/issue/view/1000', file: fixtures/issue_1000.html}]
+  expect:
+    min_items: 21
+    complete: true
+    first: {unit_key: '21022'}
+- capability: downloads
+  inputs: {unit_key: '21022'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/article/view/21022', file: fixtures/article_21022.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/article/download/21022/17193', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '21022'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/article/view/21022', file: fixtures/synthetic-no-licence_21022.html}]
+  expect:
+    first: {url: null}
+# 4: an article in English (citation_language en) in the same journal — the file carries its own language.
+- capability: downloads
+  inputs: {unit_key: '12156'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/article/view/12156', file: fixtures/article_12156.html}]
+  expect:
+    min_items: 1
+    first: {url: 'https://journal.uokufa.edu.iq/index.php/kufa_arts/article/download/12156/13686', format: pdf, language: en}

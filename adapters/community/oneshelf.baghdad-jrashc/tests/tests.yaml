@@ -1,0 +1,33 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '91'}
+  fixtures: [{url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/issue/view/91', file: fixtures/issue_91.html}]
+  expect:
+    first: {title: "مجلة التراث العلمي العربي — Vol. 23 No. 3 (2026): Arab Scientific Heritage journal", language: ar}
+- capability: catalog
+  inputs: {listing_key: '91'}
+  fixtures: [{url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/issue/view/91', file: fixtures/issue_91.html}]
+  expect:
+    min_items: 29
+    complete: true
+    first: {unit_key: '1797'}
+- capability: downloads
+  inputs: {unit_key: '1797'}
+  fixtures: [{url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/article/view/1797', file: fixtures/article_1797.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/article/download/1797/1575', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '1797'}
+  fixtures: [{url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/article/view/1797', file: fixtures/synthetic-no-licence_1797.html}]
+  expect:
+    first: {url: null}
+# 4: a real article that states no Creative Commons licence (DC.Rights: "none") — no file.
+- capability: downloads
+  inputs: {unit_key: '627'}
+  fixtures: [{url: 'https://jrashc.uobaghdad.edu.iq/index.php/jrashc/article/view/627', file: fixtures/article_627.html}]
+  expect:
+    first: {url: null}

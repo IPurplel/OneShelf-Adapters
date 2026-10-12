@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.world-bank-okr
-name: World Bank Open Knowledge Repository
-version: 0.1.0
+name: "World Bank Open Knowledge Repository · Reports · EN"
+version: 0.1.1
 api: '1.2'
 description: >-
   World Bank Open Knowledge Repository: the World Bank's reports, working papers and books, as PDF. An item is a work with one unit, downloaded as the PDF the

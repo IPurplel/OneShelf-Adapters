@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.ganjoor
-name: گنجور (Ganjoor)
-version: 0.1.0
+name: "گنجور (Ganjoor) · Poetry · FA"
+version: 0.1.1
 api: '1.2'
 description: >-
   Ganjoor, the library of classical Persian poetry — Hafez, Saadi, Rumi, Ferdowsi, Khayyam and some 240

@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.baghdad-aladab
+name: "مجلة الآداب (University of Baghdad, Iraq) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة الآداب — an open-access journal of University of Baghdad (Iraq) on arts and humanities (Al-Adab Journal, College of Arts), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (aladabj.uobaghdad.edu.iq/index.php/aladabjournal/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [aladabj.uobaghdad.edu.iq]
+defaults:
+  language: ar
+  content_type: paper

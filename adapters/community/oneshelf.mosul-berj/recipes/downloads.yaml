@@ -1,0 +1,25 @@
+# The article's PDF, as its page names it (citation_pdf_url) — only while the page states a Creative Commons
+# licence (its DC.Rights meta tag; the journal writes it with or without a trailing slash). The
+# file's language is the article's own (citation_language).
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/index.php/berj/article/view/{unit_key}"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//meta[@name='DC.Rights'][starts-with(@content, 'https://creativecommons.org/licenses/') or starts-with(@content, 'http://creativecommons.org/licenses/')]/@content)[1]"}
+    lang: {xpath: "(//meta[@name='citation_language']/@content)[1]", transforms: [trim]}
+  items: {css: "meta[name=citation_pdf_url]"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: 'content="(https://berj\.uomosul\.edu\.iq/index\.php/berj/(?:[a-z]{2}(?:_[A-Z]{2})?/)?article/download/[0-9]+/[A-Za-z0-9_-]+)"(?s:.*)\|https?://creativecommons\.org/licenses/[a-z-]+/[0-9.]+/?$', group: 1}}]
+    format: {template: "pdf", required: true}
+    language: {template: "{lang}"}
+pagination:
+  mode: none
+  complete_when: single_response

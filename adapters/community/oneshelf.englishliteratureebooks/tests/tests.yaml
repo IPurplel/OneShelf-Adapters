@@ -1,0 +1,39 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: classicpoetryebooks}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/classicpoetryebooks.html', file: fixtures/classicpoetryebooks.html}]
+  expect:
+    first: {title: 'Classic English poetry: free ebook anthologies in epub, mobi and pdf', language: en}
+- capability: catalog
+  inputs: {listing_key: classicpoetryebooks}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/classicpoetryebooks.html', file: fixtures/classicpoetryebooks.html}]
+  expect:
+    min_items: 11
+    complete: true
+    first: {unit_key: englishpoetryoflandscape, title: 'English Poetry of Landscape: An Anthology 1370 to 1928'}
+- capability: catalog
+  inputs: {listing_key: classicnovelsabridged}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/classicnovelsabridged.html', file: fixtures/classicnovelsabridged.html}]
+  expect:
+    min_items: 12
+    complete: true
+    first: {unit_key: emily-bronte-wuthering-heights-abridged}
+- capability: downloads
+  inputs: {unit_key: englishpoetryoflandscape}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/index.html', file: fixtures/index.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.englishliteratureebooks.com/englishpoetryoflandscape.epub', format: epub, language: en}
+- capability: downloads
+  inputs: {unit_key: '../other'}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/index.html', file: fixtures/index.html}]
+  expect:
+    first: {url: null}
+# 5: SYNTHETIC (the fixture says so): the home page without its permission — no file.
+- capability: downloads
+  inputs: {unit_key: englishpoetryoflandscape}
+  fixtures: [{url: 'https://www.englishliteratureebooks.com/index.html', file: fixtures/synthetic-no-permission_index.html}]
+  expect:
+    first: {url: null}

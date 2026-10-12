@@ -19,7 +19,7 @@ validator is right and `./tools/check-adapter` will say so.
 ```yaml
 schema: oneshelf.osp/1
 id: oneshelf.example-site        # = directory name; never changes after publication
-name: Example Site
+name: "Example Site · Books · EN"   # Source · Category · LANG (docs/adapter-labels.md)
 version: 1.0.0
 api: '1.0'
 description: >-

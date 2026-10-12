@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '1101'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/ksc/issue/view/1101', file: fixtures/issue_1101.html}]
+  expect:
+    first: {title: "مجلة مركز دراسات الكوفة — Vol. 1 No. 81 (2026): Journal of the Kufa Studies Center, dated June 30, 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '1101'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/ksc/issue/view/1101', file: fixtures/issue_1101.html}]
+  expect:
+    min_items: 20
+    complete: true
+    first: {unit_key: '24818'}
+- capability: downloads
+  inputs: {unit_key: '24818'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/ksc/article/view/24818', file: fixtures/article_24818.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.uokufa.edu.iq/index.php/ksc/article/download/24818/17037', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '24818'}
+  fixtures: [{url: 'https://journal.uokufa.edu.iq/index.php/ksc/article/view/24818', file: fixtures/synthetic-no-licence_24818.html}]
+  expect:
+    first: {url: null}

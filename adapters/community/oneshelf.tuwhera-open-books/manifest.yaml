@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.tuwhera-open-books
-name: Tuwhera Open Access Books (AUT)
-version: 0.1.0
+name: "Tuwhera Open Access Books (AUT) · Academic books · EN"
+version: 0.1.1
 api: '1.0'
 description: >-
   Tuwhera Open Access Books, the open-access monograph press of Auckland University of Technology's

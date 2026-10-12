@@ -1,0 +1,38 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: mixed
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "The book's authors, Framabook (Framasoft) — https://archives.framabook.org/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    Each Framabook page states its book's licence in a "Licence :" field that links the licence itself —
+    CC BY-SA 3.0 FR (Grise Bouille, tome I), CC BY-SA 2.0 FR (GKND, tome 5) or the Licence Art Libre on
+    the books sampled. Some pages have no such field: the Mimi & Eunice calendar is "Copyheart", not a
+    licence, and gets no unit and no file (tests 3, 4, a real page). A book is offered only while its own
+    page links a Creative Commons licence or the Licence Art Libre, and only files kept in the archive
+    itself; GKND's files are on the author's site and are not offered (test 5). All of these licences allow
+    commercial use and require attribution and share-alike; the file is stored unaltered for private reading.
+  exclusion_tests: [3, 4, 5]
+evidence:
+  - claim: "Grise Bouille, Tome I: Licence : CC-By-Sa linking https://creativecommons.org/licenses/by-sa/3.0/fr/; EPUB and PDF under ../docs/Grisebouille1/."
+    url: https://archives.framabook.org/grise-bouille-tome-1/index.html
+  - claim: "GKND (tome 5): Licence linking http://creativecommons.org/licenses/by-sa/2.0/fr; files on geektionnerd.net."
+    url: https://archives.framabook.org/gknd-tome-5-how-i-met-your-sysadmin/index.html
+  - claim: "Libertés numériques: Licence linking http://artlibre.org/ (Licence Art Libre); PDF under ../docs/dumo/."
+    url: https://archives.framabook.org/libertes-numeriques/index.html
+  - claim: The Mimi & Eunice calendar page has no Licence field (Copyheart only).
+    url: https://archives.framabook.org/calendrier-mimi-eunice/index.html
+  - claim: 'robots.txt is "User-agent: *" with no rules.'
+    url: https://archives.framabook.org/robots.txt
+last_verified: 2026-10-12

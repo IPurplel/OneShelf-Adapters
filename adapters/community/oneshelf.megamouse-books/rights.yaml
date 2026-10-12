@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_access_publisher
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "Emma Laybourn, Megamouse Books — https://www.megamousebooks.com/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The author states on the site's list of free stories: "All stories and ebooks on this site are Copyright ©
+    Emma Laybourn. You may share or copy the free books as much as you like, so long as you do not sell them."
+    The adapter offers only the EPUBs kept on the site (not the books hosted on Smashwords), and only while the
+    book list carries that permission (test 4: the same page without it, marked SYNTHETIC). The EPUB is stored
+    unaltered for private reading.
+  exclusion_tests: [4]
+evidence:
+  - claim: '"All stories and ebooks on this site are Copyright © Emma Laybourn. You may share or copy the free books as much as you like, so long as you do not sell them."'
+    url: https://www.megamousebooks.com/freebooklist.html
+  - claim: The download page lists every free ebook as MOBI, EPUB and PDF.
+    url: https://www.megamousebooks.com/downloadpage.html
+  - claim: 'robots.txt is "User-agent: *" with an empty Disallow.'
+    url: https://www.megamousebooks.com/robots.txt
+last_verified: 2026-10-12

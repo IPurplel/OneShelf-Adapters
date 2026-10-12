@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.yarmouk-jjes
+name: "المجلة الأردنية في العلوم التربوية (Yarmouk University, Jordan) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  المجلة الأردنية في العلوم التربوية (Jordan Journal of Educational Sciences) — an open-access education journal
+  of Yarmouk University (Jordan), published with Open Journal Systems, in Arabic and English. An issue is a work
+  and its articles are units, each downloaded as the journal's PDF — only while the article's own page states a
+  Creative Commons licence (CC BY-NC 4.0). Most older article pages state only a copyright line (10 of 451
+  carried the licence in October 2026), so most older articles are listed without a file. An article's
+  language is read from its own page. Open an issue by pasting its address
+  (jjes.yu.edu.jo/index.php/jjes/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [jjes.yu.edu.jo]
+defaults:
+  language: ar
+  content_type: paper

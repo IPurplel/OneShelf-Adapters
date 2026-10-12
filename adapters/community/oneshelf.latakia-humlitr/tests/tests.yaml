@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '774'}
+  fixtures: [{url: 'https://journal.latakia-univ.edu.sy/index.php/humlitr/issue/view/774', file: fixtures/issue_774.html}]
+  expect:
+    first: {title: "Latakia University Journal — Arts and Humanities Sciences Series — Vol. 46 No. 6 (2024): Tishreen University Journal for Research and Scientific Studies - Arts and Humanities", language: ar}
+- capability: catalog
+  inputs: {listing_key: '774'}
+  fixtures: [{url: 'https://journal.latakia-univ.edu.sy/index.php/humlitr/issue/view/774', file: fixtures/issue_774.html}]
+  expect:
+    min_items: 32
+    complete: true
+    first: {unit_key: '18571'}
+- capability: downloads
+  inputs: {unit_key: '18571'}
+  fixtures: [{url: 'https://journal.latakia-univ.edu.sy/index.php/humlitr/article/view/18571', file: fixtures/article_18571.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.latakia-univ.edu.sy/index.php/humlitr/article/download/18571/14205', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '18571'}
+  fixtures: [{url: 'https://journal.latakia-univ.edu.sy/index.php/humlitr/article/view/18571', file: fixtures/synthetic-no-licence_18571.html}]
+  expect:
+    first: {url: null}

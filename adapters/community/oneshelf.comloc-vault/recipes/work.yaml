@@ -1,0 +1,15 @@
+# The issue's page in the Vault: its heading (title and year), publisher (from its JSON-LD) and cover.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/comics/read/{listing_key}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//header[contains(@class, 'vault-title-head')]/h1)[1]", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    creator: {xpath: "(//script[@type='application/ld+json'][contains(., '\"@type\":\"Book\"')]/text())[1]", transforms: [{regex_extract: {pattern: '"publisher":\{"@type":"Organization","name":"([^"]+)"\}', group: 1}}]}
+    cover_url: {xpath: "(//meta[@property='og:image']/@content)[1]", transforms: [normalize_url]}
+    language: {template: "en"}
+    content_type: {template: "comic"}

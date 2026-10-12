@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-09), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '94'}
+  fixtures: [{url: 'https://lark.uowasit.edu.iq/index.php/lark/issue/view/94', file: fixtures/issue_94.html}]
+  expect:
+    first: {title: "مجلة لارك للفلسفة واللسانيات والعلوم الاجتماعية — Vol. 18 No. 4 (2026): Part 1", language: ar}
+- capability: catalog
+  inputs: {listing_key: '94'}
+  fixtures: [{url: 'https://lark.uowasit.edu.iq/index.php/lark/issue/view/94', file: fixtures/issue_94.html}]
+  expect:
+    min_items: 81
+    complete: true
+    first: {unit_key: '5834'}
+- capability: downloads
+  inputs: {unit_key: '5834'}
+  fixtures: [{url: 'https://lark.uowasit.edu.iq/index.php/lark/article/view/5834', file: fixtures/article_5834.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://lark.uowasit.edu.iq/index.php/lark/article/download/5834/3466', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '5834'}
+  fixtures: [{url: 'https://lark.uowasit.edu.iq/index.php/lark/article/view/5834', file: fixtures/synthetic-no-licence_5834.html}]
+  expect:
+    first: {url: null}

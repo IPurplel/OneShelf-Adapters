@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.peppercarrot
-name: Pepper&Carrot
-version: 0.1.0
+name: "Pepper&Carrot · Comics · Multi"
+version: 0.1.1
 api: '1.0'
 description: >-
   Pepper&Carrot, David Revoy's free/libre webcomic (CC BY 4.0), read page by page in any of its

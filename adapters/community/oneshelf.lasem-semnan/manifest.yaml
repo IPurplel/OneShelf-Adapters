@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.lasem-semnan
-name: Studies in Arabic Language and Literature (Semnan University)
-version: 0.1.0
+name: "Studies in Arabic Language and Literature (Semnan University) · Journal · AR"
+version: 0.1.1
 api: '1.0'
 description: >-
   دراسات في اللغة العربيّة وآدابها — Studies in Arabic Language and Literature (Semnan University): an

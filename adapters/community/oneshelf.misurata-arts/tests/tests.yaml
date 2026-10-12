@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '26'}
+  fixtures: [{url: 'https://hit.misuratau.edu.ly/ojs/index.php/arts/issue/view/26', file: fixtures/issue_26.html}]
+  expect:
+    first: {title: "مجلة كلية الآداب — Issue 22, December 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '26'}
+  fixtures: [{url: 'https://hit.misuratau.edu.ly/ojs/index.php/arts/issue/view/26', file: fixtures/issue_26.html}]
+  expect:
+    min_items: 19
+    complete: true
+    first: {unit_key: '428'}
+- capability: downloads
+  inputs: {unit_key: '428'}
+  fixtures: [{url: 'https://hit.misuratau.edu.ly/ojs/index.php/arts/article/view/428', file: fixtures/article_428.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://hit.misuratau.edu.ly/ojs/index.php/arts/article/download/428/281', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '428'}
+  fixtures: [{url: 'https://hit.misuratau.edu.ly/ojs/index.php/arts/article/view/428', file: fixtures/synthetic-no-licence_428.html}]
+  expect:
+    first: {url: null}

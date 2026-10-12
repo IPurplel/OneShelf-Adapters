@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.brogo
-name: Brogo
-version: 0.1.0
+name: "Brogo · Comics · EN"
+version: 0.1.1
 api: '1.2'
 description: >-
   Brogo, Malcolm Wilson's webcomic (2005–), released under Creative Commons Attribution-ShareAlike 4.0

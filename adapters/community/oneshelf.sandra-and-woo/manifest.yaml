@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.sandra-and-woo
-name: Sandra and Woo
-version: 0.1.0
+name: "Sandra and Woo · Comics · EN"
+version: 0.1.1
 api: '1.0'
 description: >-
   Sandra and Woo, Oliver Knörzer and Powree's webcomic (CC BY-NC-ND 3.0), read strip by strip from the

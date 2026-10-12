@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.ebible
-name: eBible.org
-version: 0.1.0
+name: "eBible.org · Religious texts · Multi"
+version: 0.1.1
 api: '1.0'
 description: >-
   Bible translations in over a thousand languages from eBible.org. A translation is a work and one Reading

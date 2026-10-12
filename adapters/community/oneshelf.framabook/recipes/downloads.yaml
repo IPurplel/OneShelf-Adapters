@@ -1,0 +1,26 @@
+# The book's EPUB and PDF from its "Téléchargements" list, in the page's order — only files kept in the
+# archive itself (docs/…), and only while the page's "Licence :" field links a Creative Commons licence
+# (with or without a jurisdiction, as in /3.0/fr/) or the Licence Art Libre, as in catalog.yaml.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/{unit_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//div[contains(@class, 'entry-content')]//strong[starts-with(normalize-space(.), 'Licence')]/following-sibling::*[1][self::a]/@href)[1]"}
+  items: {xpath: "//div[contains(@class, 'entry-content')]//a[contains(@href, '/docs/')][substring(@href, string-length(@href) - 4) = '.epub' or substring(@href, string-length(@href) - 3) = '.pdf']"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^<a href="((?:\.\./docs/|https://archives\.framabook\.org/docs/)[A-Za-z0-9_./-]+\.(?:epub|pdf))"(?s:.*)\|(?:https?://creativecommons\.org/licenses/[a-z-]+/[0-9.]+(?:/[a-z]{2})?/?|https?://(?:www\.)?artlibre\.org/(?:licence/lal/?(?:[a-z]{2}/?)?)?)$', group: 1}}
+        - normalize_url
+    format: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '\.(epub|pdf)$', group: 1}}]}
+    language: {template: "fr"}
+pagination:
+  mode: none
+  complete_when: single_response

@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '424'}
+  fixtures: [{url: 'https://journals.univ-msila.dz/index.php/OLDA/issue/view/424', file: fixtures/issue_424.html}]
+  expect:
+    first: {title: "El Omda in Linguistics and Discourse Analysis — Vol. 10 No. 01 (2026): V10- N01-2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '424'}
+  fixtures: [{url: 'https://journals.univ-msila.dz/index.php/OLDA/issue/view/424', file: fixtures/issue_424.html}]
+  expect:
+    min_items: 43
+    complete: true
+    first: {unit_key: '10018'}
+- capability: downloads
+  inputs: {unit_key: '10018'}
+  fixtures: [{url: 'https://journals.univ-msila.dz/index.php/OLDA/article/view/10018', file: fixtures/article_10018.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.univ-msila.dz/index.php/OLDA/article/download/10018/7707', format: pdf, language: en}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '10018'}
+  fixtures: [{url: 'https://journals.univ-msila.dz/index.php/OLDA/article/view/10018', file: fixtures/synthetic-no-licence_10018.html}]
+  expect:
+    first: {url: null}

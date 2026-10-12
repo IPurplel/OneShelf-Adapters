@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.intechopen
-name: IntechOpen
-version: 0.1.0
+name: "IntechOpen · Academic books · EN"
+version: 0.1.1
 api: '1.0'
 description: >-
   Open-access scientific books from IntechOpen, every one published under a Creative Commons licence.

@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-10), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '2968'}
+  fixtures: [{url: 'https://jeh.uomosul.edu.iq/index.php/jeh/issue/view/2968', file: fixtures/issue_2968.html}]
+  expect:
+    first: {title: "مجلة التربية للعلوم الانسانية — مجلد 6 عدد 24 (2026): المجلد 6 / العدد 24", language: ar}
+- capability: catalog
+  inputs: {listing_key: '2968'}
+  fixtures: [{url: 'https://jeh.uomosul.edu.iq/index.php/jeh/issue/view/2968', file: fixtures/issue_2968.html}]
+  expect:
+    min_items: 50
+    complete: true
+    first: {unit_key: '63391'}
+- capability: downloads
+  inputs: {unit_key: '63391'}
+  fixtures: [{url: 'https://jeh.uomosul.edu.iq/index.php/jeh/article/view/63391', file: fixtures/article_63391.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://jeh.uomosul.edu.iq/index.php/jeh/article/download/63391/59954', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '63391'}
+  fixtures: [{url: 'https://jeh.uomosul.edu.iq/index.php/jeh/article/view/63391', file: fixtures/synthetic-no-licence_63391.html}]
+  expect:
+    first: {url: null}

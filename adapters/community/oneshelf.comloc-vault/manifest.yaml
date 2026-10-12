@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.comloc-vault
+name: "Comloc Vault · Comics · EN"
+version: 0.1.0
+api: '1.0'
+description: >-
+  The Vault of Comloc (comicshoplocator.com): golden-age comic books from the 1940s and 1950s, each checked
+  as public domain and scanned from the Internet Archive. An issue is a work and one Reading Unit, read page
+  by page from the Vault's own images — only while the issue's page marks it with the Public Domain Mark.
+  Open an issue by pasting its address (comicshoplocator.com/comics/read/planet-comics-1/).
+publisher: OneShelf
+capabilities: [work, catalog, reader]
+network:
+  domains: [www.comicshoplocator.com]
+defaults:
+  language: en
+  content_type: comic

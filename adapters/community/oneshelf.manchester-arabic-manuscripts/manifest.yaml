@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.manchester-arabic-manuscripts
-name: Manchester Digital Collections — Arabic Manuscripts
-version: 0.1.0
+name: "Manchester Digital Collections (Arabic) · Manuscripts · AR"
+version: 0.1.1
 api: '1.0'
 description: >-
   The John Rylands Library's Arabic manuscripts (classmark series MS-ARABIC) in Manchester Digital

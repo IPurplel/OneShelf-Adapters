@@ -1,0 +1,27 @@
+# The backlist's novels (each linked to its own page; its PDF is shorts/PeterWatts_<Title>.pdf) and its story
+# and essay PDFs, in the page's order. A unit's key is its PDF's name. Links to other sites, the excerpt pages
+# and "The Things" photo-book (designed by someone else) are not units.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/real/{listing_key}.htm"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//a[@href='Blindsight.htm' or @href='STARFISH.htm' or @href='MAELSTROM.htm' or @href='Behemoth.htm'] | //a[contains(@href, 'shorts/')][substring(@href, string-length(@href) - 3) = '.pdf'][not(contains(@href, 'Photo-book'))]"}
+  fields:
+    unit_key:
+      xpath: "@href"
+      required: true
+      transforms:
+        - {regex_replace: {pattern: '^Blindsight\.htm$', replacement: "shorts/PeterWatts_Blindsight.pdf"}}
+        - {regex_replace: {pattern: '^STARFISH\.htm$', replacement: "shorts/PeterWatts_Starfish.pdf"}}
+        - {regex_replace: {pattern: '^MAELSTROM\.htm$', replacement: "shorts/PeterWatts_Maelstrom.pdf"}}
+        - {regex_replace: {pattern: '^Behemoth\.htm$', replacement: "shorts/PeterWatts_Behemoth.pdf"}}
+        - {regex_extract: {pattern: '^(?:https?://(?:www\.)?rifters\.com/real/)?shorts/((?:PeterWatts|Mohn_and_Watts|WattsChanner|Watts_Murphy|TheScorchedEarthSociety)[A-Za-z0-9_.-]*)\.pdf$', group: 1}}
+    title: {xpath: "(.//text()[normalize-space()] | .//img/@alt)[1]", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    unit_type: {template: "chapter"}
+pagination:
+  mode: none
+  complete_when: single_response

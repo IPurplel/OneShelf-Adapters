@@ -1,0 +1,20 @@
+schema: oneshelf.osp/1
+id: oneshelf.latakia-humlitr
+name: "Latakia University Journal — Arts and Humanities (Syria) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  Latakia University Journal — Arts and Humanities Sciences Series (formerly the Tishreen University Journal), an
+  open-access journal of Latakia University (Syria) on Arabic literature, history, philosophy and education,
+  published with Open Journal Systems, its articles mostly in Arabic. An issue is a work and its articles are
+  units, each downloaded as the journal's PDF — only while the article's own page states a Creative Commons
+  licence (CC BY-NC-SA 4.0 on the articles sampled); an article's language is read from its own page. The host
+  answers slowly, so the adapter sends at most 10 requests a minute. Open an issue by pasting its address
+  (journal.latakia-univ.edu.sy/index.php/humlitr/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journal.latakia-univ.edu.sy]
+defaults:
+  language: ar
+  content_type: paper

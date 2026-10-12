@@ -1,0 +1,33 @@
+# Fixtures are the live backlist page (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: shorts}
+  fixtures: [{url: 'https://www.rifters.com/real/shorts.htm', file: fixtures/backlist.html}]
+  expect:
+    first: {title: Peter Watts — The Backlist, creator: Peter Watts, language: en}
+- capability: catalog
+  inputs: {listing_key: shorts}
+  fixtures: [{url: 'https://www.rifters.com/real/shorts.htm', file: fixtures/backlist.html}]
+  expect:
+    min_items: 20
+    complete: true
+    first: {unit_key: PeterWatts_Starfish}
+- capability: downloads
+  inputs: {unit_key: PeterWatts_Home}
+  fixtures: [{url: 'https://www.rifters.com/real/shorts.htm', file: fixtures/backlist.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.rifters.com/real/shorts/PeterWatts_Home.pdf', format: pdf, language: en}
+# A key that is not one of the author's files gives nothing.
+- capability: downloads
+  inputs: {unit_key: TheThingsCompletePhoto-book}
+  fixtures: [{url: 'https://www.rifters.com/real/shorts.htm', file: fixtures/backlist.html}]
+  expect:
+    first: {url: null}
+# 4: SYNTHETIC (the fixture says so): the same page without its licence links — no file.
+- capability: downloads
+  inputs: {unit_key: PeterWatts_Home}
+  fixtures: [{url: 'https://www.rifters.com/real/shorts.htm', file: fixtures/synthetic-no-licence_backlist.html}]
+  expect:
+    first: {url: null}

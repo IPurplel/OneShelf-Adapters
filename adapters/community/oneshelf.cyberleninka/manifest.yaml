@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.cyberleninka
-name: CyberLeninka
-version: 0.1.0
+name: "CyberLeninka · Papers · RU"
+version: 0.1.1
 api: '1.2'
 description: >-
   CyberLeninka (КиберЛенинка), the Russian open-access library of scholarly articles. An article is a work

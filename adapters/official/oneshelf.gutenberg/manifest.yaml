@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.gutenberg
-name: Project Gutenberg
-version: 2.0.0
+name: "Project Gutenberg · Books · EN"
+version: 2.0.1
 api: '1.0'
 description: >-
   Project Gutenberg's public domain books, read from gutenberg.org's own per-book OPDS entries, with EPUB

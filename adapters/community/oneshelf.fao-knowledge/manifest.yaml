@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.fao-knowledge
-name: FAO Open Knowledge
-version: 0.1.0
+name: "FAO Open Knowledge · Reports · EN"
+version: 0.1.1
 api: '1.2'
 description: >-
   FAO Open Knowledge: the Food and Agriculture Organization's publications, as PDF. An item is a work with one unit, downloaded as the PDF the

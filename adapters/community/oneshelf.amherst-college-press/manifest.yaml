@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.amherst-college-press
-name: Amherst College Press
-version: 0.1.0
+name: "Amherst College Press · Academic books · EN"
+version: 0.1.1
 api: '1.0'
 description: >-
   Amherst College Press, a fully open-access publisher of peer-reviewed humanities and social-science books,
