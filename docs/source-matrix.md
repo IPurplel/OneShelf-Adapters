@@ -649,6 +649,9 @@ tooling pin.
 | [El Omda in Linguistics and Discourse Analysis (University of M'sila)](https://journals.univ-msila.dz/index.php/OLDA) | `oneshelf.msila-olda` | `VERIFIED` | Community | work, catalog, downloads | ar, en, fr (per article) | Per article: Creative Commons only (CC BY-NC 4.0; DC.Rights) |
 | [Framabook (archive)](https://archives.framabook.org/) | `oneshelf.framabook` | `VERIFIED` | Community | work, catalog, downloads | fr | Per book: a linked CC licence or Licence Art Libre; files in the archive only |
 | [Comloc Vault](https://www.comicshoplocator.com/comics/read/) | `oneshelf.comloc-vault` | `VERIFIED` | Community | work, catalog, reader | en | Per issue: Public Domain Mark 1.0 in the page's JSON-LD |
+| [Peter Watts — The Backlist](https://www.rifters.com/real/shorts.htm) | `oneshelf.peter-watts` | `VERIFIED` | Community | work, catalog, downloads | en | The author's CC BY-NC-SA 2.5 for the backlist's documents (rel="license"); his own PDFs only |
+| [English Literature Ebooks](https://www.englishliteratureebooks.com/) | `oneshelf.englishliteratureebooks` | `VERIFIED` | Community | work, catalog, downloads | en | The editor's permission to share or copy for any non-commercial purpose; EPUBs on the site only |
+| [Megamouse Books](https://www.megamousebooks.com/) | `oneshelf.megamouse-books` | `VERIFIED` | Community | work, catalog, downloads | en | The author's permission to share or copy, not sell; EPUBs on the site only |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
