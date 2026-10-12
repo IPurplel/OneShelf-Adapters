@@ -652,6 +652,7 @@ tooling pin.
 | [Peter Watts — The Backlist](https://www.rifters.com/real/shorts.htm) | `oneshelf.peter-watts` | `VERIFIED` | Community | work, catalog, downloads | en | The author's CC BY-NC-SA 2.5 for the backlist's documents (rel="license"); his own PDFs only |
 | [English Literature Ebooks](https://www.englishliteratureebooks.com/) | `oneshelf.englishliteratureebooks` | `VERIFIED` | Community | work, catalog, downloads | en | The editor's permission to share or copy for any non-commercial purpose; EPUBs on the site only |
 | [Megamouse Books](https://www.megamousebooks.com/) | `oneshelf.megamouse-books` | `VERIFIED` | Community | work, catalog, downloads | en | The author's permission to share or copy, not sell; EPUBs on the site only |
+| [Authorama](https://www.authorama.com/) | `oneshelf.authorama` | `VERIFIED` | Community | work, catalog, reader (text, API 1.2) | en | Per book: the page's own public-domain statement |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
