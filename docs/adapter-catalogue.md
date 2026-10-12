@@ -4,9 +4,9 @@
 
 Every adapter is named `Source · Category · LANG`, as the OneShelf Registry screen shows it ([docs/adapter-labels.md](adapter-labels.md)). This page lists them by category, then by language.
 
-**100 adapters.**
+**108 adapters.**
 
-[Manga](#manga) 2 · [Webtoons](#webtoons) 2 · [Comics](#comics) 6 · [Books](#books) 17 · [Children's books](#childrens-books) 3 · [Academic books](#academic-books) 11 · [Textbooks](#textbooks) 4 · [Poetry](#poetry) 2 · [Religious texts](#religious-texts) 3 · [Journal](#journal) 34 · [Papers](#papers) 3 · [Reports](#reports) 6 · [Manuscripts](#manuscripts) 3 · [Newspapers](#newspapers) 1 · [Digital library](#digital-library) 3
+[Manga](#manga) 2 · [Webtoons](#webtoons) 2 · [Comics](#comics) 7 · [Books](#books) 18 · [Children's books](#childrens-books) 3 · [Academic books](#academic-books) 11 · [Textbooks](#textbooks) 4 · [Poetry](#poetry) 2 · [Religious texts](#religious-texts) 3 · [Journal](#journal) 40 · [Papers](#papers) 3 · [Reports](#reports) 6 · [Manuscripts](#manuscripts) 3 · [Newspapers](#newspapers) 1 · [Digital library](#digital-library) 3
 
 ## By category
 
@@ -30,6 +30,7 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 |---|---|---|---|
 | Brogo | EN | Community | `oneshelf.brogo` |
 | Comic Book Plus | EN | Community | `oneshelf.comic-book-plus` |
+| Comloc Vault | EN | Community | `oneshelf.comloc-vault` |
 | Sandra and Woo | EN | Community | `oneshelf.sandra-and-woo` |
 | xkcd | EN | Community | `oneshelf.xkcd` |
 | Acomics (Авторский Комикс) | RU | Community | `oneshelf.acomics` |
@@ -50,6 +51,7 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 | Standard Ebooks | EN | Official | `oneshelf.standard-ebooks` |
 | English Wikisource | EN | Community | `oneshelf.wikisource-en` |
 | Elejandría | ES | Community | `oneshelf.elejandria` |
+| Framabook | FR | Community | `oneshelf.framabook` |
 | Magyar Elektronikus Könyvtár (MEK) | HU | Community | `oneshelf.mek` |
 | NIJL Kokusho Database (国書データベース) | JA | Community | `oneshelf.nijl-kokusho` |
 | Bokselskap | NO | Community | `oneshelf.bokselskap` |
@@ -113,6 +115,7 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 | مجلة الآداب (University of Baghdad, Iraq) | AR | Community | `oneshelf.baghdad-aladab` |
 | مجلة التراث العلمي العربي (University of Baghdad, Iraq) | AR | Community | `oneshelf.baghdad-jrashc` |
 | مجلة ديالى للبحوث الانسانية (University of Diyala, Iraq) | AR | Community | `oneshelf.diyala-djhr` |
+| مجلة العلوم الإنسانية المرقب (Elmergib University, Libya) | AR | Community | `oneshelf.elmergib-ejhs` |
 | Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran) | AR | Community | `oneshelf.ibn-almuqaffa-ut` |
 | مجلة كلية الشريعة-أكادير (IMIST, Morocco) | AR | Community | `oneshelf.imist-chariaa` |
 | دفاتر برلمانية (IMIST, Morocco) | AR | Community | `oneshelf.imist-dafatir-barlamania` |
@@ -131,6 +134,7 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 | مجلة الكوفة للعلوم القانونية والسياسية (Kufa, Iraq) | AR | Community | `oneshelf.kufa-kjlps` |
 | مجلة مركز دراسات الكوفة (University of Kufa, Iraq) | AR | Community | `oneshelf.kufa-ksc` |
 | Studies in Arabic Language and Literature (Semnan University) | AR | Community | `oneshelf.lasem-semnan` |
+| Latakia University Journal — Arts and Humanities (Syria) | AR | Community | `oneshelf.latakia-humlitr` |
 | مجلة كلية الآداب (Misurata University, Libya) | AR | Community | `oneshelf.misurata-arts` |
 | مجلة ابحاث كلية التربية الاساسية (University of Mosul, Iraq) | AR | Community | `oneshelf.mosul-berj` |
 | مجلة التربية للعلوم الانسانية (University of Mosul, Iraq) | AR | Community | `oneshelf.mosul-jeh` |
@@ -138,10 +142,14 @@ Every adapter is named `Source · Category · LANG`, as the OneShelf Registry sc
 | Research in Arabic Language (University of Isfahan) | AR | Community | `oneshelf.rall-ui` |
 | College of Sharia and Islamic Studies Journal (Qatar University) | AR | Community | `oneshelf.sharia-qu` |
 | Tajseer Journal (Qatar University) | AR | Community | `oneshelf.tajseer-qu` |
+| مجلة كلية الآداب (Thamar University, Yemen) | AR | Community | `oneshelf.thamar-arts` |
+| مجلة كلية التربية (Thamar University, Yemen) | AR | Community | `oneshelf.thamar-edu` |
 | مجلة جامعة تكريت للعلوم الإنسانية (Tikrit University, Iraq) | AR | Community | `oneshelf.tikrit-jtuh` |
 | مجلة دلالات للعلوم الإنسانية والتربوية (Tripoli, Libya) | AR | Community | `oneshelf.tripoli-delalat` |
 | مجلة لارك للفلسفة واللسانيات والعلوم الاجتماعية (Wasit, Iraq) | AR | Community | `oneshelf.wasit-lark` |
 | المجلة الأردنية في العلوم التربوية (Yarmouk University, Jordan) | AR | Community | `oneshelf.yarmouk-jjes` |
+| مجلة كلية الآداب (University of Zawia, Libya) | AR | Community | `oneshelf.zawia-uzfaj` |
+| El Omda in Linguistics and Discourse Analysis (M'sila) | AR/EN/FR | Community | `oneshelf.msila-olda` |
 | Translation Researches in Arabic Language and Literature (ATU) | FA/AR | Community | `oneshelf.rctall-atu` |
 
 ### Papers
@@ -191,13 +199,13 @@ An adapter with several languages is listed under each of them.
 
 | Language | Adapters | Categories |
 |---|---|---|
-| Arabic (AR) | 45 | Manga 1, Books 4, Children's books 3, Journal 34, Reports 1, Manuscripts 2 |
+| Arabic (AR) | 51 | Manga 1, Books 4, Children's books 3, Journal 40, Reports 1, Manuscripts 2 |
 | Bulgarian (BG) | 1 | Books 1 |
 | German (DE) | 3 | Books 1, Academic books 1, Newspapers 1 |
-| English (EN) | 31 | Webtoons 2, Comics 4, Books 4, Academic books 9, Textbooks 4, Poetry 1, Religious texts 1, Papers 1, Reports 5 |
+| English (EN) | 33 | Webtoons 2, Comics 5, Books 4, Academic books 9, Textbooks 4, Poetry 1, Religious texts 1, Journal 1, Papers 1, Reports 5 |
 | Spanish (ES) | 1 | Books 1 |
 | Persian (FA) | 2 | Poetry 1, Journal 1 |
-| French (FR) | 1 | Papers 1 |
+| French (FR) | 3 | Books 1, Journal 1, Papers 1 |
 | Hebrew (HE) | 1 | Religious texts 1 |
 | Hungarian (HU) | 1 | Books 1 |
 | Japanese (JA) | 1 | Books 1 |

@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.framabook
+name: "Framabook · Books · FR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  Framabook, Framasoft's collection of free-culture books in French (novels, manuals, essays and the comics
+  Grise Bouille and GKND), from its archive site. A book is one Reading Unit, downloaded as its EPUB or PDF
+  from the archive — only while the book's own page links its licence (a Creative Commons licence or the
+  Licence Art Libre). Books without a licence link, and files kept on other sites, are not offered. Open a
+  book by pasting its address (archives.framabook.org/grise-bouille-tome-1/).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [archives.framabook.org]
+defaults:
+  language: fr
+  content_type: book

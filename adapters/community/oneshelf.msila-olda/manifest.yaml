@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.msila-olda
+name: "El Omda in Linguistics and Discourse Analysis (M'sila) · Journal · AR/EN/FR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  El Omda in Linguistics and Discourse Analysis — an open-access journal of University of M'sila (Algeria) on linguistics and discourse analysis, published with Open Journal
+  Systems, its articles in Arabic, English and French. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY-NC 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (journals.univ-msila.dz/index.php/OLDA/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.univ-msila.dz]
+defaults:
+  language: ar
+  content_type: paper

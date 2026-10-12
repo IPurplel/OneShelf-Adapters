@@ -1,0 +1,22 @@
+# An issue is one Reading Unit (one_shot) — only while its page's JSON-LD Book carries "license" set to the
+# Public Domain Mark 1.0. Without it there is no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/comics/read/{listing_key}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//script[@type='application/ld+json'][contains(., '\"@type\":\"Book\"')]/text())[1]"}
+  items: {xpath: "(//header[contains(@class, 'vault-title-head')]/h1)[1]"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([a-z0-9-]+)\|(?s:.*)"@type":"Book"(?:[^{}]|\{[^{}]*\})*"license":"https://creativecommons\.org/publicdomain/mark/1\.0/"', group: 1}}]
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

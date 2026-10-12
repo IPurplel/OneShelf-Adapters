@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.zawia-uzfaj
+name: "مجلة كلية الآداب (University of Zawia, Libya) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة كلية الآداب — an open-access journal of University of Zawia (Libya) on humanities, history, Islamic studies and linguistics (Faculty of Arts Journal), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY-NC 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (journals.zu.edu.ly/index.php/UZFAJ/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journals.zu.edu.ly]
+defaults:
+  language: ar
+  content_type: paper

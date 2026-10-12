@@ -1,0 +1,58 @@
+# Fixtures are live archive pages (2026-10-10).
+cases:
+- capability: work
+  inputs: {listing_key: grise-bouille-tome-1}
+  fixtures: [{url: 'https://archives.framabook.org/grise-bouille-tome-1/index.html', file: fixtures/grise-bouille-tome-1.html}]
+  expect:
+    first: {title: 'Grise Bouille — Tome I', creator: Simon Giraudot, language: fr, content_type: comic}
+- capability: catalog
+  inputs: {listing_key: grise-bouille-tome-1}
+  fixtures: [{url: 'https://archives.framabook.org/grise-bouille-tome-1/index.html', file: fixtures/grise-bouille-tome-1.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {unit_key: grise-bouille-tome-1, unit_type: one_shot}
+- capability: downloads
+  inputs: {unit_key: grise-bouille-tome-1}
+  fixtures: [{url: 'https://archives.framabook.org/grise-bouille-tome-1/index.html', file: fixtures/grise-bouille-tome-1.html}]
+  expect:
+    min_items: 2
+    complete: true
+    first: {url: 'https://archives.framabook.org/docs/Grisebouille1/grise_bouille_t1.epub', format: epub, language: fr}
+# 3, 4: a real page with no licence link (the Mimi & Eunice calendar, "Copyheart") — no unit, no file.
+- capability: catalog
+  inputs: {listing_key: calendrier-mimi-eunice}
+  fixtures: [{url: 'https://archives.framabook.org/calendrier-mimi-eunice/index.html', file: fixtures/calendrier-mimi-eunice.html}]
+  expect:
+    first: {unit_key: null}
+- capability: downloads
+  inputs: {unit_key: calendrier-mimi-eunice}
+  fixtures: [{url: 'https://archives.framabook.org/calendrier-mimi-eunice/index.html', file: fixtures/calendrier-mimi-eunice.html}]
+  expect:
+    first: {url: null}
+# 5: a licensed book whose files are on another site (geektionnerd.net) — no file.
+- capability: downloads
+  inputs: {unit_key: gknd-tome-5-how-i-met-your-sysadmin}
+  fixtures: [{url: 'https://archives.framabook.org/gknd-tome-5-how-i-met-your-sysadmin/index.html', file: fixtures/gknd-tome-5.html}]
+  expect:
+    first: {url: null}
+# The same book still has its unit: its licence is linked.
+- capability: catalog
+  inputs: {listing_key: gknd-tome-5-how-i-met-your-sysadmin}
+  fixtures: [{url: 'https://archives.framabook.org/gknd-tome-5-how-i-met-your-sysadmin/index.html', file: fixtures/gknd-tome-5.html}]
+  expect:
+    min_items: 1
+    first: {unit_key: gknd-tome-5-how-i-met-your-sysadmin}
+# A book under the Licence Art Libre (link http://artlibre.org/), not a comic.
+- capability: work
+  inputs: {listing_key: libertes-numeriques}
+  fixtures: [{url: 'https://archives.framabook.org/libertes-numeriques/index.html', file: fixtures/libertes-numeriques.html}]
+  expect:
+    first: {content_type: book, language: fr}
+- capability: downloads
+  inputs: {unit_key: libertes-numeriques}
+  fixtures: [{url: 'https://archives.framabook.org/libertes-numeriques/index.html', file: fixtures/libertes-numeriques.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://archives.framabook.org/docs/dumo/dumo_couleur_licenceArtLibre_novembre2017.pdf', format: pdf}

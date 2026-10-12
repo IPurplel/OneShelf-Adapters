@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.thamar-arts
+name: "مجلة كلية الآداب (Thamar University, Yemen) · Journal · AR"
+version: 0.1.0
+api: '1.0'
+description: >-
+  مجلة كلية الآداب — an open-access journal of Thamar University (Yemen) on arts and humanities (Journal of the Faculty of Arts), published with Open Journal
+  Systems, its articles mostly in Arabic. An issue is a work and its articles are units, each downloaded as the
+  journal's PDF — only while the article's own page states a Creative Commons licence (CC BY 4.0 on the
+  articles sampled); an article's language is read from its own page. Open an issue by pasting its address
+  (journal.tu.edu.ye/index.php/artsmain/issue/view/…).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [journal.tu.edu.ye]
+defaults:
+  language: ar
+  content_type: paper

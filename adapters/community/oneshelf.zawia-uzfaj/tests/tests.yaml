@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '243'}
+  fixtures: [{url: 'https://journals.zu.edu.ly/index.php/UZFAJ/issue/view/243', file: fixtures/issue_243.html}]
+  expect:
+    first: {title: "مجلة كلية الآداب — مجلد 26 عدد 2 (2026): جامعة الزاوية - مجلة كلية الآداب", language: ar}
+- capability: catalog
+  inputs: {listing_key: '243'}
+  fixtures: [{url: 'https://journals.zu.edu.ly/index.php/UZFAJ/issue/view/243', file: fixtures/issue_243.html}]
+  expect:
+    min_items: 25
+    complete: true
+    first: {unit_key: '1872'}
+- capability: downloads
+  inputs: {unit_key: '1872'}
+  fixtures: [{url: 'https://journals.zu.edu.ly/index.php/UZFAJ/article/view/1872', file: fixtures/article_1872.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journals.zu.edu.ly/index.php/UZFAJ/article/download/1872/1281', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '1872'}
+  fixtures: [{url: 'https://journals.zu.edu.ly/index.php/UZFAJ/article/view/1872', file: fixtures/synthetic-no-licence_1872.html}]
+  expect:
+    first: {url: null}

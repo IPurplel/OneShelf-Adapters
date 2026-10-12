@@ -1,0 +1,19 @@
+# The book's page in the archive (a static copy of the Framabook WordPress site). A book filed under
+# "Bédés" is a comic.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//h1[contains(@class, 'entry-title')])[1]", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    description: {xpath: "(//div[contains(@class, 'entry-content')]/p)[1]", transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    creator: {xpath: "(//div[contains(@class, 'entry-content')]//strong[starts-with(normalize-space(.), 'Auteur')]/following-sibling::text()[1])[1]", transforms: [trim]}
+    cover_url: {xpath: "(//div[contains(@class, 'meta_post_image')]/meta[@itemprop='url']/@content)[1]", transforms: [normalize_url]}
+    language: {template: "fr"}
+    content_type:
+      xpath: "(//article/@class)[1]"
+      transforms: [{regex_replace: {pattern: '^(?s:.*\bcategory-bedes\b.*)$', replacement: "comic"}}, {regex_replace: {pattern: '^(?s:.*\bcategory-.*)$', replacement: "book"}}]

@@ -1,0 +1,9 @@
+base_url: https://archives.framabook.org
+url_patterns:
+  - pattern: '^https://archives\.framabook\.org/([a-z0-9]+(?:-[a-z0-9]+)*)/(?:index\.html)?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt is "User-agent: *" with no rules.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

@@ -1,0 +1,24 @@
+# The issue's pages, in the reader strip's order, from the Vault's own WebP images — under the same
+# condition as catalog.yaml (the Public Domain Mark in the page's JSON-LD Book).
+capability: reader
+inputs: [unit_key]
+request:
+  url: "{base_url}/comics/read/{unit_key}/"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//script[@type='application/ld+json'][contains(., '\"@type\":\"Book\"')]/text())[1]"}
+  items: {xpath: "//ol[@data-reader-strip]/li[contains(@class, 'reader-page')]/img"}
+  fields:
+    url:
+      template: "{item}|{licence}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^<img src="(/comics/read/[a-z0-9-]+/pages/p[0-9]{3}\.webp)"(?s:.*)\|(?s:.*)"@type":"Book"(?:[^{}]|\{[^{}]*\})*"license":"https://creativecommons\.org/publicdomain/mark/1\.0/"', group: 1}}
+        - normalize_url
+    page_label: {xpath: "@alt", transforms: [{regex_extract: {pattern: ', page ([0-9]+)', group: 1}}]}
+pagination:
+  mode: none
+  complete_when: single_response

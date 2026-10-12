@@ -1,0 +1,22 @@
+# A book is one Reading Unit (one_shot) — only while its page's "Licence :" field links a Creative Commons
+# licence or the Licence Art Libre. Without that link there is no unit.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  values:
+    licence: {xpath: "(//div[contains(@class, 'entry-content')]//strong[starts-with(normalize-space(.), 'Licence')]/following-sibling::*[1][self::a]/@href)[1]"}
+  items: {xpath: "(//h1[contains(@class, 'entry-title')])[1]"}
+  fields:
+    unit_key:
+      template: "{listing_key}|{licence}"
+      required: true
+      transforms: [{regex_extract: {pattern: '^([a-z0-9-]+)\|(?:https?://creativecommons\.org/licenses/[a-z-]+/[0-9.]+(?:/[a-z]{2})?/?|https?://(?:www\.)?artlibre\.org/(?:licence/lal/?(?:[a-z]{2}/?)?)?)$', group: 1}}]
+    unit_type: {template: "one_shot"}
+pagination:
+  mode: none
+  complete_when: single_response

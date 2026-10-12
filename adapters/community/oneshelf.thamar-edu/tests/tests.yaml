@@ -1,0 +1,27 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: '206'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/edu/issue/view/206', file: fixtures/issue_206.html}]
+  expect:
+    first: {title: "مجلة كلية التربية — Vol. 15 No. 1 (2026):  V 15, lssue 1 2026", language: ar}
+- capability: catalog
+  inputs: {listing_key: '206'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/edu/issue/view/206', file: fixtures/issue_206.html}]
+  expect:
+    min_items: 24
+    complete: true
+    first: {unit_key: '3281'}
+- capability: downloads
+  inputs: {unit_key: '3281'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/edu/article/view/3281', file: fixtures/article_3281.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://journal.tu.edu.ye/index.php/edu/article/download/3281/2635', format: pdf, language: ar}
+# 3: SYNTHETIC (the fixture says so): the same article page with its licence removed — no file.
+- capability: downloads
+  inputs: {unit_key: '3281'}
+  fixtures: [{url: 'https://journal.tu.edu.ye/index.php/edu/article/view/3281', file: fixtures/synthetic-no-licence_3281.html}]
+  expect:
+    first: {url: null}

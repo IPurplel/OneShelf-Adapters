@@ -1,0 +1,31 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: per_item
+access_type: public_domain
+rights_granularity: item
+license:
+  id: null
+  url: null
+commercial_use: allowed
+redistribution: allowed
+derivatives: allowed
+attribution:
+  required: false
+  text: "Comloc, The Vault (scans from the Internet Archive) — https://www.comicshoplocator.com/comics/read/"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    The Vault is one section of a commercial comic-shop site whose footer reserves rights in the site itself.
+    Each issue page states the issue's own status: its JSON-LD Book carries "license"
+    https://creativecommons.org/publicdomain/mark/1.0/, and the page says "Public domain — verified
+    2026-07-06. Scan: Internet Archive." An issue has a unit, and pages, only while its own JSON-LD carries
+    the Public Domain Mark (tests 3, 4: the same page with that entry removed, marked SYNTHETIC). The page
+    images are stored unaltered for private reading.
+  exclusion_tests: [3, 4]
+evidence:
+  - claim: 'Planet Comics #1 (1940): JSON-LD Book "license": "https://creativecommons.org/publicdomain/mark/1.0/"; "Public domain — verified 2026-07-06. Scan: Internet Archive."'
+    url: https://www.comicshoplocator.com/comics/read/planet-comics-1/
+  - claim: 'robots.txt is "User-agent: *" with "Allow: /".'
+    url: https://www.comicshoplocator.com/robots.txt
+last_verified: 2026-10-12

@@ -1,0 +1,9 @@
+base_url: https://journal.latakia-univ.edu.sy
+url_patterns:
+  - pattern: '^https://journal\.latakia\-univ\.edu\.sy/index\.php/humlitr/(?:[a-z]{2}(?:_[A-Z]{2})?/)?issue/view/([0-9]+)(?:[/?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows only /cache/; nothing this adapter requests.
+rate_limit:
+  requests_per_minute: 10
+  concurrency: 1
