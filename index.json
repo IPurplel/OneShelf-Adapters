@@ -2,739 +2,1000 @@
   "plugins": [
     {
       "api": "1.0",
-      "file": "packages/oneshelf.3asq-1.0.0.osp",
+      "file": "packages/oneshelf.3asq-1.0.1.osp",
       "id": "oneshelf.3asq",
-      "name": "3asq (Al-Aasheq)",
-      "sha256": "78d15a10a0bc9e3a69317f1bba27657a2f10dab7a871d90b3a1a1ffc9f6c1398",
+      "name": "3asq (Al-Aasheq) · Manga · AR",
+      "sha256": "ee784076d3e183f8b6e91dc4e5dcc5a4e84fc590e422b9ba21bd10ee8206a860",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.acomics-0.1.0.osp",
+      "file": "packages/oneshelf.acomics-0.1.1.osp",
       "id": "oneshelf.acomics",
-      "name": "Acomics (Авторский Комикс)",
-      "sha256": "3f94c7bcfc4d01d4911fe4ffe9aed8550f9e3bb70c58a6285322bd95f18c03fa",
+      "name": "Acomics (Авторский Комикс) · Comics · RU",
+      "sha256": "4585adf49ead16693c10bdc9a90c03ad762510dec2db937a5b63db70a7705c28",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.amherst-college-press-0.1.0.osp",
+      "file": "packages/oneshelf.amherst-college-press-0.1.1.osp",
       "id": "oneshelf.amherst-college-press",
-      "name": "Amherst College Press",
-      "sha256": "a89e5940299966b8e80de5875aadc24a0c29a0a960fc0c3aa3df186c233f27db",
+      "name": "Amherst College Press · Academic books · EN",
+      "sha256": "fe584c3993a05f07e7115c2951e103df0cac334a2f5c7c0d113f9320be037f60",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.anno-0.1.0.osp",
+      "file": "packages/oneshelf.anno-0.1.1.osp",
       "id": "oneshelf.anno",
-      "name": "ANNO — Austrian Newspapers Online",
-      "sha256": "2f0a33e442203471f205d2d44cd51c02fcde0ccd63b90c62b84b8ed0cd1f34c8",
+      "name": "ANNO (Austrian Newspapers Online) · Newspapers · DE",
+      "sha256": "f07ea9507cb3c50161853249820a9cfaebb9bc8e311275b7cff8affa1e70afe9",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.anu-press-0.1.0.osp",
+      "file": "packages/oneshelf.anu-press-0.1.1.osp",
       "id": "oneshelf.anu-press",
-      "name": "ANU Press",
-      "sha256": "5608d8243033499b296e725e53295f0e26e2bb3cf3007a7b95eb9496e5a69b2e",
+      "name": "ANU Press · Academic books · EN",
+      "sha256": "36bf2687e5a0f159fd8dc9f0042f332dfa85275c6b42273b757f0d124736041c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.arabic-collections-online-0.1.0.osp",
+      "file": "packages/oneshelf.arabic-collections-online-0.1.1.osp",
       "id": "oneshelf.arabic-collections-online",
-      "name": "Arabic Collections Online (NYU)",
-      "sha256": "201c4cdd7a5d9af3106cb5113bb27280fdf7454b9d40984cb716a90df756b820",
+      "name": "Arabic Collections Online (NYU) · Books · AR",
+      "sha256": "07ef32720b43233fbd02c45f2200f0a4d7daca8b8da18d8e2b1d6053add218f5",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.arxiv-1.0.0.osp",
+      "file": "packages/oneshelf.arxiv-1.0.1.osp",
       "id": "oneshelf.arxiv",
-      "name": "arXiv",
-      "sha256": "bf2255ea491a744dfc7aa8fe7cf660f2ba4c96ad9e6effe996a73f9007f3b9e4",
+      "name": "arXiv · Papers · EN",
+      "sha256": "c168800ffbd1899b6825114ccabd5ac4fa7587e60898422a2da09d8bee606a8d",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.athabasca-university-press-0.1.0.osp",
+      "file": "packages/oneshelf.athabasca-university-press-0.1.1.osp",
       "id": "oneshelf.athabasca-university-press",
-      "name": "Athabasca University Press",
-      "sha256": "087aeaad05a6721e791d60d3084a52842602b1fb0ebfd0b73eb3219867fdfd54",
+      "name": "Athabasca University Press · Academic books · EN",
+      "sha256": "91d341f4212e12468859df83c6e226cc0e7a242cc96d8729ca10e67d8fef3eac",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.babylon-jubh-0.1.0.osp",
+      "id": "oneshelf.babylon-jubh",
+      "name": "مجلة جامعة بابل للعلوم الانسانية (University of Babylon, Iraq) · Journal · AR",
+      "sha256": "8244d28c77f94b83f97f728bcf9b67f40f07aef318da123934415a592dfb3dd0",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.bccampus-open-textbooks-0.1.0.osp",
+      "file": "packages/oneshelf.baghdad-aladab-0.1.0.osp",
+      "id": "oneshelf.baghdad-aladab",
+      "name": "مجلة الآداب (University of Baghdad, Iraq) · Journal · AR",
+      "sha256": "5dca982ca4e8b3c966f880192a9c6bcf5522feb95825035e924b99130ad888d7",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.baghdad-jrashc-0.1.0.osp",
+      "id": "oneshelf.baghdad-jrashc",
+      "name": "مجلة التراث العلمي العربي (University of Baghdad, Iraq) · Journal · AR",
+      "sha256": "7e53cfb75d47310fb0d2af1511d71e4d4c689bc096d09420721723e1e24a3770",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.bccampus-open-textbooks-0.1.1.osp",
       "id": "oneshelf.bccampus-open-textbooks",
-      "name": "BCcampus Open Textbooks (opentextbc.ca)",
-      "sha256": "e48d1cc25fc64c456060bc3614bf9f2cc03be5e588131ac648ff622e48d605a5",
+      "name": "BCcampus Open Textbooks · Textbooks · EN",
+      "sha256": "811e94f6fbe342d9b68bb79555c104914a883c514e211de4c105e7dcc9e188cc",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.bokselskap-0.1.0.osp",
+      "file": "packages/oneshelf.bokselskap-0.1.1.osp",
       "id": "oneshelf.bokselskap",
-      "name": "Bokselskap",
-      "sha256": "3925d92ada0eb5f0c6d43268645e2ef8841cefb2aae5e0a8c8023f9b478edadc",
+      "name": "Bokselskap · Books · NO",
+      "sha256": "9576be97f1447c2687fc408d983f474c1078c5bdbc5c57ecf808851c0fea96fc",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.books-by-habiba-0.1.0.osp",
+      "file": "packages/oneshelf.books-by-habiba-0.1.1.osp",
       "id": "oneshelf.books-by-habiba",
-      "name": "Books by Habiba (Egyptian Arabic)",
-      "sha256": "d832e74b62cfebc091ef94808bc7eb27ebad6cf8f719982d9226ec790d739bd3",
+      "name": "Books by Habiba (Egyptian Arabic) · Children's books · AR",
+      "sha256": "3c72b718cf3b1c078298fbea76a4187b8c945a6415cf24a6b83f2d959a07a1b3",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.brogo-0.1.0.osp",
+      "file": "packages/oneshelf.brogo-0.1.1.osp",
       "id": "oneshelf.brogo",
-      "name": "Brogo",
-      "sha256": "5f4ffc77ab3d61bb68ea85f1990e88a4241bab68ffef72821b56b6137222fca3",
+      "name": "Brogo · Comics · EN",
+      "sha256": "b0fd74e9b44fc22bcc52a5f779426e3ceada360f468528e04824698c8ff5ae40",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.chitanka-0.1.0.osp",
+      "file": "packages/oneshelf.chitanka-0.1.1.osp",
       "id": "oneshelf.chitanka",
-      "name": "Chitanka (Моята библиотека)",
-      "sha256": "81bb0a1fdff5309996bcb297e3648dfc23dd80d5a42831834b6a15ee5dfa4ddd",
+      "name": "Chitanka (Моята библиотека) · Books · BG",
+      "sha256": "95edaaadb2be10e686badea14fd45b161403b97a5ef3acce24b57e5a8414535b",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.comic-book-plus-0.1.0.osp",
+      "file": "packages/oneshelf.comic-book-plus-0.1.1.osp",
       "id": "oneshelf.comic-book-plus",
-      "name": "Comic Book Plus",
-      "sha256": "20b74aeeaae0304d9c6465adb59615dce14cf1e61aadcfa8da8ae4f00eab4451",
+      "name": "Comic Book Plus · Comics · EN",
+      "sha256": "e8fb0419f0028b6ad12887f1de76e5771f57387a52884c57ed027d6c050c9048",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.comloc-vault-0.1.0.osp",
+      "id": "oneshelf.comloc-vault",
+      "name": "Comloc Vault · Comics · EN",
+      "sha256": "cd8b926a03875edd63922bf7e50ceaf6af463a8d2e1d32bb2f2add726fd1e6aa",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.cyberleninka-0.1.0.osp",
+      "file": "packages/oneshelf.cyberleninka-0.1.1.osp",
       "id": "oneshelf.cyberleninka",
-      "name": "CyberLeninka",
-      "sha256": "74b2b361b4c0c1dbed328a96b1c570f88ee49be0f836891f59835bc02799e2a5",
+      "name": "CyberLeninka · Papers · RU",
+      "sha256": "b3ab6a5d2a426c3439f2837c11e77d055753de54e905c69c86d9ce8879841ee1",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.digital-bodleian-0.1.0.osp",
+      "file": "packages/oneshelf.digital-bodleian-0.1.1.osp",
       "id": "oneshelf.digital-bodleian",
-      "name": "Digital Bodleian",
-      "sha256": "5b9d57021bc966befed5caacecd8551be6b620b45b095f0a995992b6863a8950",
+      "name": "Digital Bodleian · Manuscripts · Multi",
+      "sha256": "cfcd98046f33ae6a2b8ca5b08b830daf8416f4b842635571a773337877d00eb8",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.diyala-djhr-0.1.0.osp",
+      "id": "oneshelf.diyala-djhr",
+      "name": "مجلة ديالى للبحوث الانسانية (University of Diyala, Iraq) · Journal · AR",
+      "sha256": "c18efdaef24c18ca8e0d7b66425657503cc32ab65c5951f848e0f779d4283bf4",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.ebible-0.1.0.osp",
+      "file": "packages/oneshelf.ebible-0.1.1.osp",
       "id": "oneshelf.ebible",
-      "name": "eBible.org",
-      "sha256": "1dd7b24c24de8c5f5cf6205337ec486f4b027d10022166d2576f6406a1cd8824",
+      "name": "eBible.org · Religious texts · Multi",
+      "sha256": "98a5234d98cb5e3c811065fec45b0aaaae8098ec8ec2e30bf6b2ab62c95735bc",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.elejandria-0.1.0.osp",
+      "file": "packages/oneshelf.elejandria-0.1.1.osp",
       "id": "oneshelf.elejandria",
-      "name": "Elejandría",
-      "sha256": "be3fd707559e7d03bd2f390f21fb754f9c354aaa5c55e52918c8745aa2dd6d4a",
+      "name": "Elejandría · Books · ES",
+      "sha256": "0d6cf5d86f7b91afd1e3505cc9007cc79e2dceff490a45d0192010b459b84aee",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.elmergib-ejhs-0.1.0.osp",
+      "id": "oneshelf.elmergib-ejhs",
+      "name": "مجلة العلوم الإنسانية المرقب (Elmergib University, Libya) · Journal · AR",
+      "sha256": "fc2b4a3d7dd85c63c523f409ab44ff5402c3b8379dfd893e73d83ca2ef2586bb",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.english-storybooks-arabic-0.1.0.osp",
+      "file": "packages/oneshelf.english-storybooks-arabic-0.1.1.osp",
       "id": "oneshelf.english-storybooks-arabic",
-      "name": "Multilingual English Storybooks (Arabic)",
-      "sha256": "56e04510e254cbb9a0e0d39cf5643bad836406f21e40cec013c0b2363f33b6a3",
+      "name": "Multilingual English Storybooks (Arabic) · Children's books · AR",
+      "sha256": "9cbca9027c94d6c7e60ef1fcc77990879f3e15cd6e64ad849c87eb0d629c3653",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.englishliteratureebooks-0.1.0.osp",
+      "id": "oneshelf.englishliteratureebooks",
+      "name": "English Literature Ebooks (Emma Laybourn) · Books · EN",
+      "sha256": "ab8a0b11aa8706370c95e1754e5721e58e4f7df63cf8f529948af1f04cc316c6",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.erudit-0.1.0.osp",
+      "file": "packages/oneshelf.erudit-0.1.1.osp",
       "id": "oneshelf.erudit",
-      "name": "Érudit",
-      "sha256": "a40b80afe5f6e636f00f6fc07df36d1c26f907dea4307998764b4dfb757ac06d",
+      "name": "Érudit · Papers · FR",
+      "sha256": "8d667fc08e1e6f4897403f674a821163d3e6ecb1c8a5df6c10c4adaffa8d96e5",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.fao-knowledge-0.1.0.osp",
+      "file": "packages/oneshelf.fao-knowledge-0.1.1.osp",
       "id": "oneshelf.fao-knowledge",
-      "name": "FAO Open Knowledge",
-      "sha256": "e8f6f1e15d22afc0ef1ade920e264213071343d323f0c8f4ccdbf0c82366537a",
+      "name": "FAO Open Knowledge · Reports · EN",
+      "sha256": "7efdffbe1baff3ccf37dee1b955452fa3f0be2fec51f43b9199dd6e860a95424",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.folger-shakespeare-0.1.0.osp",
+      "file": "packages/oneshelf.folger-shakespeare-0.1.1.osp",
       "id": "oneshelf.folger-shakespeare",
-      "name": "Folger Shakespeare",
-      "sha256": "38dcdacada1b11064ff590910b696b0bf7b474f92179fa420aee5a275f4c0197",
+      "name": "Folger Shakespeare · Books · EN",
+      "sha256": "9026f014d08ce2fc5486b85700246ff96d99e1766ada95f36690346a2645a691",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.framabook-0.1.0.osp",
+      "id": "oneshelf.framabook",
+      "name": "Framabook · Books · FR",
+      "sha256": "475fdb1bbd2e874022d2b1a3cd0ec4b2c6ae482d362d4bc10af0aa72a08da78d",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.fsu-arabic-short-stories-0.1.0.osp",
+      "file": "packages/oneshelf.fsu-arabic-short-stories-0.1.1.osp",
       "id": "oneshelf.fsu-arabic-short-stories",
-      "name": "FSU Arabic Short Stories",
-      "sha256": "cdd1b21e201142b9d569a88763d3e998e9734a4457efa122a1e13f5fb01fb0b2",
+      "name": "FSU Arabic Short Stories · Books · AR",
+      "sha256": "cb92ee490a621ffa3e14f5060da8ad50286be3f80867bcabcc2bae10cb0e7774",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.gallica-0.1.0.osp",
+      "file": "packages/oneshelf.gallica-0.1.1.osp",
       "id": "oneshelf.gallica",
-      "name": "Gallica (BnF)",
-      "sha256": "9d34dc9fe9985226241e2082d74ca1f4d6b91a95aef6aab03a417247e6011146",
+      "name": "Gallica (BnF) · Digital library · Multi",
+      "sha256": "5c511e14960d7fa9ce4925b5382fe28fc948fe84258d492ef9e287e392b8e603",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.ganjoor-0.1.0.osp",
+      "file": "packages/oneshelf.ganjoor-0.1.1.osp",
       "id": "oneshelf.ganjoor",
-      "name": "گنجور (Ganjoor)",
-      "sha256": "dc5e45c66c090f7df3bd02dc155fdd67cca3659370d21b54192c5d71cea74fb4",
+      "name": "گنجور (Ganjoor) · Poetry · FA",
+      "sha256": "3f731629765e2e6e4adad36bb8754aa0ceb0a47a98250e8188d25621bd8d2fe3",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.govinfo-0.1.0.osp",
+      "file": "packages/oneshelf.govinfo-0.1.1.osp",
       "id": "oneshelf.govinfo",
-      "name": "GovInfo (U.S. Government Publishing Office)",
-      "sha256": "6794a0caa1210a00cb488781e31186e5dc0d1fafcae7829d51b14f25ace0168d",
+      "name": "GovInfo (U.S. Government Publishing Office) · Reports · EN",
+      "sha256": "f861674857537e3fbd8a05351af9361d3376080290975fb722f9a5c4dbbddcff",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.gutenberg-2.0.0.osp",
+      "file": "packages/oneshelf.gutenberg-2.0.1.osp",
       "id": "oneshelf.gutenberg",
-      "name": "Project Gutenberg",
-      "sha256": "b67f412243a69a721ec6c45897329c33b88ca085faf1bf66d8f5a8237e81753f",
+      "name": "Project Gutenberg · Books · EN",
+      "sha256": "024c486fa372a80fffa4b5bcf115f0340f82a7248aed48ae8c5f4b4030dade2f",
       "trust_label": "official",
-      "version": "2.0.0"
+      "version": "2.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.hindawi-1.0.0.osp",
+      "file": "packages/oneshelf.hindawi-1.0.1.osp",
       "id": "oneshelf.hindawi",
-      "name": "Safahat (Hindawi)",
-      "sha256": "0712d869acaebe79c0f51ef888e2dac0f3c8f0ee2b3c5ad503e32f5227387352",
+      "name": "Safahat (Hindawi) · Books · AR",
+      "sha256": "18560a40cb36b446e9c17780d6a55e5652278b5d2ec51875bf8121b672e91c49",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.ibn-almuqaffa-ut-0.1.0.osp",
+      "file": "packages/oneshelf.ibn-almuqaffa-ut-0.1.1.osp",
       "id": "oneshelf.ibn-almuqaffa-ut",
-      "name": "Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran)",
-      "sha256": "a2f98e1cf40a74b1b6ed54e658543ebd5b8d891a29010a7c50a6e5f33cdc9f40",
+      "name": "Ibn al-Muqaffa' in Narrative and Poetry (University of Tehran) · Journal · AR",
+      "sha256": "71b8e056c8036f3ab5b5f4e182aa014c3152be4ceb566fa0b5163da44ba5336e",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-chariaa-0.1.0.osp",
+      "file": "packages/oneshelf.imist-chariaa-0.1.1.osp",
       "id": "oneshelf.imist-chariaa",
-      "name": "مجلة كلية الشريعة-أكادير (IMIST, Morocco)",
-      "sha256": "3b9c0c97f4111f6c14cfa551dd661cdeef4a2ef404d6fa0347e34d57b21c4f84",
+      "name": "مجلة كلية الشريعة-أكادير (IMIST, Morocco) · Journal · AR",
+      "sha256": "43ebaeea146568f7fa4cc3fac75fda3578c592eace0b14354d14e265dadd4782",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-dafatir-barlamania-0.1.0.osp",
+      "file": "packages/oneshelf.imist-dafatir-barlamania-0.1.1.osp",
       "id": "oneshelf.imist-dafatir-barlamania",
-      "name": "دفاتر برلمانية (IMIST, Morocco)",
-      "sha256": "0b91b2489c9d1b6ca336668333fe41ec2465193aea897664f3c2343b82b4548d",
+      "name": "دفاتر برلمانية (IMIST, Morocco) · Journal · AR",
+      "sha256": "f1b10bdf3329cd838c4e8eb617aa9ef95bca45ea78c047e7c323bd64b1acefd7",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-didase-0.1.0.osp",
+      "file": "packages/oneshelf.imist-didase-0.1.1.osp",
       "id": "oneshelf.imist-didase",
-      "name": "مجلة الديداكتيك للعلوم التربوية (IMIST, Morocco)",
-      "sha256": "7a58903f90d83e8bf41ecd4620f1240b572f852a6da46405085e1e18fdf9b0a0",
+      "name": "مجلة الديداكتيك للعلوم التربوية (IMIST, Morocco) · Journal · AR",
+      "sha256": "1223f14e3ddb778f4ac41d2dc98c06ff1dfa5b86e53347f2a47b5d6f21397be4",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-insaf-0.1.0.osp",
+      "file": "packages/oneshelf.imist-insaf-0.1.1.osp",
       "id": "oneshelf.imist-insaf",
-      "name": "مجلة إنصاف (IMIST, Morocco)",
-      "sha256": "6beed180df279732fca10003c416ab19066cc3d6fc4d8ac3b3fe6fbe5dbc0111",
+      "name": "مجلة إنصاف (IMIST, Morocco) · Journal · AR",
+      "sha256": "c7966670897a484258119680236f20e7d4bdde67205b099254afcf9d1fbdd24c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-joussour-0.1.0.osp",
+      "file": "packages/oneshelf.imist-joussour-0.1.1.osp",
       "id": "oneshelf.imist-joussour",
-      "name": "جسور (IMIST, Morocco)",
-      "sha256": "45606a10cfb2433e1d17c0fa3800b75543e2d0b0d5a7644372da6a0c8e2bfd47",
+      "name": "جسور (IMIST, Morocco) · Journal · AR",
+      "sha256": "e744431013df0ed64f57b60668f10de788e05c50962185604d425243c0891e17",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-lixus-0.1.0.osp",
+      "file": "packages/oneshelf.imist-lixus-0.1.1.osp",
       "id": "oneshelf.imist-lixus",
-      "name": "مجلة ليكسوس:في التاريخ والعلوم الإنسانية (IMIST, Morocco)",
-      "sha256": "108a526f4646c8e2acdb3e4884c477bee78dd214b54510d0741e730e50d230d5",
+      "name": "مجلة ليكسوس:في التاريخ والعلوم الإنسانية (IMIST, Morocco) · Journal · AR",
+      "sha256": "944b32506dfce279757f4afdf10cdb54a820e791e6ff807de655246b269f642c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-prometheus-0.1.0.osp",
+      "file": "packages/oneshelf.imist-prometheus-0.1.1.osp",
       "id": "oneshelf.imist-prometheus",
-      "name": "مجلة بروميثيوس الدولية — Prometheus (IMIST, Morocco)",
-      "sha256": "20c67478d970cc8cdbc8c6700d3dcf36b9797a99f512c3dac2926f154cadd6c2",
+      "name": "مجلة بروميثيوس الدولية — Prometheus (IMIST, Morocco) · Journal · AR",
+      "sha256": "14499200ac1d9dc77d3b2ebdf64b6491cc548dbe20d2495203059a2686a9cd7d",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.imist-tribunejuridique-0.1.0.osp",
+      "file": "packages/oneshelf.imist-tribunejuridique-0.1.1.osp",
       "id": "oneshelf.imist-tribunejuridique",
-      "name": "مجلة المنبر القانوني (IMIST, Morocco)",
-      "sha256": "f19c2c0e7fc587d0bd9c00a2bacf2ad53e67b0a541e9cb7d6be3c6891d52e87d",
+      "name": "مجلة المنبر القانوني (IMIST, Morocco) · Journal · AR",
+      "sha256": "14bfb04e4d2fa4f26e5a8e46674fdb574c4c29c2bc966ecbbe3bdd47b87f5db8",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.intechopen-0.1.0.osp",
+      "file": "packages/oneshelf.intechopen-0.1.1.osp",
       "id": "oneshelf.intechopen",
-      "name": "IntechOpen",
-      "sha256": "576b3e6d8c96cecb76ba482862e081f59e515b26e882aab926d02001fce2227d",
+      "name": "IntechOpen · Academic books · EN",
+      "sha256": "1adb04b61f95af9b03c930ac1c33c0990ea8ff523770f54a6e51b5e1c915e614",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.jalit-ut-0.1.0.osp",
+      "file": "packages/oneshelf.jalit-ut-0.1.1.osp",
       "id": "oneshelf.jalit-ut",
-      "name": "Arabic Literature (University of Tehran)",
-      "sha256": "5dd09c46b189fe792086461507b04c71c3f8811c5b40bf4a44632ee79cf22e43",
+      "name": "Arabic Literature (University of Tehran) · Journal · AR",
+      "sha256": "7e3049c28506e900e6197fcadb90829d14bb52e32b35274adbe446833fdae6a4",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.jall-ferdowsi-0.1.0.osp",
+      "file": "packages/oneshelf.jall-ferdowsi-0.1.1.osp",
       "id": "oneshelf.jall-ferdowsi",
-      "name": "Journal of Arabic Language and Literature (Ferdowsi University of Mashhad)",
-      "sha256": "f75209f78f7c651cfd8f4aa3446df355d8bc458e3b670d0aaba662cf9e0b1808",
+      "name": "Journal of Arabic Language and Literature (Ferdowsi, Mashhad) · Journal · AR",
+      "sha256": "9fedbcdfa9c06b89892a35428b48a738047e62f2226011012214c01cc27ec1d1",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.kufa-arts-0.1.0.osp",
+      "id": "oneshelf.kufa-arts",
+      "name": "مجلة آداب الكوفة (University of Kufa, Iraq) · Journal · AR",
+      "sha256": "1797b897a518742f9928658fa4f09e171d33875dee2f9f9d9b3d2469e1ec6fb1",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.lasem-semnan-0.1.0.osp",
+      "file": "packages/oneshelf.kufa-ewjh-0.1.0.osp",
+      "id": "oneshelf.kufa-ewjh",
+      "name": "مجلة كلية التربية للبنات للعلوم الإنسانية (Kufa, Iraq) · Journal · AR",
+      "sha256": "ca5cf39138d853e8d28435163f91bd6dad0bb5543caa38de29dd94042bdd2162",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.kufa-fqhj-0.1.0.osp",
+      "id": "oneshelf.kufa-fqhj",
+      "name": "مجلة كلية الفقه (University of Kufa, Iraq) · Journal · AR",
+      "sha256": "2baff45a4356a9b4c01449b9775bf76c51b6058469aa56466d60adbad5f61ff9",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.kufa-jall-0.1.0.osp",
+      "id": "oneshelf.kufa-jall",
+      "name": "مجلة اللغة العربية وآدابها (University of Kufa, Iraq) · Journal · AR",
+      "sha256": "e8f7c286e763ce8679a3ecc42be5360623837e9d0fbfe3842a323218807b9369",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.kufa-kjlps-0.1.0.osp",
+      "id": "oneshelf.kufa-kjlps",
+      "name": "مجلة الكوفة للعلوم القانونية والسياسية (Kufa, Iraq) · Journal · AR",
+      "sha256": "2313734269a15b0e6369822a7d9545a88a5647c12d3fc853e43e133faf88c653",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.kufa-ksc-0.1.0.osp",
+      "id": "oneshelf.kufa-ksc",
+      "name": "مجلة مركز دراسات الكوفة (University of Kufa, Iraq) · Journal · AR",
+      "sha256": "f05bc7ca4a736f6cb4040fcb593ba16d34804006c065f16c5086716a18189138",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.lasem-semnan-0.1.1.osp",
       "id": "oneshelf.lasem-semnan",
-      "name": "Studies in Arabic Language and Literature (Semnan University)",
-      "sha256": "5ad41915ed307b1a2fad958e6d87cba5442fe924356c1d18fae001ee44158f4d",
+      "name": "Studies in Arabic Language and Literature (Semnan University) · Journal · AR",
+      "sha256": "2e88c79ddd12898995788da2954bb546620bd01a289de2b26218937663177c5d",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.latakia-humlitr-0.1.0.osp",
+      "id": "oneshelf.latakia-humlitr",
+      "name": "Latakia University Journal — Arts and Humanities (Syria) · Journal · AR",
+      "sha256": "5bd7aa49529dabece685d53f2ee97657a4d80de36f31d6e26ab4594e299fb0c5",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.lever-press-0.1.0.osp",
+      "file": "packages/oneshelf.lever-press-0.1.1.osp",
       "id": "oneshelf.lever-press",
-      "name": "Lever Press",
-      "sha256": "298acb4919f157eeb7033f1277daa5e1c81978d29efc115a415cad6dd9065570",
+      "name": "Lever Press · Academic books · EN",
+      "sha256": "57941878e9f79375f436b5145b23984a65daf74ef958b0e1163d1cc1a9a486cb",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.libretexts-0.1.0.osp",
+      "file": "packages/oneshelf.libretexts-0.1.1.osp",
       "id": "oneshelf.libretexts",
-      "name": "LibreTexts",
-      "sha256": "f30aede3b261ca7594b2d310e5363f81918f60a477808ea7baeaf40c538bf1b3",
+      "name": "LibreTexts · Textbooks · EN",
+      "sha256": "2120b146d819eb0fc04f079fb163279ee6f9f8948817af941ce591c408cddae1",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.litteraturbanken-0.1.0.osp",
+      "file": "packages/oneshelf.litteraturbanken-0.1.1.osp",
       "id": "oneshelf.litteraturbanken",
-      "name": "Litteraturbanken",
-      "sha256": "a7e9c3121997f22bb04cb4cd47ff3488350b3516e6021923cf85519387646057",
+      "name": "Litteraturbanken · Books · SV",
+      "sha256": "53343da2a2f3e593b6156e1c2eff1fd391282c90489733c30bd0812688bb8dfb",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.manchester-arabic-manuscripts-0.1.0.osp",
+      "file": "packages/oneshelf.manchester-arabic-manuscripts-0.1.1.osp",
       "id": "oneshelf.manchester-arabic-manuscripts",
-      "name": "Manchester Digital Collections — Arabic Manuscripts",
-      "sha256": "d3cb706b8dab16be71aa0ec1799e63f47c13f3976d0bc753e316c20c91cecec8",
+      "name": "Manchester Digital Collections (Arabic) · Manuscripts · AR",
+      "sha256": "cf3b8f7c01221b58d2c720816c4daa08aa03268deaf20deb8dc05a2497bc32ee",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.mangadex-1.0.0.osp",
+      "file": "packages/oneshelf.mangadex-1.0.1.osp",
       "id": "oneshelf.mangadex",
-      "name": "MangaDex",
-      "sha256": "20a82d2b6e4178e702d0f6e9caaaf6f731a6b8652486da96e7a4953642e6cc29",
+      "name": "MangaDex · Manga · Multi",
+      "sha256": "07084f2ed22decec0e8362e6594c0f24c95a2636fba836915b7daa9cb386ff38",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.mdz-arabic-manuscripts-0.1.0.osp",
+      "file": "packages/oneshelf.mdz-arabic-manuscripts-0.1.1.osp",
       "id": "oneshelf.mdz-arabic-manuscripts",
-      "name": "MDZ — Arabic Manuscripts (Bayerische Staatsbibliothek)",
-      "sha256": "f1d7fbfc8e288be69c874f918dcda3e112233721a0835cd0824fea25094229c8",
+      "name": "MDZ Arabic Manuscripts (Bayerische Staatsbibliothek) · Manuscripts · AR",
+      "sha256": "e0cdfeaaf6ed4242c7223186a5c65b34963e5f5396e4997ae946c70de0e3dddd",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.megamouse-books-0.1.0.osp",
+      "id": "oneshelf.megamouse-books",
+      "name": "Megamouse Books (Emma Laybourn) · Children's books · EN",
+      "sha256": "8822ea5e772ac2785b883f1a76c2c7a31d9750f284f0e6a22bb746639fe796c8",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.mek-0.1.0.osp",
+      "file": "packages/oneshelf.mek-0.1.1.osp",
       "id": "oneshelf.mek",
-      "name": "Magyar Elektronikus Könyvtár (MEK)",
-      "sha256": "30747f0e2e27a1ad5822cbfd6349e15ed32914a323aae65f9484e6523ca67d8c",
+      "name": "Magyar Elektronikus Könyvtár (MEK) · Books · HU",
+      "sha256": "0261614063c108680c9f22acde6a5fe307edb4eca5255442dfa0e79da951f208",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.meson-press-0.1.0.osp",
+      "file": "packages/oneshelf.meson-press-0.1.1.osp",
       "id": "oneshelf.meson-press",
-      "name": "meson press",
-      "sha256": "b21ca85c0a18f7c86b0cf26b138e1f003410ee4543c9605b2e01f5804921e518",
+      "name": "meson press · Academic books · EN/DE",
+      "sha256": "48c4ce07be6c2b8b89ee5a98c2f08de5618387162b4d6796ad01ff3b81a30526",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.misurata-arts-0.1.0.osp",
+      "id": "oneshelf.misurata-arts",
+      "name": "مجلة كلية الآداب (Misurata University, Libya) · Journal · AR",
+      "sha256": "562384aeb094cba48f382a8fec2b60cc4f7af262210218d3c4b2cd57b17fff8f",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.nasa-ntrs-0.1.0.osp",
+      "file": "packages/oneshelf.mosul-berj-0.1.0.osp",
+      "id": "oneshelf.mosul-berj",
+      "name": "مجلة ابحاث كلية التربية الاساسية (University of Mosul, Iraq) · Journal · AR",
+      "sha256": "8e167e815f816f6a30cce1dfae1ccbee0defea2c4f59ca897bc18b2b4be80b03",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.mosul-jeh-0.1.0.osp",
+      "id": "oneshelf.mosul-jeh",
+      "name": "مجلة التربية للعلوم الانسانية (University of Mosul, Iraq) · Journal · AR",
+      "sha256": "4b8c8fc4071f856fe93c2dfc823e4e235c920bef40fd28c640b6fa627123a03b",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.msila-japl-0.1.0.osp",
+      "id": "oneshelf.msila-japl",
+      "name": "مجلة دفاتر مخبر الشعرية الجزائرية (M'sila, Algeria) · Journal · AR",
+      "sha256": "6a33c0714cbae5391d3100e7f21c5ae0191af98221e8fe3f37f85f5a0d82fa94",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.msila-olda-0.1.0.osp",
+      "id": "oneshelf.msila-olda",
+      "name": "El Omda in Linguistics and Discourse Analysis (M'sila) · Journal · AR/EN/FR",
+      "sha256": "abdd7f12deeb8e68c4a5192814f35b2eeaffde8085985a9063fee36590157dca",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.nasa-ntrs-0.1.1.osp",
       "id": "oneshelf.nasa-ntrs",
-      "name": "NASA Technical Reports Server",
-      "sha256": "1f828aee9520e889b77fbb4d72339fd566929cfbbdd5d19dc58baccf83c066d1",
+      "name": "NASA Technical Reports Server · Reports · EN",
+      "sha256": "253e93271aecdd12fe88f5ca7e563649b1cc091cc55b8a31a2dd37235f6bd33d",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.nijl-kokusho-0.1.0.osp",
+      "file": "packages/oneshelf.nijl-kokusho-0.1.1.osp",
       "id": "oneshelf.nijl-kokusho",
-      "name": "NIJL Kokusho Database (国書データベース)",
-      "sha256": "57f942300a2fd828ae1cb7515a1ec570906fdb4618404827007262dfb4d6baf7",
+      "name": "NIJL Kokusho Database (国書データベース) · Books · JA",
+      "sha256": "c1d564ade996d36e23917cfdad681106207c94b36111fc3833ac8faf3724ef3a",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.oapen-0.1.0.osp",
+      "file": "packages/oneshelf.oapen-0.1.1.osp",
       "id": "oneshelf.oapen",
-      "name": "OAPEN Library",
-      "sha256": "528d68d76d05e53f509ade616f8efdd62e38fa13ff2a5c6dd6ed32346cfbbe8d",
+      "name": "OAPEN Library · Academic books · Multi",
+      "sha256": "d0dcafae3e7d2974738e45304f7cae00f8a0f1bb60a1f0a614321414325c6ec6",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.openedition-books-0.1.0.osp",
+      "file": "packages/oneshelf.openedition-books-0.1.1.osp",
       "id": "oneshelf.openedition-books",
-      "name": "OpenEdition Books (Creative Commons)",
-      "sha256": "3a241012b51b1851b87396d71bf97d3d91221d86d93ae0dbc7fa139e8bdf637d",
+      "name": "OpenEdition Books · Academic books · Multi",
+      "sha256": "099f335f86be41377350a14495edfb037078dc639ccb8e9837dc7a7374e10a8c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.openstax-0.1.0.osp",
+      "file": "packages/oneshelf.openstax-0.1.1.osp",
       "id": "oneshelf.openstax",
-      "name": "OpenStax",
-      "sha256": "e18dea2a10b2e0f48b076e2b2cd0272727ee2cac9841d1af65924022f3823a28",
+      "name": "OpenStax · Textbooks · EN",
+      "sha256": "74692e8f30d17521777aa32a6d331d34071d6f101f66026b5d6bde5a62de4f6b",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.peppercarrot-0.1.0.osp",
+      "file": "packages/oneshelf.peppercarrot-0.1.1.osp",
       "id": "oneshelf.peppercarrot",
-      "name": "Pepper&Carrot",
-      "sha256": "7610689834d3853ef519f26c7fe4ea6d251872485b09ff0ef61f781634fe8843",
+      "name": "Pepper&Carrot · Comics · Multi",
+      "sha256": "cff66ba2dfc9df8dcb6e662d8e59e846a76230692aa9017c0b39191ac38100ed",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.peter-watts-0.1.0.osp",
+      "id": "oneshelf.peter-watts",
+      "name": "Peter Watts (rifters.com) · Books · EN",
+      "sha256": "4ed90f8eb9c60ad1560fbac60f8e7b0f26c97ad9d0b291dc17f00b1bdd433007",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.rall-ui-0.1.0.osp",
+      "file": "packages/oneshelf.rall-ui-0.1.1.osp",
       "id": "oneshelf.rall-ui",
-      "name": "Research in Arabic Language (University of Isfahan)",
-      "sha256": "71218928b80abfc723a78678d30bfdd584e1c93fd8d263cb77f669e0cc7d7062",
+      "name": "Research in Arabic Language (University of Isfahan) · Journal · AR",
+      "sha256": "a487ef3f4fc277dd1167c0ff1e5b0bfe3f9ae342093c41aeddf9f54775371fe4",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.rctall-atu-0.1.0.osp",
+      "file": "packages/oneshelf.rctall-atu-0.1.1.osp",
       "id": "oneshelf.rctall-atu",
-      "name": "Translation Researches in Arabic Language and Literature (ATU)",
-      "sha256": "5321def3728a26b9c573e9982262f0c178fe71636d5cc05ac7f81579b5f18eac",
+      "name": "Translation Researches in Arabic Language and Literature (ATU) · Journal · FA/AR",
+      "sha256": "4293a7c4dcb4e96144ae7aed9e575d3d7f1b8afbb5d6d292009f1973f1f31235",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.rpo-0.1.0.osp",
+      "file": "packages/oneshelf.rpo-0.1.1.osp",
       "id": "oneshelf.rpo",
-      "name": "Representative Poetry Online",
-      "sha256": "e9f9c418e1fb656ba1fedcdd5432e688fcfe1611e2f58c2450af585b09506c5c",
+      "name": "Representative Poetry Online · Poetry · EN",
+      "sha256": "1bc31e7d1bcf0a40cf5c9aa26442ff5ac543883e07ef0a9b2fe43544ac9757a6",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.runeberg-0.1.0.osp",
+      "file": "packages/oneshelf.runeberg-0.1.1.osp",
       "id": "oneshelf.runeberg",
-      "name": "Project Runeberg",
-      "sha256": "7e014ecc7bc3489caf8689ee11c3cfe471a2ed5ae12a37ad304d9e42f0ed579d",
+      "name": "Project Runeberg · Books · Multi",
+      "sha256": "e3efe04edbc7d81763e04b6e3520bf5728d4de0ca422388894b938e7925e4aa7",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.sandra-and-woo-0.1.0.osp",
+      "file": "packages/oneshelf.sandra-and-woo-0.1.1.osp",
       "id": "oneshelf.sandra-and-woo",
-      "name": "Sandra and Woo",
-      "sha256": "2adddc5393b4c3b947c5046132dba57de7db8b6db274ca11d9c3621780f7be08",
+      "name": "Sandra and Woo · Comics · EN",
+      "sha256": "1a974098f5cae946be7b1d9f332f9269b6c12dbb9e63675ea995106b6413d72f",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.sefaria-0.1.0.osp",
+      "file": "packages/oneshelf.sefaria-0.1.1.osp",
       "id": "oneshelf.sefaria",
-      "name": "Sefaria (original texts)",
-      "sha256": "28262d0b0b7852cd876c3345c38de4e8891c5f525a3a14ce393d159788189f92",
+      "name": "Sefaria (original texts) · Religious texts · HE",
+      "sha256": "d1a093c03c208ee80d159544011132aedcc4b686db4e94b943243cabe79ed955",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.sefaria-english-0.1.0.osp",
+      "file": "packages/oneshelf.sefaria-english-0.1.1.osp",
       "id": "oneshelf.sefaria-english",
-      "name": "Sefaria (English translations)",
-      "sha256": "93991821a93e4425c51445fcc66c0c628727e9ee849ab0c825178b98e37f6d8c",
+      "name": "Sefaria (English translations) · Religious texts · EN",
+      "sha256": "836917e492ba58fd01cfdeb0fc6dad92b90ad2480562471e7e99f46c216da492",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.sharia-qu-0.1.0.osp",
+      "file": "packages/oneshelf.sharia-qu-0.1.1.osp",
       "id": "oneshelf.sharia-qu",
-      "name": "Journal of College of Sharia and Islamic Studies (Qatar University)",
-      "sha256": "312bf6a164d2c8bc28aa4f376c545e87dcef643a88a574efee50c932ab2efb79",
+      "name": "College of Sharia and Islamic Studies Journal (Qatar University) · Journal · AR",
+      "sha256": "86b9277aa87d0da55b2e978b43149eab727c5545ed5ddbd96e300bfceb50c61b",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.siyavula-0.1.0.osp",
+      "file": "packages/oneshelf.siyavula-0.1.1.osp",
       "id": "oneshelf.siyavula",
-      "name": "Siyavula open textbooks",
-      "sha256": "2ddda1b93bd1a08d858abeb71bec4a62980743b487527e74645cc0a76fb0915b",
+      "name": "Siyavula · Textbooks · EN",
+      "sha256": "cdb6dfb96a22534b19dc93bbd20413c21f13b09aa43e5aabfc4ac9e7c60b07de",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.standard-ebooks-1.1.0.osp",
+      "file": "packages/oneshelf.standard-ebooks-1.1.1.osp",
       "id": "oneshelf.standard-ebooks",
-      "name": "Standard Ebooks",
-      "sha256": "50e4262792620c28a01c1b7c5db210cf8d22b2ac419f14e4049488a8ccaf9ef9",
+      "name": "Standard Ebooks · Books · EN",
+      "sha256": "70027fbdc3b797cf500098ce10a39c1c17d54739f2600e4fa985d0c2e14eb3bb",
       "trust_label": "official",
-      "version": "1.1.0"
+      "version": "1.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.storybooks-canada-arabic-0.1.0.osp",
+      "file": "packages/oneshelf.storybooks-canada-arabic-0.1.1.osp",
       "id": "oneshelf.storybooks-canada-arabic",
-      "name": "Storybooks Canada (Arabic)",
-      "sha256": "20def683c653f4343a770d960b9d9f14cfc5c72c287dc04e5e15a0fdc9a8aa09",
+      "name": "Storybooks Canada (Arabic) · Children's books · AR",
+      "sha256": "c87293665ffca16c9317cfb08925000f15b81a7f353ee623b0e06359680b8f00",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.tajseer-qu-0.1.0.osp",
+      "file": "packages/oneshelf.tajseer-qu-0.1.1.osp",
       "id": "oneshelf.tajseer-qu",
-      "name": "Tajseer Journal (Qatar University)",
-      "sha256": "e0cb601df3bc2f75ced4c1da874ae5b27d3e4d5df402420544605ba10fbb3f97",
+      "name": "Tajseer Journal (Qatar University) · Journal · AR",
+      "sha256": "9471841085f193b39aa4aa335ffdd5be870a55c8aa7852e9b2c7cb1f6b0fb16a",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.tapas-1.0.0.osp",
+      "file": "packages/oneshelf.tapas-1.0.1.osp",
       "id": "oneshelf.tapas",
-      "name": "Tapas",
-      "sha256": "df5dffeb661dd6cc036aa46aa414f31610e8c9325ca8ed92b074a949ba585c3c",
+      "name": "Tapas · Webtoons · EN",
+      "sha256": "1c593295ab07fea9d05e29975992d91b067612fdca695ef26164ca0f1f12aada",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.textgrid-digitale-bibliothek-0.1.0.osp",
+      "file": "packages/oneshelf.textgrid-digitale-bibliothek-0.1.1.osp",
       "id": "oneshelf.textgrid-digitale-bibliothek",
-      "name": "TextGrid Digitale Bibliothek",
-      "sha256": "7241b1a3b130a1756d75f4be23244e5fbf8ad182afe7c38409cd4c20b38e02b6",
+      "name": "TextGrid Digitale Bibliothek · Books · DE",
+      "sha256": "8c03ed70ac20ccf2574a93c9cfc8612f9dc086bfd1b201d5d49cb9ed24497f0c",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.thamar-arts-0.1.0.osp",
+      "id": "oneshelf.thamar-arts",
+      "name": "مجلة كلية الآداب (Thamar University, Yemen) · Journal · AR",
+      "sha256": "77aa2a7b0093480b582e9003f5ff8f17deca2b7ea166b4cb17b7654169725300",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.tuwhera-open-books-0.1.0.osp",
+      "file": "packages/oneshelf.thamar-edu-0.1.0.osp",
+      "id": "oneshelf.thamar-edu",
+      "name": "مجلة كلية التربية (Thamar University, Yemen) · Journal · AR",
+      "sha256": "9dd00de9d4904720d29ca194906a4be98d40e0c829e7edfe2e9ec5feca7a395c",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.tikrit-jtuh-0.1.0.osp",
+      "id": "oneshelf.tikrit-jtuh",
+      "name": "مجلة جامعة تكريت للعلوم الإنسانية (Tikrit University, Iraq) · Journal · AR",
+      "sha256": "1d3c09cd2a03311ad1ccdf74abce19e39b78ebf0add33b5b95fc2e1417093958",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.tripoli-delalat-0.1.0.osp",
+      "id": "oneshelf.tripoli-delalat",
+      "name": "مجلة دلالات للعلوم الإنسانية والتربوية (Tripoli, Libya) · Journal · AR",
+      "sha256": "277a3ccf3a2b4eca2f492c5d8d2d3f480ec20f046064866511de2cbc271c4731",
+      "trust_label": "community",
+      "version": "0.1.0"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.tuwhera-open-books-0.1.1.osp",
       "id": "oneshelf.tuwhera-open-books",
-      "name": "Tuwhera Open Access Books (AUT)",
-      "sha256": "0fa72015d19bf45989a7e43dfd772b154a93e97d58e46dedd61da2f44b03e492",
+      "name": "Tuwhera Open Access Books (AUT) · Academic books · EN",
+      "sha256": "5da021310815b459bdd5d5170942da2728fbd90c518d8b7be320193857b36506",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.ucl-press-0.1.0.osp",
+      "file": "packages/oneshelf.ucl-press-0.1.1.osp",
       "id": "oneshelf.ucl-press",
-      "name": "UCL Press",
-      "sha256": "d4de287eea3c2e6de9d6cbc68530d2ca7e5d697bb35fd42be9d5ea1a78100bc7",
+      "name": "UCL Press · Academic books · EN",
+      "sha256": "195286efc8dcc98388b905eec026301849c2268cc6f61dcceb1333a7b5022c9b",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.university-of-michigan-press-0.1.0.osp",
+      "file": "packages/oneshelf.university-of-michigan-press-0.1.1.osp",
       "id": "oneshelf.university-of-michigan-press",
-      "name": "University of Michigan Press (open access)",
-      "sha256": "d2028c208dcddadfeaa1efe2895c15742861ee0c7b32c55d91457b68fcdaf7b2",
+      "name": "University of Michigan Press · Academic books · EN",
+      "sha256": "9ee682815df7f9ea089fd44ea175c6104d514fe6e2192defd0fe5df5298db725",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.wasit-lark-0.1.0.osp",
+      "id": "oneshelf.wasit-lark",
+      "name": "مجلة لارك للفلسفة واللسانيات والعلوم الاجتماعية (Wasit, Iraq) · Journal · AR",
+      "sha256": "857bcf032cccb5e7329d3666957111190f15cac5898b3257737b72f03d0443d0",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.webtoon-1.0.0.osp",
+      "file": "packages/oneshelf.webtoon-1.0.1.osp",
       "id": "oneshelf.webtoon",
-      "name": "WEBTOON",
-      "sha256": "54a71fbdf5fc0672180b4ca2fe63c909bee4c3ae228a29db22e4b7f78fe42983",
+      "name": "WEBTOON · Webtoons · EN",
+      "sha256": "df75360e1787052eab3209ccffe53779615a954fa4eae5cf7137035cda6e9e81",
       "trust_label": "official",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.wellcome-collection-0.1.0.osp",
+      "file": "packages/oneshelf.wellcome-collection-0.1.1.osp",
       "id": "oneshelf.wellcome-collection",
-      "name": "Wellcome Collection (open digitised)",
-      "sha256": "fe264cecb8f744060fe2da221b918c7d211ac130ac38b36872d4947e8ee8d634",
+      "name": "Wellcome Collection · Digital library · Multi",
+      "sha256": "34bdeb17677e4a4ec7c47797e02597b5460b32d1dd05457ef8754e53a0e156bf",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.who-iris-0.1.0.osp",
+      "file": "packages/oneshelf.who-iris-0.1.1.osp",
       "id": "oneshelf.who-iris",
-      "name": "WHO IRIS",
-      "sha256": "17df9dba4cdbc38e7ec7aa6dd7df2aad270b4657c0e3ccd257e7262992cc4847",
+      "name": "WHO IRIS · Reports · EN",
+      "sha256": "636eb0486caaf87d19e3a2ca6ef8a3f08ae87cf2262be3b20e62632ceb9b999c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.wikimedia-commons-0.1.0.osp",
+      "file": "packages/oneshelf.wikimedia-commons-0.1.1.osp",
       "id": "oneshelf.wikimedia-commons",
-      "name": "Wikimedia Commons (PDF)",
-      "sha256": "2067e8884d8fbc163fd3ed750ed8527b56307631f8b8696a78856a1e839dc509",
+      "name": "Wikimedia Commons (PDF) · Digital library · Multi",
+      "sha256": "74fcbbb27f697dcc06519746557f06e4f2d29fdfca8e31acfbca7e81e572412f",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.wikisource-ar-0.1.0.osp",
+      "file": "packages/oneshelf.wikisource-ar-0.1.1.osp",
       "id": "oneshelf.wikisource-ar",
-      "name": "ويكي مصدر (Arabic Wikisource)",
-      "sha256": "8e057eaf7082f3e58e2ba5a1766905f975f290def58354af7827e4d8e2fd0f28",
+      "name": "ويكي مصدر (Arabic Wikisource) · Books · AR",
+      "sha256": "4afe446f0ddee536654f7f6d2c666713f8c9cd24cc1e773fd2b16eb5623398b8",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.wikisource-en-0.1.0.osp",
+      "file": "packages/oneshelf.wikisource-en-0.1.1.osp",
       "id": "oneshelf.wikisource-en",
-      "name": "English Wikisource",
-      "sha256": "42627f647bb7b785078a8759dfd7efcbb479bb2a5e51f78479a984a45f04cf56",
+      "name": "English Wikisource · Books · EN",
+      "sha256": "e79e716b16a338edfb2fdd16c47be766eef7e9a67bbeadbf89f7003003925ef0",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.wipo-publications-ar-0.1.0.osp",
+      "file": "packages/oneshelf.wipo-publications-ar-0.1.1.osp",
       "id": "oneshelf.wipo-publications-ar",
-      "name": "WIPO Publications (Arabic)",
-      "sha256": "4a1afaf0ca2d2d50bae22b768c3278121061c7dc24d47f84a3a56253a6004b48",
+      "name": "WIPO Publications (Arabic) · Reports · AR",
+      "sha256": "54a01d1c18cec79358a1ec5f54f52a572ec24fedced351df80464d7e53009e9c",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.wolne-lektury-0.1.0.osp",
+      "file": "packages/oneshelf.wolne-lektury-0.1.1.osp",
       "id": "oneshelf.wolne-lektury",
-      "name": "Wolne Lektury",
-      "sha256": "c5d4c0d93ec0b851fdd6bef61c31f4810b628733fa3027485a3ba5f34dbb521d",
+      "name": "Wolne Lektury · Books · PL",
+      "sha256": "4fefbfe62e462a262a7fa3cdc4e4e38ff3b2e966266963cfd1a6606edfe42231",
       "trust_label": "community",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "api": "1.2",
-      "file": "packages/oneshelf.world-bank-okr-0.1.0.osp",
+      "file": "packages/oneshelf.world-bank-okr-0.1.1.osp",
       "id": "oneshelf.world-bank-okr",
-      "name": "World Bank Open Knowledge Repository",
-      "sha256": "1dd54d60bafc0cc81ae1128da4f38d72dac112058cb2438b303ab54a253435dc",
+      "name": "World Bank Open Knowledge Repository · Reports · EN",
+      "sha256": "aa14f8993f7ee0032a4a38166196b8212d4c7e50b64ee87d4ce3009192fa19e1",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.xkcd-0.1.1.osp",
+      "id": "oneshelf.xkcd",
+      "name": "xkcd · Comics · EN",
+      "sha256": "cbf9f958851484a1ccc00fa829004e7a0d04ec5830a85595d90f75735b9bae31",
+      "trust_label": "community",
+      "version": "0.1.1"
+    },
+    {
+      "api": "1.0",
+      "file": "packages/oneshelf.yarmouk-jjes-0.1.0.osp",
+      "id": "oneshelf.yarmouk-jjes",
+      "name": "المجلة الأردنية في العلوم التربوية (Yarmouk University, Jordan) · Journal · AR",
+      "sha256": "00dca9cbe90f198ffaeb78302ca2c93a11d111f37657e53b311da5f01a7c8637",
       "trust_label": "community",
       "version": "0.1.0"
     },
     {
       "api": "1.0",
-      "file": "packages/oneshelf.xkcd-0.1.0.osp",
-      "id": "oneshelf.xkcd",
-      "name": "xkcd",
-      "sha256": "7a2a624eb0743dbbcd45a78aec06dcd4c9de4d0b180ea0e99a10d0f8fb94ea54",
+      "file": "packages/oneshelf.zawia-uzfaj-0.1.0.osp",
+      "id": "oneshelf.zawia-uzfaj",
+      "name": "مجلة كلية الآداب (University of Zawia, Libya) · Journal · AR",
+      "sha256": "7d80c7d684205eff4934fba0d2aa61fd64ca290062413a81fa4346b189b0351d",
       "trust_label": "community",
       "version": "0.1.0"
     }
