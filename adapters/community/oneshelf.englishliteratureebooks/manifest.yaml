@@ -1,0 +1,19 @@
+schema: oneshelf.osp/1
+id: oneshelf.englishliteratureebooks
+name: "English Literature Ebooks (Emma Laybourn) · Books · EN"
+version: 0.1.0
+api: '1.0'
+description: >-
+  Free classic English literature edited and compiled by Emma Laybourn: anthologies and selections of
+  public-domain poetry (Chaucer to Edward Thomas) and abridged editions of classic novels (Austen, the Brontës,
+  Dickens, Eliot, Trollope and others). A page (poetry or abridged novels) is a work and each book is a unit,
+  downloaded as its EPUB — only while the site's home page gives its permission to share and copy the ebooks
+  for any non-commercial purpose. Open a page by pasting its address
+  (englishliteratureebooks.com/classicpoetryebooks.html).
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.englishliteratureebooks.com]
+defaults:
+  language: en
+  content_type: book

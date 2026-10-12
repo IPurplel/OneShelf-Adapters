@@ -1,0 +1,9 @@
+base_url: https://www.megamousebooks.com
+url_patterns:
+  - pattern: '^https?://(?:www\.)?megamousebooks\.com/(downloadpage)\.html(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt is "User-agent: *" with an empty Disallow (nothing disallowed).
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1

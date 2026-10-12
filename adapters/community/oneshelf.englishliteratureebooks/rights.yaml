@@ -1,0 +1,32 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: whole_source
+access_type: open_access_publisher
+rights_granularity: source
+license:
+  id: null
+  url: null
+commercial_use: not_allowed
+redistribution: allowed_with_conditions
+derivatives: unknown
+attribution:
+  required: true
+  text: "Emma Laybourn, English Literature Ebooks — https://www.englishliteratureebooks.com/"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The site's editor, Emma Laybourn, states on its home page: "You are welcome to share or copy the ebooks on
+    this site for any non-commercial purpose. They may not be sold." The poems are in the public domain; the
+    abridgements and compilations are hers. The adapter offers only the EPUBs kept on the site, and only while
+    the home page carries that permission (test 5: the same page without it, marked SYNTHETIC). The EPUB is
+    stored unaltered for private reading.
+  exclusion_tests: [5]
+evidence:
+  - claim: '"You are welcome to share or copy the ebooks on this site for any non-commercial purpose. They may not be sold."'
+    url: https://www.englishliteratureebooks.com/
+  - claim: Poetry collections "compiled from copyright-free sources", each as EPUB, MOBI and PDF.
+    url: https://www.englishliteratureebooks.com/classicpoetryebooks.html
+  - claim: 'robots.txt is "User-agent: *" with an empty Disallow.'
+    url: https://www.englishliteratureebooks.com/robots.txt
+last_verified: 2026-10-12

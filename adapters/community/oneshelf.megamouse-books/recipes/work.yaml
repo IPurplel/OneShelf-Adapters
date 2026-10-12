@@ -1,0 +1,14 @@
+# The download page, which lists all of Emma Laybourn's free ebooks.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/{listing_key}.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {template: "Megamouse Books — free children's ebooks by Emma Laybourn", required: true}
+    creator: {template: "Emma Laybourn"}
+    language: {template: "en"}
+    content_type: {template: "book"}

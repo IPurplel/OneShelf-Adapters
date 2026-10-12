@@ -1,0 +1,33 @@
+# Fixtures are live pages (2026-10-12), except the one marked SYNTHETIC.
+cases:
+- capability: work
+  inputs: {listing_key: downloadpage}
+  fixtures: [{url: 'https://www.megamousebooks.com/downloadpage.html', file: fixtures/downloadpage.html}]
+  expect:
+    first: {creator: Emma Laybourn, language: en}
+- capability: catalog
+  inputs: {listing_key: downloadpage}
+  fixtures: [{url: 'https://www.megamousebooks.com/downloadpage.html', file: fixtures/downloadpage.html}]
+  expect:
+    min_items: 50
+    complete: true
+    first: {unit_key: humdrum-the-hippo, title: Humdrum the Hippo}
+- capability: downloads
+  inputs: {unit_key: grannysmall}
+  fixtures: [{url: 'https://www.megamousebooks.com/freebooklist.html', file: fixtures/freebooklist.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.megamousebooks.com/grannysmall.epub', format: epub, language: en}
+# 3: a key that is not a plain file name gives nothing.
+- capability: downloads
+  inputs: {unit_key: 'https://example.com/x'}
+  fixtures: [{url: 'https://www.megamousebooks.com/freebooklist.html', file: fixtures/freebooklist.html}]
+  expect:
+    first: {url: null}
+# 4: SYNTHETIC (the fixture says so): the book list without its permission — no file.
+- capability: downloads
+  inputs: {unit_key: grannysmall}
+  fixtures: [{url: 'https://www.megamousebooks.com/freebooklist.html', file: fixtures/synthetic-no-permission_freebooklist.html}]
+  expect:
+    first: {url: null}

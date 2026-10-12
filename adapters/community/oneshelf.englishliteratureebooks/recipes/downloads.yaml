@@ -1,0 +1,23 @@
+# The unit's EPUB on the site — only while the home page says "You are welcome to share or copy the ebooks on
+# this site for any non-commercial purpose".
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//p[contains(normalize-space(.), 'You are welcome to share or copy the ebooks on this site for any non-commercial purpose')])[1]"}
+  fields:
+    url:
+      template: "{unit_key}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^([a-z0-9]+(?:-[a-z0-9]+)*)$', group: 1}}
+        - {regex_replace: {pattern: '^(.*)$', replacement: 'https://www.englishliteratureebooks.com/\1.epub'}}
+    format: {template: "epub", required: true}
+    language: {template: "en"}
+pagination:
+  mode: none
+  complete_when: single_response

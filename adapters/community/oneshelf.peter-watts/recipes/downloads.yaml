@@ -1,0 +1,23 @@
+# The unit's PDF in the author's shorts/ folder — only while the backlist page links its Creative Commons
+# licence (rel="license", BY-NC-SA 2.5), which it states for "these documents".
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/real/shorts.htm"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[@rel='license'][@href='http://creativecommons.org/licenses/by-nc-sa/2.5/'])[1]"}
+  fields:
+    url:
+      template: "{unit_key}"
+      required: true
+      transforms:
+        - {regex_extract: {pattern: '^((?:PeterWatts|Mohn_and_Watts|WattsChanner|Watts_Murphy|TheScorchedEarthSociety)[A-Za-z0-9_.-]*)$', group: 1}}
+        - {regex_replace: {pattern: '^(.*)$', replacement: 'https://www.rifters.com/real/shorts/\1.pdf'}}
+    format: {template: "pdf", required: true}
+    language: {template: "en"}
+pagination:
+  mode: none
+  complete_when: single_response

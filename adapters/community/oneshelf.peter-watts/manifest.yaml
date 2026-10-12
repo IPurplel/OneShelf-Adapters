@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.peter-watts
+name: "Peter Watts (rifters.com) · Books · EN"
+version: 0.1.0
+api: '1.0'
+description: >-
+  Peter Watts's own backlist on rifters.com: the novels Starfish, Maelstrom, Behemoth and Blindsight, and his
+  short stories and essays, which he releases under Creative Commons Attribution-NonCommercial-ShareAlike 2.5.
+  The backlist is a work and each novel, story or essay is a unit, downloaded as the author's PDF — only while
+  the backlist page links that licence. Open it by pasting rifters.com/real/shorts.htm.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.rifters.com]
+defaults:
+  language: en
+  content_type: book

@@ -1,0 +1,17 @@
+schema: oneshelf.osp/1
+id: oneshelf.megamouse-books
+name: "Megamouse Books (Emma Laybourn) · Children's books · EN"
+version: 0.1.0
+api: '1.0'
+description: >-
+  Megamouse Books: Emma Laybourn's free stories for children (picture-book stories, chapter books and abridged
+  children's classics). Its download page is a work and each book is a unit, downloaded as its EPUB — only
+  while the site's book list gives its permission to share and copy the free books, as long as they are not
+  sold. Open it by pasting megamousebooks.com/downloadpage.html.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.megamousebooks.com]
+defaults:
+  language: en
+  content_type: book

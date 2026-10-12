@@ -1,0 +1,34 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: collection
+access_type: open_license
+rights_granularity: collection
+license:
+  id: CC-BY-NC-SA-2.5
+  url: https://creativecommons.org/licenses/by-nc-sa/2.5/
+commercial_use: not_allowed
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "Peter Watts (CC BY-NC-SA 2.5) — https://www.rifters.com/real/shorts.htm"
+visibility: all_listed_items
+local_copy: eligible_items_only
+enforcement:
+  summary: >-
+    On his backlist page Peter Watts states that "these documents are available under a Creative Commons
+    License" and links CC BY-NC-SA 2.5 (rel="license"); each novel also carries the licence's full text at its
+    end (Blindsight, Starfish, Maelstrom, Behemoth). The adapter covers only that page: its novels and the PDFs
+    in the author's shorts/ folder that it lists, not links to other sites or "The Things" photo-book, which
+    someone else designed. A PDF is offered only while the page links the licence (test 4: the same page with
+    the licence links removed, marked SYNTHETIC). The licence is non-commercial, and Watts asks that his prose
+    not be edited; the PDF is stored unaltered for private reading.
+  exclusion_tests: [4]
+evidence:
+  - claim: '"These documents are available under a Creative Commons License" with rel="license" http://creativecommons.org/licenses/by-nc-sa/2.5/.'
+    url: https://www.rifters.com/real/shorts.htm
+  - claim: Blindsight's page ends with "Creative Commons Licensing Information" and the Attribution-NonCommercial-ShareAlike 2.5 licence text; its PDF is shorts/PeterWatts_Blindsight.pdf.
+    url: https://www.rifters.com/real/Blindsight.htm
+  - claim: rifters.com has no robots.txt (HTTP 404).
+    url: https://www.rifters.com/robots.txt
+last_verified: 2026-10-12
