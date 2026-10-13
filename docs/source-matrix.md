@@ -653,6 +653,7 @@ tooling pin.
 | [English Literature Ebooks](https://www.englishliteratureebooks.com/) | `oneshelf.englishliteratureebooks` | `VERIFIED` | Community | work, catalog, downloads | en | The editor's permission to share or copy for any non-commercial purpose; EPUBs on the site only |
 | [Megamouse Books](https://www.megamousebooks.com/) | `oneshelf.megamouse-books` | `VERIFIED` | Community | work, catalog, downloads | en | The author's permission to share or copy, not sell; EPUBs on the site only |
 | [Authorama](https://www.authorama.com/) | `oneshelf.authorama` | `VERIFIED` | Community | work, catalog, reader (text, API 1.2) | en | Per book: the page's own public-domain statement |
+| [Manga-Style Defense of Japan (English)](https://www.mod.go.jp/j/kids/comic/e/index.html) | `oneshelf.mod-japan-manga` | `VERIFIED` | Community | work, catalog, downloads | en | The ministry's Terms of Use (CC BY 4.0 compatible); logos and organisational characters excluded |
 
 **xkcd** — `VERIFIED`, `oneshelf.xkcd`
 - Access model: CC BY-NC 2.5 for the whole site ([licence](https://xkcd.com/license.html)); `rights.yaml`: open_license, source granularity, non-commercial, attribution required
