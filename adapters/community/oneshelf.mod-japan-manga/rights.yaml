@@ -1,0 +1,34 @@
+# What this source lets a OneShelf user do, and how the adapter keeps to it (docs/rights-model.md).
+schema: oneshelf.rights/1
+access_scope: collection
+access_type: open_license
+rights_granularity: source
+license:
+  id: CC-BY-4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+commercial_use: allowed
+redistribution: allowed_with_conditions
+derivatives: allowed_with_conditions
+attribution:
+  required: true
+  text: "Source: Ministry of Defense website — https://www.mod.go.jp/j/kids/comic/e/index.html"
+visibility: all_listed_items
+local_copy: allowed
+enforcement:
+  summary: >-
+    The Ministry of Defense's Terms of Use (mod.go.jp/en/notice.html, based on the Government of Japan
+    Standard Terms of Use 2.0) let the website's content be "freely used, copied, publicly transmitted,
+    translated or otherwise modified", commercial use included, with the source cited, and state that it may
+    be used under CC BY 4.0 instead. Excluded are the ministry's logo and character designs representing the
+    organisation; the booklets' characters are ordinary people (drawings by Manga Designers Lab, publisher the
+    Ministry of Defense), and the logo on a cover is kept only as part of the unaltered booklet. The adapter
+    covers only the English comics page and the PDFs it links; the PDF is stored unaltered for private reading.
+  exclusion_tests: []
+evidence:
+  - claim: 'Terms of Use: content "may be freely used, copied, publicly transmitted, translated or otherwise modified"; commercial use permitted; compatible with CC BY 4.0; logos and organisational character designs excluded.'
+    url: https://www.mod.go.jp/en/notice.html
+  - claim: The English comics page links the 2019, 2018 and 2017 booklets, each with an all.pdf download.
+    url: https://www.mod.go.jp/j/kids/comic/e/index.html
+  - claim: robots.txt disallows only /a/ and /sp/j/.
+    url: https://www.mod.go.jp/robots.txt
+last_verified: 2026-10-13

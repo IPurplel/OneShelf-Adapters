@@ -1,0 +1,17 @@
+# The page's booklets, newest first, each linked by its cover image; a unit's key is its year.
+capability: catalog
+inputs: [listing_key]
+request:
+  url: "{base_url}/j/kids/comic/{listing_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "//div[@class='contentInner']//a[.//img][starts-with(@href, '20')]"}
+  fields:
+    unit_key: {xpath: "@href", required: true, transforms: [{regex_extract: {pattern: '^((?:19|20)[0-9]{2})/index\.html$', group: 1}}]}
+    title: {xpath: "(.//img/@alt)[1]", transforms: [trim]}
+    unit_type: {template: "volume"}
+pagination:
+  mode: none
+  complete_when: single_response
