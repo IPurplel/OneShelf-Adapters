@@ -1,0 +1,14 @@
+# The English comics page: the series' heading.
+capability: work
+inputs: [listing_key]
+request:
+  url: "{base_url}/j/kids/comic/{listing_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  fields:
+    title: {xpath: "(//div[@class='contentInner']/h1)[1]", required: true, transforms: [{regex_replace: {pattern: '\s+', replacement: " "}}, trim]}
+    creator: {template: "Ministry of Defense, Japan"}
+    language: {template: "en"}
+    content_type: {template: "manga"}

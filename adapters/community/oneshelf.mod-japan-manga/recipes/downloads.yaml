@@ -1,0 +1,17 @@
+# The booklet's PDF ("all.pdf"), as its page links it.
+capability: downloads
+inputs: [unit_key]
+request:
+  url: "{base_url}/j/kids/comic/e/{unit_key}/index.html"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {xpath: "(//a[@href='all.pdf'])[1]"}
+  fields:
+    url: {xpath: "@href", required: true, transforms: [normalize_url, {regex_extract: {pattern: '^(https://www\.mod\.go\.jp/j/kids/comic/e/(?:19|20)[0-9]{2}/all\.pdf)$', group: 1}}]}
+    format: {template: "pdf", required: true}
+    language: {template: "en"}
+pagination:
+  mode: none
+  complete_when: single_response

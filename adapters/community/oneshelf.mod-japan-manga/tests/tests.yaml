@@ -1,0 +1,21 @@
+# Fixtures are live pages (2026-10-12).
+cases:
+- capability: work
+  inputs: {listing_key: e}
+  fixtures: [{url: 'https://www.mod.go.jp/j/kids/comic/e/index.html', file: fixtures/comic-e-index.html}]
+  expect:
+    first: {title: Guidebook to the Ministry of Defense / Manga-Style Defense of Japan (Comic), language: en, content_type: manga}
+- capability: catalog
+  inputs: {listing_key: e}
+  fixtures: [{url: 'https://www.mod.go.jp/j/kids/comic/e/index.html', file: fixtures/comic-e-index.html}]
+  expect:
+    min_items: 3
+    complete: true
+    first: {unit_key: '2019', title: Guidebook to the Ministry of Defense 2019}
+- capability: downloads
+  inputs: {unit_key: '2019'}
+  fixtures: [{url: 'https://www.mod.go.jp/j/kids/comic/e/2019/index.html', file: fixtures/comic-e-2019.html}]
+  expect:
+    min_items: 1
+    complete: true
+    first: {url: 'https://www.mod.go.jp/j/kids/comic/e/2019/all.pdf', format: pdf, language: en}
