@@ -1,14 +1,24 @@
-# Fixtures are live API responses (2026-10-07). Case 4 is a poem by Shahriar (died 1988): no text.
+# Search fixtures are representative snippets from live API responses (2026-10-21), reduced to the fields
+# the recipe reads. Page two repeats a collection, so the test also covers cross-page deduplication.
+# Other capability fixtures date from 2026-10-07. A reader case covers Shahriar (died 1988): no text.
 cases:
 - capability: search
   inputs:
     query: ساقی
   fixtures:
   - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=1&PageSize=50
-    file: fixtures/search-saqi.json
+    file: fixtures/search-saqi-page-1.json
+  - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=2&PageSize=50
+    file: fixtures/search-saqi-page-2.json
+  - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=3&PageSize=50
+    file: fixtures/search-saqi-page-3.json
+  - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=4&PageSize=50
+    file: fixtures/search-saqi-page-4.json
+  - url: https://api.ganjoor.net/api/ganjoor/poems/search?term=%D8%B3%D8%A7%D9%82%DB%8C&poetId=0&catId=0&PageNumber=5&PageSize=50
+    file: fixtures/search-saqi-page-5.json
   expect:
-    min_items: 5
-    complete: true
+    min_items: 6
+    complete: false
     first:
       listing_key: /roodaki/baghimande
       title: رودکی » قصاید و قطعات
@@ -56,3 +66,9 @@ cases:
   expect:
     first:
       html: null
+# An empty first page ends a bounded search without making another request.
+- capability: search
+  inputs: {query: __oneshelf_audit_no_match__}
+  fixtures:
+  - {url: 'https://api.ganjoor.net/api/ganjoor/poems/search?term=__oneshelf_audit_no_match__&poetId=0&catId=0&PageNumber=1&PageSize=50', file: fixtures/search-empty.json}
+  expect: {min_items: 0, complete: true, first: {listing_key: null}}
