@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "total": 183
+  },
+  "results": [
+    {
+      "id": 20190001192,
+      "title": "Mid-Lift-to-Drag Ratio Rigid Vehicle 6-DOF EDL Performance Using Tunable Apollo Powered Guidance"
+    },
+    {
+      "id": 19670077025,
+      "title": "Reentry Guidance for Apollo: Volume I"
+    },
+    {
+      "id": 20260005386,
+      "title": "Apollo vs FNPEG Entry Terminal Point Guidance Comparisons For a Mars EDL Mission"
+    },
+    {
+      "id": 20260006141,
+      "title": "Apollo vs FNPEG Entry Terminal Point Guidance Comparisons For a Mars EDL Mission"
+    },
+    {
+      "id": 19660019469,
+      "title": "Space Navigation Guidance and Control, Volume 2"
+    },
+    {
+      "id": 19660019462,
+      "title": "Space navigation guidance and control, volume 1"
+    },
+    {
+      "id": 19700018941,
+      "title": "Apollo guidance, navigation and control - Design survey of the Apollo inertial subsystem"
+    },
+    {
+      "id": 19680014253,
+      "title": "Auxiliary memory for Apollo guidance computer, volume 1  Final report"
+    },
+    {
+      "id": 19750004273,
+      "title": "Reliability history of the Apollo guidance computer"
+    },
+    {
+      "id": 19700014999,
+      "title": "Apollo Primary Guidance Navigation and Control System /PGNCS/  Final report"
+    },
+    {
+      "id": 19700016773,
+      "title": "Apollo Primary Guidance Navigation and Control System, addendum /PGNCS/  Final report"
+    },
+    {
+      "id": 19760019156,
+      "title": "Apollo experience report guidance and control systems"
+    },
+    {
+      "id": 19760016247,
+      "title": "Apollo experience report guidance and control systems:  Primary guidance, navigation, and control system development"
+    },
+    {
+      "id": 19680014302,
+      "title": "Auxiliary memory for Apollo guidance computer.  Volume 2 - Appendices D and E Final report"
+    },
+    {
+      "id": 19700025333,
+      "title": "Evaluation of the LM guidance system performance over the approach terrain of five of the proposed Apollo landing sites - Apollo program"
+    },
+    {
+      "id": 19750018952,
+      "title": "Apollo experience report:  Guidance and control systems.  Mission control programmer for unmanned missions AS-202, Apollo 4, and Apollo 6"
+    },
+    {
+      "id": 19730016146,
+      "title": "Apollo experience report:  Guidance and control systems.  Engineering simulation program"
+    },
+    {
+      "id": 19730017939,
+      "title": "Guidance, navigation, and control systems performance analysis:  Apollo 13 mission report"
+    },
+    {
+      "id": 20200001595,
+      "title": "Mid-Lift-To-Drag Ratio Rigid Vehicle 6-DOF EDL Performance Using Tunable Apollo Powered Guidance"
+    },
+    {
+      "id": 20260002929,
+      "title": "Explicit Guidance with Chebyshev Polynomials for Unmanned Aerial Vehicles"
+    },
+    {
+      "id": 20260002930,
+      "title": "Explicit Guidance with Chebyshev Polynomials for Unmanned Aerial Vehicles"
+    },
+    {
+      "id": 19700015154,
+      "title": "Apollo guidance computer program block 1 /100/ and block 2  Final report, 25 Jul. - 31 Dec. 1969"
+    },
+    {
+      "id": 19750013238,
+      "title": "Apollo experience report:  Guidance and control systems; lunar module mission programer"
+    },
+    {
+      "id": 19730078843,
+      "title": "Apollo 16 mission Report.  Supplement 1:  Apollo 16 guidance, navigation, and control system performance analysis report"
+    },
+    {
+      "id": 20090026451,
+      "title": "Apollo 13 Guidance, Navigation, and Control Challenges"
+    },
+    {
+      "id": 19690024052,
+      "title": "Lunar Module/Abort Guidance System /LM/AGS/ design survey. NASA/ERC design criteria program, guidance and control"
+    },
+    {
+      "id": 19690026100,
+      "title": "Low speed reentry guidance dispersion evaluation"
+    },
+    {
+      "id": 19740004402,
+      "title": "Unified powered flight guidance"
+    },
+    {
+      "id": 19720010765,
+      "title": "Apollo 13 lunar photography"
+    },
+    {
+      "id": 19660030248,
+      "title": "Navigation accuracy for infrared equipped Apollo aircraft for reentry tracking"
+    },
+    {
+      "id": 19700006511,
+      "title": "Optical Guidance System /OGS/ for rendezvous and docking  Final report"
+    },
+    {
+      "id": 19720010768,
+      "title": "Apollo 11 lunar photography"
+    },
+    {
+      "id": 19720017025,
+      "title": "Apollo experience report:  Development of guidance targeting techniques for the command module and launch vehicle"
+    },
+    {
+      "id": 20180001864,
+      "title": "Orion Powered Flight Guidance Burn Options for Near Term Exploration"
+    },
+    {
+      "id": 19660011714,
+      "title": "AES-EPO study program, volume I  Final study report"
+    },
+    {
+      "id": 20260001760,
+      "title": "Apollo 11 Lunar Module Touchdown Dynamics Reconstruction Verification and Validation for Human Landing Systems"
+    },
+    {
+      "id": 20180001863,
+      "title": "Orion's Powered Flight Guidance Burn Options for Near Term Exploration Missions"
+    },
+    {
+      "id": 20260000331,
+      "title": "Apollo 11 Lunar Module Touchdown Dynamics Reconstruction Verification and Validation for Human Landing Systems"
+    },
+    {
+      "id": 19660011715,
+      "title": "AES-EPO study program, volume II  Final study report"
+    },
+    {
+      "id": 20260000718,
+      "title": "Apollo 11 Lunar Module Touchdown Dynamics Reconstruction V and V for Human Landing Systems"
+    },
+    {
+      "id": 19700023940,
+      "title": "Development of guidance-monitoring techniques and guidance-monitoring experience during the Apollo 11 lunar descent"
+    },
+    {
+      "id": 20090016290,
+      "title": "Apollo Guidance, Navigation, and Control (GNC) Hardware Overview"
+    },
+    {
+      "id": 20000120116,
+      "title": "Guidance Concept for a Mars Ascent Vehicle First Stage"
+    },
+    {
+      "id": 19720010767,
+      "title": "Apollo 14 lunar photography.  Part 1:  Data user's note"
+    },
+    {
+      "id": 20110003649,
+      "title": "Mars Science Laboratory Entry Guidance"
+    },
+    {
+      "id": 20250000207,
+      "title": "Post-Flight EDL Entry Guidance for the Mars 2020 Mission"
+    },
+    {
+      "id": 19750018954,
+      "title": "Apollo experience report guidance and control systems:  Lunar module abort guidance system"
+    },
+    {
+      "id": 19700025290,
+      "title": "Performance of Apollo block 2 thrust vector control using the PGNCS /Primary Guidance Navigation and Control System/ - Project Apollo"
+    },
+    {
+      "id": 20240015538,
+      "title": "Entry Guidance Design and Post-Flight Performance of the Mars 2020 Mission"
+    },
+    {
+      "id": 20110013204,
+      "title": "Entry Guidance for the 2011 Mars Science Laboratory Mission"
+    }
+  ]
+}
