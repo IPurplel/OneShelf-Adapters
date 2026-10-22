@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "total": 183
+  },
+  "results": [
+    {
+      "id": 20140001472,
+      "title": "PredGuid+A: Orion Entry Guidance Modified for Aerocapture"
+    },
+    {
+      "id": 20140011313,
+      "title": "Potential for Integrating Entry Guidance into the Multi-Disciplinary Entry Vehicle Optimization Environment"
+    },
+    {
+      "id": 20130009519,
+      "title": "Post-Flight EDL Entry Guidance Performance for the 2011 Mars Science Laboratory Mission"
+    },
+    {
+      "id": 19670000110,
+      "title": "Star/horizon simulator used to test space guidance system"
+    },
+    {
+      "id": 20160001182,
+      "title": "Predictive Lateral Logic for Numerical Entry Guidance Algorithms"
+    },
+    {
+      "id": 19740012358,
+      "title": "Astronomical activities of the Apollo orbital science photographic team"
+    },
+    {
+      "id": 20230009339,
+      "title": "Path-Adaptive Guidance Algorithm Trades for a Two-Stage Lunar Descent Vehicle"
+    },
+    {
+      "id": 19740026211,
+      "title": "Apollo experience report.  Guidance and control systems:  Orbital rate drive electronics for the Apollo command module and lunar module"
+    },
+    {
+      "id": 20160001446,
+      "title": "Encke-Beta Predictor for Orion Burn Targeting and Guidance"
+    },
+    {
+      "id": 20130009144,
+      "title": "Post-Flight EDL Entry Guidance Performance of the 2011 Mars Science Laboratory Mission"
+    },
+    {
+      "id": 19730017161,
+      "title": "Apollo experience report:  Guidance and control systems - Digital autopilot design development"
+    },
+    {
+      "id": 20070025135,
+      "title": "Orion Cislunar Guidance and Navigation"
+    },
+    {
+      "id": 19700026559,
+      "title": "Guidance laws for controlling off-nominal LM powered descent trajectories back to the nominal.  Project Apollo"
+    },
+    {
+      "id": 19750011039,
+      "title": "Apollo 14 visibility tests:  Visibility of lunar surface features and lunar landing"
+    },
+    {
+      "id": 19750018955,
+      "title": "Apollo experience report:  Guidance and control systems:  Automated control system for unmanned mission AS-201"
+    },
+    {
+      "id": 19760004104,
+      "title": "Apollo experience report:  Guidance and control systems.  Lunar module stabilization and control system"
+    },
+    {
+      "id": 19750017908,
+      "title": "Apollo experience report:  Guidance and control systems:  CSM service propulsion system gimbal actuators"
+    },
+    {
+      "id": 20210022534,
+      "title": "Path-Adaptive Guidance Algorithm Trades for a Two-Stage Lunar Descent Vehicle"
+    },
+    {
+      "id": 19750005834,
+      "title": "Apollo experience report:  Guidance and control systems:  Command and service module entry monitor subsystem"
+    },
+    {
+      "id": 20100030603,
+      "title": "Guidance and Control Algorithms for the Mars Entry, Descent and Landing Systems Analysis"
+    },
+    {
+      "id": 20120015817,
+      "title": "Post-Flight EDL Entry Guidance Performance of the 2011 Mars Science Laboratory Mission"
+    },
+    {
+      "id": 20070005040,
+      "title": "Numerical Skip-Entry Guidance"
+    },
+    {
+      "id": 20070023643,
+      "title": "A Comparison of Two Skip Entry Guidance Algorithms"
+    },
+    {
+      "id": 19720024991,
+      "title": "Guidance system operations plan for manned CM earth orbital missions using program SKYLARK 1.  Section 4:  Operational modes"
+    },
+    {
+      "id": 20090016292,
+      "title": "Apollo Onboard Navigation Techniques"
+    },
+    {
+      "id": 19760012111,
+      "title": "Apollo/Saturn 5 postflight trajectory:  AS-512"
+    },
+    {
+      "id": 19700025062,
+      "title": "Linear acceleration guidance for lunar landing and launch trajectories"
+    },
+    {
+      "id": 19750011958,
+      "title": "Analysis of a Multiprocessor Guidance Computer"
+    },
+    {
+      "id": 20170001619,
+      "title": "Entry, Descent, and Landing Guidance and Control Approaches to Satisfy Mars Human Mission Landing Criteria"
+    },
+    {
+      "id": 20040008247,
+      "title": "Guidance and Control During Direct-Descent Parabolic Reentry"
+    },
+    {
+      "id": 20240015877,
+      "title": "Guidance Performance of Bank-Angle and Alpha-Beta Steering for A Large Robotic Mars Entry Vehicle"
+    },
+    {
+      "id": 19720025984,
+      "title": "Apollo guidance, navigation and control: Guidance system operations plans for manned LM earth orbital and lunar missions using Program COLOSSUS 3. Section 7:  Erasable memory programs"
+    },
+    {
+      "id": 20200000240,
+      "title": "Mid Lift-to-Drag Ratio Rigid Vehicle 6-DoF Performance for Human Mars Entry, Descent, and Landing: A Fractional Polynomial Powered Descent Guidance Approach"
+    },
+    {
+      "id": 19770077156,
+      "title": "Summary of Apollo guidance and navigation error analysis"
+    },
+    {
+      "id": 20210025125,
+      "title": "Demonstration of Linear Covariance Analysis Techniques to Evaluate Entry Descent and Landing Guidance Algorithms, Vehicle Configurations, Analysis Techniques, and Trajectory Profiles"
+    },
+    {
+      "id": 19750025041,
+      "title": "Program verification document for the ASTP flight program"
+    },
+    {
+      "id": 19700025035,
+      "title": "Investigation of landing site redesignation during phase 2 of the LEM powered descent using primary guidance"
+    },
+    {
+      "id": 19760006057,
+      "title": "Apollo/Saturn 5 Postflight Trajectory - SA-513 Skylab 1 Mission. Tracking and Flight Reconstruction"
+    },
+    {
+      "id": 20060019188,
+      "title": "Spacecraft guidance, navigation, and control requirements for an intelligent plug-n-play avionics (PAPA) architecture"
+    },
+    {
+      "id": 20100005042,
+      "title": "Performance Analysis of Apollo Navigational Starter Routine"
+    },
+    {
+      "id": 19700025388,
+      "title": "A study of landing radar antenna switching - Project Apollo"
+    },
+    {
+      "id": 19730078842,
+      "title": "Apollo 15 mission report:  Apollo 15 guidance, navigation, and control system performance analysis report (supplement 1)"
+    },
+    {
+      "id": 19700025221,
+      "title": "Maximum allowable lateral velocity errors during LM powered descent - Program Apollo"
+    },
+    {
+      "id": 19720063753,
+      "title": "Apollo guidance and navigation:  A problem in man and machine integration"
+    },
+    {
+      "id": 20120001875,
+      "title": "Fly-by-Wire Systems Enable Safer, More Efficient Flight"
+    },
+    {
+      "id": 20100039179,
+      "title": "Improved Lunar Lander Handling Qualities Through Control Response Type and Display Enhancements"
+    },
+    {
+      "id": 20080015647,
+      "title": "Video Guidance Sensor for Surface Mobility Operations"
+    },
+    {
+      "id": 20240016463,
+      "title": "Exploration Systems Exterior Lighting Design Guidance"
+    },
+    {
+      "id": 19740026209,
+      "title": "Apollo experience report.  Guidance and control systems:  Command and service module stabilization and control system"
+    },
+    {
+      "id": 20100014254,
+      "title": "Lunar Reconnaissance Orbiter (LRO) Guidance, Navigation and Control (GN&C) Overview"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "total": 183
+  },
+  "results": [
+    {
+      "id": 19730010911,
+      "title": "Space shuttle guidance, navigation and control equation document no. 19:  Prelaunch alignment and platform compensation"
+    },
+    {
+      "id": 19790072165,
+      "title": "Manned Venus Flyby"
+    },
+    {
+      "id": 19730008330,
+      "title": "Environmental health program activities"
+    },
+    {
+      "id": 19720025986,
+      "title": "Apollo guidance, navigation and control: Guidance system operations plan for manned LM earth orbital and lunar missions using Program LUMINARY 1E.  Section 7:  Erasable memory programs"
+    },
+    {
+      "id": 19720025985,
+      "title": "Apollo guidance, navigation and control: Guidance system operations plan for manned CM earth orbital and lunar missions using Program COLOSSUS 3.  Section 3:  Digital autopilots (revision 14)"
+    },
+    {
+      "id": 19750010228,
+      "title": "CSM digital autopilot testing in support of ASTP experiments control requirements"
+    },
+    {
+      "id": 19740019252,
+      "title": "Astrionics system designers handbook, volume 1"
+    },
+    {
+      "id": 20170000743,
+      "title": "Comparison of the Effects of Velocity and Range Triggers on Trajectory Dispersions for the Mars 2020 Mission"
+    },
+    {
+      "id": 20030001740,
+      "title": "Noise Abatement"
+    },
+    {
+      "id": 20030004791,
+      "title": "Noise Protection"
+    },
+    {
+      "id": 20100036583,
+      "title": "Global Landing Site Access Using Atmospheric Skip Trajectories"
+    },
+    {
+      "id": 20190033307,
+      "title": "Evolution and Impact of Saturn V on Space Launch System from a Guidance, Navigation, and Mission Analysis Perspective"
+    },
+    {
+      "id": 19720011004,
+      "title": "Apollo guidance, navigation, and control:  Candidate configuration trade study, Stellar-Inertial Measurement System (SIMS) for an Earth Observation Satellite (EOS)"
+    },
+    {
+      "id": 19940012996,
+      "title": "Study of the National Science Foundation's South Pole Station as an analogous data base for the logistical support of a Moon laboratory"
+    },
+    {
+      "id": 19720004940,
+      "title": "Space shuttle vehicle automatic docking study"
+    },
+    {
+      "id": 20030017748,
+      "title": "Entry Vehicle Control System Design for the Mars Smart Lander"
+    },
+    {
+      "id": 20090014032,
+      "title": "Programmable Logic Application Notes"
+    },
+    {
+      "id": 20100005357,
+      "title": "Orion Pad Abort 1 GN and C Design and Development"
+    },
+    {
+      "id": 20100019436,
+      "title": "Analytic Development of a Reference Profile for the First Entry in a Skip Atmospheric Entry"
+    },
+    {
+      "id": 20070032979,
+      "title": "AVGS, AR and D for Satellites, ISS, the Moon, Mars and Beyond"
+    },
+    {
+      "id": 20220011974,
+      "title": "Lunar Transport Vehicle Occupant Protection Requirements"
+    },
+    {
+      "id": 20080006650,
+      "title": "Crew Exploration Vehicle Ascent Abort Trajectory Analysis and Optimization"
+    },
+    {
+      "id": 20080009585,
+      "title": "Orion Navigation Sensitivities to Ground Station Infrastructure for Lunar Missions"
+    },
+    {
+      "id": 19750014262,
+      "title": "Lightning effects on the NASA F-8 digital-fly-by-wire airplane"
+    },
+    {
+      "id": 19930012241,
+      "title": "Autonomous docking ground demonstration"
+    },
+    {
+      "id": 20240000989,
+      "title": "Re-Creation of an Apollo-Era Separation Anomaly Using A Low-G Slosh Mechanical Analog"
+    },
+    {
+      "id": 20240000750,
+      "title": "Re-Creation of an Apollo-Era Separation Anomaly Using a Low-g Slosh Mechanical Analog"
+    },
+    {
+      "id": 19930013093,
+      "title": "Autonomous docking ground demonstration (category 3)"
+    },
+    {
+      "id": 20100022158,
+      "title": "Ares V: Progress Toward Unprecedented Heavy Lift"
+    },
+    {
+      "id": 19620004468,
+      "title": "Proceedings of the National Meeting on Manned Space Flight: Unclassified Portion"
+    },
+    {
+      "id": 19720063745,
+      "title": "Proceedings of the Second Manned Space Flight Meeting"
+    },
+    {
+      "id": 20090014083,
+      "title": "Ares I Crew Launch Vehicle Upper Stage/Upper Stage Engine Element Overview"
+    },
+    {
+      "id": 20070038284,
+      "title": "Orion Entry Flight Control Stability and Performance"
+    },
+    {
+      "id": 19780015067,
+      "title": "Fourth NASA Inter-Center Control Systems Conference"
+    },
+    {
+      "id": 20070005131,
+      "title": "NASA CEV Reference GN&C Architecture"
+    },
+    {
+      "id": 20200000053,
+      "title": "The Creation and Simulation of a Risley Prism Assembly"
+    },
+    {
+      "id": 20240002323,
+      "title": "Information Systems for Crew-Led Operations Beyond Low-Earth Orbit"
+    },
+    {
+      "id": 20220001869,
+      "title": "End-to-End Performance Optimization of a Crewed Lunar Landing Mission Staged from a Near Rectilinear Halo Orbit"
+    },
+    {
+      "id": 20220007064,
+      "title": "Repeatable Method for Conducting Chamber Studies of Aerosolized Lunar Simulant"
+    },
+    {
+      "id": 20100030126,
+      "title": "Earth to Moon Transfer: Direct vs Via Libration Points (L1, L2)"
+    },
+    {
+      "id": 20060046592,
+      "title": "Effect of Counterflow Jet on a Supersonic Reentry Capsule"
+    },
+    {
+      "id": 20180007064,
+      "title": "Pterodactyl: Integrated Control Design for Precision Targeting of Deployable Entry Vehicles"
+    },
+    {
+      "id": 19750042668,
+      "title": "High Order Software: A Methodology for Defining Software"
+    },
+    {
+      "id": 19780028789,
+      "title": "Verification of an Axiomatic Requirements Specification"
+    },
+    {
+      "id": 19930020537,
+      "title": "Design, building, and testing of the postlanding systems for the assured crew return vehicle"
+    },
+    {
+      "id": 20170000348,
+      "title": "Spacecraft Re-Entry Impact Point Targeting Using Aerodynamic Drag"
+    },
+    {
+      "id": 20120001879,
+      "title": "High-Pressure Systems Suppress Fires in Seconds"
+    },
+    {
+      "id": 20150000242,
+      "title": "Influence of Combined Whole-Body Vibration Plus G-Loading on Visual Performance"
+    },
+    {
+      "id": 19940020867,
+      "title": "Data analysis and interpretation of lunar dust exosphere"
+    },
+    {
+      "id": 20260009103,
+      "title": "South Pole-Aitken Basin Sample Return and eXploration (SPARX) Science Definition Team Report"
+    }
+  ]
+}

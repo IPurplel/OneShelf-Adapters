@@ -7,8 +7,10 @@ cases:
   fixtures:
   - url: https://litteraturbanken.se/api/list_all/etext?exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro&filter_string=Lagerl%C3%B6f&to=50
     file: fixtures/search-lagerlof.json
+  - url: https://litteraturbanken.se/api/list_all/etext?exclude=text,parts,sourcedesc,pages,errata,content_vector,workintro&filter_string=Lagerl%C3%B6f&to=100
+    file: fixtures/search-lagerlof-100.json
   expect:
-    min_items: 5
+    min_items: 53
     complete: true
     fields_present:
     - listing_key

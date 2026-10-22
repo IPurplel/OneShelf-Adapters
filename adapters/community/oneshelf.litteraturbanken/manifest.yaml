@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.litteraturbanken
 name: "Litteraturbanken · Books · SV"
-version: 0.1.1
+version: 0.1.2
 api: '1.0'
 description: >-
   Litteraturbanken, the Swedish Literature Bank: Swedish classics as edited e-texts. Search is the bank's

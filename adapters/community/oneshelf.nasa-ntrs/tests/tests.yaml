@@ -1,12 +1,18 @@
-# Fixtures are live API responses (2026-10-07).
+# Search fixtures are live API responses (2026-10-21), reduced to the fields Search reads.
+# Other capability fixtures date from 2026-10-07.
 cases:
 - capability: search
   inputs: {query: apollo guidance}
-  fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance.json}]
+  fixtures:
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=0&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-0.json}
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=50&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-50.json}
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=100&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-100.json}
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=150&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-150.json}
   expect:
-    min_items: 10
+    min_items: 183
     complete: true
     fields_present: [listing_key, title]
+    first: {listing_key: '20190001192'}
 - capability: work
   inputs: {listing_key: '20140013470'}
   fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20140013470', file: fixtures/citation-20140013470.json}]
@@ -38,3 +44,13 @@ cases:
   fixtures: [{url: 'https://ntrs.nasa.gov/api/citations/20230016438', file: fixtures/citation-20230016438-may-include-copyright.json}]
   expect:
     first: {url: null}
+# A failed later page must preserve the first page but report the result as incomplete.
+- capability: search
+  inputs: {query: apollo guidance}
+  fixtures:
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=0&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-0.json}
+  - {url: 'https://ntrs.nasa.gov/api/citations/search?q=apollo%20guidance&page.size=50&page.from=50&disseminated=DOCUMENT_AND_METADATA', file: fixtures/search-apollo-guidance-50.json, status: 503}
+  expect:
+    min_items: 50
+    complete: false
+    first: {listing_key: '20190001192'}
