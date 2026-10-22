@@ -2,10 +2,15 @@
 cases:
 - capability: search
   inputs: {query: Goethe}
-  fixtures: [{url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50', file: fixtures/search-goethe.xml}]
+  fixtures:
+  - {url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50&start=0', file: fixtures/search-goethe.xml}
+  - {url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50&start=50', file: fixtures/search-goethe-50.xml}
+  - {url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50&start=100', file: fixtures/search-goethe-100.xml}
+  - {url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50&start=150', file: fixtures/search-goethe-150.xml}
+  - {url: 'https://textgridlab.org/1.0/tgsearch-public/search?q=Goethe&filter=project.id:TGPR-372fe6dc-57f2-6cd4-01b5-2c4bbefcfd3c&filter=format:text/tg.edition%2Btg.aggregation%2Bxml&limit=50&start=200', file: fixtures/search-goethe-200.xml}
   expect:
-    min_items: 40
-    complete: true
+    min_items: 53
+    complete: false
     fields_present: [listing_key, title, creator]
 - capability: work
   inputs: {listing_key: 11d4b.0}

@@ -1,7 +1,7 @@
 schema: oneshelf.osp/1
 id: oneshelf.textgrid-digitale-bibliothek
 name: "TextGrid Digitale Bibliothek · Books · DE"
-version: 0.1.1
+version: 0.1.2
 api: '1.2'
 description: >-
   The TextGrid Digitale Bibliothek: German-language literature from its beginnings to the early twentieth
