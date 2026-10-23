@@ -1,0 +1,18 @@
+schema: oneshelf.osp/1
+id: oneshelf.mod-japan-manga
+name: "Manga-Style Defense of Japan (Japan MOD) · Manga · EN"
+version: 0.1.0
+api: '1.0'
+description: >-
+  The English editions of the Japan Ministry of Defense's manga explainers, "Manga-Style Defense of Japan" and
+  "Guidebook to the Ministry of Defense" (2017–2019), published on mod.go.jp under the ministry's Terms of Use
+  (Government of Japan Standard Terms of Use 2.0, compatible with CC BY 4.0). The series is a work and each
+  year's booklet is a unit, downloaded as the ministry's PDF. Open it by pasting
+  mod.go.jp/j/kids/comic/e/index.html.
+publisher: OneShelf
+capabilities: [work, catalog, downloads]
+network:
+  domains: [www.mod.go.jp]
+defaults:
+  language: en
+  content_type: manga

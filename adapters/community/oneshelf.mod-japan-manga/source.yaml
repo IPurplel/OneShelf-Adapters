@@ -1,0 +1,9 @@
+base_url: https://www.mod.go.jp
+url_patterns:
+  - pattern: '^https://www\.mod\.go\.jp/j/kids/comic/(e)/(?:index\.html)?(?:[?#]|$)'
+    capability: work
+    id_group: 1
+# robots.txt disallows only /a/ and /sp/j/.
+rate_limit:
+  requests_per_minute: 20
+  concurrency: 1
