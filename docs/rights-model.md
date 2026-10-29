@@ -1,8 +1,10 @@
 # Rights and access model
 
 A source being **visible** — its items listed, searchable, readable on its own site — says nothing about
-whether OneShelf may **keep a copy**. OneShelf's `reader` capability saves page images into a local CBZ and
-`downloads` saves a file; both are copies. So every adapter answers several separate questions, and none of
+whether OneShelf may **keep a copy**. An ordinary recipe adapter's `reader` can save page images into a
+permanent CBZ and `downloads` saves a file; both are copies. The reviewed native online reader described
+below instead uses Core's app-managed Reader Cache and cannot create a permanent download. Every adapter
+answers several separate questions, and none of
 them is a single "open" boolean.
 
 OneShelf Core has no licence model: it runs recipes and stores what they return. The model therefore lives
@@ -34,7 +36,7 @@ redistribution: allowed_with_conditions
 derivatives: allowed_with_conditions
 attribution: {required: true, text: "…"}
 visibility: all_listed_items        # all_listed_items | eligible_items_only — what search/catalog show
-local_copy: allowed                 # allowed | eligible_items_only | not_allowed — what reader/downloads may save
+local_copy: allowed                 # allowed | eligible_items_only | not_allowed | reader_cache_only
 enforcement:
   summary: how the recipes keep ineligible items out
   exclusion_tests: [4]              # indexes of tests.yaml cases proving an ineligible item is not offered
@@ -48,14 +50,15 @@ last_verified: 2026-09-29
 | `public_domain` | No copyright restriction (PDM, NoC, or expired). Copies allowed. |
 | `open_license` | A licence that grants copying — Creative Commons or similar. Its conditions (NC, ND, SA, BY) are the permission fields. |
 | `open_access_publisher` | A publisher's own grant of free access and copying without a standard licence. The grant is cited as evidence. |
-| `free_to_read` | Free to view on the source's site, with no grant to copy. **No `reader`, no `downloads`.** |
+| `free_to_read` | Free to view on the source's site, with no grant to copy. No ordinary recipe `reader` or `downloads`; the narrowly reviewed native cache exception is below. |
 | `mixed` | Items differ. Copying only for items whose own evidence grants it. |
 
 ## Rules `tests/test_rights.py` enforces
 
 - Every adapter not on the test's `PREDATING` list has a complete `rights.yaml`, with no unknown keys and only
   the values above. The list only shrinks.
-- `free_to_read` ⇒ `local_copy: not_allowed`; `local_copy: not_allowed` ⇒ no `reader` or `downloads`.
+- `free_to_read` ⇒ `local_copy: not_allowed`, except the exact native cache contract below;
+  `local_copy: not_allowed` ⇒ no `reader` or `downloads`.
 - Rights stated per item or per collection (or `mixed`), with a copying capability ⇒
   `local_copy: eligible_items_only`.
 - `eligible_items_only` ⇒ at least one exclusion test. Each named `tests.yaml` case must run `reader`,
@@ -65,6 +68,27 @@ last_verified: 2026-09-29
   `last_verified` is a date, not in the future.
 - `./tools/new-adapter` scaffolds a read-only `rights.yaml` (`free_to_read`, `not_allowed`). Adding `reader` or
   `downloads` without revisiting it fails the test.
+
+## Reviewed native reading cache
+
+`reader_cache_only` describes storage behavior, not a licence grant. It is accepted only for API1.3,
+`id: oneshelf.noorbook`, `native_profile: noorbook`, exactly work/catalog/reader, browser reader, the exact
+HTTPS Noor origin/domain, no extra domains, HTTP, auth or recipes, and `access_type: free_to_read` with no
+licence claim. Every native profile must use this state; it cannot claim `allowed` or `eligible_items_only`.
+The recipe copying rules and their exclusion-test requirements remain unchanged for all other adapters.
+
+Core's native download guards reject permanent files, automatic downloads and CBZ creation. The reader
+does store page images and descriptors on disk in its temporary, app-managed Reader Cache. They survive
+restarts and cached pages can remain readable offline. The default cache has a seven-day age limit checked
+when an entry is read and a 5 GiB size cap with LRU eviction under pressure; open units are protected from
+that eviction. Files are not necessarily deleted exactly seven days after reading. This is not a user
+download, export, promise of no local storage, or determination that caching is licensed.
+
+The Noor evidence records only the public reading access actually observed. Copying permissions remain
+unknown, and no terms page was reviewed. Attribution is required as a conservative default. This exception
+does not authorize other native profiles or turn a free-to-read page into an open licence. Regression tests
+reject wrong identities/profiles/APIs, added downloads or capabilities, altered origins/domains, missing
+browser support, recipe files, licence claims, and native profiles claiming permanent-copy permission.
 
 ## What a reviewer still checks
 
