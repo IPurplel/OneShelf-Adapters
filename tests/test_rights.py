@@ -32,7 +32,7 @@ ACCESS_TYPE = {"public_domain", "open_license", "open_access_publisher", "free_t
 GRANULARITY = {"source", "collection", "item"}
 PERMISSION = {"allowed", "allowed_with_conditions", "not_allowed", "unknown"}
 VISIBILITY = {"all_listed_items", "eligible_items_only"}
-LOCAL_COPY = {"allowed", "eligible_items_only", "not_allowed"}
+LOCAL_COPY = {"allowed", "eligible_items_only", "not_allowed", "reader_cache_only"}
 COPYING = {"reader", "downloads"}
 REQUIRED = {"schema", "access_scope", "access_type", "rights_granularity", "license", "commercial_use",
             "redistribution", "derivatives", "attribution", "visibility", "local_copy", "enforcement",
@@ -92,8 +92,28 @@ def test_rights_file_is_complete_and_consistent(adapter):
 
     capabilities = set(manifest.get("capabilities", []))
     copies = capabilities & COPYING
+    cache_only = rights["local_copy"] == "reader_cache_only"
+    if manifest.get("native_profile") is not None and not cache_only:
+        problems.append("native profiles must declare reader_cache_only, never permanent copying")
+    if cache_only:
+        network = manifest.get("network") or {}
+        source = load(adapter / "source.yaml")
+        reviewed_native = (
+            manifest.get("id") == "oneshelf.noorbook" and manifest.get("native_profile") == "noorbook"
+            and str(manifest.get("api")) == "1.3" and capabilities == {"work", "catalog", "reader"}
+            and set((manifest.get("browser") or {}).get("capabilities", [])) == {"reader"}
+            and network.get("domains") == ["www.noor-book.com"] and not network.get("cdn_domains")
+            and not network.get("allow_http") and manifest.get("auth") is None
+            and source.get("base_url") == "https://www.noor-book.com"
+            and not any(p.suffix in {".yaml", ".yml"} for p in (adapter / "recipes").rglob("*"))
+        )
+        if not reviewed_native or rights["access_type"] != "free_to_read" or any(licence.values()):
+            problems.append("reader_cache_only requires the exact reviewed native Noor contract and no licence claim")
+        else:
+            # This reader has app-managed cached images, not the recipe reader's permanent CBZ path.
+            copies.discard("reader")
     # Visible is not downloadable: a source that only grants reading on its own site gets no copying capability.
-    if rights["access_type"] == "free_to_read" and rights["local_copy"] != "not_allowed":
+    if rights["access_type"] == "free_to_read" and rights["local_copy"] not in {"not_allowed", "reader_cache_only"}:
         problems.append("free_to_read grants no local copy")
     if rights["local_copy"] == "not_allowed" and copies:
         problems.append(f"local_copy is not_allowed but the adapter declares {sorted(copies)}")
@@ -189,3 +209,59 @@ def test_no_list_case_passes_whatever_the_recipe_returns(adapter):
         if not expect.get("min_items") and not (expect.get("first") or {}):
             vacuous.append(index)
     assert not vacuous, f"cases {vacuous} assert nothing about the result; add first: {{url: null}} (or the key) for an empty one"
+
+
+@pytest.mark.parametrize("case", [
+    "valid", "recipe", "recipe-yml", "wrong-id", "missing-profile", "wrong-profile", "old-api",
+    "downloads", "extra-capability", "missing-capability", "no-browser", "extra-domain",
+    "cdn", "http", "auth", "wrong-origin", "open-license", "native-permanent", "native-eligible",
+])
+def test_reader_cache_only_is_bound_to_the_reviewed_native_contract(tmp_path, case):
+    import shutil
+    created = tmp_path / "noor"
+    shutil.copytree(ROOT / "adapters" / "official" / "oneshelf.noorbook", created)
+    manifest = load(created / "manifest.yaml")
+    source = load(created / "source.yaml")
+    rights = {
+        "schema": "oneshelf.rights/1", "access_scope": "per_item", "access_type": "free_to_read",
+        "rights_granularity": "item", "license": {"id": None, "url": None},
+        "commercial_use": "unknown", "redistribution": "unknown", "derivatives": "unknown",
+        "attribution": {"required": True, "text": "Test source"}, "visibility": "all_listed_items",
+        "local_copy": "reader_cache_only", "enforcement": {"summary": "Fixture cache only", "exclusion_tests": []},
+        "evidence": [{"claim": "Fixture only", "url": "https://example.org/"}],
+        "last_verified": datetime.date(2026, 10, 29),
+    }
+    if case in {"recipe", "recipe-yml"}:
+        (created / "recipes").mkdir()
+        filename = "reader.yml" if case == "recipe-yml" else "reader.yaml"
+        (created / "recipes" / filename).write_text("capability: reader\n")
+    elif case == "wrong-id": manifest["id"] = "oneshelf.other"
+    elif case == "missing-profile": manifest.pop("native_profile")
+    elif case == "wrong-profile": manifest["native_profile"] = "other"
+    elif case == "old-api": manifest["api"] = "1.2"
+    elif case == "downloads": manifest["capabilities"].append("downloads")
+    elif case == "extra-capability": manifest["capabilities"].append("search")
+    elif case == "missing-capability": manifest["capabilities"].remove("catalog")
+    elif case == "no-browser": manifest["browser"] = {"capabilities": []}
+    elif case == "extra-domain": manifest["network"]["domains"].append("example.org")
+    elif case == "cdn": manifest["network"]["cdn_domains"] = ["example.org"]
+    elif case == "http": manifest["network"]["allow_http"] = True
+    elif case == "auth": manifest["auth"] = {"mode": "browser"}
+    elif case == "wrong-origin": source["base_url"] = "https://example.org"
+    elif case == "open-license":
+        rights.update(access_type="open_license", license={"id": "CC0-1.0", "url": "https://creativecommons.org/publicdomain/zero/1.0/"})
+    elif case in {"native-permanent", "native-eligible"}:
+        rights.update(access_type="public_domain", rights_granularity="source", local_copy="allowed")
+        if case == "native-eligible":
+            rights["local_copy"] = "eligible_items_only"
+            rights["enforcement"]["exclusion_tests"] = [0]
+            (created / "tests" / "tests.yaml").write_text(yaml.safe_dump({"cases": [
+                {"capability": "catalog", "expect": {"first": {"url": None}}}
+            ]}), encoding="utf-8")
+    for name, data in [("manifest.yaml", manifest), ("source.yaml", source), ("rights.yaml", rights)]:
+        (created / name).write_text(yaml.safe_dump(data), encoding="utf-8")
+    if case == "valid":
+        test_rights_file_is_complete_and_consistent(created)
+    else:
+        with pytest.raises(AssertionError):
+            test_rights_file_is_complete_and_consistent(created)
