@@ -7,6 +7,25 @@ cases:
   expect:
     min_items: 1
     fields_present: [listing_key, title]
+# Discover's browse lists (captured 2026-11-03, trimmed to four series; `total` trimmed to match).
+- capability: latest
+  inputs: {offset: 0}
+  fixtures:
+  - url: https://api.mangadex.org/manga?limit=20&offset=0&order[latestUploadedChapter]=desc
+    file: fixtures/latest.json
+  expect:
+    min_items: 4
+    fields_present: [listing_key, title]
+    first: {listing_key: e900135b-8eba-4d29-85c9-db3d5ae885c7}
+- capability: trending
+  inputs: {offset: 0}
+  fixtures:
+  - url: https://api.mangadex.org/manga?limit=20&offset=0&order[followedCount]=desc
+    file: fixtures/trending.json
+  expect:
+    min_items: 4
+    fields_present: [listing_key, title]
+    first: {listing_key: 32d76d19-8a05-4db0-9fc2-e0b0648fe9d0}
 - capability: work
   inputs: {listing_key: 0b531d71-f321-462d-b7ca-d056564bf8b3}
   fixtures:

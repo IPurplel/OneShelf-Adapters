@@ -145,6 +145,8 @@ async def run(adapter_id: str, args) -> int:
                     chain["listing_key"] = result.entries[0].listing_key
             if "latest" in declared:
                 await attempt("latest", tested.get("latest", {}))
+            if "trending" in declared:
+                await attempt("trending", tested.get("trending", {}))
             listing_key = args.listing_key or chain.get("listing_key") or tested.get("work", tested.get("catalog", {})).get("listing_key")
             if "work" in declared and listing_key is not None:
                 await attempt("work", {"listing_key": listing_key, "language": manifest.defaults.language})

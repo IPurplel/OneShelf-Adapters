@@ -54,7 +54,7 @@ adapter with a search recipe, a synthetic fixture and a packaged test. Replace t
 - `api` — the OneShelf plugin API it targets (`'1.0'` today). You cannot raise this here: plugin API changes
   belong in OneShelf Core.
 - `capabilities` — only what the adapter really does: `search`, `work`, `catalog`, `reader`, `downloads`,
-  `latest`, `health`. Say plainly what it cannot do in `description`.
+  `latest`, `trending`, `health`. Say plainly what it cannot do in `description`.
 - `network.domains` — the exact hosts it may reach, as narrow as possible. `cdn_domains` for images/files.
 
 ### recipes

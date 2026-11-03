@@ -1,0 +1,18 @@
+capability: trending
+inputs: []
+# WEBTOON's own "Trending & Popular" ranking: what its readers are opening now, on one page. The same
+# title_no keys as `latest` and the work recipe, so a result opens the same Work.
+request:
+  url: "{base_url}/en/ranking/trending"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "a._ranking_title_a"}
+  fields:
+    listing_key: {xpath: "./@data-title-no", required: true}
+    title: {css: "strong.title::text", required: true, transforms: [trim]}
+    url: {xpath: "./@href", transforms: [normalize_url]}
+    cover_url: {css: "img::attr(src)", transforms: [trim, normalize_url]}
+pagination:
+  mode: none

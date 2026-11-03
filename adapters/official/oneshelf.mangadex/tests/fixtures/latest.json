@@ -1,0 +1,115 @@
+{
+ "result": "ok",
+ "response": "collection",
+ "data": [
+  {
+   "id": "e900135b-8eba-4d29-85c9-db3d5ae885c7",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "en": "The Ghostly Doctor"
+    },
+    "altTitles": [
+     {
+      "zh-ro": "Guǐyī Fèng Jiǔ"
+     },
+     {
+      "en": "Mesmerizing Ghost Doctor"
+     }
+    ],
+    "description": {
+     "en": "She, the leader of the hidden sect, specializes in poison and assassination. A genius, and a weirdo, in the eyes of others. After dying from an accident, she was reborn in the body of a disfigured lad"
+    },
+    "originalLanguage": "zh",
+    "availableTranslatedLanguages": [
+     "en",
+     "fr",
+     "id",
+     "es-la",
+     "pt-br",
+     "it"
+    ]
+   }
+  },
+  {
+   "id": "dc07afaa-643a-4bf4-a9d0-b21ecc101736",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "en": "I Met the Male Lead in Prison"
+    },
+    "altTitles": [
+     {
+      "ko": "감방에서 남자주인공을 만났습니다 (2023)"
+     },
+     {
+      "ko-ro": "Gambangeseo Namjajuingongeul Mannassseubnida (2023)"
+     }
+    ],
+    "description": {
+     "en": "I met the male lead in the prison. I know he's supposed to be a 19+ tragedy novel male lead, but... Why is he like that?\n\n\"Woof! Woof! Woof! Grrr.\"\n\nIt was said that he was cursed to turn into a beast"
+    },
+    "originalLanguage": "ko",
+    "availableTranslatedLanguages": [
+     "es-la",
+     "fr",
+     "en",
+     "pl"
+    ]
+   }
+  },
+  {
+   "id": "65208a20-4253-42c8-b0e7-56524bbe795b",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "zh-ro": "Xīngjiǎ Húnjiàng Zhuàn"
+    },
+    "altTitles": [
+     {
+      "en": "Legend of Star General"
+     },
+     {
+      "zh": "星甲魂将传"
+     }
+    ],
+    "description": {
+     "en": "Song Yunxiang, the last Star Soul General of the Human Race, brought the system back to the campus era.  When he was a teenager, he was blinded by the incomplete soul, because he was weak and could on"
+    },
+    "originalLanguage": "zh",
+    "availableTranslatedLanguages": [
+     "en",
+     "pt-br",
+     "id"
+    ]
+   }
+  },
+  {
+   "id": "84cb7ca0-78a8-4b7a-8a20-6fa9e67809d1",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "ja-ro": "Tetsunabe no Jan! R: Choujou Sakusen"
+    },
+    "altTitles": [
+     {
+      "ja": "鉄鍋のジャン!R 頂上作戦"
+     },
+     {
+      "en": "Iron Wok Jan! R: The Summit Operations"
+     }
+    ],
+    "description": {
+     "en": "On the stage of the ultimate showdown at the summit of Japan's Chinese culinary world, he reappears...\nThe legendary \"most fearsome chef\", Akiyama Jan, makes his shocking return!!"
+    },
+    "originalLanguage": "ja",
+    "availableTranslatedLanguages": [
+     "en"
+    ]
+   }
+  }
+ ],
+ "limit": 20,
+ "offset": 0,
+ "total": 4
+}

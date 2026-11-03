@@ -23,3 +23,23 @@ cases:
   expect:
     min_items: 6
     fields_present: [url]
+# Discover's browse lists (captured 2026-11-03, trimmed to four series each): the site's own pages, keyed by
+# the same title_no the work recipe uses.
+- capability: latest
+  inputs: {}
+  fixtures:
+  - url: https://www.webtoons.com/en/originals?sortOrder=UPDATE
+    file: fixtures/originals-update.html
+  expect:
+    min_items: 4
+    fields_present: [listing_key, title, url, cover_url]
+    first: {listing_key: '11361', title: The Day of Kidnapping}
+- capability: trending
+  inputs: {}
+  fixtures:
+  - url: https://www.webtoons.com/en/ranking/trending
+    file: fixtures/ranking-trending.html
+  expect:
+    min_items: 4
+    fields_present: [listing_key, title, url, cover_url]
+    first: {listing_key: '2745', title: Hero Killer}
