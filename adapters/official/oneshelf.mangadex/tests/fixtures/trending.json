@@ -1,0 +1,175 @@
+{
+ "result": "ok",
+ "response": "collection",
+ "data": [
+  {
+   "id": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "ko-ro": "Na Honjaman Level-Up"
+    },
+    "altTitles": [
+     {
+      "ko": "나 혼자만 레벨업"
+     },
+     {
+      "en": "Solo Leveling"
+     }
+    ],
+    "description": {
+     "de": "Als sich vor zehn Jahren das „Gate“ öffnete und unsere Welt sich mit der von Monstern verband, erhielten einige normale Menschen die Macht, diese Monster zu jagen. Sie sind als die „Hunter“ bekannt. D"
+    },
+    "originalLanguage": "ko",
+    "availableTranslatedLanguages": [
+     "ka",
+     "ru",
+     "it",
+     "vi",
+     "en",
+     "hu",
+     "lt",
+     "tr",
+     "es-la",
+     "ms",
+     "id",
+     "pt-br",
+     "hi",
+     "ro",
+     "he",
+     "fr",
+     "fa",
+     "ar",
+     "es",
+     "de",
+     "pl",
+     "nl",
+     "kk",
+     "cs",
+     "sv",
+     "ta",
+     "te",
+     "sr",
+     "tl",
+     "el",
+     "bn",
+     "my"
+    ]
+   }
+  },
+  {
+   "id": "aa6c76f7-5f5f-46b6-a800-911145f81b9b",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "ja-ro": "Sono Bisque Doll wa Koi o Suru"
+    },
+    "altTitles": [
+     {
+      "ja": "その着せ替え人形は恋をする"
+     },
+     {
+      "ja-ro": "Sono Bisque Doll ha Koi wo Suru"
+     }
+    ],
+    "description": {
+     "en": "Wakana Gojou is a fifteen year old high-school boy who was socially traumatized in the past due to his passions. That incident left a mark on him that made him into a social recluse. Until one day he "
+    },
+    "originalLanguage": "ja",
+    "availableTranslatedLanguages": [
+     "fr",
+     "en",
+     "vi",
+     "pt-br",
+     "es-la",
+     "id",
+     "es",
+     "ru",
+     "fa",
+     "tr",
+     "hu",
+     "it"
+    ]
+   }
+  },
+  {
+   "id": "77bee52c-d2d6-44ad-a33a-1734c1fe696a",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "ja-ro": "Kage no Jitsuryokusha ni Naritakute!"
+    },
+    "altTitles": [
+     {
+      "en": "The Eminence in Shadow"
+     },
+     {
+      "ru": "Восхождение в тени"
+     }
+    ],
+    "description": {
+     "en": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.  \r\nAfter hiding his strengt"
+    },
+    "originalLanguage": "ja",
+    "availableTranslatedLanguages": [
+     "hu",
+     "pl",
+     "uk",
+     "id",
+     "ru",
+     "vi",
+     "fr",
+     "zh-hk",
+     "es-la",
+     "pt-br",
+     "en",
+     "it",
+     "tr",
+     "ar",
+     "zh",
+     "et",
+     "de",
+     "fa"
+    ]
+   }
+  },
+  {
+   "id": "e1e38166-20e4-4468-9370-187f985c550e",
+   "type": "manga",
+   "attributes": {
+    "title": {
+     "ja-ro": "Mato Seihei no Slave"
+    },
+    "altTitles": [
+     {
+      "ja": "魔都精兵のスレイブ"
+     },
+     {
+      "en": "Chained Soldier"
+     }
+    ],
+    "description": {
+     "en": "The demon-filled dimension known as \"Mato\" has opened to threaten humanity, and a type of \"peach\" tree that grows there yields fruit that confers special powers to those who eat it, giving humanity a "
+    },
+    "originalLanguage": "ja",
+    "availableTranslatedLanguages": [
+     "ru",
+     "es-la",
+     "id",
+     "pl",
+     "zh-hk",
+     "pt-br",
+     "en",
+     "fr",
+     "vi",
+     "tr",
+     "uk",
+     "jv"
+    ]
+   }
+  }
+ ],
+ "limit": 20,
+ "offset": 0,
+ "total": 4
+}

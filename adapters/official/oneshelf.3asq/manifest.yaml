@@ -1,17 +1,18 @@
 schema: oneshelf.osp/1
 id: oneshelf.3asq
 name: "3asq (Al-Aasheq) · Manga · AR"
-version: 1.0.2
+version: 1.1.0
 api: '1.0'
 description: >-
   Arabic scanlations from مانجا العاشق, at 3asq.online. The site's earlier domain, 3asq.org, no longer
   resolves; the source id here is deliberately free of any domain so that a future move changes one
   line of configuration and never the identity of a Source Track. Everything needed is markup: search
-  results, the series page, the chapter list the site loads through its own endpoint, and the chapter's
-  own images. No browser, and nothing bypassed. Per §41.4 this is a public catalogue and parser stress
+  results, the series page, the chapter list the site loads through its own endpoint, the chapter's
+  own images, and two browse lists for Discover: Latest and the site's own Trending order. No browser,
+  and nothing bypassed. Per §41.4 this is a public catalogue and parser stress
   source, never an assumed official or licensed default.
 publisher: OneShelf
-capabilities: [search, work, catalog, reader, latest]
+capabilities: [search, work, catalog, reader, latest, trending]
 network:
   domains: [3asq.online]
 defaults:

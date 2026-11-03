@@ -1,0 +1,18 @@
+capability: latest
+inputs: []
+# WEBTOON's own Originals list sorted by update: the series with the newest episodes first. Each entry
+# carries its title_no, the same key the work recipe and a pasted series URL give. One page holds them all.
+request:
+  url: "{base_url}/en/originals?sortOrder=UPDATE"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "a._originals_title_a"}
+  fields:
+    listing_key: {xpath: "./@data-title-no", required: true}
+    title: {css: "strong.title::text", required: true, transforms: [trim]}
+    url: {xpath: "./@href", transforms: [normalize_url]}
+    cover_url: {css: "img::attr(src)", transforms: [trim, normalize_url]}
+pagination:
+  mode: none

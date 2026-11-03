@@ -1,0 +1,25 @@
+capability: trending
+inputs: [page]
+# The site's own "Trending" order (Madara's m_orderby=trending): what its readers are opening now. Same
+# listing markup as `latest`, so the same fields — and the same keys a search or a direct URL gives.
+request:
+  url: "{base_url}/manga/page/{page}/?m_orderby=trending"
+  headers: {Accept: text/html}
+response:
+  format: html
+extract:
+  items: {css: "div.page-item-detail"}
+  fields:
+    # The title block can also hold a translator's own link, so the anchor is pinned to a series URL.
+    listing_key: {css: "div.post-title a[href*='/manga/']::attr(href)", required: true,
+                  transforms: [{regex_extract: {pattern: "/manga/([^/]+)/", group: 1}}]}
+    title: {css: "div.post-title a[href*='/manga/']::text", required: true, transforms: [trim]}
+    url: {css: "div.post-title a[href*='/manga/']::attr(href)", transforms: [normalize_url]}
+    # Lazy-loaded covers keep the real image in `data-src` behind a placeholder `src` (dflazy.jpg).
+    cover_url: {xpath: ".//div[contains(@class, 'item-thumb')]//img/@data-src | .//div[contains(@class, 'item-thumb')]//img/@src[not(contains(., 'dflazy'))]",
+                transforms: [trim, normalize_url]}
+pagination:
+  mode: page_number
+  start: 1
+  max_pages: 3
+  stop_when: not_found
