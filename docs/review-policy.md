@@ -9,6 +9,12 @@ OneShelf installation (see the supply chain in the README). Reviewers check:
 - **No unnecessary browser or session** — public endpoints first; a browser or login must be justified.
 - **No bypasses** — nothing that defeats DRM, paywalls, CAPTCHAs, rate limits or anti-bot systems, and
   no robots.txt-disallowed paths.
+- **Honest rate limits** — `rate_limit` reflects what the source can bear, not what makes reading fastest.
+  Raising `requests_per_minute` or `concurrency`, or adding `rate_limit.resources` (plugin API 1.4: a separate
+  budget for images and files on the source's CDN), needs evidence in the Pull Request: the source's or CDN's
+  published limits, or its terms, or a measured `Retry-After` behaviour. Without evidence, the template's
+  20 requests a minute stays. Core adds its own protection on top (per-host backoff on 429/503, a circuit after
+  repeated failures, a ten-requests-a-second ceiling per host), but that is a safety net, not permission.
 - **Meaningful packaged tests** — they assert real fields, not just that something parsed.
 - **Safe fixtures** — minimal, sanitized, not whole works.
 - **Robust parsing** — selectors that survive small layout changes where the site allows.

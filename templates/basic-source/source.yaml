@@ -2,3 +2,9 @@ base_url: https://{{DOMAIN}}
 rate_limit:
   requests_per_minute: 20
   concurrency: 1
+  # Plugin API 1.4 (manifest `api: '1.4'`): a separate budget for images and files on the CDN, so reading is not
+  # held to the spacing chosen for the site's own pages. Only with evidence of what the CDN allows
+  # (docs/review-policy.md, "Honest rate limits"); otherwise leave it out and resources share the budget above.
+  # resources:
+  #   requests_per_minute: 120
+  #   concurrency: 2
