@@ -2,6 +2,11 @@ base_url: https://{{DOMAIN}}
 rate_limit:
   requests_per_minute: 20
   concurrency: 1
+  # Plugin API 1.4 (manifest `api: '1.4'`): `burst` lets up to that many requests (1..4) start together before the
+  # spacing applies, so opening a work is not three seconds per request; the long-run rate stays 20 a minute.
+  # Only with evidence that the site tolerates it (docs/review-policy.md, "Honest rate limits"); omit it on a site
+  # that asks for a fixed gap between requests.
+  # burst: 3
   # Plugin API 1.4 (manifest `api: '1.4'`): a separate budget for images and files on the CDN, so reading is not
   # held to the spacing chosen for the site's own pages. Only with evidence of what the CDN allows
   # (docs/review-policy.md, "Honest rate limits"); otherwise leave it out and resources share the budget above.
